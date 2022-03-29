@@ -8,6 +8,7 @@ Equipe composée des membres suivants :
 -> Nicolas Sacilotto
 
 --TO DO--
+
 Sommaire : Ce projet est réalisé dans le but de répondre aux besoins présents dans le sujet de la SAE
 
 Présentation du sujet 
@@ -19,6 +20,7 @@ Analyser l'existant
 
 Analyser les tâches techniques et organisationelles
 
+--DO TO--
 
 
 
