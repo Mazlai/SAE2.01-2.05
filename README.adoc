@@ -3,22 +3,23 @@
 Editée le 29/03/2022
 Equipe composée des membres suivants : 
 -> Louis Yvelin
+
 -> Victor Thompson
+
 -> Mickael Fernandez
+
+
 -> Nicolas Sacilotto
 
 --TO DO--
 
-Sommaire : Ce projet est réalisé dans le but de répondre aux besoins présents dans le sujet de la SAE
+Etablir un sommaire
 
-Présentation du sujet 
- °Contexte 
- °Objectif
- °A quel problème il répond
+Présenter le sujet ( Contexte, objectif , à quel pb il répond )
 
-Analyser l'existant 
+Faire une analayse de l'existant ( BD ) 
 
-Analyser les tâches techniques et organisationelles
+Analyser les tâches techniques et organisationelles (voir le sujet )
 
 --DO TO--
 
