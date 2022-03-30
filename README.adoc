@@ -2,8 +2,7 @@
 = CDCU V1
 Editée le 29/03/2022
 
-.Membres 
-
+.Membres -
 ===
 
 -> Louis Yvelin
@@ -18,8 +17,7 @@ Editée le 29/03/2022
 
 
 
-.Sommaire 
-
+.Sommaire -
 ...
 
 Présenter le sujet ( Contexte, objectif , à quel pb il répond )
