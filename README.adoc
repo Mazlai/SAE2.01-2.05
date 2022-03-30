@@ -71,6 +71,8 @@ Guichetier --> d
 @enduml
 ....
 
+Qui donne le diagramme suivant :
+
 <img src="http://www.plantuml.com/plantuml/png/TSr1JWCn38NXVKvXTTz5Uu2gg4Yis723u3ZKKk8W9sR5XNgENemeWsPWHlNoVv_aSsrUc-Nah1BwIf31LzYzbi2HIO4bbWgOcAJjPeI7eIvwltLZ0bBiYxnjuN62HQgbDbai-RFHOi8Wp_VREpyGEiGRIL025e-DOtVpDzTBKRXSAJvza23zXXTZl59ZKjTlcM6__pxzMVzF9r2tR2FaTS33fXpN9RWpIR2SVW00">
 </img>
             
