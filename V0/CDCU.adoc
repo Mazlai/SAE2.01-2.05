@@ -1,17 +1,6 @@
+= CDCU Version 1
+:toc:
 
-Sommaire -
-...
-
-Présenter le sujet ( Contexte, objectif , à quel pb il répond )
-
-Faire une analayse de l'existant ( BD ) 
-
-Analyser les tâches techniques et organisationelles (voir le sujet )
-
-...
-
-
-= Sommaire
 
 == Contexte 
 
@@ -27,7 +16,7 @@ L’application doit permettre de gérer des comptes bancaires de dépôt pour d
 == Analyse de l'existant (V0)
 
 
-Qui donne le diagramme suivant :
+En ce qui concerne le lancement de notre projet nous avions à notre disposition ce diagramme des cas d'utilisations suivant :
 
 
 image::images/UCV0.png[UC de départ]
