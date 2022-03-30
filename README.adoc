@@ -3,6 +3,7 @@
 Editée le 29/03/2022
 Equipe composée des membres suivants : 
 
+===
 -> Louis Yvelin
 
 -> Victor Thompson
@@ -10,6 +11,7 @@ Equipe composée des membres suivants :
 -> Mickael Fernandez
 
 -> Nicolas Sacilotto
+===
 
 --TO DO--
 
