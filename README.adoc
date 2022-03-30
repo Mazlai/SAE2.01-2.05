@@ -41,6 +41,8 @@ L’application doit permettre de gérer des comptes bancaires de dépôt pour d
 
 Concernant le lancement du projet nous avons à disposition pour comme point de départ ce diagramme d'use case suivant :
 
+[ plantuml, diagram-classes, png]
+....
 @startuml
 
 usecase m as "Modifier infos client"
@@ -64,5 +66,6 @@ Guichetier --> d
 
 
 @enduml
+....
 
 == Analyse des tâches techniques et organisationelles
