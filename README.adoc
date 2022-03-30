@@ -1,8 +1,8 @@
 = SAÉ 01-05
 = CDCU V1
 Editée le 29/03/2022
-Equipe composée des membres suivants : 
 
+.Membres 
 ===
 
 -> Louis Yvelin
@@ -15,9 +15,11 @@ Equipe composée des membres suivants :
 
 ===
 
---TO DO--
 
-sommaire
+
+.Sommaire 
+
+...
 
 Présenter le sujet ( Contexte, objectif , à quel pb il répond )
 
@@ -25,7 +27,8 @@ Faire une analayse de l'existant ( BD )
 
 Analyser les tâches techniques et organisationelles (voir le sujet )
 
---DO TO--
+...
+
 
 = Sommaire
 
