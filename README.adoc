@@ -1,20 +1,14 @@
+
 = SAÉ 01-05
 = CDCU V1
 Editée le 29/03/2022
 
-.Membres -
-===
-
--> Louis Yvelin
-
--> Victor Thompson
-
--> Mickael Fernandez
-
--> Nicolas Sacilotto
-
-===
-
+|===
+|Louis Yvelin
+|Victor Thompson
+|Mickael Fernandez
+|Nicolas Sacilotto
+|===
 
 
 .Sommaire -
