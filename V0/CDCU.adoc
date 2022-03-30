@@ -28,7 +28,6 @@ L’application doit permettre de gérer des comptes bancaires de dépôt pour d
 
 Concernant le lancement du projet nous avons à disposition pour comme point de départ ce diagramme d'use case suivant :
 
-[ plantuml, diagram-classes, png]
 ....
 @startuml
 
@@ -58,7 +57,7 @@ Guichetier --> d
 Qui donne le diagramme suivant :
 
 
-image::/images/UCVO.png[UC de départ]
+image::UCVO.png[UC de départ]
             
 
 == Analyse des tâches techniques et organisationelles
