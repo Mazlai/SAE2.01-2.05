@@ -21,5 +21,4 @@ En ce qui concerne le lancement de notre projet nous avions à notre disposition
 
 image::images/UCV0.png[UC de départ]
             
-
-== Analyse des tâches techniques et organisationelles
+== Digramme de gantt            
