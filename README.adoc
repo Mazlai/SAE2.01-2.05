@@ -68,4 +68,6 @@ Guichetier --> d
 @enduml
 ....
 
+!(UC.png)
+
 == Analyse des tâches techniques et organisationelles
