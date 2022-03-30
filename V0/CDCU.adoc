@@ -26,38 +26,11 @@ L’application doit permettre de gérer des comptes bancaires de dépôt pour d
 
 == Analyse de l'existant (V0)
 
-Concernant le lancement du projet nous avons à disposition pour comme point de départ ce diagramme d'use case suivant :
-
-....
-@startuml
-
-usecase m as "Modifier infos client"
-usecase c1 as "Créer un nouveau client"
-usecase c2 as "Consulter un compte"
-usecase d as "Débiter un compte"
-usecase r as "Rendre inactif un client"
-
-actor ChefAgence
-actor Guichetier
-
-
-
-ChefAgence --|> Guichetier	
-ChefAgence --> r
-Guichetier --> m 
-Guichetier --> c1
-Guichetier --> c2
-Guichetier --> d
-
-
-
-@enduml
-....
 
 Qui donne le diagramme suivant :
 
 
-image::UCV0.png[UC de départ]
+image::images/UCV0.png[UC de départ]
             
 
 == Analyse des tâches techniques et organisationelles
