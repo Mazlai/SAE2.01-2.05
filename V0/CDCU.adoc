@@ -57,7 +57,7 @@ Guichetier --> d
 Qui donne le diagramme suivant :
 
 
-image::UCVO.png[UC de départ]
+image::UCV0.png[UC de départ]
             
 
 == Analyse des tâches techniques et organisationelles
