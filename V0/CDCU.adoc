@@ -7,18 +7,16 @@
 La banque DailyBank souhaite développer une application JAVA-Oracle de gestion des comptes clients pour remplacer plusieurs outils obsolètes. Ce développement s’inscrit dans le cadre de la restructuration de ses services bancaires et l’application sera déployée dans les 100 agences que compte son réseau. Nous travaillerons à partir d’une application existante « Daily Bank » qu’il faudra adapter aux nouveaux besoins de la banque.
 
 == Description de l'application
-L’application permet de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle permet de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
+L’application permet de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle permet de débiter, créditer un compte soit par virement c’est-à-dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
 
 == Objectif
 
-L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle devra permettre de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
+L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle devra permettre de débiter, créditer un compte soit par virement c’est-à-dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
 
 == Analyse de l'existant (V0)
 
-
 En ce qui concerne le lancement de notre projet nous avions à notre disposition ce diagramme des cas d'utilisations suivant :
-
 
 image::images/UCV0.png[UC de départ]
             
-== Digramme de gantt            
+== Diagramme de Gantt            
