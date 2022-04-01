@@ -21,6 +21,6 @@ image::images/UCV0.png[UC de départ]
             
 == Version à implémenter (UC V1)     
 
-Voici le diagramme des cas d'utilisation pour la version une de la SAE : 
+Voici le diagramme des cas d'utilisation que l'on a élaboré pour le rendu de la version 1 : 
 
 image::../V1/images/unknown.png[UC V1]
