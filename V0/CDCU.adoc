@@ -13,10 +13,10 @@ L’application permet de gérer des comptes bancaires de dépôt pour des clien
 
 L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle devra permettre de débiter, créditer un compte soit par virement c’est-à-dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
 
-== Analyse de l'existant (V0)
+== Analyse de l'existant (UC V0)
 
 En ce qui concerne le lancement de notre projet nous avions à notre disposition ce diagramme des cas d'utilisations suivant :
 
 image::images/UCV0.png[UC de départ]
             
-== Diagramme de Gantt            
+== Version à implémenter (UC V1)        
