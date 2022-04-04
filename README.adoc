@@ -3,12 +3,14 @@
 = CDCU V1
 Editée le 29/03/2022
 
+_Groupe 4A2 :_
+
 |===
 |MEMBRES :
-|Louis Yvelin
-|Victor Thompson
-|Mickael Fernandez
-|Nicolas Sacilotto
+|_Louis Yvelin_
+|_Victor Thompson_
+|_Mickael Fernandez_
+|_Nicolas Sacilotto_
 |===
 
 
