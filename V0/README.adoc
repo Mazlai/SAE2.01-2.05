@@ -1,1 +1,41 @@
 = Récapitulatif V0
+
+??????
+
+
+== Livrables
+
+[cols="1,2,2,5",options=header]
+|===
+| Date    | Nom         |  Lien                             | Retour
+| 03/04   | Gantt V1    |                              | Vous avez un gantt illisible (pdf). Tout ce que vous avez mis dans les issues doit apparaître dans le gantt. Reportez vous aux aides sur webetud pour faire un gantt correct (voir EP éventuellement. MFC
+|         | CdC V1      |                                   |  Revoir les éléments de correction du CDCU :  Contexteproblématique et objectifs sont bien mais vous devez dans ce doc parler de l'existant et de ce qui est demandé pour la V1 (un seul doc V0-V1). Pour V0 présenter les USERS et leur rôle dans l’organisation. Commenter le UC V0 et notamment l’héritage. Pour V1 on peut préciser certaines fonctionnalités : ex expliquer ce qu’est rendre inactif un client, préciser "gérer". Eventuellement les prioriser. Préciser les besoins non fonctionnels, les règles de gestion (ex pour débiter un compte). Dans les contraintes que vous n'avez pas mises : préciser les contraintes juridiques, techniques. Présenter l’organisation de l’équipe : outils collaboratifs ainsi que dates de livraison et liste des livrables attendus (lien vers gantt). Reportez-vous aux consignes/aides données par Mme Pendaries pour le cdcu. Un seul dossier V1 doit apparaître dans la hierachie. Veillez à ce que tout le monde participe et se répartisse bien les tâches et dépose. MFC
+|         | Suivi Projet |                                   |   Les issues sont bien définies (bien faire le lien avec le gantt).  MFC         
+| 22/04  | CdC V2/V3 final|                                     |  
+|         | Gantt V2    |                               |     
+|         | Gantt V3 |         |     
+|         | Doc. Tec. V1 |        |    
+|         | Doc User V1    |        |
+|         | Recette V1  |                      | 
+|         | Suivi projet|   | 
+| 22/05   | Gantt V2  à jour    |       | 
+|         | Doc. Util. V1 |         |         
+|         | Doc. Tec. V1 |                |     
+|         | Code V1     |                     | 
+|         | Recette V1 |                      | 
+|         | Gantt V3 à jour   |                      | 
+|         | `jar` projet |    | 
+| 05/06   | Gantt V3 à Jour  |    |  
+|         | Doc. Util. V2 |         |           
+|         | Doc. Tec. V2 |    |     
+|         | Code V2     |                       |
+|         | Recette V2  |   |
+|         | `jar` projet |     |
+|12/06   | Gantt V3 à Jour  |    |  
+|         | Doc. Util. V3 |         |           
+|         | Doc. Tec. V3 |    |     
+|         | Code V3     |                       |
+|         | Recette V3  |   |
+|         | `jar` projet |     |
+|===
+
