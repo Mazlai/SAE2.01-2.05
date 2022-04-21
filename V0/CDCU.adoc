@@ -20,7 +20,7 @@ Il nous est fourni une application avec comme existant les fonctions principales
 En ce qui concerne le lancement de notre projet nous avions à notre disposition ce diagramme des cas d'utilisations suivant :
 
 image::images/UCV0.png[UC de départ]
-Le guichetier hérite du chef d'agence : il pourra ainsii rendre inactif un client en plus de ces propres fonctions.
+Le guichetier hérite du chef d'agence : il pourra ainsi rendre inactif un client en plus de ces propres fonctions et de l'accueil des clients.
             
 == Version à implémenter (UC V1)     
 
