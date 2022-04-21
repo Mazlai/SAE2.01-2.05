@@ -31,7 +31,6 @@ D'autre part, un client qui ne donne pas signe de vie depuis plus de douze mois,
 -> Le guichetier est plus proche des clients, car il occupe principalement deux tâches, analyser leur(s) besoin(s), et y répondre au mieux.
 Il peut sous réclamation du client, modifier ses informations (numéro de téléphone, adresse mail etc.), consulter son compte, débiter son compte, créer son nouveau compte.
 
-
 == Contraintes
 
 === Juridique 
@@ -48,4 +47,19 @@ Voici le diagramme des cas d'utilisation que l'on a élaboré pour le rendu de l
 
 image::../V1/images/unknown.png[UC V1]
 
+
 Nous pouvons apercevoir que les deux acteurs présentés au dessus peuvent exécuter désormais plus de tâches, en ce qui concerne le chef d'agence, il peut dès à présent gérer ses employés en plus de rendre inactif un compte. Pour le guichetier, il peut dorénavant effectuer davantages de tâches : il peut gérer des comptes c'est-à-dire gérer les opérations effectuées sur ce compte comme le crédit, ou encore le débit d'un compte. Il peut également effectuer un transfert d'argent (virement) d'un compte à un autre.
+
+
+== Règles de gestions à respecter
+
+ex : débiter un compte avoir un solde positif (retirer moins que notre solde) etc.
+
+== Besoins non fonctionnels
+
+-Faire des phrases-
+
+L'application devra être hautement sécurisée car infos confidentielles
+Tourner en réseau
+Etre compatible avec tous les systèmes d'exploitation
+L'application devra être disponible sur mobile ou autre plateforme
