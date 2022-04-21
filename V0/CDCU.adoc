@@ -55,7 +55,7 @@ Nous pouvons apercevoir que les deux acteurs présentés au dessus peuvent exéc
 
 ex : débiter un compte avoir un solde positif (retirer moins que notre solde) etc.
 
-== Besoins non fonctionnels
+== Besoins non fonctionnels qu'il faudrait implémenter
 
 -Faire des phrases-
 
