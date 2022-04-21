@@ -23,12 +23,23 @@ Le guichetier hérite du chef d'agence : il pourra ainsi rendre inactif un clien
 Il nous est fourni une application avec comme existant les fonctions principales.
 
 Nous remarquons qu'il y a deux acteurs dans ce diaframme des UC :
---> Le chef d'agence qui s'occupe principalement du côté gestion de l'agence, il occupe une unique tâche : rendre inactif un client, celle-ci peut s'interprêter de deux manières. D'une part, le client peut s'être fait volé ses informations confidentielles comme son numéro de compte, numéro de cartes, mais aussi des objets physique, tels qu'une carte bancaire, carnet de chêque etc. Dans ce cas là, le client peut mais doit appeler sa banque pour mettre son compe en état de protection, pour ce faire, la banque rend le compte inactif pour limiter les dépenses des voleurs d'informations.
+-> Le chef d'agence qui s'occupe principalement du côté gestion de l'agence, il occupe une unique tâche : rendre inactif un client, celle-ci peut s'interprêter de deux manières. D'une part, le client peut s'être fait volé ses informations confidentielles comme son numéro de compte, numéro de cartes, mais aussi des objets physique, tels qu'une carte bancaire, carnet de chêque etc. Dans ce cas là, le client peut mais doit appeler sa banque pour mettre son compe en état de protection, pour ce faire, la banque rend le compte inactif pour limiter les dépenses des voleurs d'informations.
 
 D'autre part, un client qui ne donne pas signe de vie depuis plus de douze mois, se verra dans un premier temps averti par l'agence bancaire, si le silence perdure alors le chef d'agence enclenchera une phase de limitation des frais sur le compte, puis en découlera une phase finale de transfert du compte de la personne vers un compte depôt.
 
---> Le guichetier est plus proche des clients, car il occupe principalement deux tâches, analyser leur(s) besoin(s), et y répondre au mieux.
+-> Le guichetier est plus proche des clients, car il occupe principalement deux tâches, analyser leur(s) besoin(s), et y répondre au mieux.
 Il peut sous réclamation du client, modifier ses informations (numéro de téléphone, adresse mail etc.), consulter son compte, débiter son compte, créer son nouveau compte.
+
+
+== Contraintes
+
+=== Juridique 
+
+ok
+
+=== Technique
+
+ok
 
 == Version à implémenter (UC V1)     
 
