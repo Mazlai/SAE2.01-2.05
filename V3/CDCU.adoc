@@ -45,7 +45,7 @@ ok
 
 Voici le diagramme des cas d'utilisation que l'on a élaboré pour le rendu de la version 1 : 
 
-image::V1/images/unknown.png[UC V1]
+image::/V1/images/unknown.png[UC V1]
 
 
 Nous pouvons apercevoir que les deux acteurs présentés au dessus peuvent exécuter désormais plus de tâches, en ce qui concerne le chef d'agence, il peut dès à présent gérer ses employés en plus de rendre inactif un compte. Pour le guichetier, il peut dorénavant effectuer davantages de tâches : il peut gérer des comptes c'est-à-dire gérer les opérations effectuées sur ce compte comme le crédit, ou encore le débit d'un compte. Il peut également effectuer un transfert d'argent (virement) d'un compte à un autre.
@@ -59,7 +59,8 @@ Quant à l'opération de retrait, l'utilisateur devra prendre connaissance de so
 == Besoins non fonctionnels qu'il faudrait implémenter (Optionnel)
 
 En l'occurence, l'application à développer contiendra des informations personnelles, par conséquent elle devra être sécurisée afin qu'aucune données ne soit dérobées.
-... à trouver
+
+Lorsque les utilisateurs renseigneront trois fois de suite un code erroné dès lors qu'ils souhaiteront faire une transaction, il se retrouveront directement privés de toutes opérations, un timer sera ajouté pour leur rendre la possibilité d'effectuer des opérations financières à l'issue de celui-ci.
 
 
 == Version à implémenter (UC V2)     
