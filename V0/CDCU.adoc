@@ -53,13 +53,10 @@ Nous pouvons apercevoir que les deux acteurs présentés au dessus peuvent exéc
 
 == Règles de gestions à respecter
 
-ex : débiter un compte avoir un solde positif (retirer moins que notre solde) etc.
+Avant de pouvoir utiliser l'application, les utilisateurs devront être mis au courant de la bonne utilisation de l'application afin de ne pas être mis en difficulté, en effet les utilisateurs pourront effectuer dans le futur des opérations bancaires comme un dépôt, pour cela l'utilisateur devra déposer une somme positive non nulle ( >0 ). 
+Quant à l'opération de retrait, l'utilisateur devra prendre connaissance de son solde pour ne pas retirer plus que ce qu'il à sur son compte bancaire, par ailleurs comme pour l'opération de dépôt, il devra retirer une somme positive non nulle.
 
-== Besoins non fonctionnels qu'il faudrait implémenter
+== Besoins non fonctionnels qu'il faudrait implémenter (Optionnel)
 
--Faire des phrases-
-
-L'application devra être hautement sécurisée car infos confidentielles
-Tourner en réseau
-Etre compatible avec tous les systèmes d'exploitation
-L'application devra être disponible sur mobile ou autre plateforme
+En l'occurence, l'application à développer contiendra des informations personnelles, par conséquent elle devra être sécurisée afin qu'aucune données ne soit dérobées.
+... à trouver
