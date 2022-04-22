@@ -33,7 +33,7 @@ Il peut sous réclamation du client, modifier ses informations (numéro de tél�
 
 === Juridique 
 
-plafon demandé lors de la création du compte ?
+plafond demandé lors de la création du compte ?
 
 === Technique
 
