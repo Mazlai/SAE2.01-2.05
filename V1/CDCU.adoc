@@ -1,0 +1,62 @@
+= CDCU Version 1
+:toc:
+
+
+== Contexte 
+
+La banque DailyBank souhaite développer une application JAVA-Oracle de gestion des comptes clients pour remplacer plusieurs outils obsolètes. Ce développement s’inscrit dans le cadre de la restructuration de ses services bancaires et l’application sera déployée dans les 100 agences que compte son réseau. Nous travaillerons à partir d’une application existante « Daily Bank » qu’il faudra adapter aux nouveaux besoins de la banque.
+
+== Description de l'application
+L’application permet de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle permet de débiter, créditer un compte soit par virement c’est-à-dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
+
+== Objectif
+
+L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle devra permettre de débiter, créditer un compte soit par virement c’est-à-dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
+
+== Analyse de l'existant (UC V0)
+
+En ce qui concerne le lancement de notre projet nous avions à notre disposition ce diagramme des cas d'utilisations suivant :
+
+image::images/UCV0.png[UC de départ]
+Le guichetier hérite du chef d'agence : il pourra ainsi rendre inactif un client en plus de ces propres fonctions et de l'accueil des clients.
+
+Il nous est fourni une application avec comme existant les fonctions principales.
+
+Nous remarquons qu'il y a deux acteurs dans ce diagramme des UC :
+
+-> Le chef d'agence qui s'occupe principalement du côté gestion de l'agence, il occupe une unique tâche : rendre inactif un client, celle-ci peut s'interprêter de deux manières. D'une part, le client peut s'être fait volé ses informations confidentielles comme son numéro de compte, numéro de cartes, mais aussi des objets physique, tels qu'une carte bancaire, carnet de chêque etc. Dans ce cas là, le client peut mais doit appeler sa banque pour mettre son compe en état de protection, pour ce faire, la banque rend le compte inactif pour limiter les dépenses des voleurs d'informations.
+
+D'autre part, un client qui ne donne pas signe de vie depuis plus de douze mois, se verra dans un premier temps averti par l'agence bancaire, si le silence perdure alors le chef d'agence enclenchera une phase de limitation des frais sur le compte, puis en découlera une phase finale de transfert du compte de la personne vers un compte depôt.
+
+-> Le guichetier est plus proche des clients, car il occupe principalement deux tâches, analyser leur(s) besoin(s), et y répondre au mieux.
+Il peut sous réclamation du client, modifier ses informations (numéro de téléphone, adresse mail etc.), consulter son compte, débiter son compte, créer son nouveau compte.
+
+== Contraintes
+
+=== Juridique 
+
+ok
+
+=== Technique
+
+ok
+
+== Version à implémenter (UC V1)     
+
+Voici le diagramme des cas d'utilisation que l'on a élaboré pour le rendu de la version 1 : 
+
+image::../V1/images/unknown.png[UC V1]
+
+
+Nous pouvons apercevoir que les deux acteurs présentés au dessus peuvent exécuter désormais plus de tâches, en ce qui concerne le chef d'agence, il peut dès à présent gérer ses employés en plus de rendre inactif un compte. Pour le guichetier, il peut dorénavant effectuer davantages de tâches : il peut gérer des comptes c'est-à-dire gérer les opérations effectuées sur ce compte comme le crédit, ou encore le débit d'un compte. Il peut également effectuer un transfert d'argent (virement) d'un compte à un autre.
+
+
+== Règles de gestions à respecter
+
+Avant de pouvoir utiliser l'application, les utilisateurs devront être mis au courant de la bonne utilisation de l'application afin de ne pas être mis en difficulté, en effet les utilisateurs pourront effectuer dans le futur des opérations bancaires comme un dépôt, pour cela l'utilisateur devra déposer une somme positive non nulle ( >0 ). 
+Quant à l'opération de retrait, l'utilisateur devra prendre connaissance de son solde pour ne pas retirer plus que ce qu'il à sur son compte bancaire, par ailleurs comme pour l'opération de dépôt, il devra retirer une somme positive non nulle.
+
+== Besoins non fonctionnels qu'il faudrait implémenter (Optionnel)
+
+En l'occurence, l'application à développer contiendra des informations personnelles, par conséquent elle devra être sécurisée afin qu'aucune données ne soit dérobées.
+... à trouver
