@@ -35,7 +35,7 @@ Il peut sous réclamation du client, modifier ses informations (numéro de tél�
 
 === Juridique 
 
-ok
+plafon demandé lors de la création du compte ?
 
 === Technique
 
@@ -81,5 +81,10 @@ image::/V3/images/gauche.png[UC V3]
 image::/V3/images/droite.png[UC V3]
 
 
-Suite à l'implémentation de la deuxième version du diagramme des UC, nous pouvons apercevoir que le chef d'agence pouvait désormais sous la demande du client, effectuer trois nouvelles actions à savoir : effectuer un débit exceptionnel | simuler un emprunt | simuler une assurance d'emprunt.
+Suite à l'implémentation de la troisième versions, le chef d'agence pourra par le biais d'un système nommé "Batch" générer les relevés mensuels sous le format PDF ainsi qu'exécuter des prélèvements automatiques sur compte (Les prélèvements seront mensuels). 
+
+Le chef d'agence suite à notre implémentation, sera en mesure de d'utiliser des fonctionnalités telles que : changer l'intégralité du texte français de l'interface en un texte anglais, il pourra également changer le thème de l'applcation ( clair/sombre ), enfin si le temps le permet il pourra donner une somme d'argent équvalente à la quantité de bitcon que le client voudra échanger.
+
+
+Etant donné que la seule relation possible entre deux acteurs est l'héritage, nous avons décider de "lier" les deux acteurs par le biais des actions possibles à exécuter.
 
