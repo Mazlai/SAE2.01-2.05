@@ -9,7 +9,7 @@ _Groupe 4A2 :_
 MAJ le 22/04/2022:
 
 . Tâches à faire 
-- [*] Faire le CDCU V2 | V3
+- [ ] Faire le CDCU V2 | V3 (faire les contraintes, le reste est bon, ajouter des trucs si besoin)
 - [ ] Vérifier le contenu du CDCU V1/V2/V3 | modifier / reformuler si besoin
 - [ ] Créer la documentation Technique de la V0
 - [ ] Créer la documentation utilisateur de la V0
