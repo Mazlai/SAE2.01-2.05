@@ -50,9 +50,6 @@ image::../V1/images/unknown.png[UC V1]
 
 Nous pouvons apercevoir que les deux acteurs présentés au dessus peuvent exécuter désormais plus de tâches, en ce qui concerne le chef d'agence, il peut dès à présent gérer ses employés en plus de rendre inactif un compte. Pour le guichetier, il peut dorénavant effectuer davantages de tâches : il peut gérer des comptes c'est-à-dire gérer les opérations effectuées sur ce compte comme le crédit, ou encore le débit d'un compte. Il peut également effectuer un transfert d'argent (virement) d'un compte à un autre.
 
-[FONCTIONNALITEES V2] :
-
-ok
 
 == Règles de gestions à respecter
 
@@ -64,3 +61,9 @@ Quant à l'opération de retrait, l'utilisateur devra prendre connaissance de so
 En l'occurence, l'application à développer contiendra des informations personnelles, par conséquent elle devra être sécurisée afin qu'aucune données ne soit dérobées.
 ... à trouver
 
+
+== Version à implémenter (UC V2)     
+
+Voici le diagramme des cas d'utilisation que l'on a élaboré pour le rendu de la version 1 : 
+
+image::../V2/images/unknown.png[UC V1]
