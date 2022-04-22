@@ -66,4 +66,8 @@ En l'occurence, l'application à développer contiendra des informations personn
 
 Voici le diagramme des cas d'utilisation que l'on a élaboré pour le rendu de la version 1 : 
 
-image::../V2/images/unknown.png[UC V1]
+image::../V2/images/gauche.png[UC V1]
+image::../V2/images/droite.png[UC V1]
+
+Suite à l'implémentation de la deuxième version du diagramme des UC, nous pouvons appercevoir que le chef d'agence pouvait désormais sous la demande du client, effectuer trois nouvelles actions à savoir : effectuer un débit exceptionnel | simuler un emprunt | simuler une assurance d'emprunt.
+
