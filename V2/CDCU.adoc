@@ -84,7 +84,7 @@ Quant à l'opération de retrait, l'utilisateur devra prendre connaissance de so
 
 == Besoins non fonctionnels qu'il faudrait implémenter (Optionnel)
 
-En l'occurrence, l'application à développer contiendra des informations personnelles, par conséquent elle devra être sécurisée afin qu'aucune données ne soit dérobées.
+En l'occurrence, l'application à développer contiendra des informations personnelles, par conséquent elle devra être sécurisée afin qu'aucunes données ne soient dérobées.
 ... à trouver
 
 
