@@ -6,7 +6,7 @@ Editée le 29/03/2022
 _Groupe 4A2 :_
 
 
-MAJ le 22/04/2022:
+MAJ le 23/04/2022:
 
 . Tâches à faire 
 - [ ] Faire le CDCU V2 | V3 (trouver une liste de besoins non-fonctionnels)
