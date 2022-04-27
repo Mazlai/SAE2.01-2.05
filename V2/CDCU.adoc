@@ -57,7 +57,7 @@ Pour autant, un créateur d’application ne doit pas uniquement se bloquer au r
 
 Premièrement, à l’utilisation de l’application, celle-ci doit être disponible. Concrètement, n’importe quel utilisateur recherchant une application de gestion de compte client puisse la trouver, en bénéficier et l’utiliser, quel que soit le client, où qu’il se situe et quand il le souhaite. 
 
-Vient ensuite la convivialité et la simplicité d’utilisation de l’application. L’application doit être constituée d’une interface simple, épurée et conviviale afin que l’utilisateur puisse l’utiliser de manière sereine, sans difficultés de navigation. 
+Vient ensuite la convivialité et la simplicité d’utilisation de l’application. L’application doit être constituée d’une interface simple, épurée et ergonomique afin que l’utilisateur puisse l’utiliser de manière sereine, sans difficultés de navigation. 
 Celle-ci doit donner une bonne impression et le client doit ainsi pouvoir utiliser et trouver les fonctionnalités de l’application rapidement et facilement. La convivialité est un critère important puisqu’il constitue le premier contact entre l’utilisation et l’application. 
 L’esthétique doit pouvoir se démarquer des autres applications, en essayant de toujours proposer quelque chose de nouveau, d’innovant et de créatif.
 
