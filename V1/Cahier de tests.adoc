@@ -6,7 +6,7 @@ Si vous remarquez qu'il y a des choses à modifier ou à rajouter, n'hésitez pa
 
 === Objectifs 
 
-=== Responsailités
+=== Responsabilités
 
 == Périmètre et environnement des tests
 
