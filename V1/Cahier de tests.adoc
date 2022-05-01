@@ -33,7 +33,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |2
 .4+<.>|Guichetier
 |Créditer ou débiter un compte
-|• Doit pouvoir être affiché dans une liste des opérations effectuées (listview). ; +
+|• Doit pouvoir être affiché dans une liste des opérations effectuées (listview) ; +
 
  • Ne doit pas pouvoir être crédité ou débité d'une somme négative. + 
  → _Message d'erreur "Veuillez renseigner une valeur positive pour effectuer votre transaction." (dans une liste ou sous forme de pop-up) ;_ +
@@ -44,17 +44,27 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 
 |3
 |Créer un compte à partir d'informations complémentaires
-|• Ne doit pas renseigner des informations erronées (message possédant des caractères spéciaux ou ne respectant pas le type attendu). +
+|• Doit pouvoir être visible par le créateur du compte ainsi que le chef d'agence (proposée en tant qu'option pour celui-ci).
+
+ • Ne doit pas renseigner des informations erronées (message possédant des caractères spéciaux ou ne respectant pas le type attendu). +
  → _Message d'erreur "Veuillez vérifiez que vos informations renseignées soient valides." (dans une liste ou sous forme de pop-up) ;_ +
 
-• Ne doit pas pouvoir être crée une seconde fois. +
-→ _Message d'erreur "Le compte que vous avez renseigné existe déjà." (dans une liste ou sous forme de pop-up)_
-
+ • Ne doit pas pouvoir être crée une seconde fois. +
+ → _Message d'erreur "Le compte que vous avez renseigné existe déjà." (dans une liste ou sous forme de pop-up)_
 |
 
 |4
 |Effectuer un virement de compte à compte
-|
+|• Doit pouvoir être affiché en tant que message dans une liste pour l'émetteur et le bénéficiaire (optionnel pour celui-ci, étant déjà visible dans ses comptes).
+ 
+ • Ne doit pas pouvoir être crédité ou débité d'une somme négative. + 
+ → _Message d'erreur "Veuillez renseigner une valeur positive pour effectuer votre virement." (dans une liste ou sous forme de pop-up) ;_ +
+
+ • Ne doit pas pouvoir effectuer le virement d'une somme supérieure à un plafond éventuellement défini. + 
+ → _Message d'erreur "Veuillez renseigner une valeur inférieure au plafond défini." (dans une liste ou sous forme de pop-up)_
+ 
+ • Ne doit pas pouvoir réaliser le virement vers un compte clôturé ou n'existant pas.
+ → _Message d'erreur "Veuillez choisir un compte valide." (dans une liste ou sous forme de pop-up)_
 |
 
 |5
