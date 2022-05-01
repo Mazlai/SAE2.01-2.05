@@ -25,28 +25,28 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |N° |Acteurs |Actions à réaliser |Attendus des actions sur l'application |Validité
 
 |1
-|
-|
+|Chef d'Agence
+|Gérer les employés (guichetiers et lui-même)
 |
 |
 
 |2
-.4+<.>|test
-|
+.4+<.>|Guichetier
+|Créditer ou débiter un compte
 |
 |
 
 |3
-|
+|Créer un compte
 |
 |
 
 |4
-|
+|Effectuer un virement de compte à compte
 |
 |
 
 |5
-|
+|Clôturer un compte
 |
 |
