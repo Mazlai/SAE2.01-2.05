@@ -84,7 +84,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 
  • Ne doit plus être en interaction par un autre compte afin de réaliser une transaction quelconque (dans le cas échéant, un message d'erreur serait affiché). +
  → _Soit le compte clôturé n'est plus visible par un autre compte,_ +
- → _Soit un message d'erreur serait affiché : "Veuillez choisir un compte valide." (dans une liste ou sous forme de pop-up)_
+ → _(Version non-optimisée) Soit un message d'erreur serait affiché : "Veuillez choisir un compte valide." (dans une liste ou sous forme de pop-up)_
  
  • Ne doit pas pouvoir clôturer un compte déjà clôturé. +
   → _Soit le compte clôturé n'existe plus dans l'agence (n'est plus visible),_ +
