@@ -30,7 +30,15 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |1
 |Chef d'Agence
 |Gérer les employés (guichetiers et lui-même)
-|
+|• Doit pouvoir observer les différents comptes ouverts à l'agence (y compris lui-même) à l'aide d'une option qui lui serait proposée ; +
+
+ • Doit pouvoir observer les différentes modifications qui seraient apportées par un guichetier sur un compte ; +
+ 
+ • Doit pouvoir gérer l'ensemble des comptes crées au sein de l'agence (virements, dépôts ou retraits) ; +
+ 
+ • Ne doit pas pouvoir gérer un guichetier ayant un compte au sein d'une agence différente.
+ → _Soit le chef d'agence voit uniquement les différents comptes qui sont présents dans l'agence,_
+ → _(Version non-optimisée) Soit le chef d'agence peut voir tous les comptes. Message d'erreur : "Veuillez choisir un compte au sein de votre agence bancaire." (dans une liste ou sous forme de pop-up)_
 |
 
 |2
@@ -39,10 +47,10 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |• Doit pouvoir être affiché dans une liste des opérations effectuées (listview) ; +
 
  • Ne doit pas pouvoir être crédité ou débité d'une somme négative. + 
- → _Message d'erreur "Veuillez renseigner une valeur positive pour effectuer votre transaction." (dans une liste ou sous forme de pop-up) ;_ +
+ → _Message d'erreur : "Veuillez renseigner une valeur positive pour effectuer votre transaction." (dans une liste ou sous forme de pop-up) ;_ +
 
  • Ne doit pas pouvoir être débité d'une somme supérieure à un plafond éventuellement défini. + 
- → _Message d'erreur "Veuillez renseigner une valeur inférieure au plafond défini." (dans une liste ou sous forme de pop-up)_
+ → _Message d'erreur : "Veuillez renseigner une valeur inférieure au plafond défini." (dans une liste ou sous forme de pop-up)_
 |
 
 |3
@@ -50,10 +58,10 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |• Doit pouvoir être visible par le créateur du compte ainsi que le chef d'agence (proposée en tant qu'option pour celui-ci) ;
 
  • Ne doit pas renseigner des informations erronées (message possédant des caractères spéciaux ou ne respectant pas le type attendu). +
- → _Message d'erreur "Veuillez vérifiez que vos informations renseignées soient valides." (dans une liste ou sous forme de pop-up) ;_ +
+ → _Message d'erreur : "Veuillez vérifiez que vos informations renseignées soient valides." (dans une liste ou sous forme de pop-up) ;_ +
 
  • Ne doit pas pouvoir être crée une seconde fois. +
- → _Message d'erreur "Le compte que vous avez renseigné existe déjà." (dans une liste ou sous forme de pop-up)_
+ → _Message d'erreur : "Le compte que vous avez renseigné existe déjà." (dans une liste ou sous forme de pop-up)_
 |
 
 |4
@@ -61,19 +69,25 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |• Doit pouvoir être affiché en tant que message dans une liste pour l'émetteur et le bénéficiaire (optionnel pour celui-ci, étant déjà visible dans ses comptes) ;
  
  • Ne doit pas pouvoir être crédité ou débité d'une somme négative. + 
- → _Message d'erreur "Veuillez renseigner une valeur positive pour effectuer votre virement." (dans une liste ou sous forme de pop-up) ;_ +
+ → _Message d'erreur : "Veuillez renseigner une valeur positive pour effectuer votre virement." (dans une liste ou sous forme de pop-up) ;_ +
 
  • Ne doit pas pouvoir effectuer le virement d'une somme supérieure à un plafond éventuellement défini. + 
- → _Message d'erreur "Veuillez renseigner une valeur inférieure au plafond défini." (dans une liste ou sous forme de pop-up) ;_
+ → _Message d'erreur : "Veuillez renseigner une valeur inférieure au plafond défini." (dans une liste ou sous forme de pop-up) ;_
  
  • Ne doit pas pouvoir réaliser le virement vers un compte clôturé ou n'existant pas. +
- → _Message d'erreur "Veuillez choisir un compte valide." (dans une liste ou sous forme de pop-up)_
+ → _Message d'erreur : "Veuillez choisir un compte valide." (dans une liste ou sous forme de pop-up)_
 |
 
 |5
 |Clôturer un compte
 |• Doit pouvoir être affiché en tant que message dans une liste pour le guichetier et le chef d'agence ;
 
- • Ne doit plus être visible par un autre compte, afin de réaliser une transaction quelconque (dans le cas échéant, un message d'erreur serait affiché). +
- → _Message d'erreur "Veuillez choisir un compte valide." (dans une liste ou sous forme de pop-up)_
+ • Ne doit plus être en interaction par un autre compte afin de réaliser une transaction quelconque (dans le cas échéant, un message d'erreur serait affiché). +
+ → _Soit le compte clôturé n'est plus visible par un autre compte,_
+ → _Soit un message d'erreur serait affiché : "Veuillez choisir un compte valide." (dans une liste ou sous forme de pop-up)_
+ 
+ • Ne doit pas pouvoir clôturer un compte déjà clôturé.
+  → _Soit le compte clôturé n'existe plus dans l'agence (n'est plus visible),_
+  → _(Version non-optimisée) Soit un message d'erreur serait affiché : "Veuillez choisir un compte ouvert." (dans une liste ou sous forme de pop-up)_
+ 
 |
