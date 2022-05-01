@@ -66,7 +66,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  • Ne doit pas pouvoir effectuer le virement d'une somme supérieure à un plafond éventuellement défini. + 
  → _Message d'erreur "Veuillez renseigner une valeur inférieure au plafond défini." (dans une liste ou sous forme de pop-up) ;_
  
- • Ne doit pas pouvoir réaliser le virement vers un compte clôturé ou n'existant pas.
+ • Ne doit pas pouvoir réaliser le virement vers un compte clôturé ou n'existant pas. +
  → _Message d'erreur "Veuillez choisir un compte valide." (dans une liste ou sous forme de pop-up)_
 |
 
@@ -74,6 +74,6 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |Clôturer un compte
 |• Doit pouvoir être affiché en tant que message dans une liste pour le guichetier et le chef d'agence ;
 
- • Ne doit plus être visible par un autre compte, afin de réaliser une transaction quelconque (dans le cas échéant, un message d'erreur serait affiché).
+ • Ne doit plus être visible par un autre compte, afin de réaliser une transaction quelconque (dans le cas échéant, un message d'erreur serait affiché). +
  → _Message d'erreur "Veuillez choisir un compte valide." (dans une liste ou sous forme de pop-up)_
 |
