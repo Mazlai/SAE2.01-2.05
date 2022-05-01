@@ -36,8 +36,8 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  
  • Doit pouvoir gérer l'ensemble des comptes crées au sein de l'agence (virements, dépôts ou retraits) ; +
  
- • Ne doit pas pouvoir gérer un guichetier ayant un compte au sein d'une agence différente.
- → _Soit le chef d'agence voit uniquement les différents comptes qui sont présents dans l'agence,_
+ • Ne doit pas pouvoir gérer un guichetier ayant un compte au sein d'une agence différente. +
+ → _Soit le chef d'agence voit uniquement les différents comptes qui sont présents dans l'agence,_ +
  → _(Version non-optimisée) Soit le chef d'agence peut voir tous les comptes. Message d'erreur : "Veuillez choisir un compte au sein de votre agence bancaire." (dans une liste ou sous forme de pop-up)_
 |
 
@@ -83,11 +83,11 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |• Doit pouvoir être affiché en tant que message dans une liste pour le guichetier et le chef d'agence ;
 
  • Ne doit plus être en interaction par un autre compte afin de réaliser une transaction quelconque (dans le cas échéant, un message d'erreur serait affiché). +
- → _Soit le compte clôturé n'est plus visible par un autre compte,_
+ → _Soit le compte clôturé n'est plus visible par un autre compte,_ +
  → _Soit un message d'erreur serait affiché : "Veuillez choisir un compte valide." (dans une liste ou sous forme de pop-up)_
  
- • Ne doit pas pouvoir clôturer un compte déjà clôturé.
-  → _Soit le compte clôturé n'existe plus dans l'agence (n'est plus visible),_
+ • Ne doit pas pouvoir clôturer un compte déjà clôturé. +
+  → _Soit le compte clôturé n'existe plus dans l'agence (n'est plus visible),_ +
   → _(Version non-optimisée) Soit un message d'erreur serait affiché : "Veuillez choisir un compte ouvert." (dans une liste ou sous forme de pop-up)_
  
 |
