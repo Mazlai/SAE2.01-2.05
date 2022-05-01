@@ -34,8 +34,8 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 .4+<.>|Guichetier
 |Créditer ou débiter un compte
 |• Doit pouvoir être affiché dans une liste des opérations effectuées (listview) ; +
- • Ne doit pas pouvoir être crédité ou débité d'une somme négative → erreur à l'affichage (dans la liste ou sous forme de pop-up) ; +
- • Ne doit pas pouvoir être débité d'une somme supérieure à un plafond éventuellement défini → erreur à l'affichage (dans la liste ou sous forme de pop-up)
+ • Ne doit pas pouvoir être crédité ou débité d'une somme négative + → Message d'erreur "Veuillez renseigner une valeur positive pour effectuer votre transaction." (dans la liste ou sous forme de pop-up) ; +
+ • Ne doit pas pouvoir être débité d'une somme supérieure à un plafond éventuellement défini + → Message d'erreur "Veuillez renseigner une valeur inférieure au plafond défini." (dans la liste ou sous forme de pop-up) ;
 |
 
 |3
