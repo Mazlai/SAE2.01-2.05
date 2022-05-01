@@ -33,8 +33,8 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |2
 .4+<.>|Guichetier
 |Créditer ou débiter un compte
-|• Doit pouvoir être affiché dans une liste des opérations effectuées (listview) ;\n
- • Ne doit pas pouvoir être crédité ou débité d'une somme négative → erreur à l'affichage (dans la liste ou sous forme de pop-up) ;\n
+|• Doit pouvoir être affiché dans une liste des opérations effectuées (listview) ; +
+ • Ne doit pas pouvoir être crédité ou débité d'une somme négative → erreur à l'affichage (dans la liste ou sous forme de pop-up) ; +
  • Ne doit pas pouvoir être débité d'une somme supérieure à un plafond éventuellement défini → erreur à l'affichage (dans la liste ou sous forme de pop-up)
 |
 
