@@ -22,14 +22,16 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 .Développement des cas d'utilisation de la V1
 
 |===
-|N° |Actions à réaliser |Attendus des actions sur l'application |Validité
+|N° |Acteurs |Actions à réaliser |Attendus des actions sur l'application |Validité
 
 |1
 |
 |
 |
+|
 
 |2
+.3+<.>m|test
 |
 |
 |
