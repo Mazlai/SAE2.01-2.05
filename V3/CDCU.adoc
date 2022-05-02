@@ -79,7 +79,10 @@ Nous pouvons apercevoir que les deux acteurs présentés au dessus peuvent exéc
 == Règles de gestions à respecter
 
 Avant de pouvoir utiliser l'application, les utilisateurs devront être mis au courant de la bonne utilisation de l'application afin de ne pas être mis en difficulté, en effet les utilisateurs pourront effectuer dans le futur des opérations bancaires comme un dépôt, pour cela l'utilisateur devra déposer une somme positive non nulle ( >0 ). 
+
 Quant à l'opération de retrait, l'utilisateur devra prendre connaissance de son solde pour ne pas retirer plus que ce qu'il à sur son compte bancaire, par ailleurs comme pour l'opération de dépôt, il devra retirer une somme positive non nulle.
+
+En revanche si la banque autorise un montant de découvert autotirisé, le client pourra retirer dans les négatifs tant qu'il ne dépasse pas le montant du découvert autorisé.
 
 == Besoins non fonctionnels qu'il faudrait implémenter
 
