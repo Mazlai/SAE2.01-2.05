@@ -12,6 +12,8 @@ Elle devra permettre de débiter, créditer un compte soit par virement c’est-
 
 === Responsabilités
 
+Pour réussir un projet, il est primordial d’être bien organisé et de pouvoir déterminer les responsabilités de chacun au sein du projet. 
+
 == Périmètre et environnement des tests
 
 === Cadre de tests
