@@ -98,7 +98,7 @@ image::../V2/images/droite.png[UC V1]
 
 Suite à l'implémentation de la deuxième version du diagramme des UC, nous pouvons apercevoir que le chef d'agence pouvait désormais sous la demande du client, effectuer trois nouvelles actions à savoir : effectuer un débit exceptionnel | simuler un emprunt | simuler une assurance d'emprunt.
 
-L'action effectuer un débit exceptionnel est gérée par le chef d'agence, celle-ci permet sous accord et validation du plafond par le chef d'agence à un client de retirer une somme négative, du moment ou le plafond de découvert autorisé n'est pas atteint. L'action simuler un emprunt est un indicateur qui permet de savoir si oui ou non le client peut faire un emprunt. L'action simuler une assurance d'emprunt est un indicateur qui lui permet de connaître le montant des frais de l'emprunt.
+L'action "effectuer un débit exceptionnel" est gérée par le chef d'agence, celle-ci permet sous accord et validation du plafond par le chef d'agence à un client de retirer une somme négative, du moment ou le plafond de découvert autorisé n'est pas atteint. L'action simuler un emprunt est un indicateur qui permet de savoir si oui ou non le client peut faire un emprunt. L'action simuler une assurance d'emprunt est un indicateur qui lui permet de connaître le montant des frais de l'emprunt.
 
 Quant au guichetier, il va pouvoir désormais effectuer deux nouvelles actions : générer le relevé d'un compte en PDF | gérer les prélèvements automatiques.
 
