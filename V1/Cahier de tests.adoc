@@ -1,8 +1,7 @@
 = Cahier de tests V1
+:toc:
 
 Si vous remarquez qu'il y a des choses à modifier ou à rajouter, n'hésitez pas.
-
-:toc:
 
 == Présentation du projet
 
