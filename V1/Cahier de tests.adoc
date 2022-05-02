@@ -13,6 +13,8 @@ Elle devra permettre de débiter, créditer un compte soit par virement c’est-
 === Responsabilités
 
 Pour réussir un projet, il est primordial d’être bien organisé et de pouvoir déterminer les responsabilités de chacun au sein du projet. 
+La réussite de ce projet repose donc sur une définition claire et précise des rôles et des responsabilités de chacun des acteurs.
+Pour cela, on va utiliser la méthode RACI.
 
 == Périmètre et environnement des tests
 
