@@ -18,6 +18,25 @@ La réussite de ce projet repose donc sur une définition claire et précise des
 
 Pour cela, on va utiliser la méthode RACI.
 
+Qu’est-ce que la matrice RACI ?
+
+R.A.C.I. est un acronyme qui signifie :
+
+R - Responsible : les personnes chargées de réaliser la tâche
+A - Accountable : les autorités chargées de valider le travail
+C - Consulted : les personnes à consulter
+I - Informed : les personnes à informer
+Aussi appelée matrice des responsabilités ou RAM (Responsibility Assignment Matrix), la matrice RACI vous donne une vision simple et précise de qui fait quoi au sein du projet. Il s’agit d’un outil indispensable pour identifier clairement la répartition des rôles et des responsabilités de toute personne qui intervient sur le projet.
+
+Plusieurs personnes peuvent travailler ensemble à la réalisation d’une même tâche, mais la responsabilité doit être attribuée à une seule et unique personne. C’est cette personne que l’on va contacter pour connaître l’avancement de la tâche. C’est elle qui doit s’assurer que la tâche sera effectuée en respectant le budget et les délais qui lui ont été alloués.
+
+Ainsi, la matrice RACI permet de déterminer :
+
+qui sont les membres opérationnels du projet et leurs tâches respectives ;
+qui est l'unique décideur ;
+qui sont les personnes qui peuvent être sollicités pour des conseils ;
+qui sont les personnes qui doivent être informées des évolutions du projet.
+
 == Périmètre et environnement des tests
 
 === Cadre de tests
