@@ -116,13 +116,11 @@ image::/V3/images/gauche.png[UC V3]
 image::/V3/images/droite.png[UC V3]
 
 
-Suite à l'implémentation de la troisième version, le chef d'agence pourra, par le biais d'un système nommé "Batch", générer les relevés mensuels sous le format PDF ainsi qu'exécuter des prélèvements automatiques sur compte (les prélèvements seront mensuels). 
+Suite à l'implémentation de la troisième versions, le chef d'agence pourra par le biais d'un système nommé "Batch" générer les relevés mensuels sous le format PDF ainsi qu'exécuter des prélèvements automatiques sur compte (Les prélèvements seront mensuels). 
 
-Le chef d'agence sera ainsi en mesure d'utiliser des fonctionnalités telles que : +
-• Changer l'intégralité du texte français de l'interface en un texte anglais ; +
-• Changer le thème de l'applcation ( clair/sombre ) ; +
-• Enfin si le temps nous le permet, il pourra donner une somme d'argent équivalente à la quantité de bitcoin que le client voudra échanger.
-
+Le chef d'agence suite à notre implémentation, sera en mesure de d'utiliser des fonctionnalités telles que : changer l'intégralité du texte français de l'interface en un texte anglais, il pourra également changer le thème de l'applcation ( clair/sombre ), enfin si le temps nous le permet il pourra donner une somme d'argent équvalente à la quantité de bitcon que le client voudra échanger.
 
 Etant donné que la seule relation possible entre deux acteurs est l'héritage, nous avons décider de "lier" les deux acteurs par le biais des actions possibles à exécuter.
+
+Comparé à la V2, la V3 permet d'automatiser les actions répétitives comme générer un relevé mensuel et effectuer un prélèvement automatique.
 
