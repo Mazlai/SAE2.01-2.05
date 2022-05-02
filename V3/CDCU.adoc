@@ -121,7 +121,7 @@ Suite à l'implémentation de la troisième version, le chef d'agence pourra, pa
 Le chef d'agence sera ainsi en mesure d'utiliser des fonctionnalités telles que : +
 • Changer l'intégralité du texte français de l'interface en un texte anglais ; +
 • Changer le thème de l'applcation ( clair/sombre ) ; +
-• Enfin si le temps nous le permet, il pourra donner une somme d'argent équvalente à la quantité de bitcoin que le client voudra échanger.
+• Enfin si le temps nous le permet, il pourra donner une somme d'argent équivalente à la quantité de bitcoin que le client voudra échanger.
 
 
 Etant donné que la seule relation possible entre deux acteurs est l'héritage, nous avons décider de "lier" les deux acteurs par le biais des actions possibles à exécuter.
