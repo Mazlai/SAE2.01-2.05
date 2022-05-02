@@ -31,13 +31,40 @@ Il peut sous réclamation du client, modifier ses informations (numéro de tél�
 
 == Contraintes
 
+De nos jours, il est primordial d’approuver que les applications constituent un important critère du e-commerce ou en général, du marché virtuel.
+Pour autant, au lancement d’une application sur un marché évolutif et virtuel, il est imposé aux créateurs de respecter de nombreuses contraintes, tant juridiques que techniques.
+
 === Juridique 
 
-plafond demandé lors de la création du compte ?
+Pour évoquer les contraintes juridiques, il est nécessaire de mentionner la présence des mentions légales de l’application. Cela permet à l’utilisateur de l’application de connaître d’une manière brève, le développeur de l’application et donc, de pouvoir bénéficier des coordonnées de celui-ci. 
+Ainsi, le client sait de qui provient l’application, et peut se sentir rassuré sur la validité et la légalité de l’application. 
+Sur ces mentions légales, doivent être indiquées des informations essentielles comme le numéro de téléphone, l’adresse, le nom des fondateurs de l’application ou encore les spécifications techniques garantissant un accès libre et sans restrictions d’utilisation aux clients. 
+Par ailleurs, ces mentions légales permettent aux éditeurs de l’application de pouvoir bénéficier de la protection de la marque, des logiciels ou d’éventuel(s) logo(s) utilisé(s). 
+
+Il est également important de mentionner le traitement des données personnelles de l’utilisateur. Celui-ci doit connaître de quelles manières sont gérées et utilisées ses propres données au sein de l’application mais également des droits d’accès et d’opposition dont il peut profiter. 
+Cela passe par une confirmation des conditions générales de l’utilisateur ou tout simplement d’une information sur l’usage des données personnelles, adressée au client et dont il doit accepter. 
+Toutefois, l’éditeur de l’application ne doit pas se contenter de faire valider ces conditions : il doit, en règle générale, demander une autorisation à la CNIL afin d’obtenir le droit du traitement et de la collection des informations personnelles d’un utilisateur, garantissant ainsi la loyauté et la licéité du traitement des données.
+
+Enfin, la gestion des risques opérationnels constitue un élément majeur au sein des contraintes juridiques et subsiste comme une préoccupation majeure pour les banques. Celles-ci doivent garantir la fermeté et le maintien des procédures internes, des systèmes internes ou encore du personnel. 
+Dans le cas de défaillances constatées dans ces critères, de pertes bancaires conséquentes ou encore d’une non-conformité de certaines procédures, l’entreprise peut recourir à des conséquences dramatiques notamment de nombreuses plaintes déposées à l’encontre de la société : ce sont des litiges. 
+Il est indispensable aux fondateurs, de limiter ce type de risques, qu’ils puissent être des fautes professionnelles ou encore des accidents, sous peine de risquer les différentes relations commerciales entretenues par l’entreprise, la réputation de celle-ci ou encore l'exigence des ressources dans un temps limité.
+
 
 === Technique
 
-ok
+Pour autant, un créateur d’application ne doit pas uniquement se bloquer au respect des contraintes juridiques bien qu’elles soient importantes : il doit également accepter des contraintes techniques.
+
+Premièrement, à l’utilisation de l’application, celle-ci doit être disponible. Concrètement, n’importe quel utilisateur recherchant une application de gestion de compte client puisse la trouver, en bénéficier et l’utiliser, quel que soit le client, où qu’il se situe et quand il le souhaite. 
+
+Vient ensuite la convivialité et la simplicité d’utilisation de l’application. L’application doit être constituée d’une interface simple, épurée et ergonomique afin que l’utilisateur puisse l’utiliser de manière sereine, sans difficultés de navigation. 
+Celle-ci doit donner une bonne impression et le client doit ainsi pouvoir utiliser et trouver les fonctionnalités de l’application rapidement et facilement. La convivialité est un critère important puisqu’il constitue le premier contact entre l’utilisation et l’application. 
+L’esthétique doit pouvoir se démarquer des autres applications, en essayant de toujours proposer quelque chose de nouveau, d’innovant et de créatif.
+
+L’application doit proposer des solutions ouvertes et évoluées tout en étant apte à être améliorée par l’implémentation de nouveaux modules ou de rectification de l’existant, garantissant ainsi l’évolutivité et la souplesse de la solution. Ainsi, un utilisateur peut également proposer son avis personnel sur d’éventuelles solutions puisqu’il est non seulement roi, mais également important à toute critique possible.
+
+Le client doit également pouvoir retourner au menu principal quand il le souhaite et à partir de n’importe quelle fenêtre ou boîte de dialogue de l’application.
+
+Enfin, l’application doit une nouvelle fois assurer la fiabilité des données fournies par celle-ci et de garantir la sécurité de l’accès aux informations confidentielles. La phase d’authentification d’un utilisateur au sein de l’application est une phase majeure car il est nécessaire de restreindre l’accès à ces informations, non-seulement d’un autre potentiel utilisateur souhaitant, par ses obscures ambitions, de vouloir accéder à ces informations mais également à l’administrateur. 
 
 == Version à implémenter (UC V1)     
 
