@@ -58,6 +58,8 @@ Effectuer un virement, , , ,
 Clôturer un compte, , , ,
 |===
 
+image::../V1/images/RACI.png[Matrice RACI]
+
 == Périmètre et environnement des tests
 
 === Cadre de tests
