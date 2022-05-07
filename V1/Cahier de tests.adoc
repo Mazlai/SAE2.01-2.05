@@ -32,10 +32,10 @@ Plusieurs personnes peuvent travailler ensemble à la réalisation d’une même
 
 Ainsi, la matrice RACI permet de déterminer :
 
-qui sont les membres opérationnels du projet et leurs tâches respectives ;+
-qui est l'unique décideur ;+
-qui sont les personnes qui peuvent être sollicités pour des conseils ;+
-qui sont les personnes qui doivent être informées des évolutions du projet.+
+qui sont les membres opérationnels du projet et leurs tâches respectives ; +
+qui est l'unique décideur ; +
+qui sont les personnes qui peuvent être sollicités pour des conseils ; +
+qui sont les personnes qui doivent être informées des évolutions du projet. +
 
 == Périmètre et environnement des tests
 
