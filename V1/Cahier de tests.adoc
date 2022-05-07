@@ -42,7 +42,7 @@ Ainsi, la matrice RACI permet de déterminer :
 [%header,format=csv]
 |===
 Tâches,Victor,Mika,Nicolas,Louis
-GPO,_,_,_,
+GPO,_,_,_,_
 Préparer le dépôt du groupe sout GIT,C,C,A,R
 Créer Gantt V1,R,R,A,I
 Créer / ordonnancer les tâches / issues du projet,R,R,R,R
