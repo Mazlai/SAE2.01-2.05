@@ -42,7 +42,7 @@ Ainsi, la matrice RACI permet de déterminer :
 [%header,format=csv]
 |===
 Tâches,Victor,Mika,Nicolas,Louis
-GPO,X,X,X,
+GPO,X,X,X,X
 Préparer le dépôt du groupe sout GIT,C,C,A,R
 Créer Gantt V1,R,R,A,I
 Créer / ordonnancer les tâches / issues du projet,R,R,R,R
@@ -50,7 +50,7 @@ Rédiger en Asciidoc le CDCU V1,C,C,R,I
 Rédiger la documentation technique et la documentation utilisateur V0,I,C,C,R
 Créer le cahier de TEST V1,R,A,I,I
 Rédiger la documentation technique et la documentation utilisateur V1,I,C,I,R
-DEV,X,X,X,
+DEV,X,X,X,X
 Gérer les employés, , , ,
 Créditer ou débiter un compte, , , ,
 Créer un compte, , , ,
