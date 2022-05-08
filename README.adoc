@@ -25,11 +25,11 @@ MAJ le 08/05/2022:
 |===
 
 Livraison CDCU V3 :
-0,5/2	manque équipe, date, nom projet et client. Sommaire non numéroté+
-2/2	QQ fautes de frappes+
-2/4	Copier coller du sujet. Il faut contextualiser davantage !+
-3/4	Il manque surtout qq infos techniques sur l'appli.+
-3,5/4	Attentions aux UC coupés !! Faire un UC par domaine couvert :  gestion des comptes, des clients, des crédits par ex.+
-3/4	Il manque les lg et outils imposés ainsi que les règles organisationnelles : date de livraison par ex,+
-	+
-14/20	+
+0,5/2	manque équipe, date, nom projet et client. Sommaire non numéroté +
+2/2	QQ fautes de frappes +
+2/4	Copier coller du sujet. Il faut contextualiser davantage ! +
+3/4	Il manque surtout qq infos techniques sur l'appli. +
+3,5/4	Attentions aux UC coupés !! Faire un UC par domaine couvert :  gestion des comptes, des clients, des crédits par ex. +
+3/4	Il manque les lg et outils imposés ainsi que les règles organisationnelles : date de livraison par ex, +
+	
+14/20	
