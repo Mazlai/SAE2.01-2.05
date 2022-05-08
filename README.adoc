@@ -3,7 +3,7 @@
 
 Editée le 29/03/2022
 
-_Groupe 4A2 :_
+_Groupe 4A02 :_
 
 
 MAJ le 08/05/2022:
@@ -29,6 +29,7 @@ Lien vers le CDCU V3 : https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main
 
 - Ajustement du sommaire numéroté
 - Fautes de frappes
+- Infos essentielles (équipe, date, nom projet, clients)
 
 === Commentaires
 
