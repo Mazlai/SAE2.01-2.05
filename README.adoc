@@ -11,8 +11,9 @@ MAJ le 08/05/2022:
 . Tâches à faire 
 - [ ] Créer la documentation technique de la V0
 - [ ] Créer la documentation utilisateur de la V0
-- [ ] Créer le cahier de tests V1 (terminer RACI / cadre de tests)
-- [ ] Liens vers le CDCU V3 : https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V3/CDCU.adoc[__Cliquer ici__]
+- [ ] Prendre en compte les commentaires pour les CDCU et les ajuster
+
+- Lien vers le CDCU V3 : https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V3/CDCU.adoc[__Cliquer ici__]
 
 
 
