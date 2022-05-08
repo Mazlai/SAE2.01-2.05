@@ -1,10 +1,10 @@
 = CDCU Version 1
 
-*Nom du projet : DailyBank*
-*Clients : Adhérent de la banque*
+*Nom du projet : DailyBank* +
+*Clients : Adhérent de la banque* +
 
-*MàJ : 08/05/2022*
-*Groupe : 4A02*
+*MàJ : 08/05/2022* +
+*Groupe : 4A02* +
 
 :toc:
 
