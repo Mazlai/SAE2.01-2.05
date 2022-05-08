@@ -30,6 +30,7 @@ MAJ le 08/05/2022:
 - Ajustement du sommaire numéroté
 - Fautes de frappes
 - Infos essentielles (équipe, date, nom projet, clients)
+- Dates de livraison
 
 === Commentaires
 
