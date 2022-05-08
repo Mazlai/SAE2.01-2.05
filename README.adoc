@@ -9,11 +9,10 @@ _Groupe 4A2 :_
 MAJ le 30/04/2022:
 
 . Tâches à faire 
-- [ ] Faire le CDCU V2 | V3 (trouver une liste de besoins non-fonctionnels)
 - [ ] Vérifier le contenu du CDCU V1 | V2 | V3 |
 - [ ] Créer la documentation technique de la V0
 - [ ] Créer la documentation utilisateur de la V0
-- [ ] Créer le cahier de tests V1 (lister les ressources que doit posséder l'utilisateur pour lancer lancer l'application)
+- [ ] Créer le cahier de tests V1 (lister les ressources que doit posséder l'utilisateur pour lancer l'application)
 - [ ] Se mettre d'accord sur le GANTT V2 si ok , faire le V3
 
 
