@@ -25,6 +25,12 @@ Lien vers le CDCU V3 : https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main
 |_Nicolas Sacilotto_
 |===
 
+=== Prise en compte des commentaires
+
+- Ajustement du sommaire numéroté
+
+=== Commentaires
+
 Livraison CDCU V3 : +
 0,5/2	manque équipe, date, nom projet et client. Sommaire non numéroté +
 2/2	QQ fautes de frappes +
