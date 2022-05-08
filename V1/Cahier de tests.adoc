@@ -62,11 +62,11 @@ image::../V1/images/RACI.png[Matrice RACI]
 
 === Cadre de tests
 
-L'éxécution de ces tests s'effectueront à travers le framework de test unitaire JUnit en Java 1.8 sur l'environnement de travail Eclipse. Cela permettra de s'assurer que le code répond toujours aux besoins même après d'éventuelles modifications.
+L'exécution de ces tests s'effectueront à travers le framework de test unitaire JUnit en Java 1.8 sur l'environnement de travail Eclipse. Cela permettra de s'assurer que le code répond toujours aux besoins même après d'éventuelles modifications.
 
 === Equipes concernées
 
-Afin de mener à bien les actions à réaliser, seul une équipe de 4 personnes (voir README.adoc) est présente.
+Afin de mener à bien les actions à réaliser, seule une équipe de 4 personnes (voir README.adoc) est présente.
 Toutefois, la répartition des tâches reste, pour le moment, encore incertaine.
 
 == Liste des tests
