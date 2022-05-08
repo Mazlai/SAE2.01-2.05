@@ -28,6 +28,7 @@ Lien vers le CDCU V3 : https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main
 === Prise en compte des commentaires
 
 - Ajustement du sommaire numéroté
+- Fautes de frappes
 
 === Commentaires
 
