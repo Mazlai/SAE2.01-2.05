@@ -18,23 +18,27 @@ L’application doit permettre de gérer des comptes bancaires de dépôt pour d
 En ce qui concerne le lancement de notre projet nous avions à notre disposition ce diagramme des cas d'utilisations suivant :
 
 image::/V0/images/UCV0.png[UC de départ]
-Le guichetier hérite du chef d'agence : il pourra ainsi rendre inactif un client en plus de ces propres fonctions et de l'accueil des clients.
+Le guichetier hérite du chef d'agence : il pourra ainsi rendre inactif un client en plus de ses propres fonctions et de l'accueil des clients.
+
+Il nous est fourni une application avec comme existant les fonctions principales.
 
 Nous remarquons qu'il y a deux acteurs dans ce diagramme des UC :
 
--> Le chef d'agence qui s'occupe principalement du côté gestion de l'agence, il occupe une unique tâche : rendre inactif un client, celle-ci peut s'interprêter de deux manières. D'une part, le client peut s'être fait volé ses informations confidentielles comme son numéro de compte, numéro de cartes, mais aussi des objets physique, tels qu'une carte bancaire, carnet de chêque etc. Dans ce cas là, le client peut mais doit appeler sa banque pour mettre son compe en état de protection, pour ce faire, la banque rend le compte inactif pour limiter les dépenses des voleurs d'informations.
+-> Le chef d'agence qui s'occupe principalement du côté gestion de l'agence, remplit une unique tâche : rendre inactif un client. Celle-ci peut s'interprêter de deux manières : +
 
-D'autre part, un client qui ne donne pas signe de vie depuis plus de douze mois, se verra dans un premier temps averti par l'agence bancaire, si le silence perdure alors le chef d'agence enclenchera une phase de limitation des frais sur le compte, puis en découlera une phase finale de transfert du compte de la personne vers un compte depôt.
+• D'une part, le client peut s'être fait voler ses informations confidentielles comme son numéro de compte, son numéro de carte, mais aussi des objets physiques, tels que sa carte bancaire, son carnet de chêque etc. Dans ce cas là, le client peut, mais doit appeler sa banque pour mettre son compte en état de protection. Pour ce faire, la banque rend le compte inactif pour limiter les dépenses des voleurs d'informations.
 
--> Le guichetier est plus proche des clients, car il occupe principalement deux tâches, analyser leur(s) besoin(s), et y répondre au mieux.
-Il peut sous réclamation du client, modifier ses informations (numéro de téléphone, adresse mail etc.), consulter son compte, débiter des sous de son compte, créer son nouveau compte.
+• D'autre part, un client qui ne donne pas signe de vie depuis plus de douze mois, se verra dans un premier temps averti par l'agence bancaire. Si le silence perdure, alors le chef d'agence enclenchera une phase de limitation des frais sur le compte, puis en découlera une phase finale de transfert du compte de la personne vers un compte depôt.
+
+-> Le guichetier est plus proche des clients, car il occupe principalement de deux tâches : analyser leur(s) besoin(s) et y répondre au mieux.
+Il peut, sous réclamation du client, modifier ses informations (numéro de téléphone, adresse mail etc.), consulter son compte, débiter son compte, créer son nouveau compte.
 
 == Contraintes
 
 De nos jours, il est primordial d’approuver que les applications constituent un important critère du e-commerce ou en général, du marché virtuel.
 Pour autant, au lancement d’une application sur un marché évolutif et virtuel, il est imposé aux créateurs de respecter de nombreuses contraintes, tant juridiques que techniques.
 
-=== Juridique 
+=== Juridiques 
 
 Pour évoquer les contraintes juridiques, il est nécessaire de mentionner la présence des mentions légales de l’application. Cela permet à l’utilisateur de l’application de connaître d’une manière brève, le développeur de l’application et donc, de pouvoir bénéficier des coordonnées de celui-ci. 
 Ainsi, le client sait de qui provient l’application, et peut se sentir rassuré sur la validité et la légalité de l’application. 
@@ -49,14 +53,13 @@ Enfin, la gestion des risques opérationnels constitue un élément majeur au se
 Dans le cas de défaillances constatées dans ces critères, de pertes bancaires conséquentes ou encore d’une non-conformité de certaines procédures, l’entreprise peut recourir à des conséquences dramatiques notamment de nombreuses plaintes déposées à l’encontre de la société : ce sont des litiges. 
 Il est indispensable aux fondateurs, de limiter ce type de risques, qu’ils puissent être des fautes professionnelles ou encore des accidents, sous peine de risquer les différentes relations commerciales entretenues par l’entreprise, la réputation de celle-ci ou encore l'exigence des ressources dans un temps limité.
 
-
-=== Technique
+=== Techniques
 
 Pour autant, un créateur d’application ne doit pas uniquement se bloquer au respect des contraintes juridiques bien qu’elles soient importantes : il doit également accepter des contraintes techniques.
 
 Premièrement, à l’utilisation de l’application, celle-ci doit être disponible. Concrètement, n’importe quel utilisateur recherchant une application de gestion de compte client puisse la trouver, en bénéficier et l’utiliser, quel que soit le client, où qu’il se situe et quand il le souhaite. 
 
-Vient ensuite la convivialité et la simplicité d’utilisation de l’application. L’application doit être constituée d’une interface simple, épurée et ergonomique afin que l’utilisateur puisse l’utiliser de manière sereine, sans difficultés de navigation. 
+Vient ensuite la convivialité et la simplicité d’utilisation de l’application. L’application doit être constituée d’une interface simple, épurée et conviviale afin que l’utilisateur puisse l’utiliser de manière sereine, sans difficultés de navigation. 
 Celle-ci doit donner une bonne impression et le client doit ainsi pouvoir utiliser et trouver les fonctionnalités de l’application rapidement et facilement. La convivialité est un critère important puisqu’il constitue le premier contact entre l’utilisation et l’application. 
 L’esthétique doit pouvoir se démarquer des autres applications, en essayant de toujours proposer quelque chose de nouveau, d’innovant et de créatif.
 
@@ -64,49 +67,41 @@ L’application doit proposer des solutions ouvertes et évoluées tout en étan
 
 Le client doit également pouvoir retourner au menu principal quand il le souhaite et à partir de n’importe quelle fenêtre ou boîte de dialogue de l’application.
 
-Enfin, l’application doit une nouvelle fois assurer la fiabilité des données fournies par celle-ci et de garantir la sécurité de l’accès aux informations confidentielles. La phase d’authentification d’un utilisateur au sein de l’application est une phase majeure car il est nécessaire de restreindre l’accès à ces informations, non-seulement d’un autre potentiel utilisateur souhaitant, par ses obscures ambitions, de vouloir accéder à ces informations mais également à l’administrateur. 
+Enfin, l’application doit une nouvelle fois assurer la fiabilité des données fournies par celle-ci et de garantir la sécurité de l’accès aux informations confidentielles. La phase d’authentification d’un utilisateur au sein de l’application est une phase majeure car il est nécessaire de restreindre l’accès à ces informations, non-seulement d’un autre potentiel utilisateur souhaitant, par ses obscures ambitions, de vouloir accéder à ces informations mais également à l’administrateur.
 
 == Version à implémenter (UC V1)     
 
 Voici le diagramme des cas d'utilisation que l'on a élaboré pour le rendu de la version 1 : 
 
-image::/V1/images/unknown.png[UC V1]
-
+image::../V1/images/unknown.png[UC V1]
 
 Nous pouvons apercevoir que les deux acteurs présentés au dessus peuvent exécuter désormais plus de tâches, en ce qui concerne le chef d'agence, il peut dès à présent gérer ses employés en plus de rendre inactif un compte. Pour le guichetier, il peut dorénavant effectuer davantages de tâches : il peut gérer des comptes c'est-à-dire gérer les opérations effectuées sur ce compte comme le crédit, ou encore le débit d'un compte. Il peut également effectuer un transfert d'argent (virement) d'un compte à un autre.
 
-
 == Règles de gestions à respecter
 
-Avant de pouvoir utiliser l'application, les utilisateurs devront être mis au courant de la bonne utilisation de l'application afin de ne pas être mis en difficulté, en effet les utilisateurs pourront effectuer dans le futur des opérations bancaires comme un dépôt, pour cela l'utilisateur devra déposer une somme positive non nulle ( >0 ). 
-
+Avant de pouvoir utiliser l'application, les utilisateurs devront être mis au courant de la bonne utilisation de l'application afin de ne pas être mis en difficulté, en effet les utilisateurs pourront effectuer dans le futur des opérations bancaires comme un dépôt, pour cela l'utilisateur devra déposer une somme positive non nulle (>0). 
 Quant à l'opération de retrait, l'utilisateur devra prendre connaissance de son solde pour ne pas retirer plus que ce qu'il à sur son compte bancaire, par ailleurs comme pour l'opération de dépôt, il devra retirer une somme positive non nulle.
 
-En revanche si la banque autorise un montant de découvert autotirisé, le client pourra retirer dans les négatifs tant qu'il ne dépasse pas le montant du découvert autorisé.
-
-== Besoins non fonctionnels qu'il faudrait implémenter
+== Besoins non fonctionnels qu'il faudrait implémenter (Optionnel)
 
 En l'occurrence, l'application à développer contiendra des informations personnelles, par conséquent elle devra être sécurisée afin qu'aucunes données ne soient dérobées.
 
 Lorsque les utilisateurs renseigneront trois fois de suite un code erroné dès lors qu'ils souhaiteront faire une transaction, il se retrouveront directement privés de toutes opérations, un timer sera ajouté pour leur rendre la possibilité d'effectuer des opérations financières à l'issue de celui-ci.
 
-
 == Version à implémenter (UC V2)     
 
-Voici le diagramme des cas d'utilisation que l'on a élaboré pour le rendu de la version 2 : 
+Voici le diagramme des cas d'utilisation que l'on a élaboré pour le rendu de la version 1 : 
 
-image::/V2/images/gauche.png[UC V2]
-image::/V2/images/droite.png[UC V2]
-
+image::../V2/images/gauche.png[UC V1]
+image::../V2/images/droite.png[UC V1]
 
 Suite à l'implémentation de la deuxième version du diagramme des UC, nous pouvons apercevoir que le chef d'agence pouvait désormais sous la demande du client, effectuer trois nouvelles actions à savoir : effectuer un débit exceptionnel | simuler un emprunt | simuler une assurance d'emprunt.
 
-L'action "effectuer un débit exceptionnel" est gérée par le chef d'agence, celle-ci permet sous accord et validation du plafond par le chef d'agence à un client de retirer une somme négative, du moment ou le plafond de découvert autorisé n'est pas atteint. L'action simuler un emprunt est un indicateur qui permet de savoir si oui ou non le client peut faire un emprunt. L'action simuler une assurance d'emprunt est un indicateur qui lui permet de connaître le montant des frais de l'emprunt.
+L'action "effectuer un débit exceptionnel" est gérée par le chef d'agence. Celle-ci permet, sous accord et validation du plafond par le chef d'agence, à un client de retirer une somme négative, du moment où le plafond de découvert autorisé n'est pas atteint. L'action "simuler un emprunt" est un indicateur qui permet de savoir si oui ou non le client peut faire un emprunt. L'action "simuler une assurance d'emprunt" est un indicateur qui lui permet de connaître le montant des frais de l'emprunt.
 
-Quant au guichetier, il va pouvoir désormais effectuer deux nouvelles actions : générer le relevé d'un compte en PDF | gérer les prélèvements automatiques.
+Quant au guichetier, il va pouvoir désormais effectuer deux nouvelles actions : "générer le relevé d'un compte en PDF" et "gérer les prélèvements automatiques".
 
-L'action de générer un relevé de compte est primordiale, autant pour le client que pour la banque car celui-ci permet de voir toutes les opérations faites par le client (débit / crédit)  ou bien par la banque (tenue de compte etc.) sur une durée d'un mois. L'action gérer les prélèvements automatiques permet à la banque de récupérer les sous que le client doit chaque mois à sa banque, généralement ce débit est appelé "tenue de compte".
-
+L'action de générer un relevé de compte est primordiale, autant pour le client que pour la banque car celui-ci permet de voir toutes les opérations faites par le client (débit / crédit) ou bien par la banque (tenue de compte etc.) sur une durée d'un mois. L'action gérer les prélèvements automatiques permet à la banque, de récupérer l'argent que le client doit chaque mois à sa banque. En règle générale, ce débit est appelé "tenue de compte".
 
 == Version à implémenter (UC V3)     
 
@@ -114,7 +109,6 @@ Voici le diagramme des cas d'utilisation que l'on a élaboré pour le rendu de l
 
 image::/V3/images/gauche.png[UC V3]
 image::/V3/images/droite.png[UC V3]
-
 
 Suite à l'implémentation de la troisième version, le chef d'agence pourra, par le biais d'un système nommé "Batch", générer les relevés mensuels sous le format PDF ainsi qu'exécuter des prélèvements automatiques sur compte (les prélèvements seront mensuels). 
 
