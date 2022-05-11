@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;version1.PlusMoinsApp.start(...).zoneTexte&apos; in &apos;version1.PlusMoinsApp.start(...)&apos; to field&#x0D;&#x0A;- Original project: &apos;TD2_debut&apos;&#x0D;&#x0A;- Original element: &apos;version1.PlusMoinsApp.start(...).zoneTexte&apos;&#x0D;&#x0A;- Field name: &apos;zoneTexte&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;zoneTexte&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;version1{PlusMoinsApp.java" name="zoneTexte" selection="1024 0" stamp="1649751817245" static="false" version="1.0" visibility="2"/>
+</session>

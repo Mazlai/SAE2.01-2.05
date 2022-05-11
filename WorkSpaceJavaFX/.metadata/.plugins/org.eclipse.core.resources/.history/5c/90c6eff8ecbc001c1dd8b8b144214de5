@@ -1,0 +1,603 @@
+package blackjack.view;
+
+import java.net.URL;
+import java.util.Optional;
+import java.util.ResourceBundle;
+
+import blackjack.om.BlackBot;
+import blackjack.om.EtatBlackBot;
+import blackjack.om.MainBlackjack;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextInputDialog;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+public class BJackController implements Initializable {
+
+	// Déclaration des attributs utilisés (dans le FXML ou hors FXML)
+	private Stage dialogStage;
+
+	private BlackBot bbot = new BlackBot(2); //Les deux joueurs de la partie
+
+	private MainBlackjack mainB; //La main des cartes
+
+	private EtatBlackBot etatbbot; //L'état du blackbot
+	
+	private int budgetJoueur1; //Les deux budgets des deux joueurs
+	private int budgetJoueur2;
+	
+	public int getBudgetJoueur1() {
+		return budgetJoueur1;
+	}
+
+	public void setBudgetJoueur1(int budgetJoueur1) {
+		this.budgetJoueur1 = budgetJoueur1;
+	}
+
+	public int getBudgetJoueur2() {
+		return budgetJoueur2;
+	}
+
+	public void setBudgetJoueur2(int budgetJoueur2) {
+		this.budgetJoueur2 = budgetJoueur2;
+	}
+
+	@FXML
+	private ListView<String> lviewJoueur1;
+	@FXML
+	private ListView<String> lviewJoueur2;
+	@FXML
+	private ListView<String> lviewCroupier;
+
+	@FXML
+	private Button butDistribuer;
+	@FXML
+	private Button butMiser;
+	@FXML
+	private Button butMiser2;
+	@FXML
+	private Button butTirer;
+	@FXML
+	private Button butTirer2;
+	@FXML
+	private Button butTerminer;
+	@FXML
+	private Button butTerminer2;
+	@FXML
+	private Button butRejouer;
+	@FXML
+	private Button butCroupier;
+
+	@FXML
+	private Label etat;
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+	}
+
+	public void setDialogStage(Stage dialogStage) {
+		this.dialogStage = dialogStage;
+		this.dialogStage.setOnCloseRequest(event -> {
+			event.consume();
+			actionQuitter();
+		});
+	}
+
+	@FXML
+	private void actionQuitter() {
+		Alert confirmBox = new Alert(AlertType.CONFIRMATION);
+		confirmBox.setTitle("Fermeture de l'application");
+		confirmBox.setContentText("");
+		confirmBox.setHeaderText("Voulez-vous réellement quitter ?");
+		confirmBox.initOwner(this.dialogStage);
+
+		confirmBox.getButtonTypes().setAll(ButtonType.YES, ButtonType.NO);
+
+		Optional<ButtonType> reponse = confirmBox.showAndWait();
+
+		if (reponse.get().equals(ButtonType.YES)) {
+			this.dialogStage.close();
+		} else {
+			confirmBox.close();
+		}
+	}
+
+	@FXML
+	public void actionAPropos() {
+
+		Alert infoBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+
+		infoBox.setTitle("A propos");
+		infoBox.initOwner(this.dialogStage);// place la fenêtre de fermeture au même endroit que la page de
+											// question.
+		infoBox.setHeaderText("Crédit");
+
+		WebView view = new WebView();
+		WebEngine engine = view.getEngine();
+
+		view.setPrefSize(800, 600);
+
+		engine.load("https://bicyclecards.com/how-to-play/blackjack/");
+
+		infoBox.getDialogPane().setContent(view);
+
+		infoBox.showAndWait();
+	}
+
+	@FXML
+	public void actionAMiser1() {
+
+		if(this.lviewJoueur1.getItems().size() != 0) {
+			TextInputDialog miseBox = new TextInputDialog();
+			miseBox.setTitle("Mise joueur 1");
+			miseBox.setHeaderText("Renseignez votre mise : ");
+			miseBox.setContentText("Votre mise : ");
+
+			Optional<String> reponse2 = miseBox.showAndWait();
+
+			String miser = miseBox.getResult();
+
+			String valeur = "";
+			try {
+				int mise = Integer.parseInt(miser);
+
+				this.budgetJoueur1 -= mise;
+
+				if (mise > this.budgetJoueur1 || mise < 0 || this.budgetJoueur1 < 0) {
+					Alert confirmBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+					confirmBox.setTitle("Impossible");
+					confirmBox.setContentText("Veuillez à faire respecter votre mise en fonction de votre budget.");
+					confirmBox.setHeaderText("Erreur.");
+
+					confirmBox.showAndWait();
+
+				} else {
+
+					valeur = "Player 1 -> Budget : ";
+					valeur += String.valueOf(this.budgetJoueur1);
+					valeur += " mise : ";
+					valeur += String.valueOf(mise);
+					this.lviewJoueur1.getItems().add(valeur);
+
+					this.bbot.miser(0, mise);
+					this.butMiser.setDisable(true);
+
+				}
+			} catch (Exception e) {
+				Alert confirmBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+				confirmBox.setTitle("Impossible");
+				confirmBox.setContentText("Vous avez renseigné un string !");
+				confirmBox.setHeaderText("Erreur.");
+
+				confirmBox.showAndWait();
+			}
+
+			if (reponse2.get().equals(ButtonType.OK)) {
+				this.dialogStage.close();
+			} else {
+				miseBox.close();
+			}
+		} else {
+			String valeur = "";
+
+			// Boîte de dialogue pour le budget à renseigner
+			TextInputDialog TIDialogBudget = new TextInputDialog();
+			TIDialogBudget.setHeaderText("Renseignez votre budget :");
+			TIDialogBudget.setContentText("Votre saisie :");
+
+			// Affichage de cette boîte de dialogue
+			Optional<String> reponse = TIDialogBudget.showAndWait();
+
+			// Récupération du budget sous forme de string
+			String bud = TIDialogBudget.getResult();
+
+			// Boîte de dialogue pour la mise
+			TextInputDialog miseBox = new TextInputDialog();
+			miseBox.setTitle("Mise joueur 1");
+			miseBox.setHeaderText("Renseignez votre mise : ");
+			miseBox.setContentText("Votre mise : ");
+
+			// Affichage de cette boîte de dialogue
+			Optional<String> reponse2 = miseBox.showAndWait();
+
+			// Récupération de la mise sous forme de string
+			String miser = miseBox.getResult();
+
+			try {
+				// Conversion des strings réupérés en int
+				int mise = Integer.parseInt(miser);
+				int budget = Integer.parseInt(bud);
+
+				// Vérification de la mise en fonction du budget : si incorrect, envoie une
+				// boîte de dialogue, sinon, convertit l'information sous forme de string
+				if (mise > budget) {
+					Alert confirmBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+					confirmBox.setTitle("Impossible");
+					confirmBox.setContentText("Veuillez à faire respecter votre mise en fonction de votre budget.");
+					confirmBox.setHeaderText("Erreur.");
+
+					confirmBox.showAndWait();
+
+				} else {
+					valeur = "Joueur 1 -> Budget : ";
+					valeur += String.valueOf(budget) + "€.";
+					valeur += " || Mise : ";
+					valeur += String.valueOf(mise) + "€.";
+					// Stock de l'information dans la listview
+					this.lviewJoueur1.getItems().add(valeur);
+
+					// Mise effectuée et bouton miser désactivé
+					this.bbot.miser(0, mise);
+					this.butMiser.setDisable(true);
+				}
+
+				// Dans le cas où l'utilisation renseigne un string dans l'un des deux champs ou
+				// les deux champs
+			} catch (Exception e) {
+				Alert confirmBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+				confirmBox.setTitle("Impossible");
+				confirmBox.setContentText("Renseignez une valeur valide.");
+				confirmBox.setHeaderText("Erreur.");
+
+				confirmBox.showAndWait();
+			}
+
+			// Fermeture de la première boîte de dialogue
+			if (reponse.get().equals(ButtonType.OK)) {
+				this.dialogStage.close();
+			} else {
+				miseBox.close();
+			}
+		}
+		
+		
+	}
+
+	@FXML
+	public void actionAMiser2() {
+
+		if(this.lviewJoueur2.getItems().size() != 0) {
+			TextInputDialog miseBox = new TextInputDialog();
+			miseBox.setTitle("Mise joueur 2");
+			miseBox.setHeaderText("Renseignez votre mise : ");
+			miseBox.setContentText("Votre mise : ");
+
+			Optional<String> reponse2 = miseBox.showAndWait();
+
+			String miser = miseBox.getResult();
+
+			String valeur = "";
+			try {
+				int mise = Integer.parseInt(miser);
+
+				this.budgetJoueur2 -= mise;
+
+				if (mise > this.budgetJoueur2 || mise < 0 || this.budgetJoueur2 < 0) {
+					Alert confirmBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+					confirmBox.setTitle("Impossible");
+					confirmBox.setContentText("Veuillez à faire respecter votre mise en fonction de votre budget.");
+					confirmBox.setHeaderText("Erreur.");
+
+					confirmBox.showAndWait();
+
+				} else {
+
+					valeur = "Joueur 2 -> Budget : ";
+					valeur += String.valueOf(this.budgetJoueur2) + "€.";
+					valeur += " || Mise : ";
+					valeur += String.valueOf(mise) + "€.";
+					this.lviewJoueur2.getItems().add(valeur);
+
+					this.bbot.miser(1, mise);
+					this.butMiser2.setDisable(true);
+
+				}
+			} catch (Exception e) {
+				Alert confirmBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+				confirmBox.setTitle("Impossible");
+				confirmBox.setContentText("Vous avez renseigné un string !");
+				confirmBox.setHeaderText("Erreur.");
+
+				confirmBox.showAndWait();
+			}
+
+			if (reponse2.get().equals(ButtonType.OK)) {
+				this.dialogStage.close();
+			} else {
+				miseBox.close();
+			}
+			
+		} else {
+			String valeur = "";
+
+			// Boîte de dialogue pour le budget à renseigner
+			TextInputDialog TIDialogBudget = new TextInputDialog();
+			TIDialogBudget.setHeaderText("Renseignez votre budget :");
+			TIDialogBudget.setContentText("Votre saisie :");
+
+			// Affichage de cette boîte de dialogue
+			Optional<String> reponse = TIDialogBudget.showAndWait();
+
+			// Récupération du budget sous forme de string
+			String bud = TIDialogBudget.getResult();
+
+			// Boîte de dialogue pour la mise
+			TextInputDialog miseBox = new TextInputDialog();
+			miseBox.setTitle("Mise joueur 2");
+			miseBox.setHeaderText("Renseignez votre mise : ");
+			miseBox.setContentText("Votre mise : ");
+
+			// Affichage de cette boîte de dialogue
+			Optional<String> reponse2 = miseBox.showAndWait();
+
+			// Récupération de la mise sous forme de string
+			String miser = miseBox.getResult();
+
+			try {
+				// Conversion des strings réupérés en int
+				int mise = Integer.parseInt(miser);
+				int budget = Integer.parseInt(bud);
+
+				// Vérification de la mise en fonction du budget : si incorrect, envoie une
+				// boîte de dialogue, sinon, convertit l'information sous forme de string
+				if (mise > budget) {
+					Alert confirmBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+					confirmBox.setTitle("Impossible");
+					confirmBox.setContentText("Veuillez à faire respecter votre mise en fonction de votre budget.");
+					confirmBox.setHeaderText("Erreur.");
+
+					confirmBox.showAndWait();
+
+				} else {
+					valeur = "Joueur 2 -> Budget : ";
+					valeur += String.valueOf(budget) + "€.";
+					valeur += " || Mise : ";
+					valeur += String.valueOf(mise) + "€.";
+					// Stock de l'information dans la listview
+					this.lviewJoueur2.getItems().add(valeur);
+
+					// Mise effectuée et bouton miser désactivé
+					this.bbot.miser(1, mise);
+					this.butMiser2.setDisable(true);
+				}
+
+				// Dans le cas où l'utilisation renseigne un string dans l'un des deux champs ou
+				// les deux champs
+			} catch (Exception e) {
+				Alert confirmBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+				confirmBox.setTitle("Impossible");
+				confirmBox.setContentText("Renseignez une valeur valide.");
+				confirmBox.setHeaderText("Erreur.");
+
+				confirmBox.showAndWait();
+			}
+
+			// Fermeture de la première boîte de dialogue
+			if (reponse.get().equals(ButtonType.OK)) {
+				this.dialogStage.close();
+			} else {
+				miseBox.close();
+			}
+		}
+	}
+
+	/**
+	 * Déterminer si l'un des deux joueurs a misé
+	 *
+	 * @return true si l'un des joueurs a misé sinon false
+	 */
+	public boolean ontMisees() {
+		if (this.butMiser.isDisable() || this.butMiser2.isDisable()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	@FXML
+	public void actionDistribuer() {
+		if (ontMisees()) {
+			this.bbot.distribuer();
+			getCarteJoueur1();
+			getCarteJoueur2();
+			getCarteCroupier();
+			this.etat.setText("JEU");
+			this.butDistribuer.setDisable(true);
+
+			// Si le joueur n°1 n'a pas misé
+			if (this.butMiser.isDisable() == false) {
+				this.butMiser.setDisable(true);
+			}
+
+			// Si le joueur n°2 n'a pas misé
+			if (this.butMiser2.isDisable() == false) {
+				this.butMiser2.setDisable(true);
+			}
+		} else {
+			Alert confirmBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+			confirmBox.setTitle("Erreur");
+			confirmBox.setContentText("Aucun joueur ne souhaite jouer.");
+			confirmBox.setHeaderText("ATTENTION");
+			confirmBox.showAndWait();
+		}
+	}
+
+	public void getCarteJoueur1() {
+		// Récupère l'information de la main du joueur 1 et envoie dans la listview sous
+		// forme de string, les cartes tirées par le joueur 1.
+		mainB = this.bbot.getMainJoueurs(0);
+		String message = mainB.toString();
+		this.lviewJoueur1.getItems().add(message);
+		gestionCarteJoueur1();
+	}
+
+	public void gestionCarteJoueur1() {
+		// Vérification de l'état du jeu ("JEU") et autorise le joueur 1 à
+		// tirer/terminer du moment qu'il a des cartes tirées
+		if (this.etatbbot.JEU.compareTo(bbot.getEtat()) == 0 && this.bbot.getMainJoueurs(0).getNbCartes() != 0) {
+			this.butTirer.setDisable(false);
+			this.butTerminer.setDisable(false);
+		}
+	}
+
+	public void getCarteJoueur2() {
+		// Récupère l'information de la main du joueur 2 et envoie dans la listview sous
+		// forme de string, les cartes tirées par le joueur 2.
+		mainB = this.bbot.getMainJoueurs(1);
+		String message = mainB.toString();
+		this.lviewJoueur2.getItems().add(message);
+		gestionCarteJoueur2();
+	}
+
+	public void gestionCarteJoueur2() {
+		// Vérification de l'état du jeu ("JEU") et autorise le joueur 1 à
+		// tirer/terminer du moment qu'il a des cartes tirées
+		if (this.etatbbot.JEU.compareTo(bbot.getEtat()) == 0 && this.bbot.getMainJoueurs(1).getNbCartes() != 0) {
+			this.butTirer2.setDisable(false);
+			this.butTerminer2.setDisable(false);
+		}
+	}
+
+	public void getCarteCroupier() {
+		// Récupère l'information de la main du croupier et envoie dans la listview sous
+		// forme de string, la carte tirée par le croupier.
+		mainB = this.bbot.getMainBanque();
+		String message = mainB.toString();
+		this.lviewCroupier.getItems().add(message);
+	}
+
+	@FXML
+	public void actionTirerJoueur1() {
+		// Lorsque le joueur 1 tire, l'information est stockée dans la listview et on
+		// lui retire au passage, l'affichage du budget/mise
+		MainBlackjack m = this.bbot.getMainJoueurs(0);
+		this.bbot.tirer(0);
+		String s = m.toString();
+		this.lviewJoueur1.getItems().remove(lviewJoueur1.getProperties().size());
+		this.lviewJoueur1.getItems().add(s);
+		// Si le joueur a fait + de 21, une boîte de dialogue apparait lui informant
+		// qu'il a perdu
+		if (this.bbot.getFinJoueurs(0) == true) {
+			Alert confirmBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+			confirmBox.setTitle("Perdu");
+			confirmBox.setContentText("Joueur 1, vous avez perdu.");
+			confirmBox.setHeaderText("Reessayez :)");
+			confirmBox.showAndWait();
+			this.butTirer.setDisable(true);
+			this.butTerminer.setDisable(true);
+		}
+	}
+
+	@FXML
+	public void actionTirerJoueur2() {
+		// Lorsque le joueur 2 tire, l'information est stockée dans la listview et on
+		// lui retire au passage, l'affichage du budget/mise
+		MainBlackjack m = this.bbot.getMainJoueurs(1);
+		this.bbot.tirer(1);
+		String s = m.toString();
+		this.lviewJoueur2.getItems().remove(lviewJoueur2.getProperties().size()-1);
+		this.lviewJoueur2.getItems().add(s);
+		// Si le joueur a fait + de 21, une boîte de dialogue apparait lui informant
+		// qu'il a perdu
+		if (this.bbot.getFinJoueurs(1) == true) {
+			Alert confirmBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+			confirmBox.setTitle("Perdu");
+			confirmBox.setContentText("Joueur 2, vous avez perdu.");
+			confirmBox.setHeaderText("Reessayez :)");
+			confirmBox.showAndWait();
+			this.butTirer2.setDisable(true);
+			this.butTerminer2.setDisable(true);
+		}
+	}
+
+	@FXML
+	public void actionTerminer() {
+		//Fait que le joueur 1 ait terminé et qu'aucun bouton de jeu ne soit activé
+		this.bbot.terminer(0);
+		this.butTirer.setDisable(true);
+		this.butTerminer.setDisable(true);
+	}
+
+	@FXML
+	public void actionTerminer2() {
+		//Fait que le joueur 2 ait terminé et qu'aucun bouton de jeu ne soit activé
+		this.bbot.terminer(1);
+		this.butTirer2.setDisable(true);
+		this.butTerminer2.setDisable(true);
+	}
+
+	@FXML
+	public void actionCroupier() {
+		//Active le bouton du croupier dès lors que les deux joueurs ont terminé de jouer
+		if (this.bbot.getFinJoueurs(0) == true && this.bbot.getFinJoueurs(1) == true) {
+			this.butCroupier.setDisable(true);
+			MainBlackjack cartesCroupier = this.bbot.getMainBanque();
+
+			//Affichage des informations des cartes piochées par le croupier et passe en même temps, l'état en état "GAIN"
+			String chaine = cartesCroupier.toString();
+			lviewCroupier.getItems().remove(0);
+			lviewCroupier.getItems().add(chaine);
+			this.etat.setText("GAIN");
+			afficherGain();
+			afficherGain2();			
+		} else {
+			Alert confirmBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+			confirmBox.setTitle("Erreur");
+			confirmBox.setContentText("Avez-vous pensé à miser et à jouer ?");
+			confirmBox.setHeaderText("Reessayez :)");
+			confirmBox.showAndWait();
+		}
+	}
+
+	public void afficherGain() {
+		String chaine = "";
+		if (this.bbot.getGainJoueurs(0) > 0) {
+			chaine += "Gain : ";
+			chaine += String.valueOf(this.bbot.getMiseJoueurs(0));
+			chaine += "€";
+		} else
+			chaine += "==== PERDU ====";
+
+		this.lviewJoueur1.getItems().add(chaine);
+	}
+
+	public void afficherGain2() {
+		String chaine = "";
+		if (this.bbot.getGainJoueurs(1) > 0) {
+			chaine += "Gain : ";
+			chaine += String.valueOf(this.bbot.getMiseJoueurs(1));
+			chaine += "€";
+		} else
+			chaine += "==== PERDU ====";
+
+		this.lviewJoueur2.getItems().add(chaine);
+	}
+	
+	/*public int theWinner() {
+		
+	}*/
+	
+	@FXML
+	public void actionRejouer() {
+		this.butRejouer.setDisable(true);
+		lviewCroupier.getItems().clear();
+		lviewJoueur1.getItems().clear();
+		lviewJoueur2.getItems().clear();
+		this.bbot.relancerPartie();
+		this.etatbbot = this.etatbbot.MISE;
+		this.etat.setText("Mise");
+		this.butMiser.setDisable(false);
+		this.butMiser2.setDisable(false);
+	}
+	
+	
+
+}

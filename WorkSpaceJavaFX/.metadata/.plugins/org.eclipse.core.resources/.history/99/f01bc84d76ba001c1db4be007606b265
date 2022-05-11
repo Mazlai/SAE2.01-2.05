@@ -1,0 +1,53 @@
+package gestclub.view;
+
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
+
+import gestclub.GestClubApp;
+import gestclub.model.Membre;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
+import javafx.stage.Stage;
+
+public class ListeMembresController implements Initializable {
+
+	private Stage dialogStage;
+	private GestClubApp gestclubapp;
+	
+	@FXML
+	private ListView<Membre> listViewMembres;
+	
+	public void setListeMembre(List<Membre> liste) {
+		for(Membre membre : liste) {
+			this.listViewMembres.getItems().add(membre);
+		}
+	}
+	
+	@FXML
+	private void actionNouveau() {
+		Membre m = this.gestclubapp.showSaisieMembre();
+		if(m!=null) {
+			this.listViewMembres.getItems().add(m);
+		}
+	}
+	
+	public GestClubApp getGestclubapp() {
+		return gestclubapp;
+	}
+
+	public void setGestclubapp(GestClubApp gestclubapp) {
+		this.gestclubapp = gestclubapp;
+	}
+
+	public void setDialogStage(Stage dialogStage) {
+		this.dialogStage = dialogStage;
+	}
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		System.out.println();	
+	}
+
+}

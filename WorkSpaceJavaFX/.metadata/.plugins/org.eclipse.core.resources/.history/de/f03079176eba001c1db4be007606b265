@@ -1,0 +1,29 @@
+package gestclub.view;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import gestclub.model.Membre;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
+
+public class ListeMembresController implements Initializable {
+
+	@FXML
+	private ListView<Membre> listMembre;
+	
+	@FXML
+	private void recupMembre() {
+		
+	}
+	
+	
+	
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		System.out.println();	
+	}
+
+}

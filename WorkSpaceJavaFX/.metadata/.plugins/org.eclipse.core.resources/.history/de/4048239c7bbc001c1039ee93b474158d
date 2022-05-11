@@ -1,0 +1,107 @@
+package blackjack.view;
+
+import java.net.URL;
+import java.util.Optional;
+import java.util.ResourceBundle;
+
+import blackjack.om.BlackBot;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextInputDialog;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+public class BJackController implements Initializable {
+
+	private Stage dialogStage;
+	
+	private BlackBot bbot = new BlackBot(2);
+	
+	@FXML
+	private Button butMiser;
+	
+	@FXML 
+	private Button butTirer;
+	
+	@FXML
+	private Label etat;
+	
+	@FXML
+	private Button butTerminer;
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {		
+	}
+	
+	public void setDialogStage(Stage dialogStage) {
+		this.dialogStage = dialogStage;
+		this.dialogStage.setOnCloseRequest(event -> { event.consume(); actionQuitter(); } );
+	}
+	
+	@FXML
+	private void actionQuitter() {
+		Alert confirmBox = new Alert(AlertType.CONFIRMATION);
+		confirmBox.setTitle("Fermeture de l'application");
+		confirmBox.setContentText("");
+		confirmBox.setHeaderText("Voulez-vous réellement quitter ?");
+		confirmBox.initOwner(this.dialogStage);
+		
+		confirmBox.getButtonTypes().setAll(ButtonType.YES, ButtonType.NO);
+		
+		Optional<ButtonType> reponse = confirmBox.showAndWait();
+		
+		if(reponse.get().equals(ButtonType.YES)) {
+			this.dialogStage.close();
+		} else {
+			confirmBox.close();
+		}
+	}
+	
+	@FXML
+    public void actionAPropos() {
+
+        Alert infoBox = new Alert(AlertType.INFORMATION); // Confirmation leave box
+
+        infoBox.setTitle("A propos");
+        infoBox.initOwner(this.dialogStage);// place la fenêtre de fermeture au même endroit que la page de
+                                                // question.
+        infoBox.setHeaderText("Crédit");
+
+        WebView view = new WebView();
+        WebEngine engine = view.getEngine();
+
+        view.setPrefSize(800, 600);
+        
+        engine.load("https://bicyclecards.com/how-to-play/blackjack/");
+
+        infoBox.getDialogPane().setContent(view);
+
+        infoBox.showAndWait();
+    }
+	
+	@FXML
+	public void actionAMiser() {
+		TextInputDialog TIDialog = new TextInputDialog("Test");
+		TIDialog.setHeaderText("Renseignez votre mise :");
+		
+		Optional<String> reponse = TIDialog.showAndWait();
+		
+		int resultat = Integer.parseInt(TIDialog.getResult());
+		this.bbot.getMiseJoueurs(0);
+		
+		if(reponse.get().equals(ButtonType.OK)) {
+			System.out.println("Votre mise est : " + resultat);
+		} else {
+			TIDialog.close();
+		}
+					
+	}
+
+}

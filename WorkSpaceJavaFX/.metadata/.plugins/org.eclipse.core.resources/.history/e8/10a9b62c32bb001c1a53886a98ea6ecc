@@ -1,0 +1,76 @@
+package gestclub.view;
+
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
+
+import gestclub.GestClubApp;
+import gestclub.model.Membre;
+import javafx.beans.property.ListProperty;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
+
+public class ListeMembresController implements Initializable {
+	
+	@FXML
+	private ListView<Membre> listViewMembres;
+	@FXML
+	private Button butEditer;
+	@FXML
+	private Button butSupprimer;
+	
+	private GestClubApp getClubApp;
+
+	public void setGetClubApp(GestClubApp getClubApp) {
+		this.getClubApp = getClubApp;
+	}
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		listViewMembres.setOnMouseClicked(event -> listClick());
+	}
+	
+	public void setListeMembre(ListProperty<Membre> liste) {
+		this.listViewMembres.itemsProperty().bindBidirectional(liste);
+		/*for (Membre membre : liste) {
+			this.listViewMembres.getItems().add(membre);
+		}*/
+	}
+
+	@FXML
+	private void actionNouveau() {
+		Membre m = this.getClubApp.showSaisieMembre();
+		if (m!=null) {
+			this.listViewMembres.getItems().add(m);
+		}
+	}
+	
+	public void listClick() {
+		if(listViewMembres.getSelectionModel().getSelectedItem() == null) {
+			butEditer.setDisable(true);
+		} else {
+			butEditer.setDisable(false);
+		}
+	}
+	
+	@FXML
+	private void actionEditer() {
+		listViewMembres.getSelectionModel().selectedItemProperty().addListener(observable -> listClick());
+		Membre m = this.getClubApp.showSaisieMembre();
+		if (m!=null) {
+			this.listViewMembres.getSelectionModel().add(listViewMembres.getSelectionModel().selectedItemProperty());
+		}
+		
+	}	
+		
+		
+	@FXML
+	private void actionSupprimer() {
+		System.out.println("Supprimer");
+	}
+	
+
+}
