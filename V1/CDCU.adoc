@@ -75,7 +75,9 @@ L’application doit proposer des solutions ouvertes et évoluées tout en étan
 
 Le client doit également pouvoir retourner au menu principal quand il le souhaite et à partir de n’importe quelle fenêtre ou boîte de dialogue de l’application.
 
-Enfin, l’application doit une nouvelle fois assurer la fiabilité des données fournies par celle-ci et de garantir la sécurité de l’accès aux informations confidentielles. La phase d’authentification d’un utilisateur au sein de l’application est une phase majeure car il est nécessaire de restreindre l’accès à ces informations, non-seulement d’un autre potentiel utilisateur souhaitant, par ses obscures ambitions, de vouloir accéder à ces informations mais également à l’administrateur.
+De plus, l’application doit une nouvelle fois assurer la fiabilité des données fournies par celle-ci et de garantir la sécurité de l’accès aux informations confidentielles. La phase d’authentification d’un utilisateur au sein de l’application est une phase majeure car il est nécessaire de restreindre l’accès à ces informations, non-seulement d’un autre potentiel utilisateur souhaitant, par ses obscures ambitions, de vouloir accéder à ces informations mais également à l’administrateur.
+
+Enfin, ce ne serait d'oublier que le client puisse réaliser, sur l'application, l'ensemble des fonctionnalités qui seront implémentées par les développeurs et il en va de même pour les guichetiers ainsi que le chef d'agence.
 
 == Version à implémenter (UC V1)     
 
