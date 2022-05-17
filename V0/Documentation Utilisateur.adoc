@@ -1,5 +1,7 @@
 = Documentation Utilisateur
 
+:toc:
+
 Les tâches d'administration effectuables sur les clients doivent respecter certaines conditions.
 
 == Chef d'Agence
