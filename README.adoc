@@ -10,7 +10,7 @@ MAJ le 08/05/2022:
 
 . Tâches à faire 
 
-== GPO :
+=== GPO :
 
 - [ ] Créer la documentation technique de la V0
 - [ ] Créer la documentation utilisateur de la V0
@@ -18,7 +18,7 @@ MAJ le 08/05/2022:
 - [ ] Rédiger le cahier de test V2
 - [ ] Mettre à jour le GANTT et les issues
 
-== Dev. App :
+=== Dev. App :
 
 - [ ] Créditer/débiter un compte (java et BD avec procédure stockée)
 - [ ] Créer un compte
