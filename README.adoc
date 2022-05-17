@@ -45,6 +45,7 @@ MAJ le 08/05/2022:
 - Fautes de frappes
 - Infos essentielles (équipe, date, nom projet, clients)
 - Dates de livraison
+- Doc. technique
 
 === Commentaires
 
