@@ -1,0 +1,6 @@
+= Résumé de la Version 3
+
+.Vous trouverez ci-joint, les documents suivants :
+
+. Le CDCU - V3
+. Le GANTT - V3

@@ -8,9 +8,24 @@ _Groupe 4A02 :_
 
 MAJ le 08/05/2022:
 
-. Tâches à faire 
-- [ ] Créer la documentation technique de la V0
+=== Tâches à faire 
+
+==== GPO :
+
+- [x] Créer la documentation technique de la V0
 - [ ] Créer la documentation utilisateur de la V0
+- [ ] Rédiger la documentation technique et la documentation utilisateur V1
+- [ ] Rédiger le cahier de test V2
+- [ ] Mettre à jour le GANTT et les issues
+
+==== Dev. App :
+
+- [ ] Créditer/débiter un compte (java et BD avec procédure stockée)
+- [x] Créer un compte
+- [ ] Effectuer un virement de compte à compte
+- [x] Clôturer un compte
+- [ ] Gérer (faire le « CRUD ») les employés (guichetier et chef d’agence)
+
 
 *Lien vers le CDCU V3 :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V3/CDCU.adoc[__Cliquer ici__]
 
@@ -30,6 +45,7 @@ MAJ le 08/05/2022:
 - Fautes de frappes
 - Infos essentielles (équipe, date, nom projet, clients)
 - Dates de livraison
+- Doc. technique
 
 === Commentaires
 

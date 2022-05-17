@@ -1,0 +1,6 @@
+= Résumé de la Version 2
+
+.Vous trouverez ci-joint, les documents suivants :
+
+. Le CDCU - V2
+. Le GANTT - V2

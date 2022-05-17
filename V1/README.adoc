@@ -1,6 +1,7 @@
 = Résumé de la Version 1
 
-.Nous avons :
-. exemple 1
-. exemple 2
-. ...
+.Vous trouverez ci-joint, les documents suivants :
+
+. Le CDCU - V1
+. Le cahier de tests - V1
+. Le GANTT prévisionnel - V1
