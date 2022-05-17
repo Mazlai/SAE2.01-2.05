@@ -1,4 +1,4 @@
-= Documentation Technique
+= Documentation Utilisateur
 
 Les tâches d'administration effectuables sur les clients doivent respecter certaines conditions.
 
