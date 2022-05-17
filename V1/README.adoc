@@ -1,6 +1,6 @@
 = Résumé de la Version 1
 
-.Nous avons :
+. Vous trouverez ci-joint, les documents suivants :
 . exemple 1
 . exemple 2
 . ...
