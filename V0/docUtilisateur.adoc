@@ -19,6 +19,7 @@ Faire à la fin avec le shell ou bat
 
 ==== Comment se connecter ? 
 
+image::images/accueil.png[Accueil client]
 
 
 == Résultats plus quelques exemples de jeu d'essais
