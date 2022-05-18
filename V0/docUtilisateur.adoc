@@ -1,0 +1,27 @@
+= Documentation destinée aux utilisateurs 
+:toc:
+
+
+
+== Présentation générale de l'application
+
+Cette application sert à niquer ta race 
+
+
+== Installation 
+
+Faire à la fin avec le shell ou bat 
+
+
+== Fonctionnement de l'application 
+
+=== Client 
+
+==== Comment se connecter ? 
+
+
+
+== Résultats plus quelques exemples de jeu d'essais
+
+
+
