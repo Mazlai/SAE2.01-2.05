@@ -15,9 +15,13 @@ Faire à la fin avec le shell ou bat
 
 == Fonctionnement de l'application 
 
-=== Client 
+=== Rubrique client
 
-==== Comment se connecter ? 
+Vous êtes un client en détresse, vous voulez utiliser notre application mais vous ne savez pas comment faire ? 
+Ce tuto est fait pour vous ! Veuillez suivre les étapes suivantes et suivez la ligne rouge 
+
+=== Comment se connecter ? 
+
 
 image::images/accueil.png[Accueil client]
 
