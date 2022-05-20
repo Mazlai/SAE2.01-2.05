@@ -103,7 +103,14 @@ Il ne reste plus qu'à suivre les flèches rouges
 
 image::/V0/images/compte2.png[Etape 2 pour consulter compte]
 
-puis ...
+Enfin, nous pouvons voir la liste des opérations effectuées sur le compte sélectionné (flèche rouge)
+Y sont renseignés comme éléments : 
+
+- La date de l'opération 
+
+- Description de l'opération (type de l'opération ( Retrait/dépôt), par quel moyen (carte bleue, espèce))
+
+- Montant de la somme de l'opération 
 
 image::/V0/images/compte3.png[Etape 3 pour consulter compte]
 
