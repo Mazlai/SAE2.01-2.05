@@ -3,6 +3,7 @@
 :toclevels: 5
 :numbered:
 :nofooter:
+[.text-justify]
 
 == Présentation générale de l'application
 
@@ -15,7 +16,7 @@ Faire à la fin avec le shell ou bat
 
 == Fonctionnement de l'application 
 
-=== Client 
+=== Guichetier
 
 ==== Comment se connecter ? 
 
@@ -29,9 +30,29 @@ image::/V0/images/accueil.png[Interface d'accueil]
 
 ==== Identifiant et Mot de passe
 
-En ce qui concerne vos identifiants, vous les recevrez par lettre recommandé, une fois arrivée dans votre boîte au lettre, vous pourrez insérer votre identifiant dans la zone de texte indiquée par la flèche rouge, qaunt à votre de mot de passe, vous pourrez l'inséser dans la zone de texte indiquée par la flèche bleue. Une fois vos identifiants (non érronés de préférence) ont été saisi, vous pouvez appuyer sur le bouton "valider" indiqué par la flèche noire, 
+En ce qui concerne vos identifiants, vous les recevrez par lettre recommandé, une fois arrivée dans votre boîte aux lettres. Vous pourrez ensuite insérer vos identifiants de connexion de la manière suivante : 
+
+- Votre identifiant dans la zone de texte indiqué par la flèche rouge
+
+- Votre mot de passe dans la zone de texte indiqué par la flèche bleue
+
+- Une fois vos identifiants non érronés saisie, il ne vous reste plus qu'à appuyer sur le bouton "Valider" indiqué par la flèche noire
+
+Si vos identifiants de connexion ne sont pas érronés, la page d'accueil s'affichera.
 
 image::/V0/images/log.png[Connexion à un compte]
+
+==== Gestion des clients 
+
+Pour vous déconnecter du compte, il vous suffira d'appuyer sur le bouton "Deconnexion" indiqué par la flèche noire
+
+Pour exercer votre métier de guichetier et pour pouvoir effectuer des transactions financières (débit) mais aussi juridique (créer un nouveau compte etc.) sur un compte, vous pourrez cliquer sur la rubrique "Gestion" située dans l'en-tête de l'application (flèche rouge), puis sur la sous rubrique "Clients" indiqué par la flèche bleue.
+
+image::/V0/images/gestionClient.png[Exercer le métier de guichetier]
+
+==== Créer un nouveau client
+
+
 
 == Résultats plus quelques exemples de jeu d'essais
 
