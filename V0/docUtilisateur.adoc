@@ -44,7 +44,7 @@ image::/V0/images/log.png[Connexion à un compte]
 
 ==== Gestion des clients 
 
-Pour vous déconnecter du compte, il vous suffira d'appuyer sur le bouton "Deconnexion" indiqué par la flèche rouge
+Pour vous déconnecter du compte, il vous suffira d'appuyer sur le bouton "Deconnexion" indiqué par la flèche noire
 
 Pour exercer votre métier de guichetier et pour pouvoir effectuer des transactions financières (débit) mais aussi juridique (créer un nouveau compte etc.) sur un compte, vous pourrez cliquer sur la rubrique "Gestion" située dans l'en-tête de l'application (flèche rouge), puis sur la sous rubrique "Clients" indiqué par la flèche bleue.
 
@@ -120,8 +120,15 @@ Afin de pouvoir débiter un compte, il faut suivre les étapes de la rubrique "C
 
 image::/V0/images/debiter1.png[Etape 1 pour debiter un compte]
 
-puis veuillez selectionner le 
-image::/V0/images/debiter1.png[Etape 1 pour debiter un compte]
+puis veuillez selectionner / saisir: 
+
+ - Le type d'opération (carte bleue ou espèce) indiqué par la flèche rouge
+ 
+ - Le montant de l'opération indiqué par la flèche verte 
+ 
+Une fois ces deux actions faites, il faut appuyer sur le bouton "Effectuer débit" pour valider la transaction, elle apparaîtra dans la zone de dédiée aux opération comme vu dans la rubrique "Consulter compte"
+
+image::/V0/images/debiter2.png[Etape 1 pour debiter un compte]
 
 == Résultats plus quelques exemples de jeu d'essais
 
