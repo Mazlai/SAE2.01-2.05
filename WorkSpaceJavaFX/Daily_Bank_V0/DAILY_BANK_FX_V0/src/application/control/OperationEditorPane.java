@@ -22,7 +22,7 @@ public class OperationEditorPane {
 
 		try {
 			FXMLLoader loader = new FXMLLoader(
-					OperationEditorPaneController.class.getResource("operationeditorpane.fxml"));
+			OperationEditorPaneController.class.getResource("operationeditorpane.fxml"));
 			BorderPane root = loader.load();
 
 			Scene scene = new Scene(root, 500 + 20, 250 + 10);

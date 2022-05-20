@@ -122,20 +122,24 @@ public class OperationsManagementController implements Initializable {
 	}
 
 	private void validateComponentState() {
-		//Condition compte fermé
-		if (this.compteConcerne.estCloture.equals("O")) {
-			this.btnCredit.setDisable(true);
-			this.btnDebit.setDisable(true);
-			this.btnVirement.setDisable(true);
-		}
-		//Condition virement 
-		if (this.compteConcerne.solde > 0  && this.compteConcerne.solde > this.compteConcerne.debitAutorise && this.compteConcerne.estCloture.equals("N")) {
-			this.btnVirement.setDisable(false);
-		//Sinon par défaut
-			this.btnVirement.setDisable(true);
-			this.btnCredit.setDisable(false);
-			this.btnDebit.setDisable(false);
-		}
+			//Condition compte fermé
+			if (this.compteConcerne.estCloture.equals("O")) {
+				this.btnCredit.setDisable(true);
+				this.btnDebit.setDisable(true);
+				this.btnVirement.setDisable(true);
+				//Condition Virement	
+			} else if ((this.compteConcerne.debitAutorise > 0 && this.compteConcerne.solde > (-this.compteConcerne.debitAutorise)) ||
+			 (this.compteConcerne.debitAutorise <= 0 && this.compteConcerne.solde > this.compteConcerne.debitAutorise)) {
+				this.btnVirement.setDisable(false);
+				
+			} else {
+				this.btnCredit.setDisable(false);
+				this.btnDebit.setDisable(false);
+				this.btnVirement.setDisable(true);
+			}
+			/*if (this.compteConcerne.solde > 0 && this.compteConcerne.estCloture.equals("N")) {
+			this.btnVirement.setDisable(false);*/
+			//Sinon par défaut
 	}
 
 	private void updateInfoCompteClient() {

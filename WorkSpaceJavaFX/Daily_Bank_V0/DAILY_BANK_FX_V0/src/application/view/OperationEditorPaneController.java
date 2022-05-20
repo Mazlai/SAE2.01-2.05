@@ -70,6 +70,7 @@ public class OperationEditorPaneController implements Initializable {
 			this.cbTypeOpe.setItems(list);
 			this.cbTypeOpe.getSelectionModel().select(0);
 			break;
+			
 		case CREDIT:
 
 			String info2 = "Cpt. : " + this.compteEdite.idNumCompte + "  "
@@ -89,6 +90,31 @@ public class OperationEditorPaneController implements Initializable {
 			this.cbTypeOpe.setItems(list2);
 			this.cbTypeOpe.getSelectionModel().select(0);
 			break;
+			
+		case VIREMENT:
+
+			String info3 = "Cpt. : " + this.compteEdite.idNumCompte + "  "
+					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
+					+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
+			this.lblMessage.setText(info3);
+
+			this.btnOk.setText("Effectuer Virement");
+			this.btnCancel.setText("Annuler Virement");
+
+			String STR = ConstantesIHM.OPERATIONS_VIREMENT_GUICHET;
+
+			ObservableList<String> list3 = FXCollections.observableArrayList();
+
+			/*for (String tyOp : getTousComptes()) {
+				list3.add(tyOp);
+			}*/
+
+			this.cbTypeOpe.setItems(list3);
+
+			//this.cbTypeOpe.setId(STR);
+			this.cbTypeOpe.getSelectionModel().select(0);
+			break;
+			
 		}
 
 		// Paramétrages spécifiques pour les chefs d'agences
