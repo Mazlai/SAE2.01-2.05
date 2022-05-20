@@ -44,7 +44,7 @@ image::/V0/images/log.png[Connexion à un compte]
 
 ==== Gestion des clients 
 
-Pour vous déconnecter du compte, il vous suffira d'appuyer sur le bouton "Deconnexion" indiqué par la flèche noire
+Pour vous déconnecter du compte, il vous suffira d'appuyer sur le bouton "Deconnexion" indiqué par la flèche rouge
 
 Pour exercer votre métier de guichetier et pour pouvoir effectuer des transactions financières (débit) mais aussi juridique (créer un nouveau compte etc.) sur un compte, vous pourrez cliquer sur la rubrique "Gestion" située dans l'en-tête de l'application (flèche rouge), puis sur la sous rubrique "Clients" indiqué par la flèche bleue.
 
@@ -55,6 +55,37 @@ image::/V0/images/gestionClient.png[Exercer le métier de guichetier]
 Afin de pouvoir créer un compte, veuillez cliquer sur les boutons indiqués par la flèche noire.
 
 image::/V0/images/creerCompte.png[Creer compte]
+
+Suite au clic du bouton "Nouveau client" de l'image ci-dessus, une nouvelle fenêtre nommée "Gestion d'un client" va s'ouvrir (ci-dessus), le guichetier n'aura qu'à renseigner les éléments correspondants aux différentes zone de textes à savoir : 
+
+- Nom : nom du client 
+
+- Prénom : prénom du client 
+
+- Adresse : Veuillez respecter cette nomanclature svp [numéro de rue nom de la rue "," code postale "," nom de la ville]
+
+- Téléphone : le numéro de télépone du client (portable)
+
+- E-mail : l'adresse mail du client
+
+image::/V0/images/ajoutClient.png[Creer compte]
+
+Si toutes les cases sont remplies correctement, il suffira d'appuyer sur le bouton "Valider" pour créer un nouveau client
+
+==== Modifier les informations d'un client
+
+Vous vous êtes trompé lors de la création d'un client ? Pas de problème, notre application vous permet de rectifier d'éventuelles erreurs ! 
+Afin de pouvoir modifier un compte, il vous faut au préalable connaître au minimum son numéro de compte (ID), vous regardez la liste fournie par mail. Une fois le code obetnu, il vous suffira de le renseigner dans la zone de texte indiqué par la flèche rouge (le prénom ainsi que le nom peuvent être renseignés dans leur zone de texte correspondante mais ce n'est pas obligatoire) puis d'appuyer sur le bouton "Rechercher"
+
+Prenons ici l'exemple du compte 181 qui appartient à un compte test pour la démo
+
+image::/V0/images/rechercheClient.png[Recherche Client]
+
+Une fois le compte recherché, il ne vous reste plus qu'à regarder si le compte appraît dans la zone blanche en dessous des zones de saisies comme sur l'image ci-dessous
+
+image::/V0/images/CompteTest.png[Recherche Client]
+
+
 
 == Résultats plus quelques exemples de jeu d'essais
 
