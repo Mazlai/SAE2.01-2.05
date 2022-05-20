@@ -1,12 +1,12 @@
 = Documentation destinée aux utilisateurs 
 :toc:
-
-
+:toclevels: 5
+:numbered:
+:nofooter:
 
 == Présentation générale de l'application
 
-Cette application sert à niquer ta race 
-
+Cette application est cool
 
 == Installation 
 
@@ -15,15 +15,15 @@ Faire à la fin avec le shell ou bat
 
 == Fonctionnement de l'application 
 
-=== Rubrique client
+=== Client 
 
-Vous êtes un client en détresse, vous voulez utiliser notre application mais vous ne savez pas comment faire ? 
-Ce tuto est fait pour vous ! Veuillez suivre les étapes suivantes et suivez la ligne rouge 
+==== Comment se connecter ? 
 
-=== Comment se connecter ? 
+Le client pourra se connecter en appuyant sur le bouton "Connexion" situé en bas de page :
 
 
-image::images/accueil.png[Accueil client]
+
+image::/Users/Nico/Desktop/documentation/log.pdf[UC de départ]
 
 
 == Résultats plus quelques exemples de jeu d'essais
