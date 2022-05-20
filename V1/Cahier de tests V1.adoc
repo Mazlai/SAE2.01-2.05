@@ -50,7 +50,7 @@ Créer le cahier de TEST V1,R,A,I,I
 Rédiger la documentation technique et la documentation utilisateur V1,I,C,I,R
 DEV,---,---,---,---
 Gérer les employés, , , ,
-Créditer ou débiter un compte, , , ,
+Créditer ou débiter un compte,R,I,A,I
 Créer un compte, , , ,
 Effectuer un virement, , , ,
 Clôturer un compte, , , ,
