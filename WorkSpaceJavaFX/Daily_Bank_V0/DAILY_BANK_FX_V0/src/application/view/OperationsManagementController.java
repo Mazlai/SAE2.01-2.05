@@ -113,6 +113,12 @@ public class OperationsManagementController implements Initializable {
 
 	@FXML
 	private void doVirement() {
+		Operation op = this.om.enregistrerVirement();
+		if (op != null) {
+			this.updateInfoCompteClient();
+			this.validateComponentState();
+		}
+		
 	}
 
 	private void validateComponentState() {
@@ -123,7 +129,7 @@ public class OperationsManagementController implements Initializable {
 			this.btnVirement.setDisable(true);
 		}
 		//Condition virement 
-		if (this.compteConcerne.solde > 0 && this.compteConcerne.estCloture.equals("N")) {
+		if (this.compteConcerne.solde > 0  && this.compteConcerne.solde > this.compteConcerne.debitAutorise && this.compteConcerne.estCloture.equals("N")) {
 			this.btnVirement.setDisable(false);
 		//Sinon par défaut
 			this.btnVirement.setDisable(true);
