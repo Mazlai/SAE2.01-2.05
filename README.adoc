@@ -20,7 +20,7 @@ MAJ le 08/05/2022:
 
 ==== Dev. App :
 
-- [ ] Créditer/débiter un compte (java et BD avec procédure stockée)
+- [x] Créditer/débiter un compte (java et BD avec procédure stockée)
 - [x] Créer un compte
 - [ ] Effectuer un virement de compte à compte
 - [x] Clôturer un compte
