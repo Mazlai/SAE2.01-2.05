@@ -23,7 +23,7 @@ Le client pourra se connecter en appuyant sur le bouton "Connexion" situé en ba
 
 
 
-image::/Users/Nico/Desktop/documentation/log.pdf[UC de départ]
+image::/V0/images/accueil.png[Connexion à un compte]
 
 
 == Résultats plus quelques exemples de jeu d'essais
