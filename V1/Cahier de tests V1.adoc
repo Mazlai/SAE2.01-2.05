@@ -100,7 +100,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  • Doit pouvoir être affiché dans une liste des opérations effectuées (listview) ; +
 
  • Ne doit pas pouvoir être crédité d'une somme négative. + 
- → _Message d'erreur : NumberFormatException si somme <= 0, String de la somme en ROUGE et impossibilité de créditer cette somme;_ +
+ → _Message d'erreur : NumberFormatException si somme inférieur à  0, String de la somme en ROUGE et impossibilité de créditer cette somme;_ +
 
  • Ne doit pas pouvoir être débité d'une somme supérieure à un plafond éventuellement défini. + 
  → _Message d'erreur : "Veuillez renseigner une valeur inférieure au plafond défini." (dans une liste ou sous forme de pop-up)_
