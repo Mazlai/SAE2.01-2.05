@@ -93,6 +93,20 @@ Une nouvelle fenêtre s'ouvre (image de la fenêtre ci-dessous) et vous pourrez 
 
 image::/V0/images/modifClient.png[Modifier un compte]
 
+==== Consulter un compte
+
+Afin de voir les opération d'un compte je vous laisse suivre les étapes jusqu'à arriver à la fenêtre nommée "Gestion des clients" défini dans la rubrique "Modifier les informations d'un client" (étape 3.1.5). Une fois la page ouverte, il suffit de cliquer sur le compte dont on souhaite consulter ses opérations, puis il suffit d'appuyer sur le bouton "Comptes client" (flèche rouge)
+
+image::/V0/images/compte1.png[Etape 1 pour consulter compte]
+
+Il ne reste plus qu'à suivre les flèches rouges
+
+image::/V0/images/compte2.png[Etape 2 pour consulter compte]
+
+puis ...
+
+image::/V0/images/compte3.png[Etape 3 pour consulter compte]
+
 == Résultats plus quelques exemples de jeu d'essais
 
 
