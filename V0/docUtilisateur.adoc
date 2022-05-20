@@ -19,12 +19,19 @@ Faire à la fin avec le shell ou bat
 
 ==== Comment se connecter ? 
 
-Le client pourra se connecter en appuyant sur le bouton "Connexion" situé en bas de page :
+
+Voici l'interface d'accueil qui s'affichera lors de l'ouverture de l'exécutable de notre application DAILY BANK.
+
+Pour se connecter à son compte le client devra appuyer sur le bouton "Connexion" situé en bas de page :
 
 
+image::/V0/images/accueil.png[Interface d'accueil]
 
-image::/V0/images/accueil.png[Connexion à un compte]
+==== Identifiant et Mot de passe
 
+En ce qui concerne vos identifiants, vous les recevrez par lettre recommandé, une fois arrivée dans votre boîte au lettre, vous pourrez insérer votre identifiant dans la zone de texte indiquée par la flèche rouge, qaunt à votre de mot de passe, vous pourrez l'inséser dans la zone de texte indiquée par la flèche bleue. Une fois vos identifiants (non érronés de préférence) ont été saisi, vous pouvez appuyer sur le bouton "valider" indiqué par la flèche noire, 
+
+image::/V0/images/log.png[Connexion à un compte]
 
 == Résultats plus quelques exemples de jeu d'essais
 
