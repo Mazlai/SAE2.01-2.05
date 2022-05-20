@@ -47,7 +47,7 @@
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="btnSupprCompte" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSupprimerCompte" text="Supprimer compte" GridPane.rowIndex="4">
+                        <Button fx:id="btnSupprCompte" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSupprimerCompte" text="Clôturer compte" GridPane.rowIndex="4">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>

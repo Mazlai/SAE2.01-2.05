@@ -1,6 +1,7 @@
 package application.view;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -14,10 +15,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.data.Client;
 import model.data.CompteCourant;
+import model.orm.exception.DataAccessException;
+import model.orm.exception.DatabaseConnexionException;
+import model.orm.exception.RowNotFoundOrTooManyRowsException;
 
 public class ComptesManagementController implements Initializable {
 
@@ -83,6 +88,12 @@ public class ComptesManagementController implements Initializable {
 	@FXML
 	private Button btnSupprCompte;
 
+	@FXML
+	private TextField txtDecAutorise;
+
+	@FXML
+	private TextField txtSolde;
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
@@ -97,7 +108,9 @@ public class ComptesManagementController implements Initializable {
 		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			CompteCourant cpt = this.olCompteCourant.get(selectedIndice);
-			this.cm.gererOperations(cpt);
+			if (cpt != null) {
+				this.cm.gererOperations(cpt);
+			}
 		}
 		this.loadList();
 		this.validateComponentState();
@@ -105,22 +118,61 @@ public class ComptesManagementController implements Initializable {
 
 	@FXML
 	private void doModifierCompte() {
+		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
+		if (selectedIndice >= 0) {
+			CompteCourant compteAmodif = this.olCompteCourant.get(selectedIndice);
+			CompteCourant result;
+			try {
+				result = this.cm.modifierCompte(compteAmodif);
+				if (result != null) {
+					this.olCompteCourant.set(selectedIndice, result);
+					this.loadList();
+				}
+			} catch (DataAccessException e) {
+				e.printStackTrace();
+			} catch (RowNotFoundOrTooManyRowsException e) {
+				e.printStackTrace();
+			} catch (DatabaseConnexionException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	@FXML
 	private void doSupprimerCompte() {
+		try {
+			int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
+			if (selectedIndice >= 0) {
+				CompteCourant cliMod = this.olCompteCourant.get(selectedIndice);
+				try {
+					this.cm.supprimerCompte(cliMod);
+					this.loadList();
+
+				} catch (DatabaseConnexionException e) {
+					e.printStackTrace();
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@FXML
 	private void doNouveauCompte() {
 		CompteCourant compte;
-		compte = this.cm.creerCompte();
-		if (compte != null) {
-			this.olCompteCourant.add(compte);
+		try {
+			compte = this.cm.creerCompte();
+			if (compte != null) {
+				this.olCompteCourant.add(compte);
+				this.loadList();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
-	private void loadList () {
+	private void loadList() {
 		ArrayList<CompteCourant> listeCpt;
 		listeCpt = this.cm.getComptesDunClient();
 		this.olCompteCourant.clear();
@@ -136,9 +188,20 @@ public class ComptesManagementController implements Initializable {
 
 		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
-			this.btnVoirOpes.setDisable(false);
+			if (this.lvComptes.getSelectionModel().getSelectedItem().estCloture.equals("O")) {
+				this.btnVoirOpes.setDisable(false);
+				this.btnSupprCompte.setDisable(true);
+				this.btnModifierCompte.setDisable(true);
+			} else {
+				this.btnVoirOpes.setDisable(false);
+				this.btnSupprCompte.setDisable(false);
+				this.btnModifierCompte.setDisable(false);
+			}
 		} else {
 			this.btnVoirOpes.setDisable(true);
+			this.btnSupprCompte.setDisable(true);
+			this.btnModifierCompte.setDisable(true);
 		}
+
 	}
 }

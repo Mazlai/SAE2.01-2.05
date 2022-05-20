@@ -1,5 +1,9 @@
 package application.control;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import application.DailyBankApp;
@@ -16,10 +20,14 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.data.Client;
 import model.data.CompteCourant;
+import model.orm.AccessClient;
 import model.orm.AccessCompteCourant;
+import model.orm.LogToDatabase;
 import model.orm.exception.ApplicationException;
+import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
 import model.orm.exception.Order;
+import model.orm.exception.RowNotFoundOrTooManyRowsException;
 import model.orm.exception.Table;
 
 public class ComptesManagement {
@@ -65,37 +73,115 @@ public class ComptesManagement {
 		om.doOperationsManagementDialog();
 	}
 
-	public CompteCourant creerCompte() {
+	public CompteCourant creerCompte() throws SQLException {
 		CompteCourant compte;
 		CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dbs);
 		compte = cep.doCompteEditorDialog(this.clientDesComptes, null, EditionMode.CREATION);
 		if (compte != null) {
-			try {
-				// Temporaire jusqu'à implémentation
-				compte = null;
-				AlertUtilities.showAlert(this.primaryStage, "En cours de développement", "Non implémenté",
-						"Enregistrement réel en BDD du compe non effectué\nEn cours de développement", AlertType.ERROR);
+			 try {
+				
+					//Code ajouté 
+					Connection con = LogToDatabase.getConnexion(); //Connexion à la base de données
+					
+					String query = "INSERT INTO COMPTECOURANT VALUES (" + "seq_id_client.NEXTVAL" + ", " + "?" + ", " + "?" + ", " + "?" + ", " + "?" + ")";
+					
+					PreparedStatement pst = con.prepareStatement(query);
+					pst.setInt(1, compte.debitAutorise);
+					pst.setDouble(2, compte.solde);
+					pst.setInt(3, compte.idNumCli);
+					pst.setString(4, compte.estCloture);
+					
+					int result = pst.executeUpdate();
+					pst.close();
 
-				// TODO : enregistrement du nouveau compte en BDD (la BDD donne de nouvel id
-				// dans "compte")
+					if (result != 1) {
+						con.rollback();
+						throw new RowNotFoundOrTooManyRowsException(Table.CompteCourant, Order.INSERT,
+								"Insert anormal (insert de moins ou plus d'une ligne)", null, result);
+					}else {
+						con.commit();
+					}
 
-				// if JAMAIS vrai
-				// existe pour compiler les catchs dessous
-				if (Math.random() < -1) {
-					throw new ApplicationException(Table.CompteCourant, Order.INSERT, "todo : test exceptions", null);
+					// if JAMAIS vrai
+					// existe pour compiler les catchs dessous
+					if (Math.random() < -1) {
+						throw new ApplicationException(Table.CompteCourant, Order.INSERT, "todo : test exceptions", null);
+					}
+				} catch (DatabaseConnexionException e) {
+					ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+					ed.doExceptionDialog();
+					this.primaryStage.close();
+				} catch (ApplicationException ae) {
+					ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+					ed.doExceptionDialog();
 				}
+		}
+		return compte;
+	}
+	
+	
+	public  CompteCourant supprimerCompte(CompteCourant compteAsupprimer) throws DatabaseConnexionException, SQLException {		
+		try {
+		Connection con = LogToDatabase.getConnexion(); //Connexion à la base de données
+		
+		String query = "UPDATE COMPTECOURANT SET ESTCLOTURE = 'O' , SOLDE = 0.00 WHERE IDNUMCOMPTE = ?";
+		
+		PreparedStatement pst = con.prepareStatement(query);
+		pst.setInt(1, compteAsupprimer.idNumCompte);
+		
+		int result = pst.executeUpdate();
+		pst.close();
+
+		if (result != 1) {
+			con.rollback();
+			throw new RowNotFoundOrTooManyRowsException(Table.CompteCourant, Order.UPDATE,
+					"Insert anormal (insert de moins ou plus d'une ligne)", null, result);
+		}else {
+			con.commit();
+		}
+
+		// if JAMAIS vrai
+		// existe pour compiler les catchs dessous
+		if (Math.random() < -1) {
+			throw new ApplicationException(Table.CompteCourant, Order.UPDATE, "todo : test exceptions", null);
+		}
+	} catch (DatabaseConnexionException e) {
+		ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+		ed.doExceptionDialog();
+		this.primaryStage.close();
+	} catch (ApplicationException ae) {
+		ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+		ed.doExceptionDialog();
+	}
+		
+		return compteAsupprimer;
+	}
+
+	public void doCompteEditorDialog() {
+		this.cmc.displayDialog();
+	}
+	
+	public CompteCourant modifierCompte(CompteCourant compteAmodif) throws DataAccessException, RowNotFoundOrTooManyRowsException, DatabaseConnexionException {
+		CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dbs);
+		CompteCourant result = cep.doCompteEditorDialog(this.clientDesComptes, compteAmodif, EditionMode.MODIFICATION);
+		if (result != null) {
+			try {
+				AccessCompteCourant ac = new AccessCompteCourant();
+				ac.updateCompteCourant(result);
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 				ed.doExceptionDialog();
+				result = null;
 				this.primaryStage.close();
 			} catch (ApplicationException ae) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
 				ed.doExceptionDialog();
+				result = null;
 			}
 		}
-		return compte;
+		return compteAmodif;
 	}
-
+	
 	public ArrayList<CompteCourant> getComptesDunClient() {
 		ArrayList<CompteCourant> listeCpt = new ArrayList<>();
 

@@ -35,6 +35,7 @@ public class OperationsManagementController implements Initializable {
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
 	private ObservableList<Operation> olOperation;
+	
 
 	// Manipulation de la fenêtre
 	public void initContext(Stage _primaryStage, OperationsManagement _om, DailyBankState _dbstate, Client client, CompteCourant compte) {
@@ -78,6 +79,8 @@ public class OperationsManagementController implements Initializable {
 	private Button btnDebit;
 	@FXML
 	private Button btnCredit;
+	@FXML
+    private Button btnVirement;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -100,16 +103,33 @@ public class OperationsManagementController implements Initializable {
 
 	@FXML
 	private void doCredit() {
+		
+		Operation op = this.om.enregistrerCredit();
+		if (op != null) {
+			this.updateInfoCompteClient();
+			this.validateComponentState();
+		}
 	}
 
 	@FXML
-	private void doAutre() {
+	private void doVirement() {
 	}
 
 	private void validateComponentState() {
-		// Non implémenté => désactivé
-		this.btnCredit.setDisable(true);
-		this.btnDebit.setDisable(false);
+		//Condition compte fermé
+		if (this.compteConcerne.estCloture.equals("O")) {
+			this.btnCredit.setDisable(true);
+			this.btnDebit.setDisable(true);
+			this.btnVirement.setDisable(true);
+		}
+		//Condition virement 
+		if (this.compteConcerne.solde > 0 && this.compteConcerne.estCloture.equals("N")) {
+			this.btnVirement.setDisable(false);
+		//Sinon par défaut
+			this.btnVirement.setDisable(true);
+			this.btnCredit.setDisable(false);
+			this.btnDebit.setDisable(false);
+		}
 	}
 
 	private void updateInfoCompteClient() {

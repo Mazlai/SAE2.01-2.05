@@ -85,6 +85,30 @@ public class OperationsManagement {
 		}
 		return op;
 	}
+	
+	public Operation enregistrerCredit() {
+
+		OperationEditorPane oep = new OperationEditorPane(this.primaryStage, this.dbs);
+		Operation op = oep.doOperationEditorDialog(this.compteConcerne, CategorieOperation.CREDIT);
+		if (op != null) {
+			try {
+				AccessOperation ao = new AccessOperation();
+
+				ao.insertCredit(this.compteConcerne.idNumCompte, 0 - op.montant, op.idTypeOp);
+
+			} catch (DatabaseConnexionException e) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+				ed.doExceptionDialog();
+				this.primaryStage.close();
+				op = null;
+			} catch (ApplicationException ae) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+				ed.doExceptionDialog();
+				op = null;
+			}
+		}
+		return op;
+	}
 
 	public PairsOfValue<CompteCourant, ArrayList<Operation>>  operationsEtSoldeDunCompte() {
 		ArrayList<Operation> listeOP = new ArrayList<>();

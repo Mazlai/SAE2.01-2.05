@@ -2,6 +2,7 @@ package application.view;
 
 import java.net.URL;
 import java.util.Locale;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import application.DailyBankState;
@@ -11,8 +12,10 @@ import application.tools.EditionMode;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -33,6 +36,7 @@ public class CompteEditorPaneController implements Initializable {
 	private Client clientDuCompte;
 	private CompteCourant compteEdite;
 	private CompteCourant compteResult;
+	ComptesManagementController compteAsupp;
 
 	// Manipulation de la fenêtre
 	public void initContext(Stage _primaryStage, DailyBankState _dbstate) {
@@ -71,15 +75,28 @@ public class CompteEditorPaneController implements Initializable {
 			this.btnCancel.setText("Annuler");
 			break;
 		case MODIFICATION:
-			AlertUtilities.showAlert(this.primaryStage, "Non implémenté", "Modif de compte n'est pas implémenté", null,
-					AlertType.ERROR);
-			return null;
-		// break;
+			this.txtDecAutorise.setDisable(false);
+			this.txtSolde.setDisable(true);
+			this.lblMessage.setText("Modifications du compte n° : " + this.compteEdite.idNumCompte + " de " + this.clientDuCompte.nom + " " + this.clientDuCompte.prenom);
+			this.lblSolde.setText("Solde");
+			this.btnOk.setText("OK");
+			this.btnCancel.setText("Annuler");
+			//return null;
+		    break;
 		case SUPPRESSION:
-			AlertUtilities.showAlert(this.primaryStage, "Non implémenté", "Suppression de compte n'est pas implémenté",
-					null, AlertType.ERROR);
-			return null;
-		// break;
+			/*AlertUtilities.showAlert(this.primaryStage, "Non implémenté", "Suppression de compte n'est pas implémenté",
+					null, AlertType.ERROR);*/
+			/*Alert alert = new Alert(AlertType.CONFIRMATION);
+			alert.setTitle("Suppression de compte");
+			alert.setHeaderText("Confirmation de la suppression du compte");
+			alert.setContentText("Voulez vous vraiment supprimer ce compte ?");
+			Optional<ButtonType> result = alert.showAndWait();
+			if (result.get() == ButtonType.OK){
+			   alert.close();
+			} else {
+			   alert.close();
+			}*/
+			break;
 		}
 
 		// Paramétrages spécifiques pour les chefs d'agences
