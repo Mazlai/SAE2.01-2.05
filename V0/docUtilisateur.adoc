@@ -52,7 +52,9 @@ image::/V0/images/gestionClient.png[Exercer le métier de guichetier]
 
 ==== Créer un nouveau client
 
+Afin de pouvoir créer un compte, veuillez cliquer sur les boutons indiqués par la flèche noire.
 
+image::/V0/images/creerCompte.png[Creer compte]
 
 == Résultats plus quelques exemples de jeu d'essais
 
