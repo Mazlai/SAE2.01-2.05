@@ -114,6 +114,15 @@ Y sont renseignés comme éléments :
 
 image::/V0/images/compte3.png[Etape 3 pour consulter compte]
 
+==== Débiter un compte 
+
+Afin de pouvoir débiter un compte, il faut suivre les étapes de la rubrique "Consulter un compte" puis arriver jusqu'à l'interface nommée "Gestion des opérations comme illustré sur l'image ci-dessous 
+
+image::/V0/images/debiter1.png[Etape 1 pour debiter un compte]
+
+puis veuillez selectionner le 
+image::/V0/images/debiter1.png[Etape 1 pour debiter un compte]
+
 == Résultats plus quelques exemples de jeu d'essais
 
 
