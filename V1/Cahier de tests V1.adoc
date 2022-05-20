@@ -96,7 +96,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |2
 .4+<.>|Guichetier
 |Créditer ou débiter un compte
-|Débiter :; +
+|Débiter : +
  • Doit pouvoir être affiché dans une liste des opérations effectuées (listview) ; +
 
  • Ne doit pas pouvoir être crédité d'une somme négative. + 
@@ -105,7 +105,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  • Ne doit pas pouvoir être débité d'une somme supérieure à un plafond éventuellement défini. + 
  → _Message d'erreur : "Veuillez renseigner une valeur inférieure au plafond défini." (dans une liste ou sous forme de pop-up)_
  
- Créditer :; +
+ Créditer : +
   • Doit pouvoir être affiché dans une liste des opérations effectuées (listview) ; +
 
  • Ne doit pas pouvoir être crédité d'une somme négative. + 
