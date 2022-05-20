@@ -12,15 +12,15 @@ MAJ le 08/05/2022:
 
 ==== GPO :
 
-- [x] Créer la documentation technique de la V0
-- [ ] Créer la documentation utilisateur de la V0
+- [ ] Créer la documentation technique de la V0
+- [x] Créer la documentation utilisateur de la V0
 - [ ] Rédiger la documentation technique et la documentation utilisateur V1
 - [ ] Rédiger le cahier de test V2
 - [ ] Mettre à jour le GANTT et les issues
 
 ==== Dev. App :
 
-- [ ] Créditer/débiter un compte (java et BD avec procédure stockée)
+- [x] Créditer/débiter un compte (java et BD avec procédure stockée)
 - [x] Créer un compte
 - [ ] Effectuer un virement de compte à compte
 - [x] Clôturer un compte

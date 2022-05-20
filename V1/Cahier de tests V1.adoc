@@ -50,7 +50,7 @@ Créer le cahier de TEST V1,R,A,I,I
 Rédiger la documentation technique et la documentation utilisateur V1,I,C,I,R
 DEV,---,---,---,---
 Gérer les employés, , , ,
-Créditer ou débiter un compte, , , ,
+Créditer ou débiter un compte,R,I,A,I
 Créer un compte, , , ,
 Effectuer un virement, , , ,
 Clôturer un compte, , , ,
@@ -96,13 +96,23 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |2
 .4+<.>|Guichetier
 |Créditer ou débiter un compte
-|• Doit pouvoir être affiché dans une liste des opérations effectuées (listview) ; +
+|Débiter : +
+ • Doit pouvoir être affiché dans une liste des opérations effectuées (listview) ; +
 
- • Ne doit pas pouvoir être crédité ou débité d'une somme négative. + 
- → _Message d'erreur : "Veuillez renseigner une valeur positive pour effectuer votre transaction." (dans une liste ou sous forme de pop-up) ;_ +
+ • Ne doit pas pouvoir être crédité d'une somme négative. + 
+ → _Message d'erreur : NumberFormatException si somme inférieur à  0, String de la somme en ROUGE et impossibilité de créditer cette somme;_ +
 
  • Ne doit pas pouvoir être débité d'une somme supérieure à un plafond éventuellement défini. + 
  → _Message d'erreur : "Veuillez renseigner une valeur inférieure au plafond défini." (dans une liste ou sous forme de pop-up)_
+ 
+ Créditer : +
+  • Doit pouvoir être affiché dans une liste des opérations effectuées (listview) ; +
+
+ • Ne doit pas pouvoir être crédité d'une somme négative. + 
+ → _Message d'erreur : NumberFormatException si somme inférieur à 0, String de la somme en ROUGE et impossibilité de créditer cette somme;_ +
+
+ • Ne doit pas pouvoir être débité d'une somme supérieure à un plafond éventuellement défini. + 
+ → _Message d'erreur : "Dépassement du découvert!" (dans une liste ou sous forme de pop-up)_
 |
 
 |3
