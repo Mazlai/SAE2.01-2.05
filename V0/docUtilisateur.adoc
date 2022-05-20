@@ -91,7 +91,7 @@ image::/V0/images/preModif.png[Pré modification d'un compte]
 
 Une nouvelle fenêtre s'ouvre (image de la fenêtre ci-dessous) et vous pourrez de ce fait changer les erreurs éventuelles en cliquant sur le bouton "Modifier" indiqué par la flèche rouge
 
-image::/V0/images/Modif.png[Modifier un compte]
+image::/V0/images/modifClient.png[Modifier un compte]
 
 == Résultats plus quelques exemples de jeu d'essais
 
