@@ -3,4 +3,5 @@
 .Vous trouverez ci-joint, les documents suivants :
 
 . Le CDCU - V2
+. Le cahier de tests - V2
 . Le GANTT - V2
