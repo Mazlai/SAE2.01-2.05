@@ -106,6 +106,21 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |
 
 |2
+|Effectuer un débit exceptionnel
+|
+|
+
+|3
+|Simuler un emprunt
+|
+|
+
+|4
+|Simuler une assurance d'emprunt
+|
+|
+
+|5
 .4+<.>|Guichetier
 |Créditer ou débiter un compte
 |Débiter : +
@@ -127,7 +142,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  → _Message d'erreur : "Dépassement du découvert!" (dans une liste ou sous forme de pop-up)_
 |
 
-|3
+|6
 |Créer un compte à partir d'informations complémentaires
 |• Doit pouvoir être visible par le créateur du compte ainsi que le chef d'agence (proposée en tant qu'option pour celui-ci) ;
 
@@ -138,7 +153,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  → _Message d'erreur : "Le compte que vous avez renseigné existe déjà." (dans une liste ou sous forme de pop-up)_
 |
 
-|4
+|7
 |Effectuer un virement de compte à compte
 |• Doit pouvoir être affiché en tant que message complet (virement, montant) dans une listview pour l'émetteur et le bénéficiaire ;
  
@@ -155,7 +170,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  → _Condition vérifiant si le compte dans lequel nous réalisons l'opération figure parmi tous les comptes recherchés. Si c'est le cas, il est retiré pour la procédure du virement, dans le cas échéant, ce ne sera pas le cas._
 |
 
-|5
+|8
 |Clôturer un compte
 |• Doit pouvoir être affiché en tant que message dans une liste pour le guichetier et le chef d'agence ;
 
@@ -167,4 +182,14 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
   → _Soit le compte clôturé n'existe plus dans l'agence (n'est plus visible),_ +
   → _(Version non-optimisée) Soit un message d'erreur serait affiché : "Veuillez choisir un compte ouvert." (dans une liste ou sous forme de pop-up)_
  
+|
+
+|9
+|Générer un relevé mensuel d'un compte en PDF
+|
+|
+
+|10
+|Gérer les prélèvements automatiques
+|
 |
