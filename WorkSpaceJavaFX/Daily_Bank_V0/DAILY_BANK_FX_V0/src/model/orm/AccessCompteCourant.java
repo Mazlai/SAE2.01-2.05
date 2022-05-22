@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import application.control.OperationsManagement;
 import model.data.CompteCourant;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
@@ -109,6 +110,42 @@ public class AccessCompteCourant {
 			throw new DataAccessException(Table.CompteCourant, Order.SELECT, "Erreur accès", e);
 		}
 	}
+	
+	public ArrayList<CompteCourant> getTousLesComptes()
+            throws DataAccessException, DatabaseConnexionException {
+        ArrayList<CompteCourant> alResult = new ArrayList<>();
+
+        try {
+            Connection con = LogToDatabase.getConnexion();
+            PreparedStatement pst;
+            
+            String query;
+            
+                query = "SELECT * FROM COMPTECOURANT WHERE estCloture = 'N' ORDER BY idNumCompte ";
+                
+                pst = con.prepareStatement(query);
+
+
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                int idNumCompte = rs.getInt("idNumCompte");
+                int debitAutorise = rs.getInt("debitAutorise");
+                double solde = rs.getDouble("solde");
+                String estCloture = rs.getString("estCloture");
+                int idNumCli = rs.getInt("idNumCli");
+
+
+                alResult.add(
+                        new CompteCourant(idNumCompte,debitAutorise,solde,estCloture,idNumCli));
+            }
+            rs.close();
+            pst.close();
+        } catch (SQLException e) {
+            throw new DataAccessException(Table.Client, Order.SELECT, "Erreur accès", e);
+        }
+
+        return alResult;
+    }
 
 	/**
 	 * Mise à jour d'un CompteCourant.

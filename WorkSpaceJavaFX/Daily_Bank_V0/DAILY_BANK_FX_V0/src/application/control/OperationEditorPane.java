@@ -17,6 +17,10 @@ public class OperationEditorPane {
 
 	private Stage primaryStage;
 	private OperationEditorPaneController oepc;
+	
+	public OperationEditorPaneController getOepc() {
+		return this.oepc;
+	}
 
 	public OperationEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 

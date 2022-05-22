@@ -131,6 +131,7 @@ public class OperationsManagementController implements Initializable {
 			} else if ((this.compteConcerne.debitAutorise > 0 && this.compteConcerne.solde > (-this.compteConcerne.debitAutorise)) ||
 			 (this.compteConcerne.debitAutorise <= 0 && this.compteConcerne.solde > this.compteConcerne.debitAutorise)) {
 				this.btnVirement.setDisable(false);
+				this.btnCredit.setDisable(false);
 				
 			} else {
 				this.btnCredit.setDisable(false);

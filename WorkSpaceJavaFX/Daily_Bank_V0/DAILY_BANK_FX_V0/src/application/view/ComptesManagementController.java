@@ -45,6 +45,7 @@ public class ComptesManagementController implements Initializable {
 		this.clientDesComptes = client;
 		this.configure();
 	}
+	
 
 	private void configure() {
 		String info;

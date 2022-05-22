@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import application.DailyBankApp;
 import application.DailyBankState;
 import application.tools.CategorieOperation;
+import application.tools.ConstantesIHM;
 import application.tools.PairsOfValue;
 import application.tools.StageManagement;
 import application.view.OperationsManagementController;
@@ -116,11 +117,15 @@ public class OperationsManagement {
 		if (op != null) {
 			try {
 				AccessOperation ao = new AccessOperation();
+				AccessCompteCourant acc = new AccessCompteCourant();
+				ArrayList<CompteCourant> clients = acc.getTousLesComptes();
 				
+				String STR = ConstantesIHM.OPERATIONS_VIREMENT_GUICHET;
+				String strInfo = "Virement ";
 				
-				ao.insertDebit(this.compteConcerne.idNumCompte, op.montant, op.idTypeOp);
-				//ao.insertCredit(this.compteConcerne.idNumCompte, 0 - op.montant, op.idTypeOp);
-
+				ao.insertDebit(this.compteConcerne.idNumCompte, op.montant,STR);
+				ao.insertCredit(clients.get(oep.getOepc().getCompteSelectionne()).idNumCompte, 0 - op.montant, STR);
+				
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 				ed.doExceptionDialog();
