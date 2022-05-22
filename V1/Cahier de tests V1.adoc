@@ -52,7 +52,7 @@ DEV,---,---,---,---
 Gérer les employés, , , ,
 Créditer ou débiter un compte,R,I,A,I
 Créer un compte, , , ,
-Effectuer un virement, , , ,
+Effectuer un virement,A,R,C,I
 Clôturer un compte, , , ,
 |===
 
@@ -128,16 +128,19 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 
 |4
 |Effectuer un virement de compte à compte
-|• Doit pouvoir être affiché en tant que message dans une liste pour l'émetteur et le bénéficiaire (optionnel pour celui-ci, étant déjà visible dans ses comptes) ;
+|• Doit pouvoir être affiché en tant que message complet (virement, montant) dans une listview pour l'émetteur et le bénéficiaire ;
  
  • Ne doit pas pouvoir être crédité ou débité d'une somme négative. + 
- → _Message d'erreur : "Veuillez renseigner une valeur positive pour effectuer votre virement." (dans une liste ou sous forme de pop-up) ;_ +
+ → _Erreur apparaissant sur l'interface du virement : les champs de texte changent de couleur, passant ainsi au rouge.;_ +
 
  • Ne doit pas pouvoir effectuer le virement d'une somme supérieure à un plafond éventuellement défini. + 
- → _Message d'erreur : "Veuillez renseigner une valeur inférieure au plafond défini." (dans une liste ou sous forme de pop-up) ;_
+ → _Message d'erreur : "Dépassement du découvert !" accompagné des champs de texte également modifiés en rouge.;_
  
  • Ne doit pas pouvoir réaliser le virement vers un compte clôturé ou n'existant pas. +
- → _Message d'erreur : "Veuillez choisir un compte valide." (dans une liste ou sous forme de pop-up)_
+ → _Changement de la requête SQL en ne prenant en considération que les comptes ouverts._
+ 
+ • Ne doit pas pouvoir réaliser un virement vers lui-même (le même compte) +
+ → _Condition vérifiant si le compte dans lequel nous réalisons l'opération figure parmi tous les comptes recherchés. Si c'est le cas, il est retiré pour la procédure du virement, dans le cas échéant, ce ne sera pas le cas._
 |
 
 |5
