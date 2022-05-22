@@ -107,18 +107,18 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 
 |2
 |Effectuer un débit exceptionnel
-|
-|
+|a
+|a
 
 |3
 |Simuler un emprunt
-|
-|
+|b
+|b
 
 |4
 |Simuler une assurance d'emprunt
-|
-|
+|c
+|c
 
 |5
 .6+<.>|Guichetier
@@ -186,10 +186,10 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 
 |9
 |Générer un relevé mensuel d'un compte en PDF
-|
-|
+|d
+|d
 
 |10
 |Gérer les prélèvements automatiques
-|
-|
+|e
+|e
