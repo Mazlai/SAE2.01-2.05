@@ -115,6 +115,11 @@ Les éléments étant renseignés sont les suivants :
 
 image::/V0/images/compte3.png[Etape 3 pour consulter compte]
 
+Il vous est, en toute logique, impossible de réaliser une opération, quoi qu'elle puisse être, sur un compte que vous avez décidé de faire clôturer.
+Vous pourrez toujours consulter l'ensemble des opérations réalisées précédemment sur le compte en question, mais vous ne pourrez plus interagir avec celui-ci dès lors qu'il s'agit de faire une opération :
+
+image::/V0/images/cloture.PNG[Operation impossible]
+
 ===== Débiter un compte
 
 Afin de pouvoir débiter un compte, il faut suivre les étapes de la rubrique "Consulter un compte" puis d'arriver jusqu'à l'interface nommée "Gestion des opérations comme illustrée sur l'image ci-dessous :
