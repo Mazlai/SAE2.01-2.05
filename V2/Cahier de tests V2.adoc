@@ -121,7 +121,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |
 
 |5
-.4+<.>|Guichetier
+.6+<.>|Guichetier
 |Créditer ou débiter un compte
 |Débiter : +
  • Doit pouvoir être affiché dans une liste des opérations effectuées (listview) ; +
