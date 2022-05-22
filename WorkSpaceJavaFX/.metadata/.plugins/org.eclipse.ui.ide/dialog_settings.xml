@@ -20,11 +20,13 @@
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\victo\OneDrive\Documents\sae2022-bank-4a2\WorkSpaceJavaFX\Daily_Bank_V0\DAILY_BANK_FX_V0"/>
 			<item value="D:\COURS IUT\INFO S2\SAE\sae2022-bank-4a2\WorkSpaceJavaFX\Daily_Bank_V0\DAILY_BANK_FX_V0"/>
 			<item value=""/>
 			<item value="D:\IUTJavaFX\WorkSpaceJavaFX\TD1"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
 			<item value="D:\IUTJavaFX\WorkSpaceJavaFX\Blackjack2022.zip"/>
 			<item value="D:\IUTJavaFX\WorkSpaceJavaFX\TP3_debut.zip"/>
 			<item value="D:\IUTJavaFX\WorkSpaceJavaFX\TD3_debut.zip"/>
@@ -44,11 +46,12 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\victo\Downloads\sae2022-bank-4b02-main\sae2022-bank-4b02-main\Code\V0"/>
 			<item value="C:\Users\Etudiant\Downloads\DAILY_BANK_FX_V0bis"/>
 		</list>
 	</section>
 	<section name="org.eclipse.text.quicksearch.internal.ui.QuickSearchDialog.DIALOG_SETTINGS">
-		<item key="LAST_QUERY" value="n&apos;est pas im"/>
+		<item key="LAST_QUERY" value="loadList"/>
 		<item key="PATH_FILTER" value=""/>
 		<item key="CASE_SENSITIVE" value="true"/>
 		<item key="KEEP_OPEN" value="false"/>

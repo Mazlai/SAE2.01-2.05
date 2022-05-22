@@ -47,4 +47,8 @@
     <fullyQualifiedTypeName name="javafx.stage.Stage"/>
     <fullyQualifiedTypeName name="blackjack.om.MainBlackjack"/>
     <fullyQualifiedTypeName name="blackjack.om.EtatBlackBot"/>
+    <fullyQualifiedTypeName name="application.view.ComptesManagementController"/>
+    <fullyQualifiedTypeName name="model.orm.exception.DataAccessException"/>
+    <fullyQualifiedTypeName name="model.orm.exception.DatabaseConnexionException"/>
+    <fullyQualifiedTypeName name="application.view.OperationEditorPaneController"/>
 </qualifiedTypeNameHistroy>
