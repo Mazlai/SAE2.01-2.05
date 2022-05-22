@@ -111,6 +111,14 @@ public class AccessCompteCourant {
 		}
 	}
 	
+	/**
+	 * Recherche de l'ensemble des comptes courants présents aux différents clients
+	 *
+	 * @return Les comptes ou null si non trouvé
+	 * @return Tous les CompteCourant de tous les clients (ou liste vide)
+	 * @throws DataAccessException
+	 * @throws DatabaseConnexionException
+	 */
 	public ArrayList<CompteCourant> getTousLesComptes()
             throws DataAccessException, DatabaseConnexionException {
         ArrayList<CompteCourant> alResult = new ArrayList<>();

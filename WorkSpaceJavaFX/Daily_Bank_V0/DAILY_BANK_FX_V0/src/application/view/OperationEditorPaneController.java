@@ -46,8 +46,6 @@ public class OperationEditorPaneController implements Initializable {
 	private CompteCourant compteEdite;
 	private Operation operationResultat;
 
-	
-
 	// Manipulation de la fenêtre
 	public void initContext(Stage _primaryStage, DailyBankState _dbstate) {
 		this.primaryStage = _primaryStage;
@@ -111,7 +109,7 @@ public class OperationEditorPaneController implements Initializable {
                     + String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
             this.lblMessage.setText(info3);
 
-            this.lblClient.setText("Choisissez un client :");
+            this.lblCompte.setText("Choisissez un compte :");
             this.btnOk.setText("Effectuer Virement");
             this.btnCancel.setText("Annuler Virement");
 
@@ -122,6 +120,7 @@ public class OperationEditorPaneController implements Initializable {
 
             ArrayList<CompteCourant> listeCpt = new ArrayList<>();
             
+            
             try {
                 AccessCompteCourant acc = new AccessCompteCourant();
                 try {
@@ -131,7 +130,11 @@ public class OperationEditorPaneController implements Initializable {
                 }    
                 
                 for (CompteCourant tyOp : listeCpt) {
-                    list3.add(tyOp.toString());
+                	if(tyOp.idNumCompte == this.compteEdite.idNumCompte) {
+                		list3.remove(tyOp.toString());
+                	} else {
+                		list3.add(tyOp.toString());
+                	}
                 }
                 
             } catch(DatabaseConnexionException e) {
@@ -168,13 +171,10 @@ public class OperationEditorPaneController implements Initializable {
 	private Label lblMessage;
 	@FXML
 	private Label lblMontant;
-	
 	@FXML
-	private Label lblClient;
-	
+	private Label lblCompte;	
 	@FXML
-	private ComboBox<String> cbTypeOpe;
-	
+	private ComboBox<String> cbTypeOpe;	
 	@FXML
 	private TextField txtMontant;
 	@FXML
@@ -203,7 +203,7 @@ public class OperationEditorPaneController implements Initializable {
 			double montant;
 
 			this.txtMontant.getStyleClass().remove("borderred");
-			this.lblClient.getStyleClass().remove("borderred");
+			this.lblCompte.getStyleClass().remove("borderred");
 			this.lblMontant.getStyleClass().remove("borderred");
 			this.lblMessage.getStyleClass().remove("borderred");
 			String info = "Cpt. : " + this.compteEdite.idNumCompte + "  "
@@ -218,7 +218,7 @@ public class OperationEditorPaneController implements Initializable {
 			} catch (NumberFormatException nfe) {
 				this.txtMontant.getStyleClass().add("borderred");
 				this.lblMontant.getStyleClass().add("borderred");
-				this.lblClient.getStyleClass().add("borderred");
+				this.lblCompte.getStyleClass().add("borderred");
 				this.txtMontant.requestFocus();
 				return;
 			}
@@ -229,12 +229,14 @@ public class OperationEditorPaneController implements Initializable {
 				this.lblMessage.setText(info);
 				this.txtMontant.getStyleClass().add("borderred");
 				this.lblMontant.getStyleClass().add("borderred");
-				this.lblClient.getStyleClass().add("borderred");
+				this.lblCompte.getStyleClass().add("borderred");
 				this.lblMessage.getStyleClass().add("borderred");
 				this.txtMontant.requestFocus();
 				return;
 			}
+
 			String typeOp = this.cbTypeOpe.getValue();
+			
 			this.operationResultat = new Operation(-1, montant, null, null, this.compteEdite.idNumCli, typeOp);
 			this.primaryStage.close();
 			break;
@@ -245,7 +247,7 @@ public class OperationEditorPaneController implements Initializable {
 			double montant2;
 
 			this.txtMontant.getStyleClass().remove("borderred");
-			this.lblClient.getStyleClass().remove("borderred");
+			this.lblCompte.getStyleClass().remove("borderred");
 			this.lblMontant.getStyleClass().remove("borderred");
 			this.lblMessage.getStyleClass().remove("borderred");
 			String info2 = "Cpt. : " + this.compteEdite.idNumCompte + "  "
@@ -260,7 +262,7 @@ public class OperationEditorPaneController implements Initializable {
 			} catch (NumberFormatException nfe) {
 				this.txtMontant.getStyleClass().add("borderred");
 				this.lblMontant.getStyleClass().add("borderred");
-				this.lblClient.getStyleClass().add("borderred");
+				this.lblCompte.getStyleClass().add("borderred");
 				this.txtMontant.requestFocus();
 				return;
 		
@@ -282,7 +284,7 @@ public class OperationEditorPaneController implements Initializable {
             
             this.txtMontant.getStyleClass().remove("borderred");
             this.lblMontant.getStyleClass().remove("borderred");
-            this.lblClient.getStyleClass().remove("borderred");
+            this.lblCompte.getStyleClass().remove("borderred");
             this.lblMessage.getStyleClass().remove("borderred");
             String info3 = "Cpt. : " + this.compteEdite.idNumCompte + "  "
                     + String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
@@ -296,7 +298,7 @@ public class OperationEditorPaneController implements Initializable {
             } catch (NumberFormatException nfe) {
                 this.txtMontant.getStyleClass().add("borderred");
                 this.lblMontant.getStyleClass().add("borderred");
-                this.lblClient.getStyleClass().add("borderred");
+                this.lblCompte.getStyleClass().add("borderred");
                 this.txtMontant.requestFocus();
                 return;
             }
@@ -307,19 +309,22 @@ public class OperationEditorPaneController implements Initializable {
                 this.lblMessage.setText(info);
                 this.txtMontant.getStyleClass().add("borderred");
                 this.lblMontant.getStyleClass().add("borderred");
-                this.lblClient.getStyleClass().add("borderred");
+                this.lblCompte.getStyleClass().add("borderred");
                 this.lblMessage.getStyleClass().add("borderred");
                 this.txtMontant.requestFocus();
                 return;
             }
-            typeOp = this.cbTypeOpe.getValue();
-            this.operationResultat = new Operation(-1, montant3, null, null, this.compteEdite.idNumCli, typeOp);
+            String typeOp3 = this.cbTypeOpe.getValue();
+            this.operationResultat = new Operation(-1, montant3, null, null, this.compteEdite.idNumCli, typeOp3);
             this.primaryStage.close();
             break;
 		}
 	}
-	    
-        
+	
+	/** Renvoie le compte sélectionné
+	 * 
+	 * @return Le compte sélectionné à l'index actuel dans le modèle
+	 */
 	public int getCompteSelectionne() {
 
 		return this.cbTypeOpe.getSelectionModel().getSelectedIndex();

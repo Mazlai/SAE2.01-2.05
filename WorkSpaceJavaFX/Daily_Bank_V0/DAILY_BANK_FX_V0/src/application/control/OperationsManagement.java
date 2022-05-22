@@ -121,9 +121,8 @@ public class OperationsManagement {
 				ArrayList<CompteCourant> clients = acc.getTousLesComptes();
 				
 				String STR = ConstantesIHM.OPERATIONS_VIREMENT_GUICHET;
-				String strInfo = "Virement ";
 				
-				ao.insertDebit(this.compteConcerne.idNumCompte, op.montant,STR);
+				ao.insertDebit(this.compteConcerne.idNumCompte, op.montant, STR);
 				ao.insertCredit(clients.get(oep.getOepc().getCompteSelectionne()).idNumCompte, 0 - op.montant, STR);
 				
 			} catch (DatabaseConnexionException e) {
