@@ -7,28 +7,27 @@
 
 == Présentation générale de l'application
 
-Cette application est cool
+[A remplir]
 
 == Installation 
 
-Faire à la fin avec le shell ou bat 
-
+Faire à la fin avec le shell ou bat [A remplir]
 
 == Fonctionnement de l'application 
 
 === Guichetier
 
-==== Comment se connecter ? 
+==== Connexion
 
+===== Comment se connecter ? 
 
 Voici l'interface d'accueil qui s'affichera lors de l'ouverture de l'exécutable de notre application DAILY BANK.
 
-Pour se connecter à son compte le client devra appuyer sur le bouton "Connexion" situé en bas de page :
-
+Pour se connecter à son compte, le client devra appuyer sur le bouton "Connexion" situé en bas de page :
 
 image::/V0/images/accueil.png[Interface d'accueil]
 
-==== Identifiant et Mot de passe
+===== Identifiant et mot de passe
 
 En ce qui concerne vos identifiants, vous les recevrez par lettre recommandée. Vous pourrez ensuite insérer vos identifiants de connexion de la manière suivante : 
 
@@ -50,7 +49,7 @@ Pour exercer votre métier de guichetier et pour pouvoir effectuer des transacti
 
 image::/V0/images/gestionClient.png[Exercer le métier de guichetier]
 
-==== Créer un nouveau client
+===== Créer un nouveau client
 
 Afin de pouvoir créer un compte, veuillez cliquer sur les boutons indiqués par la flèche noire.
 
@@ -72,7 +71,7 @@ image::/V0/images/ajoutClient.png[Creer compte]
 
 Si toutes les cases sont remplies correctement, il suffira d'appuyer sur le bouton "Valider" pour créer un nouveau client
 
-==== Modifier les informations d'un client
+===== Modifier les informations d'un client
 
 Vous vous êtes trompé lors de la création d'un client ? Pas de problème, notre application vous permet de rectifier d'éventuelles erreurs ! 
 Afin de pouvoir modifier un compte, il vous faut au préalable connaître au minimum son numéro de compte (ID), vous regarderez la liste fournie par mail. Une fois le code obetnu, il vous suffira de le renseigner dans la zone de texte indiquée par la flèche rouge (le prénom ainsi que le nom peuvent être renseignés dans leur zone de texte correspondante, mais ce n'est pas obligatoire) puis d'appuyer sur le bouton "Rechercher".
@@ -93,7 +92,7 @@ Une nouvelle fenêtre s'ouvre (image de la fenêtre ci-dessous) et vous pourrez,
 
 image::/V0/images/modifClient.png[Modifier un compte]
 
-==== Consulter un compte
+===== Consulter un compte
 
 Afin de voir les opérations d'un compte je vous laisse suivre les étapes jusqu'à arriver à la fenêtre nommée "Gestion des clients" définie dans la rubrique "Modifier les informations d'un client" (étape 3.1.5). Une fois la page ouverte, il suffit de cliquer sur le compte dont on souhaite consulter les opérations, puis il suffit d'appuyer sur le bouton "Comptes client" (flèche rouge)
 
@@ -102,6 +101,8 @@ image::/V0/images/compte1.png[Etape 1 pour consulter compte]
 Il ne reste plus qu'à suivre les flèches rouges
 
 image::/V0/images/compte2.png[Etape 2 pour consulter compte]
+
+==== Opérations
 
 Enfin, nous pouvons voir la liste des opérations effectuées sur le compte sélectionné (flèche rouge)
 Y sont renseignés comme éléments :
@@ -114,7 +115,7 @@ Y sont renseignés comme éléments :
 
 image::/V0/images/compte3.png[Etape 3 pour consulter compte]
 
-==== Débiter un compte
+===== Débiter un compte
 
 Afin de pouvoir débiter un compte, il faut suivre les étapes de la rubrique "Consulter un compte" puis arriver jusqu'à l'interface nommée "Gestion des opérations comme illustré sur l'image ci-dessous.
 
@@ -129,6 +130,12 @@ Puis, veuillez selectionner / saisir :
 Une fois ces deux actions faites, il faut appuyer sur le bouton "Effectuer débit" pour valider la transaction, elle apparaîtra dans la zone dédiée aux opérations, comme vu dans la rubrique "Consulter compte"
 
 image::/V0/images/debiter2.png[Etape 1 pour debiter un compte]
+
+===== Créditer un compte
+
+===== Réaliser un virement d'un compte à un compte
+
+==== Chef d'Agence
 
 == Résultats plus quelques exemples de jeux d'essais
 
