@@ -147,13 +147,13 @@ image::/V0/images/virement.PNG[Etape 1 pour faire un virement de compte à compt
 A la différence des deux autres actions, vous pourrez interagir avec le compte d'un autre client afin de procéder à une transaction en direction du compte choisi. 
 Vous avez ainsi la possibilité de choisir parmi la liste que vous avez à votre disposition, le compte d'un client auquel vous effectuerez votre virement. 
 
-Mais ce ne serait sans oublier le montant dont vous êtes libre de choisir pour rendre le virement fonctionnel. Toutefois, veuillez à vérifier votre découvert autorisé en fonction du solde de votre compte si vous aviez pour ambition de réaliser un virement auprès d'un autre client !
+Mais ce ne serait sans oublier le montant dont vous êtes libre de choisir pour rendre le transfert fonctionnel. Toutefois, veuillez à vérifier votre découvert autorisé en fonction du solde de votre compte si vous aviez pour ambition de réaliser un virement auprès d'un autre client !
 
-Si vous pensez que vous êtes prêt à réaliser votre virement, alors appuyez sur "Effectuer virement" pour confirmer le virement que vous étiez en train de réaliser jusque-là !
+Si vous pensez que vous êtes prêt à réaliser votre opération, alors appuyez sur "Effectuer virement" pour confirmer la transaction que vous étiez en train de réaliser jusque-là !
 
 image::/V0/images/interfacevirement.PNG[Etape 2 pour faire un virement de compte à compte]
 
-Comme toute autre opération (créditer/débiter), vous verrez également votre virement s'afficher dans la liste des opérations effectuées depuis ce même compte et il en va de même pour le bénéficiaire du virement !
+Comme toute autre opération (créditer/débiter), vous verrez également votre règlement s'afficher dans la liste des opérations effectuées depuis ce même compte et il en va de même pour le bénéficiaire du virement !
 
 image::/V0/images/affichage.PNG[Etape 3 pour faire un virement de compte à compte]
 
