@@ -31,19 +31,19 @@ image::/V0/images/accueil.png[Interface d'accueil]
 
 En ce qui concerne vos identifiants, vous les recevrez par lettre recommandée. Vous pourrez ensuite insérer vos identifiants de connexion de la manière suivante : 
 
-- Votre identifiant dans la zone de texte indiquée par la flèche rouge
+- Votre identifiant dans la zone de texte indiquée par la flèche rouge ;
 
-- Votre mot de passe dans la zone de texte indiquée par la flèche bleue
+- Votre mot de passe dans la zone de texte indiquée par la flèche bleue ;
 
-- Une fois vos identifiants non érronés saisis, il ne vous reste plus qu'à appuyer sur le bouton "Valider" indiqué par la flèche noire
+- Une fois vos identifiants non erronés saisis, il ne vous reste plus qu'à appuyer sur le bouton "Valider" indiqué par la flèche noire.
 
-Si vos identifiants de connexion ne sont pas érronés, la page d'accueil s'affichera.
+Si vos identifiants de connexion ne sont pas erronés, la page d'accueil s'affichera.
 
 image::/V0/images/log.png[Connexion à un compte]
 
 ==== Gestion des clients 
 
-Pour vous déconnecter du compte, il vous suffira d'appuyer sur le bouton "Déconnexion" indiqué par la flèche noire
+Pour vous déconnecter du compte, il vous suffira d'appuyer sur le bouton "Déconnexion" indiqué par la flèche noire.
 
 Pour exercer votre métier de guichetier et pour pouvoir effectuer des transactions financières (débit) mais aussi juridiques (créer un nouveau compte etc.) sur un compte, vous pourrez cliquer sur la rubrique "Gestion" située dans l'en-tête de l'application (flèche rouge), puis sur la sous-rubrique "Clients" indiquée par la flèche bleue.
 
@@ -55,79 +55,79 @@ Afin de pouvoir créer un compte, veuillez cliquer sur les boutons indiqués par
 
 image::/V0/images/creerCompte.png[Creer compte]
 
-Suite au clic du bouton "Nouveau client" de l'image ci-dessus, une nouvelle fenêtre nommée "Gestion d'un client" va s'ouvrir (ci-dessus), le guichetier n'aura qu'à renseigner les éléments correspondants aux différentes zones de texte, à savoir : 
+Suite au clic du bouton "Nouveau client" de l'image ci-dessus, une nouvelle fenêtre nommée "Gestion d'un client" va s'ouvrir (ci-dessus). Le guichetier n'aura qu'à renseigner les éléments correspondants aux différentes zones de texte, à savoir : 
 
 - Nom : nom du client 
 
 - Prénom : prénom du client 
 
-- Adresse : veuillez respecter cette nomanclature [numéro de rue "," nom de la rue "," code postale "," nom de la ville]
+- Adresse : veuillez respecter cette nomenclature [numéro de rue "," nom de la rue "," code postal "," nom de la ville]
 
-- Téléphone : le numéro de télépone du client (portable)
+- Téléphone : le numéro de téléphone du client (portable)
 
-- E-mail : l'adresse email du client
+- E-mail : l'adresse mail du client
 
 image::/V0/images/ajoutClient.png[Creer compte]
 
-Si toutes les cases sont remplies correctement, il suffira d'appuyer sur le bouton "Valider" pour créer un nouveau client
+Si toutes les cases sont remplies correctement, il vous suffira d'appuyer sur le bouton "Valider" pour créer un nouveau client.
 
 ===== Modifier les informations d'un client
 
-Vous vous êtes trompé lors de la création d'un client ? Pas de problème, notre application vous permet de rectifier d'éventuelles erreurs ! 
-Afin de pouvoir modifier un compte, il vous faut au préalable connaître au minimum son numéro de compte (ID), vous regarderez la liste fournie par mail. Une fois le code obetnu, il vous suffira de le renseigner dans la zone de texte indiquée par la flèche rouge (le prénom ainsi que le nom peuvent être renseignés dans leur zone de texte correspondante, mais ce n'est pas obligatoire) puis d'appuyer sur le bouton "Rechercher".
+Vous vous êtes trompé lors de la création d'un client ? Pas de problèmes, notre application vous permet de rectifier d'éventuelles erreurs ! 
+Afin de pouvoir modifier un compte, il vous faut au préalable connaître au minimum son numéro de compte (ID). Vous regarderez la liste fournie par mail. Une fois le code obtenu, il vous suffira de le renseigner dans la zone de texte indiquée par la flèche rouge (le prénom ainsi que le nom peuvent être renseignés dans leur zone de texte correspondante, mais ce n'est pas obligatoire) puis d'appuyer sur le bouton "Rechercher".
 
-Prenons ici l'exemple du compte 181 qui appartient à un compte test pour la démonstration
+Prenons ici l'exemple du compte 181 qui appartient à un compte test pour la démonstration :
 
 image::/V0/images/rechercheClient.png[Recherche Client]
 
-Une fois le compte recherché, il ne vous reste plus qu'à regarder si le compte apparaît dans la zone blanche en dessous des zones de saisies comme sur l'image ci-dessous
+Une fois le compte recherché, il ne vous reste plus qu'à regarder si le compte apparaît dans la zone blanche en dessous des zones de saisies comme sur l'image ci-dessous :
 
 image::/V0/images/CompteTest.png[Recherche Client]
 
-Une fois le client apparu dans la zone de recherche, il vous suffit de cliquer sur la zone horizontale ou il apparaît puis de cliquer sur le bouton "Modifier client" indiqué par la flèche rouge
+Une fois le client apparu dans la zone de recherche, il vous suffit de cliquer sur la zone horizontale où il apparaît puis de cliquer sur le bouton "Modifier client" indiqué par la flèche rouge :
 
 image::/V0/images/preModif.png[Pré modification d'un compte]
 
-Une nouvelle fenêtre s'ouvre (image de la fenêtre ci-dessous) et vous pourrez, de ce fait, changer les erreurs éventuelles en cliquant sur le bouton "Modifier" indiqué par la flèche rouge
+Une nouvelle fenêtre s'ouvre (image de la fenêtre ci-dessous) et vous pourrez, de ce fait, changer les éventuelles erreurs en cliquant sur le bouton "Modifier" indiqué par la flèche rouge :
 
 image::/V0/images/modifClient.png[Modifier un compte]
 
 ===== Consulter un compte
 
-Afin de voir les opérations d'un compte je vous laisse suivre les étapes jusqu'à arriver à la fenêtre nommée "Gestion des clients" définie dans la rubrique "Modifier les informations d'un client" (étape 3.1.5). Une fois la page ouverte, il suffit de cliquer sur le compte dont on souhaite consulter les opérations, puis il suffit d'appuyer sur le bouton "Comptes client" (flèche rouge)
+Afin de voir les opérations d'un compte je vous laisse suivre les étapes jusqu'à arriver à la fenêtre nommée "Gestion des clients" définie dans la rubrique "Modifier les informations d'un client" (étape 2.1.2.2). Une fois la page ouverte, il suffit de cliquer sur le compte dont on souhaite consulter les opérations avant de terminer par appuyer sur le bouton "Comptes client" (flèche rouge).
 
 image::/V0/images/compte1.png[Etape 1 pour consulter compte]
 
-Il ne reste plus qu'à suivre les flèches rouges
+Il ne reste plus qu'à suivre les flèches rouges :
 
 image::/V0/images/compte2.png[Etape 2 pour consulter compte]
 
 ==== Opérations
 
 Enfin, nous pouvons voir la liste des opérations effectuées sur le compte sélectionné (flèche rouge)
-Y sont renseignés comme éléments :
+Les éléments étant renseignés sont les suivants :
 
-- La date de l'opération
+- La date de l'opération ;
 
-- Description de l'opération (type de l'opération ( Retrait/dépôt), par quel moyen (carte bleue, espèce))
+- Description de l'opération (type de l'opération (retrait/dépôt), par quel moyen (carte bleue, espèce)) ;
 
-- Montant de la somme de l'opération
+- Montant de la somme de l'opération.
 
 image::/V0/images/compte3.png[Etape 3 pour consulter compte]
 
 ===== Débiter un compte
 
-Afin de pouvoir débiter un compte, il faut suivre les étapes de la rubrique "Consulter un compte" puis arriver jusqu'à l'interface nommée "Gestion des opérations comme illustré sur l'image ci-dessous.
+Afin de pouvoir débiter un compte, il faut suivre les étapes de la rubrique "Consulter un compte" puis d'arriver jusqu'à l'interface nommée "Gestion des opérations comme illustrée sur l'image ci-dessous :
 
 image::/V0/images/debiter1.png[Etape 1 pour debiter un compte]
 
-Puis, veuillez selectionner / saisir :
+Puis, veuillez sélectionner / saisir :
 
- - Le type d'opération (carte bleue ou espèce) indiqué par la flèche rouge
+ - Le type d'opération (carte bleue ou espèce) indiqué par la flèche rouge ;
  
- - Le montant de l'opération indiqué par la flèche verte
+ - Le montant de l'opération indiqué par la flèche verte.
  
-Une fois ces deux actions faites, il faut appuyer sur le bouton "Effectuer débit" pour valider la transaction, elle apparaîtra dans la zone dédiée aux opérations, comme vu dans la rubrique "Consulter compte"
+Une fois ces deux actions réalisées, il vous faut appuyer sur le bouton "Effectuer débit" pour valider la transaction, elle apparaîtra dans la zone dédiée aux opérations, comme vu dans la rubrique "Consulter compte" :
 
 image::/V0/images/debiter2.png[Etape 1 pour debiter un compte]
 
