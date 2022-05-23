@@ -45,6 +45,7 @@ public class ComptesManagementController implements Initializable {
 		this.clientDesComptes = client;
 		this.configure();
 	}
+	
 
 	private void configure() {
 		String info;
@@ -167,6 +168,7 @@ public class ComptesManagementController implements Initializable {
 				this.loadList();
 			}
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

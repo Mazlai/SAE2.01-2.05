@@ -152,9 +152,8 @@ public class DailyBankMainFrameController implements Initializable {
 
 	@FXML
 	private void doEmployeOption() {
-		/*AlertUtilities.showAlert(this.primaryStage, "Gestion des Employé", "En cours de développement",
-				"Livraison prévue\nEn juin 2022", AlertType.INFORMATION);*/
-		this.dbmf.gestionEmploye();
+		AlertUtilities.showAlert(this.primaryStage, "Gestion des Employé", "En cours de développement",
+				"Livraison prévue\nEn juin 2022", AlertType.INFORMATION);
 	}
 
 	private void actionQuitterBD() {

@@ -251,29 +251,4 @@ public class AccessClient {
 			throw new DataAccessException(Table.Client, Order.UPDATE, "Erreur accès", e);
 		}
 	}
-
-	  public void rendreInactif(Client client)
-			throws DatabaseConnexionException, SQLException, RowNotFoundOrTooManyRowsException, DataAccessException {
-
-		try {
-			Connection con = LogToDatabase.getConnexion();
-
-			String query = "UPDATE CLIENT SET " + "estInactif = " + "O" + " " + "WHERE idNumCli = ?";
-
-			PreparedStatement pst = con.prepareStatement(query);
-			pst.setString(1, client.estInactif);
-			pst.setInt(2, client.idNumCli);
-
-			int result = pst.executeUpdate();
-			pst.close();
-			if (result != 1) {
-				con.rollback();
-				throw new RowNotFoundOrTooManyRowsException(Table.Client, Order.UPDATE,
-						"Update anormal (update de moins ou plus d'une ligne)", null, result);
-			}
-			con.commit();
-		} catch (SQLException e) {
-			throw new DataAccessException(Table.Client, Order.UPDATE, "Erreur accès", e);
-		}
-	}
 }

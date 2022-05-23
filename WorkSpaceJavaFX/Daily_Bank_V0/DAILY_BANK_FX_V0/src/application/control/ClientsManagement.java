@@ -124,5 +124,4 @@ public class ClientsManagement {
 		}
 		return listeCli;
 	}
-	
 }
