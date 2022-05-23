@@ -4,7 +4,9 @@
 
 Les tâches d'administration effectuables sur les clients doivent respecter certaines conditions.
 
-== Chef d'Agence
+== Javadoc commentée - V0
+
+=== Chef d'Agence
 - Le chef d'agence peut rendre inactif un client
 * Si le client est inactif depuis plus de un an.
 * Si le compte rencontre un problème technique.
@@ -12,7 +14,7 @@ Les tâches d'administration effectuables sur les clients doivent respecter cert
 
 Il est également la structure mère du guichetier.
 
-== Guichetier
+=== Guichetier
 Ce dernier hérite du chef d'agence, il peut ainsi également rendre inactif un client.
 
 .Le guichetier peut effectuer quatres actions :
