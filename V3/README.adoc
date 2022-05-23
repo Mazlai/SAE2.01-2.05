@@ -3,4 +3,4 @@
 .Vous trouverez ci-joint, les documents suivants :
 
 . Le CDCU - V3
-. Le GANTT - V3
+. Le GANTT prévisionnel - V3
