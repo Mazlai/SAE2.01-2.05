@@ -1,0 +1,93 @@
+= Documentation Technique - V1
+:toc:
+[.text-justify]
+
+== Présentation rapide de l'application
+
+=== Explications du Use Case global
+
+==== Types d'utilisateurs
+
+==== Spécificités
+
+=== Explications du diagramme de classe des données globales
+
+==== Chef d'agence (et ses fonctionnalités)
+
+==== Guichetier (et ses fonctionnalités)
+
+== Architecture
+
+=== Architecture générale
+
+==== Poste client
+
+==== Serveurs
+
+==== Rôle de chaque élément
+
+=== Ressources externes et rôles
+
+=== Structuration en packages de l'application
+
+=== Elements à connaître
+
+==== Spécificités
+
+==== Elements nécessaires à la mise en oeuvre du développement
+
+== Explications des fonctionnalités
+
+=== Partie de use case réalisé et scénarios éventuels
+
+=== Partie du diagramme de classes données nécessaire
+
+==== En lecture
+
+==== En mise à jour
+
+=== Copie(s) de la fonctionnalité / Maquettes états imprimés
+
+=== Classes impliquées dans chaque package
+
+=== Elements à connaître
+
+==== Spécificités
+
+==== Elements nécessaires à la mise en oeuvre du développement
+
+=== Extraits de code commentés pour des points particuliers / importants
+
+Les tâches d'administration effectuables sur les clients doivent respecter certaines conditions.
+
+=== Chef d'Agence
+- Le chef d'agence peut rendre inactif un client
+* Si le client est inactif depuis plus de un an.
+* Si le compte rencontre un problème technique.
+* Si le client a subi un vol.
+
+Il est également la structure mère du guichetier.
+
+=== Guichetier
+Ce dernier hérite du chef d'agence, il peut ainsi également rendre inactif un client.
+
+.Le guichetier peut effectuer quatres actions :
+
+['upperroman']
+. Modifier les informations d'un client
+* **Attention** : Le numéro du client ne doit pas être modifiable !
+* Nom du client
+* Adresse du client
+* Numéro de téléphone du client
+* ...
+
+. Créer un nouveau client
+* Le numéro de client doit être inexistant dans la base de données.
+* Certaines informations sont exigées : Nom, Prénom, Adresse
+
+. Consulter un compte
+* Doit posséder le numéro de client
+
+. Débiter un compte
+* Sur la demande d'un client seulement.
+* Doit posséder le numéro de client
