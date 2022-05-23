@@ -140,7 +140,7 @@ image::/V0/images/debiter2.png[Etape 2 pour debiter un compte]
 
 Afin de pouvoir créditer un compte, il faut suivre les étapes de la rubrique "Consulter un compte" puis d'arriver jusqu'à l'interface nommée "Gestion des opérations comme illustrée sur l'image ci-dessous :
 
-image::/V0/images/debiter1.png[Etape 1 pour créditer un compte]
+image::/V1/images/Créditer.png[Etape 1 pour créditer un compte]
 
 Puis, veuillez sélectionner / saisir :
 
@@ -150,7 +150,7 @@ Puis, veuillez sélectionner / saisir :
  
 Une fois ces deux actions réalisées, il vous faut appuyer sur le bouton "Effectuer Crédit" pour valider la transaction, elle apparaîtra dans la zone dédiée aux opérations, comme vu dans la rubrique "Consulter compte" :
 
-image::/V0/images/debiter2.png[Etape 2 pour créditer un compte]
+image::/V1/images/Créditer_TypeOp.png[Etape 2 pour créditer un compte]
 
 
 ===== Réaliser un virement d'un compte à un compte
