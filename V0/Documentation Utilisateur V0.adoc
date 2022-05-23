@@ -115,11 +115,6 @@ Les éléments étant renseignés sont les suivants :
 
 image::/V0/images/compte3.png[Etape 3 pour consulter compte]
 
-Il vous est, en toute logique, impossible de réaliser une opération, quoi qu'elle puisse être, sur un compte que vous avez décidé de faire clôturer.
-Vous pourrez toujours consulter l'ensemble des opérations réalisées précédemment sur le compte en question, mais vous ne pourrez plus interagir avec celui-ci dès lors qu'il s'agit de faire une opération :
-
-image::/V0/images/cloture.PNG[Operation impossible]
-
 ===== Débiter un compte
 
 Afin de pouvoir débiter un compte, il faut suivre les étapes de la rubrique "Consulter un compte" puis d'arriver jusqu'à l'interface nommée "Gestion des opérations comme illustrée sur l'image ci-dessous :
@@ -136,28 +131,9 @@ Une fois ces deux actions réalisées, il vous faut appuyer sur le bouton "Effec
 
 image::/V0/images/debiter2.png[Etape 2 pour debiter un compte]
 
-===== Créditer un compte
-
-===== Réaliser un virement d'un compte à un compte
-
-La troisième et dernière opération que vous avez à votre disposition depuis la sélection d'un compte est de pouvoir réaliser un virement. Vous pouvez, de même, vous référer aux étapes expliquées plus haut afin d'accéder à la fenêtre suivante :
-
-image::/V0/images/virement.PNG[Etape 1 pour faire un virement de compte à compte]
-
-A la différence des deux autres actions, vous pourrez interagir avec le compte d'un autre client afin de procéder à une transaction en direction du compte choisi. 
-Vous avez ainsi la possibilité de choisir parmi la liste que vous avez à votre disposition, le compte d'un client auquel vous effectuerez votre virement. 
-
-Mais ce ne serait sans oublier le montant dont vous êtes libre de choisir pour rendre le transfert fonctionnel. Toutefois, veuillez à vérifier votre découvert autorisé en fonction du solde de votre compte si vous aviez pour ambition de réaliser un virement auprès d'un autre client !
-
-Si vous pensez que vous êtes prêt à réaliser votre opération, alors appuyez sur "Effectuer virement" pour confirmer la transaction que vous étiez en train de réaliser jusque-là !
-
-image::/V0/images/interfacevirement.PNG[Etape 2 pour faire un virement de compte à compte]
-
-Comme toute autre opération (créditer/débiter), vous verrez également votre règlement s'afficher dans la liste des opérations effectuées depuis ce même compte et il en va de même pour le bénéficiaire du virement !
-
-image::/V0/images/affichage.PNG[Etape 3 pour faire un virement de compte à compte]
-
 ==== Chef d'Agence
+
+==== Rendre inactif un client
 
 == Résultats plus quelques exemples de jeux d'essais
 
