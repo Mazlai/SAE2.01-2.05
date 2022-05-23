@@ -2,8 +2,6 @@
 :toc:
 [.text-justify]
 
-Structure au choix pour la V0 (pour la V1, il faudra suivre la structure suivante) :
-
 == Présentation rapide de l'application
 
 === Explications du Use Case global
@@ -59,10 +57,6 @@ Structure au choix pour la V0 (pour la V1, il faudra suivre la structure suivant
 ==== Elements nécessaires à la mise en oeuvre du développement
 
 === Extraits de code commentés pour des points particuliers / importants
-
-= Ou bien :
-
-== Javadoc commentée - V0
 
 Les tâches d'administration effectuables sur les clients doivent respecter certaines conditions.
 
