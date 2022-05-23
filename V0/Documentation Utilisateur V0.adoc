@@ -133,7 +133,7 @@ image::/V0/images/debiter2.png[Etape 2 pour debiter un compte]
 
 ==== Chef d'Agence
 
-==== Rendre inactif un client
+===== Rendre inactif un client
 
 == Résultats plus quelques exemples de jeux d'essais
 
