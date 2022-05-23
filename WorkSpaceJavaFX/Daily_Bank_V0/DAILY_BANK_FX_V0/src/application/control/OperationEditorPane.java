@@ -17,16 +17,12 @@ public class OperationEditorPane {
 
 	private Stage primaryStage;
 	private OperationEditorPaneController oepc;
-	
-	public OperationEditorPaneController getOepc() {
-		return this.oepc;
-	}
 
 	public OperationEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
 		try {
 			FXMLLoader loader = new FXMLLoader(
-			OperationEditorPaneController.class.getResource("operationeditorpane.fxml"));
+					OperationEditorPaneController.class.getResource("operationeditorpane.fxml"));
 			BorderPane root = loader.load();
 
 			Scene scene = new Scene(root, 500 + 20, 250 + 10);

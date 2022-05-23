@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import application.DailyBankApp;
 import application.DailyBankState;
 import application.tools.CategorieOperation;
-import application.tools.ConstantesIHM;
 import application.tools.PairsOfValue;
 import application.tools.StageManagement;
 import application.view.OperationsManagementController;
@@ -73,58 +72,6 @@ public class OperationsManagement {
 
 				ao.insertDebit(this.compteConcerne.idNumCompte, op.montant, op.idTypeOp);
 
-			} catch (DatabaseConnexionException e) {
-				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
-				ed.doExceptionDialog();
-				this.primaryStage.close();
-				op = null;
-			} catch (ApplicationException ae) {
-				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
-				ed.doExceptionDialog();
-				op = null;
-			}
-		}
-		return op;
-	}
-	
-	public Operation enregistrerCredit() {
-
-		OperationEditorPane oep = new OperationEditorPane(this.primaryStage, this.dbs);
-		Operation op = oep.doOperationEditorDialog(this.compteConcerne, CategorieOperation.CREDIT);
-		if (op != null) {
-			try {
-				AccessOperation ao = new AccessOperation();
-
-				ao.insertCredit(this.compteConcerne.idNumCompte, 0 - op.montant, op.idTypeOp);
-
-			} catch (DatabaseConnexionException e) {
-				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
-				ed.doExceptionDialog();
-				this.primaryStage.close();
-				op = null;
-			} catch (ApplicationException ae) {
-				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
-				ed.doExceptionDialog();
-				op = null;
-			}
-		}
-		return op;
-	}
-	
-	public Operation enregistrerVirement() {
-		OperationEditorPane oep = new OperationEditorPane(this.primaryStage, this.dbs);
-		Operation op = oep.doOperationEditorDialog(this.compteConcerne, CategorieOperation.VIREMENT);
-		if (op != null) {
-			try {
-				AccessOperation ao = new AccessOperation();
-				AccessCompteCourant acc = new AccessCompteCourant();
-				ArrayList<CompteCourant> clients = acc.getTousLesComptes();
-				
-				String STR = ConstantesIHM.OPERATIONS_VIREMENT_GUICHET;
-				
-				ao.insertDebit(this.compteConcerne.idNumCompte, op.montant, STR);
-				ao.insertCredit(clients.get(oep.getOepc().getCompteSelectionne()).idNumCompte, 0 - op.montant, STR);
-				
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 				ed.doExceptionDialog();

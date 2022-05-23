@@ -103,44 +103,27 @@ public class OperationsManagementController implements Initializable {
 
 	@FXML
 	private void doCredit() {
-		
-		Operation op = this.om.enregistrerCredit();
-		if (op != null) {
-			this.updateInfoCompteClient();
-			this.validateComponentState();
-		}
 	}
 
 	@FXML
 	private void doVirement() {
-		Operation op = this.om.enregistrerVirement();
-		if (op != null) {
-			this.updateInfoCompteClient();
-			this.validateComponentState();
-		}
-		
 	}
 
 	private void validateComponentState() {
-			//Condition compte fermé
-			if (this.compteConcerne.estCloture.equals("O")) {
-				this.btnCredit.setDisable(true);
-				this.btnDebit.setDisable(true);
-				this.btnVirement.setDisable(true);
-				//Condition Virement	
-			} else if ((this.compteConcerne.debitAutorise > 0 && this.compteConcerne.solde > (-this.compteConcerne.debitAutorise)) ||
-			 (this.compteConcerne.debitAutorise <= 0 && this.compteConcerne.solde > this.compteConcerne.debitAutorise)) {
-				this.btnVirement.setDisable(false);
-				this.btnCredit.setDisable(false);
-				
-			} else {
-				this.btnCredit.setDisable(false);
-				this.btnDebit.setDisable(false);
-				this.btnVirement.setDisable(true);
-			}
-			/*if (this.compteConcerne.solde > 0 && this.compteConcerne.estCloture.equals("N")) {
+		//Condition compte fermé
+		if (this.compteConcerne.estCloture.equals("O")) {
+			this.btnCredit.setDisable(true);
+			this.btnDebit.setDisable(true);
+			this.btnVirement.setDisable(true);
+		}
+		//Condition virement 
+		/*if (this.compteConcerne.solde > 0 && this.compteConcerne.estCloture.equals("N")) {
 			this.btnVirement.setDisable(false);*/
-			//Sinon par défaut
+		//Sinon par défaut
+			this.btnVirement.setDisable(true);
+			this.btnCredit.setDisable(true);
+			this.btnDebit.setDisable(false);
+		
 	}
 
 	private void updateInfoCompteClient() {

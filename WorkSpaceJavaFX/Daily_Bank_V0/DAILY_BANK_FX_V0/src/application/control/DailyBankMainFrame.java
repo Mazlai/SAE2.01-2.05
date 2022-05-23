@@ -140,4 +140,9 @@ public class DailyBankMainFrame extends Application {
 		ClientsManagement cm = new ClientsManagement(this.primaryStage, this.dbs);
 		cm.doClientManagementDialog();
 	}
+	
+	public void gestionEmploye() {
+		EmployesManagement em = new EmployesManagement(this.primaryStage, this.dbs);
+		em.doEmployeManagementDialog();
+	}
 }

@@ -20,6 +20,7 @@
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Sioul\Documents\sae2022-bank-4a2\WorkSpaceJavaFX\Daily_Bank_V0\DAILY_BANK_FX_V0"/>
 			<item value="C:\Users\victo\OneDrive\Documents\sae2022-bank-4a2\WorkSpaceJavaFX\Daily_Bank_V0\DAILY_BANK_FX_V0"/>
 			<item value="D:\COURS IUT\INFO S2\SAE\sae2022-bank-4a2\WorkSpaceJavaFX\Daily_Bank_V0\DAILY_BANK_FX_V0"/>
 			<item value=""/>

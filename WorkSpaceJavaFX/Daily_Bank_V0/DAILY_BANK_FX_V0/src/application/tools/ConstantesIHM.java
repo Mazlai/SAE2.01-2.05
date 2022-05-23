@@ -23,7 +23,6 @@ public class ConstantesIHM {
 
 	public static final String[] OPERATIONS_DEBIT_GUICHET = { ConstantesIHM.TYPE_OP_2, ConstantesIHM.TYPE_OP_5 };
 	public static final String[] OPERATIONS_CREDIT_GUICHET = { ConstantesIHM.TYPE_OP_1, ConstantesIHM.TYPE_OP_3 };
-	public static final String OPERATIONS_VIREMENT_GUICHET =  ConstantesIHM.TYPE_OP_7;
 
 	public static boolean isAdmin(String droitAccess) {
 		return droitAccess.equals(ConstantesIHM.AGENCE_CHEF);
