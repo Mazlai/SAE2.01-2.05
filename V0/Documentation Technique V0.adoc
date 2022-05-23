@@ -2,6 +2,66 @@
 :toc:
 [.text-justify]
 
+Structure au choix pour la V0 (pour la V1, il faudra suivre la structure suivante) :
+
+== Présentation rapide de l'application
+
+=== Explications du Use Case global
+
+==== Types d'utilisateurs
+
+==== Spécificités
+
+=== Explications du diagramme de classe des données globales
+
+==== Chef d'agence (et ses fonctionnalités)
+
+==== Guichetier (et ses fonctionnalités)
+
+== Architecture
+
+=== Architecture générale
+
+==== Poste client
+
+==== Serveurs
+
+==== Rôle de chaque élément
+
+=== Ressources externes et rôles
+
+=== Structuration en packages de l'application
+
+=== Elements à connaître
+
+==== Spécificités
+
+==== Elements nécessaires à la mise en oeuvre du développement
+
+== Explications des fonctionnalités
+
+=== Partie de use case réalisé et scénarios éventuels
+
+=== Partie du diagramme de classes données nécessaire
+
+==== En lecture
+
+==== En mise à jour
+
+=== Copie(s) de la fonctionnalité / Maquettes états imprimés
+
+=== Classes impliquées dans chaque package
+
+=== Elements à connaître
+
+==== Spécificités
+
+==== Elements nécessaires à la mise en oeuvre du développement
+
+=== Extraits de code commentés pour des points particuliers / importants
+
+= Ou bien :
+
 == Javadoc commentée - V0
 
 Les tâches d'administration effectuables sur les clients doivent respecter certaines conditions.
