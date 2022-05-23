@@ -1,10 +1,10 @@
 = Documentation Technique
-
 :toc:
-
-Les tâches d'administration effectuables sur les clients doivent respecter certaines conditions.
+[.text-justify]
 
 == Javadoc commentée - V0
+
+Les tâches d'administration effectuables sur les clients doivent respecter certaines conditions.
 
 === Chef d'Agence
 - Le chef d'agence peut rendre inactif un client
