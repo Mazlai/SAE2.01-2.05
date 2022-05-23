@@ -4,4 +4,4 @@
 
 . Le CDCU - V2
 . Le cahier de tests - V2
-. Le GANTT - V2
+. Le GANTT prévisionnel - V2
