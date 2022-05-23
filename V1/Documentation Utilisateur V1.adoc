@@ -138,6 +138,21 @@ image::/V0/images/debiter2.png[Etape 2 pour debiter un compte]
 
 ===== Créditer un compte
 
+Afin de pouvoir créditer un compte, il faut suivre les étapes de la rubrique "Consulter un compte" puis d'arriver jusqu'à l'interface nommée "Gestion des opérations comme illustrée sur l'image ci-dessous :
+
+image::/V0/images/debiter1.png[Etape 1 pour créditer un compte]
+
+Puis, veuillez sélectionner / saisir :
+
+ - Le type d'opération (chèque ou espèce) indiqué par la flèche rouge ;
+ 
+ - Le montant de l'opération indiqué par la flèche verte.
+ 
+Une fois ces deux actions réalisées, il vous faut appuyer sur le bouton "Effectuer Crédit" pour valider la transaction, elle apparaîtra dans la zone dédiée aux opérations, comme vu dans la rubrique "Consulter compte" :
+
+image::/V0/images/debiter2.png[Etape 2 pour créditer un compte]
+
+
 ===== Réaliser un virement d'un compte à un compte
 
 La troisième et dernière opération que vous avez à votre disposition depuis la sélection d'un compte est de pouvoir réaliser un virement. Vous pouvez, de même, vous référer aux étapes expliquées plus haut afin d'accéder à la fenêtre suivante :
