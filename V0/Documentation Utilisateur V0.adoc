@@ -7,11 +7,14 @@
 
 == Présentation générale de l'application
 
+Cette application à été réalisé lors de notre première année de BUT informatique, nous avions pour but de réaliser une application nommée "DAILY BANK", celle-ci nous permettra de simuler des actions que l'on peut retrouver dans une banque du monde réel.
+
 L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle devra permettre de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
 
 == Installation 
 
-Faire à la fin avec le shell ou bat [A remplir]
+Afin de pouvoir utiliser notre application, nos clients devront disposer d'un poste informatique munit d'un JRE JAVA 8. 
+https://techexpert.tips/fr/windows-fr/installation-de-java-jre-sur-windows/[Comment installer et configurer JAVA 8 sur votre PC ?]
 
 == Fonctionnement de l'application 
 
