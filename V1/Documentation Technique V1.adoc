@@ -6,11 +6,15 @@
 
 === Explications du Use Case global
 
+image::../V1/images/unknown.png[UC V1]
+
 ==== Types d'utilisateurs
 
 ==== Spécificités
 
 === Explications du diagramme de classe des données globales
+
+image::../V1/images/diagrammeclassesv1.png[DC V1]
 
 ==== Chef d'agence (et ses fonctionnalités)
 
