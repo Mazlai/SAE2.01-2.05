@@ -14,7 +14,7 @@ image::../V1/images/unknown.png[UC V1]
 
 === Explications du diagramme de classe des données globales
 
-image::../V1/images/diagrammeclassesv1.png[DC V1]
+image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 
 ==== Chef d'agence (et ses fonctionnalités)
 
