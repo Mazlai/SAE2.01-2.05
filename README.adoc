@@ -24,7 +24,7 @@ MAJ le 08/05/2022:
 - [x] Créer un compte
 - [x] Effectuer un virement de compte à compte
 - [x] Clôturer un compte
-- [ ] Gérer (faire le « CRUD ») les employés (guichetier et chef d’agence)
+- [x] Gérer (faire le « CRUD ») les employés (guichetier et chef d’agence)
 
 
 *Lien vers le CDCU V3 :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V3/CDCU.adoc[__Cliquer ici__]
