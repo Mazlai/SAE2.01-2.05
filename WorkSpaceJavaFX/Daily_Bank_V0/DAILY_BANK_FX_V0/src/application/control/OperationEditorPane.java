@@ -60,7 +60,7 @@ public class OperationEditorPane {
 	 * Prend en parametre le Compte courant à appliquer l'opération et la categorie de l'operation(Virement,Credit,Debit)
 	 * @param cpte CompteCourant
 	 * @param cm Categorie 
-	 * @return
+	 * @return le contenu à afficher dans la boites de dialogue
 	 */
 	public Operation doOperationEditorDialog(CompteCourant cpte, CategorieOperation cm) {
 		return this.oepc.displayDialog(cpte, cm);
