@@ -2,65 +2,189 @@
 :toc:
 [.text-justify]
 
-== Présentation rapide de l'application
+== I - Présentation rapide de l'application
 
-=== Explications du Use Case global
+=== 1. Explications du Use Case global
 
 image::../V1/images/unknown.png[UC V1]
 
-==== Types d'utilisateurs
+==== 1.1 Types d'utilisateurs et spécificités
 
-==== Spécificités
-
-=== Explications du diagramme de classe des données globales
+=== 2. Explications du diagramme de classe des données globales
 
 image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 
-==== Chef d'agence (et ses fonctionnalités)
+==== 2.1 Fonctionnalités du chef d'agence
 
-==== Guichetier (et ses fonctionnalités)
+==== 2.2 Fonctionnalités du guichetier
 
-== Architecture
+== II - Architecture
 
-=== Architecture générale
+=== 1. Architecture générale
 
-==== Poste client
+==== 1.1 Poste client
 
-==== Serveurs
+==== 1.2 Serveurs
 
-==== Rôle de chaque élément
+==== 1.3 Rôle de chaque élément
 
-=== Ressources externes et rôles
+=== 2. Ressources externes et rôles
 
-=== Structuration en packages de l'application
+=== 3. Structuration en packages de l'application
 
-=== Elements à connaître
+=== 4. Elements à connaître
 
-==== Spécificités
+==== 4.1 Spécificités
+
+==== 4.2 Elements nécessaires à la mise en oeuvre du développement
+
+== III - Explications des fonctionnalités
+
+=== 1. Guichetier
+
+==== 1.1 Modifier les informations d'un client
+
+===== Partie du use case conforme
+
+===== Partie du diagramme de classe conforme
+
+===== Principales fonctionnalités
+
+===== Classes impliquées à l'implémentation de la fonction
+
+===== Éléments à connaître / spécificités
+
+===== Extraits de code commentés pour des points importants
+
+==== 1.2 Créer un nouveau client
+
+===== Partie du use case conforme
+
+===== Partie du diagramme de classe conforme
+
+===== Principales fonctionnalités
+
+===== Classes impliquées à l'implémentation de la fonction
+
+===== Éléments à connaître / spécificités
+
+===== Extraits de code commentés pour des points importants
+
+==== 1.3 Créer un nouveau compte 
+
+===== Partie du use case conforme
+
+===== Partie du diagramme de classe conforme
+
+===== Principales fonctionnalités
+
+===== Classes impliquées à l'implémentation de la fonction
+
+===== Éléments à connaître / spécificités
+
+===== Extraits de code commentés pour des points importants
+
+==== 1.4 Clôturer un compte
+
+===== Partie du use case conforme
+
+===== Partie du diagramme de classe conforme
+
+===== Principales fonctionnalités
+
+===== Classes impliquées à l'implémentation de la fonction
+
+===== Éléments à connaître / spécificités
+
+===== Extraits de code commentés pour des points importants
+
+==== 1.5 Consulter un compte
+
+===== Partie du use case conforme
+
+===== Partie du diagramme de classe conforme
+
+===== Principales fonctionnalités
+
+===== Classes impliquées à l'implémentation de la fonction
+
+===== Éléments à connaître / spécificités
+
+===== Extraits de code commentés pour des points importants
+
+==== 1.6 Débiter un compte (BD)
+
+===== Partie du use case conforme
+
+===== Partie du diagramme de classe conforme
+
+===== Principales fonctionnalités
+
+===== Classes impliquées à l'implémentation de la fonction
+
+===== Éléments à connaître / spécificités
+
+===== Extraits de code commentés pour des points importants
+
+==== 1.7 Créditer un compte (BD)
+
+===== Partie du use case conforme
+
+===== Partie du diagramme de classe conforme
+
+===== Principales fonctionnalités
+
+===== Classes impliquées à l'implémentation de la fonction
+
+===== Éléments à connaître / spécificités
+
+===== Extraits de code commentés pour des points importants
+
+==== 1.8 Effectuer un virement de compte à compte
+
+===== Partie du use case conforme
+
+===== Partie du diagramme de classe conforme
+
+===== Principales fonctionnalités
+
+===== Classes impliquées à l'implémentation de la fonction
+
+===== Éléments à connaître / spécificités
+
+===== Extraits de code commentés pour des points importants
+
+=== 2. Chef d'agence
+
+==== 2.1 Rendre inactif un client 
+
+===== Partie du use case conforme
+
+===== Partie du diagramme de classe conforme
+
+===== Principales fonctionnalités
+
+===== Classes impliquées à l'implémentation de la fonction
+
+===== Éléments à connaître / spécificités
+
+===== Extraits de code commentés pour des points importants
+
+==== 2.2 Gérer les employés (CRUD)
+
+===== Partie du use case conforme
+
+===== Partie du diagramme de classe conforme
+
+===== Principales fonctionnalités
+
+===== Classes impliquées à l'implémentation de la fonction
+
+===== Éléments à connaître / spécificités
+
+===== Extraits de code commentés pour des points importants
 
 ==== Elements nécessaires à la mise en oeuvre du développement
-
-== Explications des fonctionnalités
-
-=== Partie de use case réalisé et scénarios éventuels
-
-=== Partie du diagramme de classes données nécessaire
-
-==== En lecture
-
-==== En mise à jour
-
-=== Copie(s) de la fonctionnalité / Maquettes états imprimés
-
-=== Classes impliquées dans chaque package
-
-=== Elements à connaître
-
-==== Spécificités
-
-==== Elements nécessaires à la mise en oeuvre du développement
-
-=== Extraits de code commentés pour des points particuliers / importants
 
 Les tâches d'administration effectuables sur les clients doivent respecter certaines conditions.
 
