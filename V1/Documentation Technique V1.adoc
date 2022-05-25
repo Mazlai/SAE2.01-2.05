@@ -42,10 +42,10 @@ Concrètement, cela se résume à ce que l'application puisse être utilisée de
 ==== 1.2 Serveurs
 
 L'application possède ainsi une base de données propre à ses caractéristiques. Elle permet de conserver l'ensemble des informations relatives à une agence bancaire telles que :
-. Les employés ; +
-. Les clients ; +
-. Les comptes des clients ou encore +
-. Les opérations effectuées depuis un compte.
+* Les employés ; 
+* Les clients ; 
+* Les comptes des clients ou encore 
+* Les opérations effectuées depuis un compte.
 
 === 2. Ressources externes et rôles
 
