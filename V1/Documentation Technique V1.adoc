@@ -185,30 +185,30 @@ image::/V1/images/virementcompte.PNG[Virement compte]
 
 ===== Principales fonctionnalités
 
-Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation technique_].
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur].
 
 ===== Classes impliquées à l'implémentation de la fonction
 
 Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
 
 *Côté application.tools :* +
-• CategorieOperation.java +
-• ConstantesIHM.java
+• _CategorieOperation.java_ +
+• _ConstantesIHM.java_
 
 *Côté application.control :* +
-• OperationManagement.java +
-• OperationEditorPane.java
+• _OperationManagement.java_ +
+• _OperationEditorPane.java_
 
 *Côté application.view :* +
-• OperationManagementController.java +
-• OperationEditorPaneController.java 
+• _OperationManagementController.java_ +
+• _OperationEditorPaneController.java_
 
 *Côté model.orm :* +
-• CompteCourant.java
+• _CompteCourant.java_
 
 *Côté model.orm / model.orm.exception :* +
-• AccessCompteCourant.java +
-• DatabaseConnexionException.java
+• _AccessCompteCourant.java_ +
+• _DatabaseConnexionException.java_
 
 ===== Éléments à connaître / spécificités
 
@@ -254,7 +254,7 @@ image::/V1/images/gereremployes.PNG[Gérer employés]
 
 ===== Extraits de code commentés pour des points importants
 
-==== Elements nécessaires à la mise en oeuvre du développement
+==== Éléments nécessaires à la mise en oeuvre du développement
 
 Les tâches d'administration effectuables sur les clients doivent respecter certaines conditions.
 
