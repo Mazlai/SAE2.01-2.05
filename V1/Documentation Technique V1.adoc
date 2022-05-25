@@ -175,6 +175,8 @@ image::/V1/images/créditerdébiter.PNG[Débiter compte]
 
 ==== 1.8 Effectuer un virement de compte à compte
 
+Le virement consiste à, depuis un compte sélectionné, transférer une somme d'argent quelconque à destination d'un compte pouvant être d'un autre client ou de soi-même. Évidemment, il est inutile voir contradictoire d'effectuer un virement vers le même compte sélectionné et il en va de même pour un montant invalide (inférieur à 0 ou ne respectant pas le type attendu). 
+
 ===== Partie du use case conforme
 
 image::/V1/images/virementcompte.PNG[Virement compte]
@@ -183,11 +185,40 @@ image::/V1/images/virementcompte.PNG[Virement compte]
 
 ===== Principales fonctionnalités
 
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation technique_].
+
 ===== Classes impliquées à l'implémentation de la fonction
+
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté application.tools :* +
+• CategorieOperation.java +
+• ConstantesIHM.java
+
+*Côté application.control :* +
+• OperationManagement.java +
+• OperationEditorPane.java
+
+*Côté application.view :* +
+• OperationManagementController.java +
+• OperationEditorPaneController.java 
+
+*Côté model.orm :* +
+• CompteCourant.java
+
+*Côté model.orm / model.orm.exception :* +
+• AccessCompteCourant.java
+• DatabaseConnexionException.java
 
 ===== Éléments à connaître / spécificités
 
+L'une des fonctions importantes pour implémenter cette action est la fonction getTousLesComptes() dans la classe AccessCompteCourant.java qui permet de rechercher l'ensemble des comptes de tous les clients (qu'ils soient dans une même agence ou non) pour effectuer cette opération.
+
 ===== Extraits de code commentés pour des points importants
+
+image::/V1/images/bouclevirement.PNG[Boucle virement]
+
+Cette condition est relativement importante pour mentionner le fait qu'un virement ne peut pas être effectué sur le compte étant sélectionné. Sans cette condition, aucune erreur ne serait à constater car le montant dépensé correspondait au moment reçu mais cela ne fait aucuns sens.
 
 === 2. Chef d'agence
 
