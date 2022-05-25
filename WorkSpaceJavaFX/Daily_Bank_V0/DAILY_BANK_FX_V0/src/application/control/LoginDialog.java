@@ -14,12 +14,21 @@ import model.orm.AccessEmploye;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DatabaseConnexionException;
 
+/**
+ * La classe LoginDialog permet de génerer la ressource FXML qui affiche la fenetre de login pour se connecter sur l'app en tant qu'employé.
+ * Cette classe recherche aussi un employé à partir de son mot de passe et de son login.
+ */
 public class LoginDialog {
 
 	private Stage primaryStage;
 	private DailyBankState dbs;
 	private LoginDialogController ldc;
-
+	
+	/**Permet de générer la ressource logindialog.fxml depuis son controller. Elle prend en parametre la fenetre(Stage) et l'état de l'agence bancaire(DailyBankState).
+	 * @param _parentStage
+	 * @param _dbstate
+	 * @param client
+	 */
 	public LoginDialog(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
 		try {
@@ -44,11 +53,20 @@ public class LoginDialog {
 			e.printStackTrace();
 		}
 	}
-
+	
+	/**Permet d'afficher le contenu de la fenetre pour se connecter sur l'application attends une interaction potentielle avec celle-ci
+	 * 
+	 * @return le contenu à afficher dans la boites de dialogue
+	 */
 	public void doLoginDialog() {
 		this.ldc.displayDialog();
 	}
-
+	
+	/**Permet de rechercher un employé dans la base de données SQL depuis son login et mot de passe. Prend en paramtre le mot de passe et le login saisi
+	 * @param login
+	 * @param password
+	 * @return l'employé recherché
+	 */
 	public Employe chercherParLogin(String login, String password) {
 		Employe employe = null;
 		try {
