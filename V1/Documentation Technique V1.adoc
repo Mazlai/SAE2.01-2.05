@@ -6,7 +6,19 @@
 
 === 1. Explications du use case global
 
+Voici le use case général de la version 1 de l'application DailyBank :
+
 image::../V1/images/unknown.png[UC V1]
+
+Tout comme dans la V0, deux types d'utilisateurs subsistent : le chef d'agence ainsi que les guichetiers.
+En tant que chef d'agence, celui-ci possède des privilèges et des droits supplémentaires au sein de son agence bancaire, à comparer d'un simple employé (guichetier).
+
+Pour justifier cela, bien que le chef d'agence pouvait, dans la V0, rendre inactif un client inscrit dans son agence bancaire, celui-ci peut en plus gérer ses employés. Cela n'aurait évidemment pas d'intérêts que cette action soit réciproque car la hiérarchie des rôles de chaque employé ne serait pas respectée.
+Celui-ci, en logique, bénéficie de l'ensemble des actions que peuvent réaliser les guichetiers.
+
+Pour un guichetier, en plus de pouvoir modifier les informations d'un client ou en créer un nouveau, de consulter un compte ou de pouvoir le débiter, étant des fonctionnalités déjà présentes dans la V0, celui-ci pourra profiter de possibilités supplémentaires telles que de créer un nouveau compte, de créditer ou d'effectuer un virement de compte à compte ou encore de pouvoir clôturer le compte sélectionné.
+
+Ces actions ne seront ainsi, possibles sans traiter les différentes problématiques liées à ces utilisations.
 
 ==== 1.1 Types d'utilisateurs et spécificités
 
