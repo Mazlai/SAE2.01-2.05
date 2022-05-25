@@ -202,6 +202,38 @@ Les principales fonctionnalités ont été introduites de manière brève dans l
 
 ===== Classes impliquées à l'implémentation de la fonction
 
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté ``application.tools`` :* +
+____
+• _CategorieOperation.java_
+• _ConstantesIHM.java_
+____
+
+*Côté ``application.control`` :* +
+____
+• _OperationManagement.java_
+• _OperationEditorPane.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _OperationManagementController.java_
+• _OperationEditorPaneController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _Operation.java_
+• _TypeOperation.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessOperation.java_
+• _DatabaseConnexionException.java_
+____
+
 ===== Éléments à connaître / spécificités
 
 ===== Extraits de code commentés pour des points importants
@@ -268,7 +300,7 @@ ____
 • _OperationEditorPaneController.java_
 ____
 
-*Côté ``model.orm`` :* +
+*Côté ``model.data`` :* +
 ____
 • _CompteCourant.java_
 ____
