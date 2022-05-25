@@ -24,6 +24,11 @@ import model.orm.exception.ApplicationException;
 import model.orm.exception.Order;
 import model.orm.exception.Table;
 
+/**
+ * La classe "ClientEditorPaneController" permet de traiter l'ensemble des actions de l'utilisateur concernant la définition d'un nouveau client ou la modification de celui-ci. 
+ * Cette classe traite ainsi les données renseignées ou modifiées par l'utilisateur, à la fois sur la "vue", correspondant à la partie graphique de l'interface mais également dans le "modèle", signifiant l'univers dans lequel s'inscrit l'application.
+ */
+
 public class ClientEditorPaneController implements Initializable {
 
 	// Etat application
@@ -44,10 +49,20 @@ public class ClientEditorPaneController implements Initializable {
 		this.configure();
 	}
 
+	/**
+	 * Permet de mettre en place la configuration de la fenêtre ainsi que les données chargées. 
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 	}
 
+	/** 
+	 * Permet de définir l'ensemble des caractéristiques de la fenêtre d'édition d'un client tout en attendant la réponse de l'éditeur.
+	 * 
+	 * @param client IN : le client édité/concerné
+	 * @param mode IN : le mode d'édition d'un client
+	 * @return : le résultat d'un client (après création, modification ou suppression)
+	 */
 	public Client displayDialog(Client client, EditionMode mode) {
 
 		this.em = mode;
@@ -168,12 +183,18 @@ public class ClientEditorPaneController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Permet l'annulation de modification sur la page et donc, de retourner sur la page précédente, en fermant la fenêtre actuelle.
+	 */
 	@FXML
 	private void doCancel() {
 		this.clientResult = null;
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Permet l'édition d'un client au coeur d'une agence bancaire, qu'il s'agisse d'un nouveau client, d'un client étant remplacé par un autre, ou de son retrait au sein de celle-ci.
+	 */
 	@FXML
 	private void doAjouter() {
 		switch (this.em) {
@@ -197,6 +218,10 @@ public class ClientEditorPaneController implements Initializable {
 
 	}
 
+	/**
+	 * Permet d'indiquer si l'ensemble des champs de saisie sont valides ou non, au sein de l'interface.
+	 * @return false si l'une des saisies de l'utilisateur n'est pas conforme au résultat attendu, true dans le cas contraire
+	 */
 	private boolean isSaisieValide() {
 		this.clientEdite.nom = this.txtNom.getText().trim();
 		this.clientEdite.prenom = this.txtPrenom.getText().trim();
