@@ -134,9 +134,11 @@ image::/V0/images/debiter1.png[Etape 1 pour debiter un compte]
 
 Puis, veuillez sélectionner / saisir :
 
+____
  - Le type d'opération (carte bleue ou espèce) indiqué par la flèche rouge ;
  
  - Le montant de l'opération indiqué par la flèche verte.
+____
  
 Une fois ces deux actions réalisées, il vous faut appuyer sur le bouton "Effectuer débit" pour valider la transaction, elle apparaîtra dans la zone dédiée aux opérations, comme vu dans la rubrique "Consulter compte" :
 
