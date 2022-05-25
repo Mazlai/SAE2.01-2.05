@@ -51,7 +51,31 @@ L'application possède ainsi une base de données propre à ses caractéristique
 
 === 3. Structuration en packages de l'application
 
+La structuration de l'application est répartie en plusieurs packages que voici : 
+
+[source]
+----
+├── application
+    │   ├── application.control
+    │   ├── application.tools
+    │   └── application.view
+    └── model
+        ├── model.data
+        └── model.orm
+            └── model.orm.exception
+----
+
 === 4. Éléments à connaître
+
+Comme vous pouvez l'observer, le code de l'application est fourni dans 4 packages principaux : 
+• control ; +
+• tools ; +
+• view ; +
+• model ; +
+
+Ces packages font ainsi référence à un principe de structuration que l'application ici présente et que les applications web en règle générale : le principe de MVC (Model-View-Controller).
+
+Le MVC (de son nom français _modèle-vue-contrôleur_) est le nom d'une méthodologie ou d'un motif de conception visant à faire le lien entre l'interface utilisateur et les modèles de données sous-jacents. Elle est notamment utile pour permettre de créer une application web afin de bien gérer la structuration d’un projet en trois parties ou encore pour la réutilisation du code objet, qui permet de réduire le temps nécessaire au développement d'applications dotées d'une interface utilisateur.
 
 ==== 4.1 Spécificités
 
@@ -218,7 +242,7 @@ L'une des fonctions importantes pour implémenter cette action est la fonction g
 
 image::/V1/images/bouclevirement.PNG[Boucle virement]
 
-Cette condition est relativement importante pour mentionner le fait qu'un virement ne peut pas être effectué sur le compte étant sélectionné. Sans cette condition, aucune erreur ne serait à constater car le montant dépensé correspondait au moment reçu mais cela ne fait aucuns sens.
+Cette condition est relativement importante pour mentionner le fait qu'un virement ne peut pas être effectué sur le compte étant sélectionné. Sans cette condition, aucune erreur ne serait à constater car le montant dépensé correspondait au montant reçu mais cela ne fait aucun sens.
 
 === 2. Chef d'agence
 
