@@ -46,6 +46,8 @@ image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 
 ===== Partie du use case conforme
 
+image::/V1/images/modifinfoclient.PNG[Modifier info client]
+
 ===== Partie du diagramme de classe conforme
 
 ===== Principales fonctionnalités
@@ -59,6 +61,8 @@ image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 ==== 1.2 Créer un nouveau client
 
 ===== Partie du use case conforme
+
+image::/V1/images/creercompte.PNG[Creer new client]
 
 ===== Partie du diagramme de classe conforme
 
@@ -74,6 +78,8 @@ image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 
 ===== Partie du use case conforme
 
+image::/V1/images/creercompte.PNG[Creer new compte]
+
 ===== Partie du diagramme de classe conforme
 
 ===== Principales fonctionnalités
@@ -87,6 +93,8 @@ image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 ==== 1.4 Clôturer un compte
 
 ===== Partie du use case conforme
+
+image::/V1/images/cloturercompte.PNG[Clôturer compte]
 
 ===== Partie du diagramme de classe conforme
 
@@ -102,6 +110,8 @@ image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 
 ===== Partie du use case conforme
 
+image::/V1/images/consultercompte.PNG[Consulter compte]
+
 ===== Partie du diagramme de classe conforme
 
 ===== Principales fonctionnalités
@@ -115,6 +125,8 @@ image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 ==== 1.6 Débiter un compte (BD)
 
 ===== Partie du use case conforme
+
+image::/V1/images/créditerdébiter.PNG[Créditer compte]
 
 ===== Partie du diagramme de classe conforme
 
@@ -130,6 +142,8 @@ image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 
 ===== Partie du use case conforme
 
+image::/V1/images/créditerdébiter.PNG[Débiter compte]
+
 ===== Partie du diagramme de classe conforme
 
 ===== Principales fonctionnalités
@@ -143,6 +157,8 @@ image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 ==== 1.8 Effectuer un virement de compte à compte
 
 ===== Partie du use case conforme
+
+image::/V1/images/virementcompte.PNG[Virement compte]
 
 ===== Partie du diagramme de classe conforme
 
@@ -160,6 +176,8 @@ image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 
 ===== Partie du use case conforme
 
+image::/V1/images/inactifclient.PNG[Client inactif]
+
 ===== Partie du diagramme de classe conforme
 
 ===== Principales fonctionnalités
@@ -173,6 +191,8 @@ image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 ==== 2.2 Gérer les employés (CRUD)
 
 ===== Partie du use case conforme
+
+image::/V1/images/gereremployes.PNG[Gérer employés]
 
 ===== Partie du diagramme de classe conforme
 
