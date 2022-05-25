@@ -16,7 +16,6 @@ import model.orm.exception.DatabaseConnexionException;
 
 /**
  * La classe DailyBankMainFrame hérite de la classe Application. Elle permet le demarrage de la homepage de l'application, de s'y connecter et de s'y deconnecter.
- *
  */
 public class DailyBankMainFrame extends Application {
 
@@ -99,15 +98,15 @@ public class DailyBankMainFrame extends Application {
 		}
 	}
 	
-	/**Permet de lancer l'application
-	 * 
+	/**
+	 * Permet de lancer l'application
 	 */
 	public static void runApp() {
 		Application.launch();
 	}
 	
-	/**Permet de se déconnecter sur l'application et fermer la connexion à la base de données
-	 * 
+	/**
+	 * Permet de se déconnecter sur l'application et fermer la connexion à la base de données
 	 */
 	public void disconnect() {
 		this.dbs.setAgAct(null);
