@@ -17,9 +17,8 @@ import model.orm.AccessClient;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DatabaseConnexionException;
 
-/** La classe ClientsManagement permet de gérer les clients, si on veut créer les informations d'un client ou en modifier un dejà existant
- * 
- *
+/** 
+ * La classe ClientsManagement permet de gérer les clients, si on veut créer les informations d'un client ou en modifier un dejà existant
  */
 public class ClientsManagement {
 
@@ -27,7 +26,8 @@ public class ClientsManagement {
 	private DailyBankState dbs;
 	private ClientsManagementController cmc;
 	
-	/**Procédure pour générer la ressource clientsmanagement.fxml depuis son controller. Elle prend en parametre la fenetre(Stage) et l'état de l'agence bancaire(DailyBankState).
+	/**
+	 * Procédure pour générer la ressource clientsmanagement.fxml depuis son controller. Elle prend en parametre la fenetre(Stage) et l'état de l'agence bancaire(DailyBankState).
 	 * @param _parentStage
 	 * @param _dbstate
 	 */
@@ -56,15 +56,16 @@ public class ClientsManagement {
 		}
 	}
 	
-	/**Permet d'afficher le contenu de la fenetre pour gérer les clients et attends une interaction potentielle avec celle-ci
-	 * 
+	/**
+	 * Permet d'afficher le contenu de la fenetre pour gérer les clients et attends une interaction potentielle avec celle-ci
 	 * @return le contenu à afficher dans la boites de dialogue
 	 */
 	public void doClientManagementDialog() {
 		this.cmc.displayDialog();
 	}
 	
-	/**Permet la fonctionnalité de modifier un client dans la fenetre de modification, il prend en parametre un client
+	/**
+	 * Permet la fonctionnalité de modifier un client dans la fenetre de modification, il prend en parametre un client
 	 * @param c
 	 * @return le resultat de la modification
 	 */
@@ -89,7 +90,8 @@ public class ClientsManagement {
 		return result;
 	}
 	
-	/**Permet la fonctionnalité de créer un client dans la fenetre de modification
+	/**
+	 * Permet la fonctionnalité de créer un client dans la fenetre de modification
 	 * @return le client crée
 	 */
 	public Client nouveauClient() {
@@ -115,7 +117,8 @@ public class ClientsManagement {
 		return client;
 	}
 	
-	/**Procédure pour gérer les comptes d'un client
+	/**
+	 * Procédure pour gérer les comptes d'un client
 	 * @param c client
 	 */
 	public void gererComptesClient(Client c) {
@@ -123,7 +126,8 @@ public class ClientsManagement {
 		cm.doComptesManagementDialog();
 	}
 	
-	/**Getter pour rechercher et récuperer la liste des clients, prend en paramètre le N° du Compte, le nom et le prenom du client
+	/**
+	 * Getter pour rechercher et récuperer la liste des clients, prend en paramètre le N° du Compte, le nom et le prenom du client
 	 * @param _numCompte
 	 * @param _debutNom
 	 * @param _debutPrenom
