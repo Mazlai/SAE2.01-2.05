@@ -23,6 +23,11 @@ import javafx.stage.WindowEvent;
 import model.data.Client;
 import model.data.CompteCourant;
 
+/**
+ * La classe "CompteEditorPaneController" permet de traiter l'ensemble des actions de l'utilisateur concernant la définition d'un nouveau compte ou la modification de celui-ci. 
+ * Cette classe traite ainsi les données renseignées ou modifiées par l'utilisateur, à la fois sur la "vue", correspondant à la partie graphique de l'interface mais également dans le "modèle", signifiant l'univers dans lequel s'inscrit l'application.
+ */
+
 public class CompteEditorPaneController implements Initializable {
 
 	// Etat application
@@ -45,6 +50,9 @@ public class CompteEditorPaneController implements Initializable {
 		this.configure();
 	}
 
+	/**
+	 * Permet de mettre en place la configuration de la fenêtre ainsi que les données chargées. 
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
@@ -52,6 +60,14 @@ public class CompteEditorPaneController implements Initializable {
 		this.txtSolde.focusedProperty().addListener((t, o, n) -> this.focusSolde(t, o, n));
 	}
 
+	/**
+	 * Permet de définir l'ensemble des caractéristiques de la fenêtre d'édition d'un compte tout en attendant la réponse de l'éditeur.
+	 * 
+	 * @param client IN : le client concerné
+	 * @param cpte IN : le compte courant du client concerné
+	 * @param mode : le mode d'édition d'un compte
+	 * @return le résultat d'un compte (après création, modification ou suppression)
+	 */
 	public CompteCourant displayDialog(Client client, CompteCourant cpte, EditionMode mode) {
 		this.clientDuCompte = client;
 		this.em = mode;
@@ -124,6 +140,13 @@ public class CompteEditorPaneController implements Initializable {
 		return null;
 	}
 
+	/**
+	 * Permet de définir dans un champ de texte, les caractéristiques d'un découvert autorisé.
+	 * @param txtField (non utilisé ?)
+	 * @param oldPropertyValue IN : focus du champ de texte d'un découvert autorisé
+	 * @param newPropertyValue (non utilisée ?)
+	 * @return null si le focus n'a jamais été envisagé
+	 */
 	private Object focusDecouvert(ObservableValue<? extends Boolean> txtField, boolean oldPropertyValue,
 			boolean newPropertyValue) {
 		if (oldPropertyValue) {
@@ -141,6 +164,13 @@ public class CompteEditorPaneController implements Initializable {
 		return null;
 	}
 
+	/**
+	 * Permet de définir dans un champ de texte, les caractéristiques d'un solde.
+	 * @param txtField (non utilisé ?)
+	 * @param oldPropertyValue IN : focus du champ de texte d'un solde
+	 * @param newPropertyValue (non utilisée ?)
+	 * @return null si le focus n'a jamais été envisagé
+	 */
 	private Object focusSolde(ObservableValue<? extends Boolean> txtField, boolean oldPropertyValue,
 			boolean newPropertyValue) {
 		if (oldPropertyValue) {
@@ -183,12 +213,18 @@ public class CompteEditorPaneController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Permet l'annulation de modification sur la page et donc, de retourner sur la page précédente, en fermant la fenêtre actuelle.
+	 */
 	@FXML
 	private void doCancel() {
 		this.compteResult = null;
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Permet l'édition d'un client au coeur d'une agence bancaire, qu'il s'agisse d'un nouveau client, d'un client étant remplacé par un autre, ou de son retrait au sein de celle-ci.
+	 */
 	@FXML
 	private void doAjouter() {
 		switch (this.em) {
@@ -212,6 +248,10 @@ public class CompteEditorPaneController implements Initializable {
 
 	}
 
+	/**
+	 * Permet d'indiquer si les saisies de l'utilisateur sont conformes aux attentes.
+	 * @return true si tout est valide 
+	 */
 	private boolean isSaisieValide() {
 
 		return true;
