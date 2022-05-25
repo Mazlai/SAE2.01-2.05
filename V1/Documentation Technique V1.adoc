@@ -62,7 +62,7 @@ image::/V1/images/modifinfoclient.PNG[Modifier info client]
 
 ===== Partie du use case conforme
 
-image::/V1/images/creercompte.PNG[Creer new client]
+image::/V1/images/creernewclient.PNG[Creer new client]
 
 ===== Partie du diagramme de classe conforme
 
