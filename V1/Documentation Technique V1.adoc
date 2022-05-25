@@ -68,12 +68,12 @@ La structuration de l'application est répartie en plusieurs packages que voici 
 === 4. Éléments à connaître
 
 Comme vous pouvez l'observer, le code de l'application est fourni dans 4 packages principaux : +
-----
-• control ; +
-• tools ; +
-• view ; +
-• model ; +
-----
+++++
+• control ; 
+• tools ; 
+• view ; 
+• model ; 
+++++
 
 Ces packages font ainsi référence à un principe de structuration que l'application ici présente et que les applications web en règle générale : le principe de MVC (Model-View-Controller).
 
