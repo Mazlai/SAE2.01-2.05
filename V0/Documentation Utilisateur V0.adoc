@@ -34,11 +34,13 @@ image::/V0/images/accueil.png[Interface d'accueil]
 
 En ce qui concerne vos identifiants, vous les recevrez par lettre recommandée. Vous pourrez ensuite insérer vos identifiants de connexion de la manière suivante : 
 
+____
 - Votre identifiant dans la zone de texte indiquée par la flèche rouge ;
 
 - Votre mot de passe dans la zone de texte indiquée par la flèche bleue ;
 
 - Une fois vos identifiants non erronés saisis, il ne vous reste plus qu'à appuyer sur le bouton "Valider" indiqué par la flèche noire.
+____
 
 Si vos identifiants de connexion ne sont pas erronés, la page d'accueil s'affichera.
 
@@ -60,6 +62,7 @@ image::/V0/images/creerCompte.png[Creer compte]
 
 Suite au clic du bouton "Nouveau client" de l'image ci-dessus, une nouvelle fenêtre nommée "Gestion d'un client" va s'ouvrir (ci-dessus). Le guichetier n'aura qu'à renseigner les éléments correspondants aux différentes zones de texte, à savoir : 
 
+____
 - Nom : nom du client 
 
 - Prénom : prénom du client 
@@ -69,6 +72,7 @@ Suite au clic du bouton "Nouveau client" de l'image ci-dessus, une nouvelle fen�
 - Téléphone : le numéro de téléphone du client (portable)
 
 - E-mail : l'adresse mail du client
+____
 
 image::/V0/images/ajoutClient.png[Creer compte]
 
@@ -110,11 +114,13 @@ image::/V0/images/compte2.png[Etape 2 pour consulter compte]
 Enfin, nous pouvons voir la liste des opérations effectuées sur le compte sélectionné (flèche rouge)
 Les éléments étant renseignés sont les suivants :
 
+____
 - La date de l'opération ;
 
 - Description de l'opération (type de l'opération (retrait/dépôt), par quel moyen (carte bleue, espèce)) ;
 
 - Montant de la somme de l'opération.
+____
 
 image::/V0/images/compte3.png[Etape 3 pour consulter compte]
 
@@ -126,9 +132,11 @@ image::/V0/images/debiter1.png[Etape 1 pour debiter un compte]
 
 Puis, veuillez sélectionner / saisir :
 
+____
  - Le type d'opération (carte bleue ou espèce) indiqué par la flèche rouge ;
  
  - Le montant de l'opération indiqué par la flèche verte.
+____
  
 Une fois ces deux actions réalisées, il vous faut appuyer sur le bouton "Effectuer débit" pour valider la transaction, elle apparaîtra dans la zone dédiée aux opérations, comme vu dans la rubrique "Consulter compte" :
 
