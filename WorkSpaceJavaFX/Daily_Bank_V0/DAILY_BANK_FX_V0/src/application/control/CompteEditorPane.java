@@ -13,11 +13,19 @@ import javafx.stage.Stage;
 import model.data.Client;
 import model.data.CompteCourant;
 
+/**
+ * La classe CompteEditorPane permet de générer la ressource FXML associé à son controller et d'ouvrir la fenetre pour saisir les informations d'un compte. 
+ *
+ */
 public class CompteEditorPane {
 
 	private Stage primaryStage;
 	private CompteEditorPaneController cepc;
-
+	
+	/**Procédure pour générer la ressource compteeditorpane.fxml depuis son controller. Elle prend en parametre la fenetre(Stage) et l'état de l'agence bancaire(DailyBankState).
+	 * @param _parentStage
+	 * @param _dbstate
+	 */
 	public CompteEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
 		try {
@@ -42,7 +50,13 @@ public class CompteEditorPane {
 			e.printStackTrace();
 		}
 	}
-
+	
+	/**Permet d'afficher le contenu de la fenetre pour saisir les informations du compte d'un client et attends une interaction potentielle avec celle-ci
+	 * @param client
+	 * @param cpte compteCourant
+	 * @param em EditionMode
+	 * @return le Client saisi
+	 */
 	public CompteCourant doCompteEditorDialog(Client client, CompteCourant cpte, EditionMode em) {
 		return this.cepc.displayDialog(client, cpte, em);
 	}
