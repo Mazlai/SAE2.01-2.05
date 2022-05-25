@@ -42,10 +42,12 @@ Concrètement, cela se résume à ce que l'application puisse être utilisée de
 ==== 1.2 Serveurs
 
 L'application possède ainsi une base de données propre à ses caractéristiques. Elle permet de conserver l'ensemble des informations relatives à une agence bancaire telles que : +
-• Les employés ; +
-• Les clients ; +
-• Les comptes des clients ou encore +
+____
+• Les employés ; 
+• Les clients ; 
+• Les comptes des clients ou encore 
 • Les opérations effectuées depuis un compte.
+____
 
 === 2. Ressources externes et rôles
 
@@ -218,23 +220,33 @@ Les principales fonctionnalités ont été introduites de manière brève dans l
 Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
 
 *Côté application.tools :* +
-• _CategorieOperation.java_ +
+____
+• _CategorieOperation.java_
 • _ConstantesIHM.java_
+____
 
 *Côté application.control :* +
-• _OperationManagement.java_ +
+____
+• _OperationManagement.java_
 • _OperationEditorPane.java_
+____
 
 *Côté application.view :* +
-• _OperationManagementController.java_ +
+____
+• _OperationManagementController.java_
 • _OperationEditorPaneController.java_
+____
 
 *Côté model.orm :* +
+____
 • _CompteCourant.java_
+____
 
 *Côté model.orm / model.orm.exception :* +
-• _AccessCompteCourant.java_ +
+____
+• _AccessCompteCourant.java_
 • _DatabaseConnexionException.java_
+____
 
 ===== Éléments à connaître / spécificités
 
