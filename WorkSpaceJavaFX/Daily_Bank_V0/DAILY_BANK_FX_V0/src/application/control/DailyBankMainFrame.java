@@ -14,11 +14,18 @@ import model.orm.LogToDatabase;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DatabaseConnexionException;
 
+/**
+ * La classe DailyBankMainFrame hérite de la classe Application. Elle permet le demarrage de la homepage de l'application, de s'y connecter et de s'y deconnecter.
+ *
+ */
 public class DailyBankMainFrame extends Application {
 
 	private DailyBankState dbs;
 	private Stage primaryStage;
-
+	
+	/**
+	 * Permet d'ouvrir la fenetre de démarrage de l'application. Elle prend en parametre la fenetre principale.
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 
@@ -91,11 +98,17 @@ public class DailyBankMainFrame extends Application {
 			System.exit(-1);
 		}
 	}
-
+	
+	/**Permet de lancer l'application
+	 * 
+	 */
 	public static void runApp() {
 		Application.launch();
 	}
-
+	
+	/**Permet de se déconnecter sur l'application et fermer la connexion à la base de données
+	 * 
+	 */
 	public void disconnect() {
 		this.dbs.setAgAct(null);
 		this.dbs.setEmpAct(null);
@@ -107,7 +120,10 @@ public class DailyBankMainFrame extends Application {
 			ed.doExceptionDialog();
 		}
 	}
-
+	
+	/**
+	 * Permet de se connecter sur l'application
+	 */
 	public void login() {
 		LoginDialog ld = new LoginDialog(this.primaryStage, this.dbs);
 		ld.doLoginDialog();
@@ -135,7 +151,10 @@ public class DailyBankMainFrame extends Application {
 			}
 		}
 	}
-
+	
+	/**
+	 * Permet d'ouvrir la fenetre de gestion de clients 
+	 */
 	public void gestionClients() {
 		ClientsManagement cm = new ClientsManagement(this.primaryStage, this.dbs);
 		cm.doClientManagementDialog();
