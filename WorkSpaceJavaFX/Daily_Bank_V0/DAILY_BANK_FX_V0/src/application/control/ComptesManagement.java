@@ -30,9 +30,8 @@ import model.orm.exception.Order;
 import model.orm.exception.RowNotFoundOrTooManyRowsException;
 import model.orm.exception.Table;
 
-/** La classe ComptesManagement permet de gérer les comptes, si on veut créer les informations d'un compte, supprimer un compte ou en modifier un dejà existant
- * 
- *
+/** 
+ * La classe ComptesManagement permet de gérer les comptes, si on veut créer les informations d'un compte, supprimer un compte ou en modifier un dejà existant
  */
 public class ComptesManagement {
 
@@ -41,7 +40,8 @@ public class ComptesManagement {
 	private DailyBankState dbs;
 	private Client clientDesComptes;
 	
-	/**Procédure pour générer la ressource comptesmanagement.fxml depuis son controller. Elle prend en parametre la fenetre(Stage) et l'état de l'agence bancaire(DailyBankState) et le client du compte(Client).
+	/**
+	 * Procédure pour générer la ressource comptesmanagement.fxml depuis son controller. Elle prend en parametre la fenetre(Stage) et l'état de l'agence bancaire(DailyBankState) et le client du compte(Client).
 	 * @param _parentStage
 	 * @param _dbstate
 	 * @param client
@@ -73,15 +73,16 @@ public class ComptesManagement {
 		}
 	}
 	
-	/**Permet d'afficher le contenu de la fenetre pour gérer les comptes et attends une interaction potentielle avec celle-ci
-	 * 
+	/**
+	 * Permet d'afficher le contenu de la fenetre pour gérer les comptes et attends une interaction potentielle avec celle-ci
 	 * @return le contenu à afficher dans la boites de dialogue
 	 */
 	public void doComptesManagementDialog() {
 		this.cmc.displayDialog();
 	}
 	
-	/**Procédure pour gérer les opérations d'un compteCourant
+	/**
+	 * Procédure pour gérer les opérations d'un compteCourant
 	 * @param cpt
 	 */
 	public void gererOperations(CompteCourant cpt) {
@@ -89,7 +90,8 @@ public class ComptesManagement {
 		om.doOperationsManagementDialog();
 	}
 	
-	/**Permet la fonctionnalité de créer un compte dans l'app et dans la base de données dans la fenetre pour gerer les comptes. 
+	/**
+	 * Permet la fonctionnalité de créer un compte dans l'app et dans la base de données dans la fenetre pour gerer les comptes. 
 	 * @return le compté crée
 	 * @throws SQLException Exception SQL lors de la création du compte dans la base de données
 	 */
@@ -139,7 +141,8 @@ public class ComptesManagement {
 		return compte;
 	}
 	
-	 /**Permet la fonctionnalité de supprimer un compte dans l'app et dans la base de données dans la fenetre pour gerer les comptes. Prend en parametre le Compte à supprimer.
+	 /**
+	 * Permet la fonctionnalité de supprimer un compte dans l'app et dans la base de données dans la fenetre pour gerer les comptes. Prend en parametre le Compte à supprimer.
 	 * @param compteAsupprimer
 	 * @return le compte à supprimer
 	 * @throws DatabaseConnexionException Exeption de connexion à la base de données
@@ -182,15 +185,16 @@ public class ComptesManagement {
 		return compteAsupprimer;
 	}
 	
-	/**Permet d'afficher le contenu de la fenetre pour gérer les comptes et attends une interaction potentielle avec celle-ci
-	 * 
+	/**
+	 * Permet d'afficher le contenu de la fenetre pour gérer les comptes et attends une interaction potentielle avec celle-ci
 	 * @return le contenu à afficher dans la boites de dialogue
 	 */
 	public void doCompteEditorDialog() {
 		this.cmc.displayDialog();
 	}
 	
-	/**Permet la fonctionnalité de modifier un compte dans la fenetre pour gérer les comptes, il prend en parametre un compteCourant à modifier
+	/**
+	 * Permet la fonctionnalité de modifier un compte dans la fenetre pour gérer les comptes, il prend en parametre un compteCourant à modifier
 	 * @param compteAmodif
 	 * @return le compte à modifier
 	 * @throws DataAccessException
@@ -217,7 +221,8 @@ public class ComptesManagement {
 		}
 		return compteAmodif;
 	}
-	/**Getter pour rechercher et récuperer la liste des compte d'un client
+	/**
+	 * Getter pour rechercher et récuperer la liste des compte d'un client
 	 * @return la ArrayList des comptes d'un client.
 	 */
 	public ArrayList<CompteCourant> getComptesDunClient() {
