@@ -207,7 +207,7 @@ Pour l'implémentation de cette action, plusieurs classes ont été impliquées 
 • CompteCourant.java
 
 *Côté model.orm / model.orm.exception :* +
-• AccessCompteCourant.java
+• AccessCompteCourant.java +
 • DatabaseConnexionException.java
 
 ===== Éléments à connaître / spécificités
