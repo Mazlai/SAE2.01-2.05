@@ -33,11 +33,19 @@ image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 
 === 1. Architecture générale
 
+Lorsqu'un employé vient à utiliser l'application "DailyBank", celle-ci n'est en réalité pas complexe à son utilisation. Elle reste relativement claire, facile à comprendre bien que certaines règles (règle des trois clics par exemple) ne soient pas respectées afin de trouver toutes les informations de manière rapide et simplement. Pour autant, celle-ci possède une architecture relativement aisée à comprendre étant donné qu'elle est construite sur un fonctionnement centralisé.
+
 ==== 1.1 Poste client
+
+Concrètement, cela se résume à ce que l'application puisse être utilisée de n'importe quel employé, depuis n'importe quel poste de travail. Ainsi, chaque modifications ou ajouts de données effectuées, depuis un poste de travail au sein d'une agence bancaire inclue dans l'application, seront directement appliquées et reliées à la base de données de celle-ci. Ainsi, chaque poste de travail est une machine dédiée à un employé de l'agence bancaire.
 
 ==== 1.2 Serveurs
 
-==== 1.3 Rôle de chaque élément
+L'application possède ainsi une base de données propre à ses caractéristiques. Elle permet de conserver l'ensemble des informations relatives à une agence bancaire telles que :
+. Les employés ; +
+. Les clients ; +
+. Les comptes des clients ou encore +
+. Les opérations effectuées depuis un compte.
 
 === 2. Ressources externes et rôles
 
