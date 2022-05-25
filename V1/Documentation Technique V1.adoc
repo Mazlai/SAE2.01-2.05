@@ -1,4 +1,3 @@
-[.text-justify]
 = Documentation Technique - V1
 :toc:
 
@@ -10,6 +9,7 @@ Voici le use case général de la version 1 de l'application DailyBank :
 
 image::../V1/images/unknown.png[UC V1]
 
+[align=justified]
 Tout comme dans la V0, deux types d'utilisateurs subsistent : le chef d'agence ainsi que les guichetiers.
 En tant que chef d'agence, celui-ci possède des privilèges et des droits supplémentaires au sein de son agence bancaire, à comparer d'un simple employé (guichetier).
 
