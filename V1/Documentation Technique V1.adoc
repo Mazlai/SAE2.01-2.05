@@ -238,6 +238,10 @@ ____
 
 ===== Extraits de code commentés pour des points importants
 
+image::/V1/images/CodeDébiter.PNG[code débiter]
+
+Ce bout de code est reltivemement important car il permet d'enregitrer le débit dans la base de données SQL, de déterminer quel type d'opération est renseigné et du montant à débiter.
+
 ==== 1.7 Créditer un compte (BD)
 
 ===== Partie du use case conforme
