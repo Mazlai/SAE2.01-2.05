@@ -33,6 +33,11 @@ import model.orm.exception.Table;
 import model.data.CompteCourant;
 import model.data.Operation;
 
+/**
+ * La classe "OperationsEditorPaneController" permet de traiter l'ensemble des actions de l'utilisateur concernant une opération en train d'être effectuée par un nouveau client sur le compte désigné.
+ * Cette classe traite ainsi les données renseignées par l'utilisateur, à la fois sur la "vue", correspondant à la partie graphique de l'interface mais également dans le "modèle", signifiant l'univers dans lequel s'inscrit l'application.
+ */
+
 public class OperationEditorPaneController implements Initializable {
 
 	// Etat application
@@ -53,10 +58,20 @@ public class OperationEditorPaneController implements Initializable {
 		this.configure();
 	}
 
+	/**
+	 * Permet de mettre en place la configuration de la fenêtre ainsi que les données chargées. 
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 	}
 
+	/** 
+	 * Permet de définir l'ensemble des caractéristiques de la fenêtre d'édition d'une opération tout en attendant la réponse de l'éditeur.
+	 * 
+	 * @param cpte IN : le compte concerné
+	 * @param mode IN : la catégorie de l'opération effectuée
+	 * @return : le résultat d'une opération 
+	 */
 	public Operation displayDialog(CompteCourant cpte, CategorieOperation mode) {
 		this.categorieOperation = mode;
 		this.compteEdite = cpte;
@@ -186,12 +201,18 @@ public class OperationEditorPaneController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Permet l'annulation de modification sur la page et donc, de retourner sur la page précédente, en fermant la fenêtre actuelle.
+	 */
 	@FXML
 	private void doCancel() {
 		this.operationResultat = null;
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Permet l'édition d'une opération sur un compte selon sa catégorie avant d'être ajoutée dans la liste des opérations.
+	 */
 	@FXML
 	private void doAjouter() {
 		switch (this.categorieOperation) {
