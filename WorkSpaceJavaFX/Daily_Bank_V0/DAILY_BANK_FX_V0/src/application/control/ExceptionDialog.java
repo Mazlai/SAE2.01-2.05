@@ -45,8 +45,8 @@ public class ExceptionDialog {
 		}
 	}
 	
-	/**Permet d'afficher le contenu de la fenetre pour les exceptions et les messages d'ereurs et attends une interaction potentielle avec celle-ci
-	 * 
+	/**
+	 * Permet d'afficher le contenu de la fenetre pour les exceptions et les messages d'ereurs et attends une interaction potentielle avec celle-ci
 	 * @return le contenu à afficher dans la boites de dialogue
 	 */
 	public void doExceptionDialog() {
