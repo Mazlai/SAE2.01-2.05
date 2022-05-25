@@ -4,7 +4,7 @@
 
 == I - Présentation rapide de l'application
 
-=== 1. Explications du Use Case global
+=== 1. Explications du use case global
 
 image::../V1/images/unknown.png[UC V1]
 
@@ -32,11 +32,11 @@ image::../V1/images/diagrammeclassesv1.PNG[DC V1]
 
 === 3. Structuration en packages de l'application
 
-=== 4. Elements à connaître
+=== 4. Éléments à connaître
 
 ==== 4.1 Spécificités
 
-==== 4.2 Elements nécessaires à la mise en oeuvre du développement
+==== 4.2 Éléments nécessaires à la mise en oeuvre du développement
 
 == III - Explications des fonctionnalités
 
