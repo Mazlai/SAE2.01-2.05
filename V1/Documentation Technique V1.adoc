@@ -51,6 +51,13 @@ ____
 
 === 2. Ressources externes et rôles
 
+L'application "DailyBank" étant codée en Java, celle-ci aura pour extension de fichier, un .jar car ce format est avantageux pour stocker l'ensemble des définitions des classes ainsi que de ses métadonnées, constituant la totalité du programme.
+
+Pour les employés souhaitant utiliser cette application de gestion de comptes clients, ils doivent s'assurer que leurs postes de travail soient équipés d'une JRE (Java Runtime Environement) 1.8.
+
+Concernant la librairie figurant au sein de "DailyBank", celle-ci utilise la librairie jar.
+Enfin, l'application repose sur un fichier nommé "ojdbc6.jar" : c'est un pilote JDBC d'Oracle fournissant une connectivité entre une base de données au serveur de base de données Oracle et une interface de programme d'application JDBC disponible en Java.
+
 === 3. Structuration en packages de l'application
 
 La structuration de l'application est répartie en plusieurs packages que voici : 
