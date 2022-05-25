@@ -178,6 +178,8 @@ image::/V1/images/consultercompte.PNG[Consulter compte]
 
 ==== 1.6 Débiter un compte (BD)
 
+Débiter un compte permet de retirer une somme d'argent depuis un compte bancaire sélectionné associé à un client. Il est évidemment impossible de débiter une somme négative ou un montant invalide. Le débit de peut pas dépasser un certain seuil défini préalablement, le retrait d'une somme ne peut pas dépasser le découvert.
+
 ===== Partie du use case conforme
 
 image::/V1/images/créditerdébiter.PNG[Créditer compte]
