@@ -22,6 +22,11 @@ import model.data.Client;
 import model.data.CompteCourant;
 import model.data.Operation;
 
+/**
+ * La classe "OperationsManagementController" permet de traiter l'ensemble des actions de l'utilisateur concernant les opérations déjà effectuées d'un nouveau client sur le compte désigné.
+ * Cette classe traite ainsi les données utilisées par l'utilisateur, à la fois sur la "vue", correspondant à la partie graphique de l'interface mais également dans le "modèle", signifiant l'univers dans lequel s'inscrit l'application.
+ */
+
 public class OperationsManagementController implements Initializable {
 
 	// Etat application
@@ -47,6 +52,9 @@ public class OperationsManagementController implements Initializable {
 		this.configure();
 	}
 
+	/**
+	 * Permet de mettre en place la configuration de la fenêtre ainsi que les données chargées. 
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
@@ -57,6 +65,9 @@ public class OperationsManagementController implements Initializable {
 		this.validateComponentState();
 	}
 
+	/**
+	 * Affiche simplement la fenêtre en question, tout en attendant une quelconque réponse de l'utilisateur.
+	 */
 	public void displayDialog() {
 		this.primaryStage.showAndWait();
 	}
@@ -86,11 +97,17 @@ public class OperationsManagementController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Permet de retourner sur la page précédente, en fermant la fenêtre actuelle.
+	 */
 	@FXML
 	private void doCancel() {
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Permet de définir une opération de débit en mettant à jour, la liste de l'ensemble des opérations effectuées sur le compte et dépendant de l'état du compte.
+	 */
 	@FXML
 	private void doDebit() {
 
@@ -101,6 +118,9 @@ public class OperationsManagementController implements Initializable {
 		}
 	}
 
+	/**
+	 * Permet de définir une opération de crédit en mettant à jour, la liste de l'ensemble des opérations effectuées sur le compte et dépendant de l'état du compte.
+	 */
 	@FXML
 	private void doCredit() {
 		
@@ -111,6 +131,9 @@ public class OperationsManagementController implements Initializable {
 		}
 	}
 
+	/**
+	 * Permet de définir une opération de crédit en mettant à jour, la liste de l'ensemble des opérations effectuées sur le compte et dépendant de l'état du compte.
+	 */
 	@FXML
 	private void doVirement() {
 		Operation op = this.om.enregistrerVirement();
@@ -121,6 +144,9 @@ public class OperationsManagementController implements Initializable {
 		
 	}
 
+	/**
+	 * Permet de définir l'état des différents boutons dédiés à une interaction potentielle de l'utilisateur, en fonction de certaines caractériques du compte.
+	 */
 	private void validateComponentState() {
 			//Condition compte fermé
 			if (this.compteConcerne.estCloture.equals("O")) {
@@ -143,6 +169,10 @@ public class OperationsManagementController implements Initializable {
 			//Sinon par défaut
 	}
 
+	/**
+	 * Permet de mettre à jour la liste de l'ensemble des opérations effectuées caractérisées par le type de l'opération, le montant renseigné ou encore le numéro de compte sur lequel est effectué l'opération en question.
+	 * Cette procédure dépend ainsi de la procédure de vérification de l'interaction d'un utilisateur pour effectuer l'opération concernée.
+	 */
 	private void updateInfoCompteClient() {
 
 		PairsOfValue<CompteCourant, ArrayList<Operation>> opesEtCompte;
