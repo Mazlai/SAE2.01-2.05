@@ -211,6 +211,16 @@ image::/V1/images/virementcompte.PNG[Virement compte]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V1/images/dcvirement.PNG[DC Virement compte]
+
+La tâche virement inclut 3 classes dans ce diagramme de classes :
+
+____
+• La classe _CompteCourant_, n'étant seulement dédiée qu'à une lecture étant donné qu'elle prendra en compte les informations de celui-ci sans pour autant les modifier ;
+• La classe _TypeOperation_ qui, de même, n'est dédiée qu'à une simple lecture étant donné qu'elle caractérise seulement l'opération sans pour autant y interagir avec ;
+• La classe _Operation_ qui elle, utilise les données renseignées de l'utilisateur. Elle ne se contente donc pas de seulement lire les données mais également de les interpréter, et cela passe avant par une définition de ces données (autrement dit, un "ajout").
+____
+
 ===== Principales fonctionnalités
 
 Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
