@@ -3,6 +3,8 @@
 .Vous trouverez ci-joint, les documents suivants :
 
 . Le CDCU - V1
-. Le cahier de tests - V1
+. Le cahier de tests (en cours) - V1
+. La documentation technique (en cours) - V1
+. La documentation utilisateur (en cours) - V1
 . Le GANTT prévisionnel - V1
 . Le GANTT réel - V1
