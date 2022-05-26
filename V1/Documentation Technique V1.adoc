@@ -109,7 +109,12 @@ ____
 
 ==== 4.2 Éléments nécessaires à la mise en oeuvre du développement
 
-Pour une personne étant destiné à faire maintenir le fonctionnement de l'application, à réaliser de quelconques tests pour vérifier le fonctionnement de l'application ou tout simplement pour implémenter de nouvelles fonctionnalités, celle-ci devra obligatoirement opter pour une JRE en version 1.8. 
+Pour une personne étant destiné à faire maintenir le fonctionnement de l'application, à réaliser de quelconques tests pour vérifier le fonctionnement de l'application ou tout simplement pour implémenter de nouvelles fonctionnalités, celle-ci devra obligatoirement opter pour une JRE (machine virtuelle Java) en version 1.8. 
+
+Par la suite, il lui est nécessaire de posséder un IDE (environnement de développement intégré) pour tout simplement pouvoir observer le code et interagir avec. Eclipse ou encore IntelliJ IDEA sont des IDE que le développeur peut utiliser. 
+
+Enfin, ce ne serait sans mentionner le Workspace depuis lequel repose l'application que le développeur pourrait programmer. Ce Workspace doit alors être configuré en JavaFX avec une version du JDK en 1.8. Le logiciel SceneBuilder devra être intégré dans le buildpath mais il est à préconiser afin d'interagir avec les fichiers fxml de "DailyBank". 
+
 
 == III - Explications des fonctionnalités
 
