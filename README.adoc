@@ -18,7 +18,7 @@ MAJ le 08/05/2022:
 - [ ] Rédiger le cahier de test V2
 - [x] Mettre à jour le GANTT et les issues
 
-*Lien vers le CDCU V3 :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V3/CDCU.adoc[__Cliquer ici__]
+*Lien vers le CDCU V3 :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V3/CDCU%20V3.adoc[__Cliquer ici__]
 
 |===
 |MEMBRES :
