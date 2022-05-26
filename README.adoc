@@ -18,18 +18,7 @@ MAJ le 08/05/2022:
 - [ ] Rédiger le cahier de test V2
 - [x] Mettre à jour le GANTT et les issues
 
-==== Dev. App :
-
-- [x] Créditer/débiter un compte (java et BD avec procédure stockée)
-- [x] Créer un compte
-- [x] Effectuer un virement de compte à compte
-- [x] Clôturer un compte
-- [x] Gérer (faire le « CRUD ») les employés (guichetier et chef d’agence)
-
-
 *Lien vers le CDCU V3 :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V3/CDCU.adoc[__Cliquer ici__]
-
-
 
 |===
 |MEMBRES :
