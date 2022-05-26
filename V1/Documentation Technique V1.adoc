@@ -76,7 +76,7 @@ La structuration de l'application est répartie en plusieurs packages que voici 
 
 === 4. Éléments à connaître
 
-Comme vous pouvez l'observer, le code de l'application est fourni dans 4 packages principaux : +
+Comme vous pouvez l'observer, le code de l'application est fourni dans 1 package principal étant ``application`` et dont celui-ci est constitué de 4 sous-packages principaux : +
 ____
 • control ; 
 • tools ; 
@@ -89,6 +89,15 @@ Ces packages font ainsi référence à un principe de structuration que l'applic
 Le MVC (de son nom français _modèle-vue-contrôleur_) est le nom d'une méthodologie ou d'un motif de conception visant à faire le lien entre l'interface utilisateur et les modèles de données sous-jacents. Elle est notamment utile pour permettre de créer une application web afin de bien gérer la structuration d’un projet en trois parties ou encore pour la réutilisation du code objet, qui permet de réduire le temps nécessaire au développement d'applications dotées d'une interface utilisateur.
 
 ==== 4.1 Spécificités
+
+Concernant le package ``application``, celui-ci constitue le package principal de l'application "DailyBank". 
+Vous trouverez dans ce package (comme indiqué au dessus, à la partie _3. Structuration en packages de l'application_), trois packages, dont les packages ``view`` et ``control`` sont inclus dans l'acronyme MVC.
+Concrètement : +
+____
+• Le sous-package _control_ comporte des classes permettant de faire communiquer les classes comprises dans le modèle ainsi que la vue. Ici, les classes présentes dans ce sous-package permettent d'afficher les différentes fenêtres ou sous-fenêtres de "DailyBank".
+• Le sous-package _tools_, comme son nom l'indique, est un sous-package d'outils. Celui-ci comporte des classes permettant de gérer certaines parties du code de l'application (notamment les différents types de droits, d'opérations, les pop-ups, etc.).
+• Le sous-package _view_ comporte un ensemble de classes représentant les différents éléments présents dans l'interface utilisée par l'utilisateur (boutons, listes, etc.) Ici-même, il contient l'ensemble des "controller" des différentes fenêtres ou sous-fenêtres avec leurs fichiers fxml respectifs.
+____
 
 ==== 4.2 Éléments nécessaires à la mise en oeuvre du développement
 
