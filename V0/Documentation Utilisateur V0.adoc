@@ -201,3 +201,21 @@ image::/V0/images/consulterCompte2Preuve.png[Etape 2 preuve consultation compte 
 Côté back-end, les informations apparaissent également grâce à cette requête, une nouvelle fois, si vous voulez consulter les informations d'un autre client, il vous suffira de changer le chiffre "323" par l'id du client désiré
 
 image::/V0/images/consulterCompte3Preuve.png[Etape 3 preuve consultation compte d'un client]
+
+=== Débiter un compte
+
+Pour ne pas chnager, reprenons le client hercule1, nous allons effectuer 2 debits (par carte bleue et espèce). Pour choisir le type de retrait il vous suffit de cliquer sur la barre déroulante nommée "Retrait Espèces" puis choisir entre les deux options comme sur l'image ci-dessous :
+
+image::/V0/images/choixDuRetrait.png[Choix du type de retrait]
+
+Ensuite renseignez le montant que vous voulez retirer dans la zone de texte puis appuyez sur le bouton "Effectuer Débit" indiqué par la flèche rouge comme sur l'image dessous : 
+
+image::/V0/images/debit1Preuve.png[Etape 1 preuve debit]
+
+Nous pouvons voir maintenant que le debit effectué à l'instant s'affiche dans l'encadré blanc en dessous des anciennes opérations
+
+image::/V0/images/debit2Preuve.png[Etape 2 preuve debit]
+
+Du côté back-end, les changements ont également été effectué 
+
+image::/V0/images/debit3Preuve.png[Etape 3 preuve debit]
