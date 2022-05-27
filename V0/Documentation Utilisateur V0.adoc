@@ -162,5 +162,14 @@ image::/V0/images/inactif3.png[Etape 3 pour rendre inactif un client]
 
 == Résultats plus quelques exemples de jeux d'essais
 
+Passons à moins de théorique, ici vous trouverez les résultats de nos fonctionnalités, afin de mieux comprendre, il est fortement conseillé de connaître les étapes à suivre, je vous laisse pour cela, prendre connaissances de celles-ci qui sont situés dans la partie "Fonctionnement". Bien sur vous disposerez de toutes les preuves nécessaires (interface JAVA | base de données) pour témoigner de leur bon fonctionnement.  
 
+=== Créer un nouveau client
+
+Une fois toutes informations nécessaires renseignées, le client se rajoutera dans l'encadré blanc de votre interface "Gestion des clients" comme sur l'image ci-dessous:
+
+
+
+
+Au niveau back-end, votre client sera également ajouté, vous pourrez vérifier si il existe en notant son idnumclient et remplacer le chiffre "323" par le chiffre qui correspond au niveau client, cette requête vous permet d'interroger la base de données et vous renvoie si il existe, les informations du client crée 
 
