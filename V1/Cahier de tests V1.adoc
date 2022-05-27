@@ -149,5 +149,5 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  
  
  • Ne doit pas pouvoir clôturer un compte déjà clôturé. +
-  → _Le compte est toujours visible par le chef d'agence ainsi que le guichetier mais aucunes actions ne peuvent être faites mise à part consulter le compte
+ → _Le compte est toujours visible par le chef d'agence ainsi que le guichetier mais aucunes actions ne peuvent être faites mise à part consulter le compte
 |
