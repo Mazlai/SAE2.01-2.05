@@ -250,4 +250,4 @@ Il vous suffit de vous rendre dans modifier client puis de cliquer sur le bouton
 
 Voici l'affichage lorsqu'un client est inactif 
 
-image::/V0/images/ri4euve.png[Etape 4preuve rendre inactif un client]
+image::/V0/images/ri4Preuve.png[Etape 4preuve rendre inactif un client]
