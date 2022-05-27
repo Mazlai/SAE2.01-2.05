@@ -219,3 +219,35 @@ image::/V0/images/debit2Preuve.png[Etape 2 preuve debit]
 Du côté back-end, les changements ont également été effectué 
 
 image::/V0/images/debit3Preuve.png[Etape 3 preuve debit]
+
+=== Rendre inactif un client
+
+Cette fonctionnalité est différente selon les situations, pour vous les illustrer, vous pourrez les retrouvez ci-dessous
+
+==== Si le client n'a pas de compte
+
+Généralement ce cas peut arriver lors de la création d'un client, lors de sa création il ne possède pas de compte donc on ne peut pas le rendre inactif
+
+image::/V0/images/ri1Preuve.png[Etape 1 preuve rendre inactif un client]
+
+==== Si le client possède des comptes non clôturés
+
+Pour rendre inactif un client, il faut que tous les comptes du client soient clôturés donc nous vous proposons de tous les clôturer en un clic comme sur l'imae ci-dessous
+
+image::/V0/images/ri2Preuve.png[Etape 2 preuve rendre inactif un client]
+
+Voici le message de succès de la clôturation de tous les comptes du client
+
+image::/V0/images/ri3Preuve.png[Etape 3 preuve rendre inactif un client]
+
+
+==== Si le client possède tous ses comptes clôturés
+
+Il vous suffit de vous rendre dans modifier client puis de cliquer sur le bouton "Inactif"
+
+
+==== Si vous êtes arriver à le rendre inactif
+
+Voici l'affichage lorsqu'un client est inactif 
+
+image::/V0/images/ri4euve.png[Etape 4preuve rendre inactif un client]
