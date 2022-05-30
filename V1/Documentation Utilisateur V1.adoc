@@ -110,6 +110,8 @@ Il ne reste plus qu'à suivre les flèches rouges :
 
 image::/V0/images/compte2.png[Etape 2 pour consulter compte]
 
+===== Créer un compte
+
 ==== Opérations
 
 Enfin, nous pouvons voir la liste des opérations effectuées sur le compte sélectionné (flèche rouge)
@@ -166,7 +168,6 @@ Une fois ces deux actions réalisées, il vous faut appuyer sur le bouton "Effec
 
 image::/V1/images/Créditer_TypeOp.png[Etape 2 pour créditer un compte]
 
-
 ===== Réaliser un virement d'un compte à un compte
 
 La troisième et dernière opération que vous avez à votre disposition depuis la sélection d'un compte est de pouvoir réaliser un virement. Vous pouvez, de même, vous référer aux étapes expliquées plus haut afin d'accéder à la fenêtre suivante :
@@ -203,6 +204,8 @@ image::/V0/images/inactif2.png[Etape 2 pour rendre inactif un client]
 Une fois rendu inactif, vous pourrez remarquer que le texte indiqué par la flèche rouge aura changé comme sur l'image ci-dessous, le client est désormais inactif.
 
 image::/V0/images/inactif3.png[Etape 3 pour rendre inactif un client]
+
+===== Gérer (faire le CRUD) les employés
 
 == Résultats plus quelques exemples de jeux d'essais
 
