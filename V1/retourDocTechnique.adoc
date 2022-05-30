@@ -1,0 +1,31 @@
+= Documentations technique
+
+== Eléments obligatoires
+   
+- Page de garde
+- Sommaire
+-  Présentation de l'Application
+- Répartition des fonctionnalités par programmeur (Une section qui décrit le partage du travail)
+
+- Pas de page de garge
+- Il faut dire l’objectif de l’application, qui est le clien, qui sont les utilisateurs, quelles sont les principales fonctionnalités.
+- pas de répartition du tavail.
+
+== Forme :
+
+ Toutes les figures doivent avoir un numéro et un titre et un commentaire.
+
+
+== Ressources externes :
+Il faut indiquer , l’utilisation de java fx …
+Il faut donc s’assurer que les postes de travail des employés possèdent une JRE 1.8 pour pouvoir faire fonctionner le .jar sans encombre. 
+Voir comment lancer dans le bon environnement → IHM
+Comment installer l’application pour pouvoir la maintenir : accès à la base  ...
+
+
+== V1
+Indiquer pour chaque partie qui a fait.
+
+Rendre un client inactif y a-t-il des prérequis autres ? Par exemple tous ces comptes sont clôtures…
+
+ 
