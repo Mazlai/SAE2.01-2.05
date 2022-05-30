@@ -55,18 +55,25 @@ voir fichier ascidoc retour
  * lien vers https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/retourDocTechnique.adoc
  
  
+ 
  == cahier de recette
  
  La partie générale est très bien mais il faut revoir les fiches de tests elle m^me.
  
  Hiérarchiser les fiches de test par exemple
- CRUD des employés
+=== CRUD des employés
  un test employé existant création impossible
  un test employé nouveau ok on se déconnecte on se connecte avec lui il a le bon rôle
  ...
- Compte
+=== Compte
  Un test créditer -> nouveau solde ok
  un test débiter débit impossible
  ...
  Il faut plus détailler.
  
+ 
+=== javadoc
+pas vue
+
+=== jar
+pas vu
