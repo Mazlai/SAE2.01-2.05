@@ -61,6 +61,51 @@ public class AccessOperation {
 	}
 
 	/**
+	 * Enregistrement d'un crédit.
+	 *
+	 * Se fait par procédure stockée : - Vérifie que le créditAutorisé n'est pas
+	 * dépassé - Enregistre l'opération - Met à jour le solde du compte.
+	 *
+	 * @param idNumCompte compte crédité
+	 * @param montant     montant crédité
+	 * @param typeOp      libellé de l'opération effectuée (cf TypeOperation)
+	 * @throws RowNotFoundOrTooManyRowsException
+	 * @throws DataAccessException
+	 * @throws DatabaseConnexionException
+	 * @throws ManagementRuleViolation
+	 */
+	public void insertCredit(int idNumCompte, double montant, String typeOp)
+			throws DatabaseConnexionException, ManagementRuleViolation, DataAccessException {
+		try {
+			Connection con = LogToDatabase.getConnexion();
+			CallableStatement call;
+
+			String q = "{call Debiter (?, ?, ?, ?)}";
+			// les ? correspondent aux paramètres : cf. déf procédure (4 paramètres)
+			call = con.prepareCall(q);
+			// Paramètres in
+			call.setInt(1, idNumCompte);
+			// 1 -> valeur du premier paramètre, cf. déf procédure
+			call.setDouble(2, montant);
+			call.setString(3, typeOp);
+			// Paramètres out
+			call.registerOutParameter(4, java.sql.Types.INTEGER);
+			// 4 type du quatrième paramètre qui est déclaré en OUT, cf. déf procédure
+
+			call.execute();
+
+			int res = call.getInt(4);
+
+			if (res != 0) { // Erreur applicative
+				throw new ManagementRuleViolation(Table.Operation, Order.INSERT,
+						"Erreur de règle de gestion : découvert autorisé dépassé", null);
+			}
+		} catch (SQLException e) {
+			throw new DataAccessException(Table.Operation, Order.INSERT, "Erreur accès", e);
+		}
+	}
+	
+	/**
 	 * Recherche d'une opération par son id.
 	 *
 	 * @param idOperation id de l'opération recherchée (clé primaire)
@@ -157,22 +202,9 @@ public class AccessOperation {
 		}
 	}
 	
-	/**
-	 * Enregistrement d'un crédit.
-	 *
-	 * Se fait par procédure stockée : - Vérifie que le créditAutorisé n'est pas
-	 * dépassé - Enregistre l'opération - Met à jour le solde du compte.
-	 *
-	 * @param idNumCompte compte crédité
-	 * @param montant     montant crédité
-	 * @param typeOp      libellé de l'opération effectuée (cf TypeOperation)
-	 * @throws RowNotFoundOrTooManyRowsException
-	 * @throws DataAccessException
-	 * @throws DatabaseConnexionException
-	 * @throws ManagementRuleViolation
-	 */
-	public void insertCredit(int idNumCompte, double montant, String typeOp)
-			throws DatabaseConnexionException, ManagementRuleViolation, DataAccessException {
+	//  A revoir
+	public void operationVider(int idNumCompte,double montant, String typeOp) 
+		throws DatabaseConnexionException, ManagementRuleViolation, DataAccessException {
 		try {
 			Connection con = LogToDatabase.getConnexion();
 			CallableStatement call;
@@ -200,8 +232,9 @@ public class AccessOperation {
 		} catch (SQLException e) {
 			throw new DataAccessException(Table.Operation, Order.INSERT, "Erreur accès", e);
 		}
+		
 	}
-
+	
 	/**
 	 * Fonction utilitaire qui retourne un ordre sql "to_date" pour mettre une date
 	 * dans une requête sql

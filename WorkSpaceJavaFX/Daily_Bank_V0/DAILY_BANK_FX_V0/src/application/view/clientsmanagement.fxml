@@ -54,12 +54,13 @@
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="btnDesactClient" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doDesactiverClient" text="Désactiver client" GridPane.rowIndex="3">
+                        <Button fx:id="btnVoirClient" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doVoirInfoClient" text="Voir info client" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
                         <Button layoutX="10.0" layoutY="20.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" visible="false" GridPane.rowIndex="1" />
+                        <Button fx:id="btnDesactClient" mnemonicParsing="false" onAction="#doDesactiverClient" prefHeight="25.0" prefWidth="209.0" text="Desactiver client" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children>

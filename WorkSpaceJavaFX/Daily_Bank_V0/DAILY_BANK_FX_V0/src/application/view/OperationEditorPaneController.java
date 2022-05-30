@@ -1,23 +1,16 @@
 package application.view;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.ArrayList;
-
 import application.DailyBankState;
-import application.tools.AlertUtilities;
 import application.tools.CategorieOperation;
 import application.tools.ConstantesIHM;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -25,11 +18,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.orm.AccessCompteCourant;
-import model.orm.LogToDatabase;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
-import model.orm.exception.Order;
-import model.orm.exception.Table;
 import model.data.CompteCourant;
 import model.data.Operation;
 

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ClientsManagementController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.EmployesManagementController">
    <right>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <top>
@@ -24,7 +24,7 @@
             </Button>
          </top>
          <bottom>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doNouveauClient" text="Nouveau client" BorderPane.alignment="CENTER">
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doNouvelEmploye" text="Nouvel employé" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="10.0" right="10.0" top="10.0" />
                </BorderPane.margin>
@@ -44,23 +44,17 @@
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="btnComptesClient" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doComptesClient" text="Comptes client">
+                        <Button fx:id="btnModifEmploye" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doModifEmploye" text="Modifier employé" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="btnModifClient" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doModifierClient" text="Modifier client" GridPane.rowIndex="2">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </Button>
-                        <Button fx:id="btnVoirClient" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doVoirInfoClient" text="Voir info client" GridPane.rowIndex="3">
+                        <Button fx:id="btnSuppEmploye" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSupprimerEmploye" text=" Supprimer employé" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
                         <Button layoutX="10.0" layoutY="20.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" visible="false" GridPane.rowIndex="1" />
-                        <Button fx:id="btnDesactClient" mnemonicParsing="false" onAction="#doDesactiverClient" prefHeight="25.0" prefWidth="209.0" text="Desactiver client" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children>
@@ -120,7 +114,7 @@
             </FlowPane>
          </top>
          <center>
-            <ListView fx:id="lvClients" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <ListView fx:id="lvEmploye" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
                </BorderPane.margin>

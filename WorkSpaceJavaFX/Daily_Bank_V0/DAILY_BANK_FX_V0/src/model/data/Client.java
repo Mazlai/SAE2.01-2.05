@@ -31,8 +31,14 @@ public class Client {
 
 	@Override
 	public String toString() {
+		String caractInactif ="";
+		if(this.estInactif.equals("O")) {
+		caractInactif = "Inactif";
+		}else {
+			caractInactif = "Actif";
+		}
 		return "[" + this.idNumCli + "]  " + this.nom.toUpperCase() + " " + this.prenom + "(" + this.email + ")  {"
-				+ this.telephone + "}";
+				+ this.telephone + "}" + "  {"+caractInactif+"}";
 	}
 
 }

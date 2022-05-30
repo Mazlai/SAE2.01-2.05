@@ -96,7 +96,7 @@
                         <Insets right="20.0" />
                      </padding>
                   </RadioButton>
-                  <RadioButton fx:id="rbInactif" layoutX="131.0" layoutY="17.0" mnemonicParsing="false" text="Inactif" toggleGroup="$actifInactif" />
+                  <RadioButton fx:id="rbInactif" layoutX="131.0" layoutY="17.0" mnemonicParsing="false" onAction="#doRendreInactif" text="Inactif" toggleGroup="$actifInactif" />
                </children>
             </HBox>
          </children>

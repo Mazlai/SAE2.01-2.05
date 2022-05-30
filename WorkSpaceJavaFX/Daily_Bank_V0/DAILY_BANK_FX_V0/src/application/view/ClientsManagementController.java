@@ -73,11 +73,14 @@ public class ClientsManagementController implements Initializable {
 	private Button btnDesactClient;
 	@FXML
 	private Button btnModifClient;
+    @FXML
+    private Button btnVoirClient;
 	@FXML
 	private Button btnComptesClient;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
 	}
 
 	@FXML
@@ -139,10 +142,18 @@ public class ClientsManagementController implements Initializable {
 			this.cm.gererComptesClient(client);
 		}
 	}
-
+	
+	@FXML
+	private void doVoirInfoClient() {
+		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
+		if (selectedIndice >= 0) {
+			Client client = this.olc.get(selectedIndice);
+			this.cm.voirInfoClient(client);
+		}
+	}
+	
 	@FXML
 	private void doModifierClient() {
-
 		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			Client cliMod = this.olc.get(selectedIndice);
@@ -167,15 +178,25 @@ public class ClientsManagementController implements Initializable {
 	}
 
 	private void validateComponentState() {
-		// Non implémenté => désactivé
 		this.btnDesactClient.setDisable(true);
+		this.btnVoirClient.setDisable(true);
 		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			this.btnModifClient.setDisable(false);
 			this.btnComptesClient.setDisable(false);
+			this.btnVoirClient.setDisable(false);
+			Client cliMod = this.olc.get(selectedIndice);
+			if (cliMod.estInactif.equals("O")) {
+				this.btnDesactClient.setDisable(true);
+				this.btnModifClient.setDisable(true);
+				
+			}
+			
 		} else {
 			this.btnModifClient.setDisable(true);
 			this.btnComptesClient.setDisable(true);
 		}
 	}
+	
+	
 }

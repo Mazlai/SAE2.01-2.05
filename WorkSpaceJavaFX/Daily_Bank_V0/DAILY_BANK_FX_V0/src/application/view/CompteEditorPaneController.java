@@ -23,11 +23,6 @@ import javafx.stage.WindowEvent;
 import model.data.Client;
 import model.data.CompteCourant;
 
-/**
- * La classe "CompteEditorPaneController" permet de traiter l'ensemble des actions de l'utilisateur concernant la définition d'un nouveau compte ou la modification de celui-ci. 
- * Cette classe traite ainsi les données renseignées ou modifiées par l'utilisateur, à la fois sur la "vue", correspondant à la partie graphique de l'interface mais également dans le "modèle", signifiant l'univers dans lequel s'inscrit l'application.
- */
-
 public class CompteEditorPaneController implements Initializable {
 
 	// Etat application
@@ -50,9 +45,6 @@ public class CompteEditorPaneController implements Initializable {
 		this.configure();
 	}
 
-	/**
-	 * Permet de mettre en place la configuration de la fenêtre ainsi que les données chargées. 
-	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
@@ -61,12 +53,11 @@ public class CompteEditorPaneController implements Initializable {
 	}
 
 	/**
-	 * Permet de définir l'ensemble des caractéristiques de la fenêtre d'édition d'un compte tout en attendant la réponse de l'éditeur.
-	 * 
-	 * @param client IN : le client concerné
-	 * @param cpte IN : le compte courant du client concerné
-	 * @param mode : le mode d'édition d'un compte
-	 * @return le résultat d'un compte (après création, modification ou suppression)
+	 * Permet de load l'interface en activant les bons boutons grâces au différents états (creation,modification ...)
+	 * @param client IN : Le client qui possède le compte à modifier
+	 * @param cpte IN : Le compte que l'on doit modifier
+	 * @param mode IN : L'état du CRUD
+	 * @return Le nouveau client mis à jour
 	 */
 	public CompteCourant displayDialog(Client client, CompteCourant cpte, EditionMode mode) {
 		this.clientDuCompte = client;
@@ -100,18 +91,13 @@ public class CompteEditorPaneController implements Initializable {
 			//return null;
 		    break;
 		case SUPPRESSION:
-			/*AlertUtilities.showAlert(this.primaryStage, "Non implémenté", "Suppression de compte n'est pas implémenté",
-					null, AlertType.ERROR);*/
-			/*Alert alert = new Alert(AlertType.CONFIRMATION);
-			alert.setTitle("Suppression de compte");
-			alert.setHeaderText("Confirmation de la suppression du compte");
-			alert.setContentText("Voulez vous vraiment supprimer ce compte ?");
-			Optional<ButtonType> result = alert.showAndWait();
-			if (result.get() == ButtonType.OK){
-			   alert.close();
-			} else {
-			   alert.close();
-			}*/
+			
+			break;
+		case VOIR:
+			this.txtDecAutorise.setDisable(true);
+			this.txtSolde.setDisable(true);
+			this.btnCancel.setText("Fin consultation");
+			this.btnOk.setVisible(false);
 			break;
 		}
 
@@ -141,11 +127,12 @@ public class CompteEditorPaneController implements Initializable {
 	}
 
 	/**
-	 * Permet de définir dans un champ de texte, les caractéristiques d'un découvert autorisé.
-	 * @param txtField (non utilisé ?)
-	 * @param oldPropertyValue IN : focus du champ de texte d'un découvert autorisé
-	 * @param newPropertyValue (non utilisée ?)
-	 * @return null si le focus n'a jamais été envisagé
+	 * Permet de gérer les erreurs lors de la saisie du découvert autorisé du nouveau compte
+	 * 
+	 * @param txtField IN : La zone de texte qui contient la somme du solde
+	 * @param oldPropertyValue IN : Ancienne valeur 
+	 * @param newPropertyValue OUT : Nouvelle valeur
+	 * @return
 	 */
 	private Object focusDecouvert(ObservableValue<? extends Boolean> txtField, boolean oldPropertyValue,
 			boolean newPropertyValue) {
@@ -165,11 +152,12 @@ public class CompteEditorPaneController implements Initializable {
 	}
 
 	/**
-	 * Permet de définir dans un champ de texte, les caractéristiques d'un solde.
-	 * @param txtField (non utilisé ?)
-	 * @param oldPropertyValue IN : focus du champ de texte d'un solde
-	 * @param newPropertyValue (non utilisée ?)
-	 * @return null si le focus n'a jamais été envisagé
+	 * Permet de gérer les erreurs lors de la saisie du solde du nouveau compte
+	 * 
+	 * @param txtField IN : La zone de texte qui contient la somme du solde
+	 * @param oldPropertyValue IN : Ancienne valeur 
+	 * @param newPropertyValue OUT : Nouvelle valeur
+	 * @return
 	 */
 	private Object focusSolde(ObservableValue<? extends Boolean> txtField, boolean oldPropertyValue,
 			boolean newPropertyValue) {
@@ -214,7 +202,7 @@ public class CompteEditorPaneController implements Initializable {
 	}
 
 	/**
-	 * Permet l'annulation de modification sur la page et donc, de retourner sur la page précédente, en fermant la fenêtre actuelle.
+	 * Permet de fermer l'interface de l'édition du compte
 	 */
 	@FXML
 	private void doCancel() {
@@ -223,7 +211,8 @@ public class CompteEditorPaneController implements Initializable {
 	}
 
 	/**
-	 * Permet l'édition d'un client au coeur d'une agence bancaire, qu'il s'agisse d'un nouveau client, d'un client étant remplacé par un autre, ou de son retrait au sein de celle-ci.
+	 * Permet de vérifier dans un premier temps de voir si les informations saisies sont correctes, puis ajoute/modifie/supprime selon les trois états 
+	 * le compte
 	 */
 	@FXML
 	private void doAjouter() {
@@ -249,8 +238,8 @@ public class CompteEditorPaneController implements Initializable {
 	}
 
 	/**
-	 * Permet d'indiquer si les saisies de l'utilisateur sont conformes aux attentes.
-	 * @return true si tout est valide 
+	 * 
+	 * @return true car la saisie est valide
 	 */
 	private boolean isSaisieValide() {
 

@@ -1,5 +1,5 @@
 package application.tools;
 
 public enum EditionMode {
-	CREATION, MODIFICATION, SUPPRESSION
+	CREATION, MODIFICATION, SUPPRESSION, VOIR
 }

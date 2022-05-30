@@ -134,7 +134,6 @@ public class EmployesManagementController implements Initializable {
 
 	@FXML
 	private void doModifEmploye() {
-
 		int selectedIndice = this.lvEmploye.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			Employe empMod = this.ole.get(selectedIndice);
@@ -159,7 +158,6 @@ public class EmployesManagementController implements Initializable {
 	}
 
 	private void validateComponentState() {
-		// Non implémenté => désactivé
 		this.btnSuppEmploye.setDisable(true);
 		int selectedIndice = this.lvEmploye.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {

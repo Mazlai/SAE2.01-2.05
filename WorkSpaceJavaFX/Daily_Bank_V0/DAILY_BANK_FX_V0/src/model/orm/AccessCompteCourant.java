@@ -6,8 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import application.control.OperationsManagement;
+import application.control.ExceptionDialog;
 import model.data.CompteCourant;
+import model.orm.exception.ApplicationException;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
 import model.orm.exception.ManagementRuleViolation;
@@ -60,6 +61,51 @@ public class AccessCompteCourant {
 		return alResult;
 	}
 
+	
+	/**
+	 * Recherche de l'ensemble des comptes courants présents aux différents clients
+	 *
+	 * @return Les comptes ou null si non trouvé
+	 * @return Tous les CompteCourant de tous les clients (ou liste vide)
+	 * @throws DataAccessException
+	 * @throws DatabaseConnexionException
+	 */
+	public ArrayList<CompteCourant> getTousLesComptes()
+            throws DataAccessException, DatabaseConnexionException {
+        ArrayList<CompteCourant> alResult = new ArrayList<>();
+
+        try {
+            Connection con = LogToDatabase.getConnexion();
+            PreparedStatement pst;
+            
+            String query;
+            
+                query = "SELECT * FROM COMPTECOURANT WHERE estCloture = 'N' ORDER BY idNumCompte ";
+                
+                pst = con.prepareStatement(query);
+
+
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                int idNumCompte = rs.getInt("idNumCompte");
+                int debitAutorise = rs.getInt("debitAutorise");
+                double solde = rs.getDouble("solde");
+                String estCloture = rs.getString("estCloture");
+                int idNumCli = rs.getInt("idNumCli");
+
+
+                alResult.add(
+                        new CompteCourant(idNumCompte,debitAutorise,solde,estCloture,idNumCli));
+            }
+            rs.close();
+            pst.close();
+        } catch (SQLException e) {
+            throw new DataAccessException(Table.Client, Order.SELECT, "Erreur accès", e);
+        }
+
+        return alResult;
+    }
+	
 	/**
 	 * Recherche d'un CompteCourant à partir de son id (idNumCompte).
 	 *
@@ -112,48 +158,37 @@ public class AccessCompteCourant {
 	}
 	
 	/**
-	 * Recherche de l'ensemble des comptes courants présents aux différents clients
-	 *
-	 * @return Les comptes ou null si non trouvé
-	 * @return Tous les CompteCourant de tous les clients (ou liste vide)
-	 * @throws DataAccessException
-	 * @throws DatabaseConnexionException
+	 * Permet de cloturer un compte bancaire (met son solde à zéro puis met l'état du compte à estClotue = "O"
+	 * 
+	 * @param compteAsupprimer IN : le compte en question à cloturer
+	 * @throws SQLException
+	 * @throws ApplicationException
 	 */
-	public ArrayList<CompteCourant> getTousLesComptes()
-            throws DataAccessException, DatabaseConnexionException {
-        ArrayList<CompteCourant> alResult = new ArrayList<>();
+	public  void cloturerCompte(CompteCourant compteAsupprimer) throws SQLException, ApplicationException {		
 
-        try {
-            Connection con = LogToDatabase.getConnexion();
-            PreparedStatement pst;
-            
-            String query;
-            
-                query = "SELECT * FROM COMPTECOURANT WHERE estCloture = 'N' ORDER BY idNumCompte ";
-                
-                pst = con.prepareStatement(query);
+		Connection con = LogToDatabase.getConnexion(); //Connexion à la base de données
+		
+		String query = "UPDATE COMPTECOURANT SET ESTCLOTURE = 'O' , SOLDE = 0.00 WHERE IDNUMCOMPTE = ?";
+		
+		PreparedStatement pst = con.prepareStatement(query);
+		pst.setInt(1, compteAsupprimer.idNumCompte);
+		
+		int result = pst.executeUpdate();
+		pst.close();
 
+		if (result != 1) {
+			con.rollback();
+			throw new RowNotFoundOrTooManyRowsException(Table.CompteCourant, Order.UPDATE,
+					"Insert anormal (insert de moins ou plus d'une ligne)", null, result);
+		}else {
+			con.commit();
+		}
 
-            ResultSet rs = pst.executeQuery();
-            while (rs.next()) {
-                int idNumCompte = rs.getInt("idNumCompte");
-                int debitAutorise = rs.getInt("debitAutorise");
-                double solde = rs.getDouble("solde");
-                String estCloture = rs.getString("estCloture");
-                int idNumCli = rs.getInt("idNumCli");
+		if (Math.random() < -1) {
+			throw new ApplicationException(Table.CompteCourant, Order.UPDATE, "todo : test exceptions", null);
+		}
 
-
-                alResult.add(
-                        new CompteCourant(idNumCompte,debitAutorise,solde,estCloture,idNumCli));
-            }
-            rs.close();
-            pst.close();
-        } catch (SQLException e) {
-            throw new DataAccessException(Table.Client, Order.SELECT, "Erreur accès", e);
-        }
-
-        return alResult;
-    }
+	}
 
 	/**
 	 * Mise à jour d'un CompteCourant.
@@ -202,4 +237,5 @@ public class AccessCompteCourant {
 			throw new DataAccessException(Table.CompteCourant, Order.UPDATE, "Erreur accès", e);
 		}
 	}
+	
 }

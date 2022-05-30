@@ -45,7 +45,6 @@ public class ComptesManagementController implements Initializable {
 		this.clientDesComptes = client;
 		this.configure();
 	}
-	
 
 	private void configure() {
 		String info;
@@ -85,13 +84,13 @@ public class ComptesManagementController implements Initializable {
 	@FXML
 	private Button btnVoirOpes;
 	@FXML
+	private Button btnVoirCompte;
+	@FXML
 	private Button btnModifierCompte;
 	@FXML
 	private Button btnSupprCompte;
-
 	@FXML
 	private TextField txtDecAutorise;
-
 	@FXML
 	private TextField txtSolde;
 
@@ -99,11 +98,17 @@ public class ComptesManagementController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Permet de fermer l'interface
+	 */
 	@FXML
 	private void doCancel() {
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Permet de voir les opérations financières du compte d'un client
+	 */
 	@FXML
 	private void doVoirOperations() {
 		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
@@ -117,6 +122,32 @@ public class ComptesManagementController implements Initializable {
 		this.validateComponentState();
 	}
 
+	/**
+	 * Permet uniquement de voir les information d'un des comptes d'un client 
+	 */
+	@FXML
+	private void doVoirCompte() {
+		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
+		if (selectedIndice >= 0) {
+			CompteCourant compteAmodif = this.olCompteCourant.get(selectedIndice);
+			CompteCourant result;
+			try {
+				result = this.cm.voirCompte(compteAmodif);
+			} catch (DataAccessException e) {
+				e.printStackTrace();
+			} catch (RowNotFoundOrTooManyRowsException e) {
+				e.printStackTrace();
+			} catch (DatabaseConnexionException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		validateComponentState();
+	}
+	
+	/**
+	 * Permet de modifier les informations d'un des comptes du client
+	 */
 	@FXML
 	private void doModifierCompte() {
 		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
@@ -139,6 +170,9 @@ public class ComptesManagementController implements Initializable {
 		}
 	}
 
+	/**
+	 * Permet de clôturer un compte
+	 */
 	@FXML
 	private void doSupprimerCompte() {
 		try {
@@ -158,6 +192,9 @@ public class ComptesManagementController implements Initializable {
 		}
 	}
 
+	/**
+	 * Permet d'ajouter un compte bancaire
+	 */
 	@FXML
 	private void doNouveauCompte() {
 		CompteCourant compte;
@@ -168,11 +205,13 @@ public class ComptesManagementController implements Initializable {
 				this.loadList();
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
+	/**
+	 * Permet d'actualiser les compte courant d'un client en rafraichissant la liste depuis la BD
+	 */
 	private void loadList() {
 		ArrayList<CompteCourant> listeCpt;
 		listeCpt = this.cm.getComptesDunClient();
@@ -182,10 +221,15 @@ public class ComptesManagementController implements Initializable {
 		}
 	}
 
+	
+	/**
+	 * Permet de d'activer/desactiver les boutons de manière logique en fonction de l'état de plusieurs facteurs (compte selectionné, compte clôturé)
+	 */
 	private void validateComponentState() {
-		// Non implémenté => désactivé
+		
 		this.btnModifierCompte.setDisable(true);
 		this.btnSupprCompte.setDisable(true);
+		this.btnVoirCompte.setDisable(true);
 
 		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
@@ -193,10 +237,12 @@ public class ComptesManagementController implements Initializable {
 				this.btnVoirOpes.setDisable(false);
 				this.btnSupprCompte.setDisable(true);
 				this.btnModifierCompte.setDisable(true);
+				this.btnVoirCompte.setDisable(false);
 			} else {
 				this.btnVoirOpes.setDisable(false);
 				this.btnSupprCompte.setDisable(false);
 				this.btnModifierCompte.setDisable(false);
+				this.btnVoirCompte.setDisable(false);
 			}
 		} else {
 			this.btnVoirOpes.setDisable(true);
