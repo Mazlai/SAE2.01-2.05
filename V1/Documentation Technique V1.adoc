@@ -263,7 +263,7 @@ ____
 
 image::/V1/images/CodeDébiter.png[code débiter]
 
-Ce bout de code est reltivemement important car il permet d'enregitrer le débit dans la base de données SQL, de déterminer quel type d'opération est renseigné et du montant à débiter.
+Ce bout de code est relativemement important car il permet d'enregitrer le débit dans la base de données SQL depuis la procédure "Débiter", de déterminer quel type d'opération est renseignée et du montant à débiter.
 
 ==== 1.7 Créditer un compte (BD)
 
