@@ -259,6 +259,8 @@ ____
 
 ===== Éléments à connaître / spécificités
 
+Il n'y a pas d'élements réellement spécifique pour cette fonctionnalité.
+
 ===== Extraits de code commentés pour des points importants
 
 image::/V1/images/CodeDébiter.png[code débiter]
