@@ -73,7 +73,4 @@ Voir comment lancer dans le bon environnement → IHM
 Comment installer l’application pour pouvoir la maintenir : accès à la base  ...
 
 
-== V1
-voir fichier ascidoc retour 
 
- * lien vers https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/retourDocTechnique.adoc
