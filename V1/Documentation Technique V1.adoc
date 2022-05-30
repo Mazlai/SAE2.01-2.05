@@ -152,7 +152,7 @@ image::/V1/images/creernewclient.PNG[Creer new client]
 
 ===== Extraits de code commentés pour des points importants
 
-==== 1.3 Créer un nouveau compte 
+==== 1.3 Créer un nouveau compte - Nicolas S.
 
 ===== Partie du use case conforme
 
@@ -168,7 +168,7 @@ image::/V1/images/creercompte.PNG[Creer new compte]
 
 ===== Extraits de code commentés pour des points importants
 
-==== 1.4 Clôturer un compte
+==== 1.4 Clôturer un compte - Nicolas S.
 
 ===== Partie du use case conforme
 
@@ -200,7 +200,7 @@ image::/V1/images/consultercompte.PNG[Consulter compte]
 
 ===== Extraits de code commentés pour des points importants
 
-==== 1.6 Débiter un compte (BD)
+==== 1.6 Débiter un compte (BD) - Victor T.
 
 Débiter un compte permet de retirer une somme d'argent depuis un compte bancaire sélectionné associé à un client. Il est évidemment impossible de débiter une somme négative ou un montant invalide. Le débit ne peut pas dépasser un certain seuil défini au préalable et le retrait d'une somme ne peut pas dépasser le découvert.
 
@@ -267,7 +267,7 @@ image::/V1/images/CodeDébiter.png[code débiter]
 
 Ce bout de code est relativement important car il permet d'enregitrer le débit dans la base de données SQL depuis la procédure "Débiter", de déterminer quel type d'opération est renseigné et du montant à débiter.
 
-==== 1.7 Créditer un compte (BD)
+==== 1.7 Créditer un compte (BD) - Victor T.
 
 Créditer un compte permet de déposer une somme d'argent depuis un compte bancaire sélectionné associé à un client. Il est évidemment impossible de déposer une somme négative ou un montant invalide.
 
@@ -328,7 +328,7 @@ L'implémentation de la fonctionnalité Créditer a été éffectuée à partir 
 
 ===== Extraits de code commentés pour des points importants
 
-==== 1.8 Effectuer un virement de compte à compte
+==== 1.8 Effectuer un virement de compte à compte - Mickael F.
 
 Le virement consiste à, depuis un compte sélectionné, transférer une somme d'argent quelconque à destination d'un compte pouvant être d'un autre client ou de soi-même. Évidemment, il est inutile voire contradictoire d'effectuer un virement vers le même compte sélectionné et il en va de même pour un montant invalide (inférieur à 0 ou ne respectant pas le type attendu). 
 
@@ -397,7 +397,7 @@ Cette condition est relativement importante pour mentionner le fait qu'un vireme
 
 === 2. Chef d'agence
 
-==== 2.1 Rendre inactif un client 
+==== 2.1 Rendre inactif un client - Nicolas S.
 
 ===== Partie du use case conforme
 
@@ -413,7 +413,7 @@ image::/V1/images/inactifclient.PNG[Client inactif]
 
 ===== Extraits de code commentés pour des points importants
 
-==== 2.2 Gérer les employés (CRUD)
+==== 2.2 Gérer les employés (CRUD) - Louis Y.
 
 ===== Partie du use case conforme
 
