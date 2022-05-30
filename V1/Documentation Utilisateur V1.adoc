@@ -7,11 +7,15 @@
 
 == Présentation générale de l'application
 
+Cette application a été réalisée lors de notre première année de BUT informatique, nous avions pour but de réaliser une application nommée "DAILY BANK", celle-ci nous permettra de simuler des actions que l’on peut retrouver dans une banque du monde réel.
+
 L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle devra permettre de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
 
 == Installation 
 
-Faire à la fin avec le shell ou bat [A remplir]
+Afin de pouvoir utiliser notre application, nos clients devront disposer d’un poste informatique munie d’un JRE JAVA 8. Comment installer et configurer JAVA 8 sur votre PC ?
+
+3. Fonctionnement de l’application
 
 == Fonctionnement de l'application 
 
@@ -184,4 +188,108 @@ image::/V0/images/affichage.PNG[Etape 3 pour faire un virement de compte à comp
 
 ==== Chef d'Agence
 
+===== Rendre inactif un client
+
+Afin de pouvoir rendre inactif d'un client, il faudra s'assurer dans un premier temps que vous êtes bien connecté en tant que chef d'agence et non en tant que  guichetier car seulement le chef d'agence peut rendre inactif un client. 
+
+Ensuite, vous pourrez selectionner un compte d'un client comme sur l'image ci-dessous, puis suivre les étapes de la flèche rouge.
+
+image::/V0/images/inactif1.png[Etape 1 pour rendre inactif un client]
+
+Une fois arrivé sur l'interface de modification des informations concernant le client, il vous suffira de cliquer sur le bouton "Inactif". Petite précison des différentes situations qui peuvent se dérouler dans la partie "Jeu d'essais"
+
+image::/V0/images/inactif2.png[Etape 2 pour rendre inactif un client]
+
+Une fois rendu inactif, vous pourrez remarquer que le texte indiqué par la flèche rouge aura changé comme sur l'image ci-dessous, le client est désormais inactif.
+
+image::/V0/images/inactif3.png[Etape 3 pour rendre inactif un client]
+
 == Résultats plus quelques exemples de jeux d'essais
+
+Passons à moins de théorique, ici vous trouverez les résultats de nos fonctionnalités, afin de mieux comprendre, il est fortement conseillé de connaître les étapes à suivre, je vous laisse pour cela, prendre connaissances de celles-ci qui sont situés dans la partie "Fonctionnement". Bien sur vous disposerez de toutes les preuves nécessaires (interface JAVA | base de données) pour témoigner de leur bon fonctionnement. 
+
+=== Créer un nouveau client
+
+Une fois toutes informations nécessaires renseignées, le client se rajoutera dans l'encadré blanc de votre interface "Gestion des clients" comme sur l'image ci-dessous:
+
+image::/V0/images/creaCli1Preuve.png[Etape 1 preuve création client]
+
+Au niveau back-end, votre client sera également ajouté, vous pourrez vérifier s'il existe en notant son idNumClient et remplacer le chiffre "323" par le chiffre qui correspond au niveau client, cette requête vous permet d'interroger la base de données et vous renvoie si il existe, les informations du client créé. 
+
+image::/V0/images/creaCli2Preuve.png[Etape 2 preuve création client]
+
+=== Modifier informations client
+
+Ici, nous reprenons le client créé juste plus haut, nous allons changer toutes ses informations mis à part l'id du client et son idAgence.
+
+image::/V0/images/modifCli1Preuve.png[Etape 1 preuve modification client]
+
+Nous pouvons, à présent, voir que le client ait bien modifié que ce soit au niveau de l'interface JAVA :
+
+image::/V0/images/modifCli2Preuve.png[Etape 2 preuve modification client]
+
+Mais également au niveau de la base de données, on effectue la même requête que tout à l'heure :
+
+image::/V0/images/modifCli3Preuve.png[Etape 3 preuve modification client]
+
+=== Consulter un compte 
+
+Reprenons une nouvelle fois le client orange1 crée plus haut et plus précisément son compte. Comme vous pouvez le voir sur l'image ci-dessous, le client hercule1 possède un compte. Pour le consulter, il vous suffit de cliquer dessus puis de suivre la flèche rouge.
+
+image::/V0/images/consulterCompte1Preuve.png[Etape 1 preuve consultation compte d'un client]
+
+Nous pouvons à présent voir les opérations du compte (débit en l'occurrence, ce n'est pas encore la fin du mois donc pas de crédit)
+
+image::/V0/images/consulterCompte2Preuve.png[Etape 2 preuve consultation compte d'un client]
+
+Côté back-end, les informations apparaissent également grâce à cette requête, une nouvelle fois, si vous voulez consulter les informations d'un autre client. Il vous suffira de changer le chiffre "323" par l'id du client désiré.
+
+image::/V0/images/consulterCompte3Preuve.png[Etape 3 preuve consultation compte d'un client]
+
+=== Débiter un compte
+
+Pour ne pas changer, reprenons le client hercule1. Nous allons effectuer 2 debits (par carte bleue et espèce). Pour choisir le type de retrait, il vous suffit de cliquer sur la barre déroulante nommée "Retrait Espèces" puis de choisir entre les deux options comme sur l'image ci-dessous :
+
+image::/V0/images/choixDuRetrait.png[Choix du type de retrait]
+
+Ensuite renseignez le montant que vous voulez retirer dans la zone de texte puis, appuyez sur le bouton "Effectuer Débit" indiqué par la flèche rouge comme sur l'image dessous : 
+
+image::/V0/images/debit1Preuve.png[Etape 1 preuve debit]
+
+Nous pouvons voir maintenant que le debit effectué à l'instant s'affiche dans l'encadré blanc en dessous des anciennes opérations :
+
+image::/V0/images/debit2Preuve.png[Etape 2 preuve debit]
+
+Du côté back-end, les changements ont également été effectué :
+
+image::/V0/images/debit3Preuve.png[Etape 3 preuve debit]
+
+=== Rendre inactif un client
+
+Cette fonctionnalité est différente selon les situations, pour vous les illustrer, vous pourrez les retrouvez ci-dessous :
+
+==== Si le client n'a pas de compte
+
+Généralement ce cas peut arriver lors de la création d'un client, lors de sa création il ne possède pas de compte donc on ne peut pas le rendre inactif :
+
+image::/V0/images/ri1Preuve.png[Etape 1 preuve rendre inactif un client]
+
+==== Si le client possède des comptes non clôturés
+
+Pour rendre inactif un client, il faut que tous les comptes du client soient clôturés donc nous vous proposons de tous les clôturer en un clic comme sur l'image ci-dessous :
+
+image::/V0/images/ri2Preuve.png[Etape 2 preuve rendre inactif un client]
+
+Voici le message de succès de la clôturation de tous les comptes du client :
+
+image::/V0/images/ri3Preuve.png[Etape 3 preuve rendre inactif un client]
+
+==== Si le client possède tous ses comptes clôturés
+
+Il vous suffit de vous rendre dans "Modifier client" puis de cliquer sur le bouton "Inactif"
+
+==== Si vous êtes arrivé à le rendre inactif
+
+Voici l'affichage lorsqu'un client est inactif :
+
+image::/V0/images/ri4Preuve.png[Etape 4preuve rendre inactif un client]
