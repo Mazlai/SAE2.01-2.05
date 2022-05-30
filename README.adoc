@@ -55,8 +55,7 @@ voir fichier ascidoc retour
  * lien vers https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/retourDocTechnique.adoc
  
  
- 
- == cahier de recette
+== cahier de recette
  
  La partie générale est très bien mais il faut revoir les fiches de tests elle m^me.
  
