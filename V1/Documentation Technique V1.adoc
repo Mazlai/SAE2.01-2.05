@@ -206,7 +206,7 @@ Débiter un compte permet de retirer une somme d'argent depuis un compte bancair
 
 ===== Partie du use case conforme
 
-image::/V1/images/créditerdébiter.PNG[Créditer compte]
+image::/V1/images/créditerdébiter.PNG[Déditer compte]
 
 ===== Partie du diagramme de classe conforme
 
@@ -269,17 +269,62 @@ Ce bout de code est relativemement important car il permet d'enregitrer le débi
 
 ==== 1.7 Créditer un compte (BD)
 
+Créditer un compte permet de déposer une somme d'argent depuis un compte bancaire sélectionné associé à un client. Il est évidemment impossible de déposer une somme négative ou un montant invalide.
+
 ===== Partie du use case conforme
 
-image::/V1/images/créditerdébiter.PNG[Débiter compte]
+image::/V1/images/créditerdébiter.PNG[Créditer compte]
 
 ===== Partie du diagramme de classe conforme
 
+La tâche débit inclut 3 classes dans ce diagramme de classes :
+____
+• La classe ``CompteCourant``, n'étant seulement dédiée qu'à une lecture étant donné qu'elle prendra en compte les informations de celui-ci sans pour autant les modifier ;
+• La classe ``TypeOperation`` qui, de même, n'est dédiée qu'à une simple lecture étant donné qu'elle caractérise seulement l'opération sans pour autant y interagir avec ;
+• La classe ``Operation`` qui elle, utilise les données renseignées de l'utilisateur. Elle ne se contente donc pas de seulement lire les données mais plutôt de les interpréter, et cela passe avant par une définition de ces données.
+____
+
 ===== Principales fonctionnalités
+
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
 
 ===== Classes impliquées à l'implémentation de la fonction
 
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté ``application.tools`` :* +
+____
+• _CategorieOperation.java_
+• _ConstantesIHM.java_
+____
+
+*Côté ``application.control`` :* +
+____
+• _OperationManagement.java_
+• _OperationEditorPane.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _OperationManagementController.java_
+• _OperationEditorPaneController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _Operation.java_
+• _TypeOperation.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessOperation.java_
+• _DatabaseConnexionException.java_
+____
+
 ===== Éléments à connaître / spécificités
+
+L'implémentation de la fonctionnalité Créditer a été éffectué à partir de la procédure SQL "Débiter" en mettant " 0 - " devant le montant à créditer pour permettre l'utilisation "inversé" de la procédure.
 
 ===== Extraits de code commentés pour des points importants
 
