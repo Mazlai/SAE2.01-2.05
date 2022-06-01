@@ -263,7 +263,7 @@ Il n'y a pas d'élement réellement spécifique pour cette fonctionnalité.
 
 ===== Extraits de code commentés pour des points importants
 
-image::/V1/images/CodeDébiter.PNG[code débiter]
+image::/V1/images/CodeDébiter.png[code débiter]
 
 Ce bout de code est relativement important car il permet d'enregitrer le débit dans la base de données SQL depuis la procédure "Débiter", de déterminer quel type d'opération est renseigné et du montant à débiter.
 
@@ -328,7 +328,7 @@ L'implémentation de la fonctionnalité Créditer a été éffectuée à partir 
 
 ===== Extraits de code commentés pour des points importants
 
-image::/V1/images/CaptureCodeCrediter.png[code Crediter]
+image::/V1/images/CaptureCodeCrediter.PNG[code Crediter]
 
 Comme cité plus haut, ce bout de code utilise la procédure SQL "Débiter" mais à "l'envers" en mettant " 0 - " devant le montant à créditer. Cela permet de réutiliser la même procédure pour deux opérations qui sont finalement opposées.
 
