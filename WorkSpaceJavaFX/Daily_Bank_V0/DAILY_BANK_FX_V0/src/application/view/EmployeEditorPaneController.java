@@ -128,7 +128,7 @@ public class EmployeEditorPaneController implements Initializable {
 
 		this.em = mode;
 		if (employe == null) {
-			this.employeEdite = new Employe(0, "", "", "", "", "N", this.dbs.getEmpAct().idAg);
+			this.employeEdite = new Employe(0, "", "", "", "", "", this.dbs.getEmpAct().idAg);
 		} else {
 			this.employeEdite = new Employe(employe);
 		}
