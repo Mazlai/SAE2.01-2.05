@@ -328,6 +328,10 @@ L'implémentation de la fonctionnalité Créditer a été éffectuée à partir 
 
 ===== Extraits de code commentés pour des points importants
 
+image::/V1/images/CaptureCodeCrediter.PNG[code Crediter]
+
+Comme cité plus haut, ce bout de code utilise la procédure SQL "Débiter" mais à "l'envers" en mettant " 0 - " devant le montant à créditer. Cela permet de réutiliser la même procédure pour deux opérations qui sont finalement opposées.
+
 ==== 1.8 Effectuer un virement de compte à compte - Mickael F.
 
 Le virement consiste à, depuis un compte sélectionné, transférer une somme d'argent quelconque à destination d'un compte pouvant être d'un autre client ou de soi-même. Évidemment, il est inutile voire contradictoire d'effectuer un virement vers le même compte sélectionné et il en va de même pour un montant invalide (inférieur à 0 ou ne respectant pas le type attendu). 
