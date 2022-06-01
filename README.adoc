@@ -54,6 +54,8 @@ voir fichier ascidoc retour
 
  * lien vers https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/retourDocTechnique.adoc
  
+ * lien vers https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc
+ 
  
 == cahier de recette
  
