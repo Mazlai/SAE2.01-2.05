@@ -20,6 +20,12 @@ public class EmployeEditorPane {
 	private Stage primaryStage;
 	private EmployeEditorPaneController eepc;
 
+	
+	/**
+	 * Constructeur de EmployeEditorPane
+	 * @param _parentStage Fenêtre mère dont celle-ci dépendra
+	 * @param _dbstate Informations sur l'utilisateur : chef d'agence, guichetier
+	 */
 	public EmployeEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
 		try {
@@ -45,6 +51,12 @@ public class EmployeEditorPane {
 		}
 	}
 
+	/**
+	 * Ouvre la fenêtre d'édition d'un employé
+	 * @param employe Employé à modifier
+	 * @param em Type de modification parmi : CREATION, MODIFICATION, SUPPRESSION, VOIR
+	 * @return
+	 */
 	public Employe doEmployeEditorDialog(Employe employe, EditionMode em) {
 		return this.eepc.displayDialog(employe, em);
 	}

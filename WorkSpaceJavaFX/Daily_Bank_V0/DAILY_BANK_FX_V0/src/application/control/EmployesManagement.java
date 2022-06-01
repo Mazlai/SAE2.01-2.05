@@ -26,6 +26,11 @@ public class EmployesManagement {
 	private DailyBankState dbs;
 	private EmployesManagementController emc;
 
+	/**
+	 * Constructeur de EmployesManagement
+	 * @param _parentStage Fenêtre mère dont celle-ci dépendra
+	 * @param _dbstate Informations sur l'utilisateur : chef d'agence, guichetier
+	 */
 	public EmployesManagement(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
 		try {
@@ -51,10 +56,18 @@ public class EmployesManagement {
 		}
 	}
 
+	/**
+	 * Ouvre la fenêtre de gestion d'un employé
+	 */
 	public void doEmployeManagementDialog() {
 		this.emc.displayDialog();
 	}
 
+	/**
+	 * Ouvre la fenêtre de modification d'un employé
+	 * @param emp Employé à modifier
+	 * @return Employé modifié
+	 */
 	public Employe modifierEmploye(Employe emp) {
 		EmployeEditorPane eep = new EmployeEditorPane(this.primaryStage, this.dbs);
 		Employe result = eep.doEmployeEditorDialog(emp, EditionMode.MODIFICATION);
@@ -99,6 +112,13 @@ public class EmployesManagement {
 		return employe;
 	}
 
+	/**
+	 * Affiche la liste des comptes en fonction de l'identifiant, du nom et du prénom
+	 * @param _numCompte Numéro de compte dont on souhaite afficher le compte
+	 * @param _debutNom	Nom dans lequel apparaît _debutNom dont on souhaite afficher les compte
+	 * @param _debutPrenom Prenom dans lequel apparaît _debutPrenom dont on souhaite afficher les compte
+	 * @return Liste des employés correspondant aux filtres appliqués
+	 */
 	public ArrayList<Employe> getlisteComptes(int _numCompte, String _debutNom, String _debutPrenom) {
 		ArrayList<Employe> listeEmp = new ArrayList<>();
 		try {
