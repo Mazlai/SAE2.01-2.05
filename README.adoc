@@ -13,10 +13,16 @@ MAJ le 08/05/2022:
 ==== GPO :
 
 - [ ] Créer la documentation technique de la V0
-- [x] Créer la documentation utilisateur de la V0
 - [ ] Rédiger la documentation technique et la documentation utilisateur V1
 - [ ] Rédiger le cahier de test V2
-- [x] Mettre à jour le GANTT et les issues
+
+==== DEV :
+
+- [ ] Générer un relevé mensuel d'un compte en PDF
+- [ ] Effectuer un débit exceptionnel 
+- [ ] Gérer (faire le "CRUD") les prélèvements automatiques
+- [ ] Simuler un emprunt
+- [ ] Simuler une assurance d'emprunt
 
 *Lien vers le CDCU final :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V3/CDCU%20V3.adoc[__Cliquer ici__] +
 *Lien vers la documentation utilisateur :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[__Cliquer ici__] +
