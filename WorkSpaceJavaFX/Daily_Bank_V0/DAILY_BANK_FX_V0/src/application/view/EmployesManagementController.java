@@ -114,10 +114,10 @@ public class EmployesManagementController implements Initializable {
 		if (numCompte != -1) {
 			this.txtNom.setText("");
 			this.txtPrenom.setText("");
-		} else {
-			if (debutNom.equals("") && !debutPrenom.equals("")) {
-				this.txtPrenom.setText("");
-			}
+//		else {
+//			if (debutNom.equals("") && !debutPrenom.equals("")) {
+//				this.txtPrenom.setText("");
+//			}
 		}
 
 		// Recherche des employés en BD
