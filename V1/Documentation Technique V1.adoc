@@ -122,6 +122,8 @@ Enfin, ce ne serait sans mentionner le Workspace depuis lequel repose l'applicat
 
 ==== 1.1 Modifier les informations d'un client
 
+Un chef d'agence ou un guichetier peut modifier les informations d'un client selon les actualités tournant autour de celui-ci. Ces informations peuvent concerner le nom ou le prénom du client, son adresse, ses moyens de communication ou encore son évolutivité dans son agence bancaire, c'est-à-dire son activité.
+
 ===== Partie du use case conforme
 
 image::/V1/images/modifinfoclient.PNG[Modifier info client]
@@ -130,11 +132,53 @@ image::/V1/images/modifinfoclient.PNG[Modifier info client]
 
 ===== Principales fonctionnalités
 
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
+
 ===== Classes impliquées à l'implémentation de la fonction
+
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté ``application.tools`` :* +
+____
+• _CategorieOperation.java_
+• _ConstantesIHM.java_
+____
+
+*Côté ``application.control`` :* +
+____
+• _ClientEditorPane.java_
+• _ClientManagement.java_
+• _ExceptionDialog.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _ClientEditorPaneController.java_
+• _ClientManagementController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _Client.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessClient.java_
+• _ApplicationException.java_
+• _DatabaseConnexionException.java_
+• _DataAccessException.java_
+____
 
 ===== Éléments à connaître / spécificités
 
+L'élément à connaître pour cette tâche est une fonction et celle-ci réside dans la classe _ClientsManagement.java_ : *modifierClient(Client c)*.
+
+
 ===== Extraits de code commentés pour des points importants
+
+Le code étant déjà présent dans l'application, il n'y a aucune partie qui mérite d'être signalée et venant de notre part.
+De plus, il n'y a pas de détails spécifiques qui seraient difficiles à comprendre et donc à expliquer ou tout simplement d'être mentionné.
 
 ==== 1.2 Créer un nouveau client
 
@@ -255,6 +299,7 @@ ____
 ____
 • _AccessOperation.java_
 • _DatabaseConnexionException.java_
+• _DataAccessException.java_
 ____
 
 ===== Éléments à connaître / spécificités
@@ -320,6 +365,7 @@ ____
 ____
 • _AccessOperation.java_
 • _DatabaseConnexionException.java_
+• _DataAccessException.java_
 ____
 
 ===== Éléments à connaître / spécificités
@@ -387,6 +433,7 @@ ____
 ____
 • _AccessCompteCourant.java_
 • _DatabaseConnexionException.java_
+• _DataAccessException.java_
 ____
 
 ===== Éléments à connaître / spécificités
