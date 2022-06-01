@@ -230,6 +230,7 @@ public class EmployeEditorPaneController implements Initializable {
 		this.employeEdite.prenom = this.txtPrenom.getText().trim();
 		this.employeEdite.login = this.txtLogin.getText().trim();
 		this.employeEdite.motPasse = this.txtMotPasse.getText().trim();
+		
 		if (this.rbGuichetier.isSelected()) {
 			this.employeEdite.droitsAccess = "guichetier";
 		} else {
@@ -242,10 +243,22 @@ public class EmployeEditorPaneController implements Initializable {
 			this.txtNom.requestFocus();
 			return false;
 		}
-		if (this.employeEdite.prenom.isEmpty()) {
+		else if (this.employeEdite.prenom.isEmpty()) {
 			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le prénom ne doit pas être vide",
 					AlertType.WARNING);
 			this.txtPrenom.requestFocus();
+			return false;
+		}
+		else if (this.employeEdite.login.isEmpty()) {
+			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le login ne doit pas être vide",
+					AlertType.WARNING);
+			this.txtLogin.requestFocus();
+			return false;
+		}
+		else if (this.employeEdite.motPasse.isEmpty()) {
+			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le mot de passe ne doit pas être vide",
+					AlertType.WARNING);
+			this.txtMotPasse.requestFocus();
 			return false;
 		}
 
