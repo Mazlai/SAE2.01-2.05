@@ -32,7 +32,12 @@ public class EmployesManagementController implements Initializable {
 	// Données de la fenêtre
 	private ObservableList<Employe> ole;
 
-	// Manipulation de la fenêtre
+	/**
+	 *  Manipulation de la fenêtre
+	 * @param _primaryStage fenêtre principale
+	 * @param _em Fenêtre de gestion d'employé dont elle dépend
+	 * @param _dbstate Type d'utilisateur : guichetier, chef d'agence
+	 */
 	public void initContext(Stage _primaryStage, EmployesManagement _em, DailyBankState _dbstate) {
 		this.em = _em;
 		this.primaryStage = _primaryStage;
@@ -40,6 +45,9 @@ public class EmployesManagementController implements Initializable {
 		this.configure();
 	}
 
+	/**
+	 * Configure la fermeture et les éléments de la fenêtre
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
@@ -51,11 +59,18 @@ public class EmployesManagementController implements Initializable {
 		this.validateComponentState();
 	}
 
+	/**
+	 * Affiche la fenêtre
+	 */
 	public void displayDialog() {
 		this.primaryStage.showAndWait();
 	}
 
-	// Gestion du stage
+	/**
+	 * Gestion du stage
+	 * @param e
+	 * @return
+	 */
 	private Object closeWindow(WindowEvent e) {
 		this.doCancel();
 		e.consume();
@@ -114,10 +129,10 @@ public class EmployesManagementController implements Initializable {
 		if (numCompte != -1) {
 			this.txtNom.setText("");
 			this.txtPrenom.setText("");
-		} else {
-			if (debutNom.equals("") && !debutPrenom.equals("")) {
-				this.txtPrenom.setText("");
-			}
+//		else {
+//			if (debutNom.equals("") && !debutPrenom.equals("")) {
+//				this.txtPrenom.setText("");
+//			}
 		}
 
 		// Recherche des employés en BD
@@ -157,6 +172,9 @@ public class EmployesManagementController implements Initializable {
 		}
 	}
 
+	/**
+	 * Change l'état de l'employé. Si supprimé : désactive les buttons incohérents
+	 */
 	private void validateComponentState() {
 		this.btnSuppEmploye.setDisable(true);
 		int selectedIndice = this.lvEmploye.getSelectionModel().getSelectedIndex();

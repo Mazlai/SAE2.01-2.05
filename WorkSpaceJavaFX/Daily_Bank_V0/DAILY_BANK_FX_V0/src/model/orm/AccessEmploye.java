@@ -200,7 +200,7 @@ public class AccessEmploye {
 				pst.setInt(1, idAg);
 				pst.setInt(2, idEmploye);
 
-			} else if (!debutNom.equals("")) {
+			} else if (!debutNom.equals("") || !debutPrenom.equals("")) {
 				debutNom = debutNom.toUpperCase() + "%";
 				debutPrenom = debutPrenom.toUpperCase() + "%";
 				query = "SELECT * FROM EMPLOYE where idAg = ?";
@@ -210,6 +210,7 @@ public class AccessEmploye {
 				pst.setInt(1, idAg);
 				pst.setString(2, debutNom);
 				pst.setString(3, debutPrenom);
+
 			} else {
 				query = "SELECT * FROM Employe where idAg = ?";
 				query += " ORDER BY nom";
