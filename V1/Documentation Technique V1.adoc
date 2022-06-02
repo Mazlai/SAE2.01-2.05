@@ -130,6 +130,11 @@ image::/V1/images/modifinfoclient.PNG[Modifier info client]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V1/images/clientdc.PNG[Modifier info client]
+
+Cette tâche n'inclut seulement qu'une classe dans le diagramme de classes V1 : la classe ``Client``.
+Cette classe est, de ce fait, dédiée à la modification des informations d'un client et par conséquent, à la mise à jour des données sur la base de données.
+
 ===== Principales fonctionnalités
 
 Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
@@ -173,7 +178,6 @@ ____
 ===== Éléments à connaître / spécificités
 
 L'élément à connaître pour cette tâche est une fonction et celle-ci réside dans la classe _ClientsManagement.java_ : *modifierClient(Client c)*.
-
 
 ===== Extraits de code commentés pour des points importants
 
