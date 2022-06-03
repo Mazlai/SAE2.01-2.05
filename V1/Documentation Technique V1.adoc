@@ -1,8 +1,12 @@
-= DailyBank - Documentation Technique - V1
 :toc:
+:toc-placement!:
 :toc-title: Table des matières
 
+image::/images/DailyBank.png[]
+= DailyBank - Documentation Technique - V1
 _Réalisé par THOMPSON Victor, YVELIN Louis, SACILOTTO Nicolas et FERNANDEZ Mickael (4A)_
+
+toc::[]
 
 == I - Présentation rapide de l'application
 
