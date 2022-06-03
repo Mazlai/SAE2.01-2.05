@@ -2,7 +2,7 @@
 Réalisé par THOMPSON Victor, YVELIN Louis, SACILOTTO Nicolas et FERNANDEZ Mickael (4A)
 
 :toc:
-:toc-title:Table des matières
+:toc-title: Table des matières
 
 == I - Présentation rapide de l'application
 
