@@ -1,6 +1,6 @@
 = Documentation Technique - V1
----
 Réalisé par THOMPSON Victor, YVELIN Louis, SACILOTTO Nicolas et FERNANDEZ Mickael (4A)
+---
 
 :toc:
 
