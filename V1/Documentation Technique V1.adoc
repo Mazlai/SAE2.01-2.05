@@ -3,7 +3,7 @@ Réalisé par THOMPSON Victor, YVELIN Louis, SACILOTTO Nicolas et FERNANDEZ Mick
 ---
 :toc:
 
-:news:
+:news1:
 
 :cl-added: pass:quotes[[.label.added]#Added:#]
 :cl-changed: pass:q[[.label.changed]#Changed:#]
