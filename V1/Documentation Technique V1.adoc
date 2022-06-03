@@ -444,7 +444,7 @@ ____
 
 ===== Éléments à connaître / spécificités
 
-L'une des fonctions importantes pour implémenter cette action est la fonction getComptesOuverts(int idNumCli) dans la classe AccessCompteCourant.java qui permet de rechercher l'ensemble des comptes courants présents pour un client faisant parti d'une agence bancaire pour effectuer cette opération de virement.
+L'une des fonctions importantes pour implémenter cette action est la fonction _getComptesOuverts(int idNumCli)_ dans la classe AccessCompteCourant.java qui permet de rechercher l'ensemble des comptes courants présents pour un client faisant parti d'une agence bancaire pour effectuer cette opération de virement.
 
 ===== Extraits de code commentés pour des points importants
 
