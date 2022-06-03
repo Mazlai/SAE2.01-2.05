@@ -3,6 +3,20 @@ Réalisé par THOMPSON Victor, YVELIN Louis, SACILOTTO Nicolas et FERNANDEZ Mick
 ---
 :toc:
 
+:news:
+
+:cl-added: pass:quotes[[.label.added]#Added:#]
+:cl-changed: pass:q[[.label.changed]#Changed:#]
+:cl-updated: pass:q[[.label.updated]#Updated:#]
+
+== Actualités
+ 
+* {cl-added} Document attributes for document.
+* {cl-changed} Definition of attributes to include
+ more options.
+* {cl-updated} New version of Asciidoctor.
+
+
 == I - Présentation rapide de l'application
 
 === 1. Explications du use case global
