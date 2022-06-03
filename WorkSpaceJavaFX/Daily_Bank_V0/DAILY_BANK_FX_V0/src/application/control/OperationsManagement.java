@@ -117,8 +117,6 @@ public class OperationsManagement {
 		return op;
 	}
 	
-	
-	
 	/**
 	 * Permet d'enregister le virement à effectuer sur le compte
 	 * @return l'opération du virement
@@ -130,12 +128,29 @@ public class OperationsManagement {
 			try {
 				AccessOperation ao = new AccessOperation();
 				AccessCompteCourant acc = new AccessCompteCourant();
-				ArrayList<CompteCourant> clients = acc.getTousLesComptes();
+				ArrayList<CompteCourant> clients = acc.getComptesOuverts(this.compteConcerne.idNumCli);
+				
+				ArrayList<CompteCourant> clientswithoutselected =new ArrayList<CompteCourant>(0);
+				
+				for (int i= 0 ; i < clients.size(); ++i) {
+					if(clients.get(oep.getOepc().getCompteSelectionne()) != clients.get(i)) {
+						clientswithoutselected.add(clients.get(i));
+					    }
+					}
+					System.out.println(clients);
+			
 				
 				String STR = ConstantesIHM.OPERATIONS_VIREMENT_GUICHET;
 				
 				ao.insertDebit(this.compteConcerne.idNumCompte, op.montant, STR);
-				ao.insertCredit(clients.get(oep.getOepc().getCompteSelectionne()).idNumCompte, 0 - op.montant, STR);
+				
+				if(this.compteConcerne.idNumCompte > clients.get(oep.getOepc().getCompteSelectionne()).idNumCompte) {
+					ao.insertCredit(clients.get(oep.getOepc().getCompteSelectionne()).idNumCompte , 0 - op.montant, STR);
+				}  else {
+					ao.insertCredit(clientswithoutselected.get(oep.getOepc().getCompteSelectionne()).idNumCompte, 0 - op.montant, STR);
+				}
+				
+				System.out.println(clientswithoutselected.get(oep.getOepc().getCompteSelectionne()).idNumCompte);
 				
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
@@ -151,7 +166,6 @@ public class OperationsManagement {
 		return op;
 	}
 	
-
 	public PairsOfValue<CompteCourant, ArrayList<Operation>>  operationsEtSoldeDunCompte() {
 		ArrayList<Operation> listeOP = new ArrayList<>();
 
