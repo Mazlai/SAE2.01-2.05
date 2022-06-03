@@ -376,7 +376,7 @@ ____
 
 ===== Éléments à connaître / spécificités
 
-L'implémentation de la fonctionnalité Créditer a été éffectuée à partir de la procédure SQL "Débiter" en mettant " 0 - " devant le montant à créditer pour permettre l'utilisation "inversée" de la procédure.
+L'implémentation de la fonctionnalité Créditer a été effectuée à partir de la procédure SQL "Débiter" en mettant " 0 - " devant le montant à créditer pour permettre l'utilisation "inversée" de la procédure.
 
 ===== Extraits de code commentés pour des points importants
 
@@ -444,7 +444,7 @@ ____
 
 ===== Éléments à connaître / spécificités
 
-L'une des fonctions importantes pour implémenter cette action est la fonction getTousLesComptes() dans la classe AccessCompteCourant.java qui permet de rechercher l'ensemble des comptes de tous les clients (qu'ils soient dans une même agence ou non) pour effectuer cette opération.
+L'une des fonctions importantes pour implémenter cette action est la fonction getComptesOuverts(int idNumCli) dans la classe AccessCompteCourant.java qui permet de rechercher l'ensemble des comptes courants présents pour un client faisant parti d'une agence bancaire pour effectuer cette opération de virement.
 
 ===== Extraits de code commentés pour des points importants
 
