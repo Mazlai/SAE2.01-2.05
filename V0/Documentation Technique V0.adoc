@@ -2,6 +2,8 @@
 :toc:
 :toc-title: Table des matières
 
+image::/images/DailyBank.png[]
+
 _Réalisé par THOMPSON Victor, YVELIN Louis, SACILOTTO Nicolas et FERNANDEZ Mickael (4A)_
 
 == Commentaires de la V0 (Javadoc)
