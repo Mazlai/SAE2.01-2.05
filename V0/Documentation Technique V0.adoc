@@ -1,10 +1,12 @@
-= DailyBank - Documentation Technique - V0
 :toc:
+:toc-placement!:
 :toc-title: Table des matières
 
 image::/images/DailyBank.png[]
-
+= DailyBank - Documentation Technique - V0
 _Réalisé par THOMPSON Victor, YVELIN Louis, SACILOTTO Nicolas et FERNANDEZ Mickael (4A)_
+
+toc::[]
 
 == Commentaires de la V0 (Javadoc)
 
