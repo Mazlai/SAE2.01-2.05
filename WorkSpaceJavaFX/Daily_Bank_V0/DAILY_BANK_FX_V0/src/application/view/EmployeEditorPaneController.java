@@ -90,7 +90,11 @@ public class EmployeEditorPaneController implements Initializable {
 
 
 
-	// Manipulation de la fenêtre
+	/**
+	 * Manipulation de la fenêtre
+	 * @param _primaryStage Fenêtre principale
+	 * @param _dbstate Type d'utilisateur : guichetier, chef d'agence
+	 */
 	public void initContext(Stage _primaryStage, DailyBankState _dbstate) {
 		this.primaryStage = _primaryStage;
 		this.dbs = _dbstate;
@@ -103,6 +107,9 @@ public class EmployeEditorPaneController implements Initializable {
 		
 	}
 	
+	/**
+	 * Configure la fermeture de la fenêtre
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 	}
@@ -111,11 +118,17 @@ public class EmployeEditorPaneController implements Initializable {
 		return null;
 	}
 	
+	/**
+	 * Ouvre la page d'affichage, de modification ou de suppression de l'employé
+	 * @param employe Employé comcerné
+	 * @param mode Type de modification : affichage, modification ou suppression
+	 * @return Employé possiblement modifié
+	 */
 	public Employe displayDialog(Employe employe, EditionMode mode) {
 
 		this.em = mode;
 		if (employe == null) {
-			this.employeEdite = new Employe(0, "", "", "", "", "N", this.dbs.getEmpAct().idAg);
+			this.employeEdite = new Employe(0, "", "", "", "", "", this.dbs.getEmpAct().idAg);
 		} else {
 			this.employeEdite = new Employe(employe);
 		}
@@ -208,11 +221,16 @@ public class EmployeEditorPaneController implements Initializable {
 
 	}
 
+	/**
+	 * Corrige et vérifie la saisie lors de la modification d'un employé
+	 * @return vrai ou faux : la saisie est-elle valide ?
+	 */
 	private boolean isSaisieValide() {
 		this.employeEdite.nom = this.txtNom.getText().trim();
 		this.employeEdite.prenom = this.txtPrenom.getText().trim();
 		this.employeEdite.login = this.txtLogin.getText().trim();
 		this.employeEdite.motPasse = this.txtMotPasse.getText().trim();
+		
 		if (this.rbGuichetier.isSelected()) {
 			this.employeEdite.droitsAccess = "guichetier";
 		} else {
@@ -225,10 +243,22 @@ public class EmployeEditorPaneController implements Initializable {
 			this.txtNom.requestFocus();
 			return false;
 		}
-		if (this.employeEdite.prenom.isEmpty()) {
+		else if (this.employeEdite.prenom.isEmpty()) {
 			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le prénom ne doit pas être vide",
 					AlertType.WARNING);
 			this.txtPrenom.requestFocus();
+			return false;
+		}
+		else if (this.employeEdite.login.isEmpty()) {
+			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le login ne doit pas être vide",
+					AlertType.WARNING);
+			this.txtLogin.requestFocus();
+			return false;
+		}
+		else if (this.employeEdite.motPasse.isEmpty()) {
+			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le mot de passe ne doit pas être vide",
+					AlertType.WARNING);
+			this.txtMotPasse.requestFocus();
 			return false;
 		}
 
