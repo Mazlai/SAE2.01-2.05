@@ -1,12 +1,15 @@
-= DailyBank - Documentation destinée aux utilisateurs - V1
 :toc:
+:toc-placement!:
 :toc-title: Table des matières
 :toclevels: 6
 :numbered:
 :nofooter:
-[.text-justify]
 
+image::/images/DailyBank.png[]
+= DailyBank - Documentation destinée aux utilisateurs - V1
 _Réalisé par THOMPSON Victor, YVELIN Louis, SACILOTTO Nicolas et FERNANDEZ Mickael (4A)_
+
+toc::[]
 
 == Présentation générale de l'application
 
