@@ -1,5 +1,8 @@
 = Cahier de tests V2
 :toc:
+:toc-title: Table des matières
+
+_Réalisé par THOMPSON Victor, YVELIN Louis, SACILOTTO Nicolas et FERNANDEZ Mickael (4A)_
 
 == Présentation du projet
 
