@@ -1,6 +1,7 @@
 package model.orm;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,6 +9,7 @@ import java.util.ArrayList;
 
 import application.control.ExceptionDialog;
 import model.data.CompteCourant;
+import model.data.Operation;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
@@ -61,6 +63,36 @@ public class AccessCompteCourant {
 		return alResult;
 	}
 
+	
+	  public static ArrayList<Operation> getViewListOperationsDunCompte(int idNumCompte) throws DataAccessException, DatabaseConnexionException {
+			ArrayList<Operation> alResult = new ArrayList<>();
+
+			try {
+				Connection con = LogToDatabase.getConnexion();
+				String query = "SELECT * FROM Operation where idNumCompte = ? AND to_char(dateOp, 'MM') = to_char(sysdate, 'MM') ";
+				query += " ORDER BY dateOp";
+
+				PreparedStatement pst = con.prepareStatement(query);
+				pst.setInt(1, idNumCompte);
+
+				ResultSet rs = pst.executeQuery();
+				while (rs.next()) {
+					int idOperation = rs.getInt("idOperation");
+					double montant = rs.getDouble("montant");
+					Date dateOp = rs.getDate("dateOp");
+					Date dateValeur = rs.getDate("dateValeur");
+					int idNumCompteTrouve = rs.getInt("idNumCompte");
+					String idTypeOp = rs.getString("idTypeOp");
+
+					alResult.add(new Operation(idOperation, montant, dateOp, dateValeur, idNumCompteTrouve, idTypeOp));
+				}
+				rs.close();
+				pst.close();
+				return alResult;
+			} catch (SQLException e) {
+				throw new DataAccessException(Table.Operation, Order.SELECT, "Erreur accès", e);
+			}
+		}
 	
 	/**
 	 * Recherche de l'ensemble des comptes courants ouverts présents pour un client

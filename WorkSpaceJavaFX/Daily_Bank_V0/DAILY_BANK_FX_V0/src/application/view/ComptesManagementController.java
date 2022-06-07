@@ -1,9 +1,19 @@
 package application.view;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
 
 import application.DailyBankState;
 import application.control.ComptesManagement;
@@ -20,6 +30,8 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.data.Client;
 import model.data.CompteCourant;
+import model.data.Operation;
+import model.orm.AccessCompteCourant;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
 import model.orm.exception.RowNotFoundOrTooManyRowsException;
@@ -105,6 +117,8 @@ public class ComptesManagementController implements Initializable {
 	private void doCancel() {
 		this.primaryStage.close();
 	}
+	
+	
 
 	/**
 	 * Permet de voir les opérations financières du compte d'un client

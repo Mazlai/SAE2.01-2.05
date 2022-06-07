@@ -1,9 +1,19 @@
 package application.view;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
+
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
 
 import application.DailyBankState;
 import application.control.OperationsManagement;
@@ -21,6 +31,9 @@ import javafx.stage.WindowEvent;
 import model.data.Client;
 import model.data.CompteCourant;
 import model.data.Operation;
+import model.orm.AccessCompteCourant;
+import model.orm.exception.DataAccessException;
+import model.orm.exception.DatabaseConnexionException;
 
 public class OperationsManagementController implements Initializable {
 
@@ -80,6 +93,8 @@ public class OperationsManagementController implements Initializable {
 	@FXML
 	private Button btnCredit;
 	@FXML
+	private Button btnPDF;
+	@FXML
     private Button btnVirement;
 
 	@Override
@@ -98,6 +113,126 @@ public class OperationsManagementController implements Initializable {
 			this.updateInfoCompteClient();
 			this.validateComponentState();
 		}
+	}
+	
+	/**
+	 * Permet de générer le pdf du relevé bancaire mensuel
+	 */
+	@FXML
+	private void doPDF() {
+		 ArrayList<Operation> ALop = new ArrayList<>();
+		 AccessCompteCourant acc = new AccessCompteCourant();
+	      try {
+			ALop = acc.getViewListOperationsDunCompte(this.compteConcerne.idNumCompte);
+		} catch (DataAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (DatabaseConnexionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	      //  Assume the below is the input file format
+	   // conn=mysqlconnect.ConnectDB();
+	    //String input ="select * from personne";
+	    //pst=conn.prepareStatement(input);
+	    //rs=pst.executeQuery();
+
+	      // creation of a document-object
+	      Document document = new Document();
+	        try {
+	          // create a writer
+	          PdfWriter.getInstance(
+	          // that listens to the document
+	          document,
+	          // and directs a PDF-stream to a file
+	          new FileOutputStream("C:\\Users\\Etudiant\\Downloads\\Relevé_Mensuel.pdf"));
+	          // open document
+	          document.open();
+	          // ajouter table dans le document
+	          PdfPTable table = new PdfPTable(4);
+	          PdfPCell cell =
+	              new PdfPCell(
+	                  new Paragraph("Relevé de comptes"));
+	          cell.setColspan(4);
+		         // cell.setBackgroundColor(Color.red);
+		          cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+		          table.addCell(cell);
+	          
+	          PdfPCell cellNumCompte =
+	              new PdfPCell(
+	                  new Paragraph("Numéro de Compte : " + this.compteConcerne.idNumCompte));
+	         
+	          cellNumCompte.setColspan(2);
+		      cellNumCompte.setHorizontalAlignment(Element.ALIGN_CENTER);
+		      table.addCell(cellNumCompte);
+		      
+		      PdfPCell cellBank =
+		              new PdfPCell(
+		                  new Paragraph("Agence bancaire : " + this.dbs.getAgAct().nomAg));
+		         
+		      cellBank.setColspan(2);
+		      cellBank.setHorizontalAlignment(Element.ALIGN_CENTER);
+			  table.addCell(cellBank);
+
+	          //Définir le texte d'en-tête de la Table
+
+	          cell = new PdfPCell(new Paragraph("ID de l'opération"));
+	          //cell.setBackgroundColor(Color.blue);
+	          table.addCell(cell);
+	          
+	          cell = new PdfPCell(new Paragraph("Montant"));
+	          //cell.setBackgroundColor(Color.blue);
+	          table.addCell(cell);
+
+
+	          cell = new PdfPCell(new Paragraph("Date"));
+	         // cell.setBackgroundColor(Color.blue);
+	          table.addCell(cell);
+	          
+
+
+	          cell = new PdfPCell(new Paragraph("Libellé de L'opération"));
+	          //cell.setBackgroundColor(Color.blue);
+	          table.addCell(cell);
+
+	          //Fill data to the table
+
+
+	          for (int i = 0; i < ALop.size(); i++) {
+	        	  
+	        	  //ArrayList<String> fieldV = new ArrayList<String>();
+
+	             // String fieldValuesArray[] = ALop.get(i).toString().split(",");
+	        	  
+
+	            
+	            	/*  public int idOperation;
+	            		public double montant;
+	            		public Date dateOp;
+	            		public Date dateValeur;
+	            		public int idNumCompte;
+	            		public String idTypeOp;*/
+	            		
+
+	                  table.addCell(""+ALop.get(i).idOperation);
+	                  table.addCell(""+ALop.get(i).montant);
+	                  table.addCell(""+ALop.get(i).dateOp);
+
+	                  
+	                  table.addCell(ALop.get(i).idTypeOp);
+
+	             
+	          }
+
+	          document.add(table);
+	      } catch (DocumentException de) {
+	          de.printStackTrace();
+	      } catch (IOException ioe) {
+	          ioe.printStackTrace();
+	      }
+
+	      // close the document
+	      document.close();
 	}
 
 	/**
