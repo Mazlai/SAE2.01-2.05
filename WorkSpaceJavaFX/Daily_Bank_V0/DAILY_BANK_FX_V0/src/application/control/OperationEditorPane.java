@@ -17,7 +17,6 @@ public class OperationEditorPane {
 
 	private Stage primaryStage;
 	private OperationEditorPaneController oepc;
-
 	
 	public OperationEditorPaneController getOepc() {
 		return this.oepc;

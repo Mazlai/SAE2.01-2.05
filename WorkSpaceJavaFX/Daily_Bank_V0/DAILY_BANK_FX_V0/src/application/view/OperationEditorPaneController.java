@@ -5,12 +5,14 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.ArrayList;
 import application.DailyBankState;
+import application.tools.AlertUtilities;
 import application.tools.CategorieOperation;
 import application.tools.ConstantesIHM;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -65,6 +67,8 @@ public class OperationEditorPaneController implements Initializable {
 	public Operation displayDialog(CompteCourant cpte, CategorieOperation mode) {
 		this.categorieOperation = mode;
 		this.compteEdite = cpte;
+		
+		int nbComptesOuverts = 0;
 
 		switch (mode) {
 		case DEBIT:
@@ -129,7 +133,7 @@ public class OperationEditorPaneController implements Initializable {
             try {
                 AccessCompteCourant acc = new AccessCompteCourant();
                 try {
-                    listeCpt = acc.getTousLesComptes();
+                    listeCpt = acc.getComptesOuverts(this.compteEdite.idNumCli);
                 } catch (DataAccessException e) {
                     e.printStackTrace();
                 }    
@@ -139,6 +143,7 @@ public class OperationEditorPaneController implements Initializable {
                 		list3.remove(tyOp.toString());
                 	} else {
                 		list3.add(tyOp.toString());
+                		nbComptesOuverts++;
                 	}
                 }
                 
@@ -160,7 +165,12 @@ public class OperationEditorPaneController implements Initializable {
 		this.operationResultat = null;
 		this.cbTypeOpe.requestFocus();
 
-		this.primaryStage.showAndWait();
+		if (nbComptesOuverts == 0 && mode == this.categorieOperation.VIREMENT) {
+			AlertUtilities.showAlert(this.primaryStage, "Erreur sur ", null, "Vous ne pouvez pas effectuer un virement vers votre même compte !",
+			AlertType.WARNING);
+		} else {
+			this.primaryStage.showAndWait();
+		}
 		return this.operationResultat;
 	}
 

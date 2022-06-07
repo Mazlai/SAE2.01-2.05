@@ -63,6 +63,49 @@ public class AccessCompteCourant {
 
 	
 	/**
+	 * Recherche de l'ensemble des comptes courants ouverts présents pour un client
+	 *
+	 * @return Les comptes ou null si non trouvé
+	 * @return Tous les CompteCourant d'un client (ou liste vide)
+	 * @throws DataAccessException
+	 * @throws DatabaseConnexionException
+	 */
+	public ArrayList<CompteCourant> getComptesOuverts(int idNumCli)
+            throws DataAccessException, DatabaseConnexionException {
+        ArrayList<CompteCourant> alResult = new ArrayList<>();
+ 
+        try {
+            Connection con = LogToDatabase.getConnexion();
+            
+            String query;
+            
+                query = "SELECT * FROM CompteCourant where idNumCli = ? AND estCloture = 'N' ORDER BY idNumCompte";
+                
+                PreparedStatement pst = con.prepareStatement(query);
+                pst.setInt(1, idNumCli);
+                
+                System.err.println(query);
+ 
+ 
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                int idNumCompte = rs.getInt("idNumCompte");
+                int debitAutorise = rs.getInt("debitAutorise");
+                double solde = rs.getDouble("solde");
+                String estCloture = rs.getString("estCloture");
+                int idNumCliO = rs.getInt("idNumCli");
+  
+                alResult.add(new CompteCourant(idNumCompte,debitAutorise,solde,estCloture,idNumCliO));
+            }
+            rs.close();
+            pst.close();
+        } catch (SQLException e) {
+            throw new DataAccessException(Table.Client, Order.SELECT, "Erreur accès", e);
+        }
+ 
+        return alResult;
+    }
+	/**
 	 * Recherche de l'ensemble des comptes courants présents aux différents clients
 	 *
 	 * @return Les comptes ou null si non trouvé
@@ -70,6 +113,7 @@ public class AccessCompteCourant {
 	 * @throws DataAccessException
 	 * @throws DatabaseConnexionException
 	 */
+	
 	public ArrayList<CompteCourant> getTousLesComptes()
             throws DataAccessException, DatabaseConnexionException {
         ArrayList<CompteCourant> alResult = new ArrayList<>();

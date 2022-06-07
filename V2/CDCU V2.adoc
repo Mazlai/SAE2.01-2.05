@@ -1,4 +1,10 @@
-= CDCU Version 2
+:toc:
+:toc-placement!:
+:toc-title: Table des matières
+
+image::/images/DailyBank.png[]
+= DailyBank - CDCU Version 2
+_Réalisé par THOMPSON Victor, YVELIN Louis, SACILOTTO Nicolas et FERNANDEZ Mickael (4A)_
 
 *Nom du projet : DailyBank* +
 *Clients : Adhérents de la banque* +
@@ -7,7 +13,7 @@
 *MàJ : 08/05/2022* +
 *Groupe : 4A02* +
 
-:toc:
+toc::[]
 
 :sectnums:
 == Contexte 

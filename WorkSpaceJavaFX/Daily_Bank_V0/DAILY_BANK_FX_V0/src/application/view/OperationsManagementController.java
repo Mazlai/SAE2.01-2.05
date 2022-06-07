@@ -118,6 +118,7 @@ public class OperationsManagementController implements Initializable {
 	 */
 	@FXML
 	private void doVirement() {
+		
 		Operation op = this.om.enregistrerVirement();
 		if (op != null) {
 			this.updateInfoCompteClient();
