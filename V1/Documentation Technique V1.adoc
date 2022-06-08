@@ -243,7 +243,7 @@ image::/V1/images/cloturercompte.PNG[Clôturer compte]
 
 ===== Partie du use case conforme
 
-image::/V1/images/consulterCompte.PNG[Consulter compte]
+image::/V1/images/consultercompte.PNG[Consulter compte]
 
 Un chef d'agence ou un guichetier peut consulter les informations d'un compte client. Ces informations peuvent concerner le code du compte, son solde, découvert autorisé et s'il est cloturé.
 
