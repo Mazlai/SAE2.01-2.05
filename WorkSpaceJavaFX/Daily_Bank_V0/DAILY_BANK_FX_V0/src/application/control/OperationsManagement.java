@@ -24,6 +24,9 @@ import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
 import model.orm.exception.ManagementRuleViolation;
 
+/** 
+ * La classe OperationsManagement permet de gérer les opération à réaliser, si on veut enregister un débit, un crédit ou un virement.Elle ouvre la fenetre permettant ces actions.
+ */
 public class OperationsManagement {
 
 	private Stage primaryStage;
@@ -31,7 +34,15 @@ public class OperationsManagement {
 	private OperationsManagementController omc;
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
-
+	
+	/**
+	 * Procédure pour générer la ressource operationsmanagement.fxml depuis son controller. 
+	 * Elle prend en parametre la fenetre(Stage) et l'état de l'agence bancaire(DailyBankState), le compteCourant auquel on doit appliquer l'operations et le client du compte(Client).
+	 * @param _parentStage
+	 * @param _dbstate
+	 * @param client
+	 * @param compte
+	 */
 	public OperationsManagement(Stage _parentStage, DailyBankState _dbstate, Client client, CompteCourant compte) {
 
 		this.clientDuCompte = client;
@@ -60,11 +71,19 @@ public class OperationsManagement {
 			e.printStackTrace();
 		}
 	}
-
+	
+	/**
+	 * Permet d'afficher le contenu de la fenetre pour determiner la categorie d'operation du compte il faut ppliquer les operations et attends une interaction potentielle avec celle-ci
+	 * @return le contenu à afficher dans la boites de dialogue
+	 */
 	public void doOperationsManagementDialog() {
 		this.omc.displayDialog();
 	}
-
+	
+	/**
+	 * Permet d'enregister le débit à effectuer sur le compte
+	 * @return l'opération du débit
+	 */
 	public Operation enregistrerDebit() {
 
 		OperationEditorPane oep = new OperationEditorPane(this.primaryStage, this.dbs);
@@ -166,6 +185,10 @@ public class OperationsManagement {
 		return op;
 	}
 	
+	/**
+	 * Permet d'associer une paire de valeur compte courant et liste d'opérations de ce compte, s'il y en a d'effectuées
+	 * @return la paire de valeur
+	 */
 	public PairsOfValue<CompteCourant, ArrayList<Operation>>  operationsEtSoldeDunCompte() {
 		ArrayList<Operation> listeOP = new ArrayList<>();
 
