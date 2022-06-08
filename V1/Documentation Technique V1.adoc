@@ -520,17 +520,54 @@ image::/V1/images/inactifclient.PNG[Client inactif]
 
 image::/V1/images/gereremployes.PNG[Gérer employés]
 
+Un chef d'agence peut gérer les employés. Cela concerne le code de l'employé, son login, mot de passe, adresse et son numéro de téléphone.
+
 ===== Partie du diagramme de classe conforme
+
+image::/V1/images/dcEmploye.PNG[Gérer les informations d'un employé]
+
+Cette tâche n'inclut seulement qu'une classe dans le diagramme de classes V1 : la classe ``Employé``.
+Cette classe est, de ce fait, dédiée à la consultation et la modification des informations d'un employé et par conséquent permet également aux employés de consulter leurs informations.
 
 ===== Principales fonctionnalités
 
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
+
 ===== Classes impliquées à l'implémentation de la fonction
 
-===== Éléments à connaître / spécificités
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
 
-===== Extraits de code commentés pour des points importants
+*Côté ``application.tools`` :* +
+____
+• _CategorieOperation.java_
+• _ConstantesIHM.java_
+____
 
-==== Éléments nécessaires à la mise en oeuvre du développement
+*Côté ``application.control`` :* +
+____
+• _EmployéEditorPane.java_
+• _EmployéManagement.java_
+• _ExceptionDialog.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _EmployéEditorPaneController.java_
+• _EmployéManagementController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _Employé.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessCompte.java_
+• _ApplicationException.java_
+• _DatabaseConnexionException.java_
+• _DataAccessException.java_
+____
 
 Les tâches d'administration effectuables sur les clients doivent respecter certaines conditions.
 
