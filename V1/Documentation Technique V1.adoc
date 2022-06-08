@@ -243,17 +243,56 @@ image::/V1/images/cloturercompte.PNG[Clôturer compte]
 
 ===== Partie du use case conforme
 
-image::/V1/images/consultercompte.PNG[Consulter compte]
+image::/V1/images/consulterCompte.PNG[Consulter compte]
+
+Un chef d'agence ou un guichetier peut consulter les informations d'un compte client. Ces informations peuvent concerner le code du compte, son solde, découvert autorisé et s'il est cloturé.
 
 ===== Partie du diagramme de classe conforme
 
+image::/V1/images/dcCompteCourant.PNG[Consulter les informations d'un compte]
+
+Cette tâche n'inclut seulement qu'une classe dans le diagramme de classes V1 : la classe ``ComteCourant``.
+Cette classe est, de ce fait, dédiée à la consultation des informations d'un compte client et par conséquent n'offre aucune possibilité de modification.
+
 ===== Principales fonctionnalités
+
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
 
 ===== Classes impliquées à l'implémentation de la fonction
 
-===== Éléments à connaître / spécificités
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
 
-===== Extraits de code commentés pour des points importants
+*Côté ``application.tools`` :* +
+____
+• _CategorieOperation.java_
+• _ConstantesIHM.java_
+____
+
+*Côté ``application.control`` :* +
+____
+• _CompteEditorPane.java_
+• _CompteManagement.java_
+• _ExceptionDialog.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _CompteEditorPaneController.java_
+• _CompteManagementController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _Compte.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessCompte.java_
+• _ApplicationException.java_
+• _DatabaseConnexionException.java_
+• _DataAccessException.java_
+____
 
 ==== 1.6 Débiter un compte (BD) - Victor T.
 
