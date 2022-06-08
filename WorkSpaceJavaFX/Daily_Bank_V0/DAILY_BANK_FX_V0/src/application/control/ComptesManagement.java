@@ -30,6 +30,9 @@ import model.orm.exception.Order;
 import model.orm.exception.RowNotFoundOrTooManyRowsException;
 import model.orm.exception.Table;
 
+/** 
+ * La classe ComptesManagement permet de gérer les comptes, si on veut créer les informations d'un compte, supprimer un compte ou en modifier un dejà existant
+ */
 public class ComptesManagement {
 
 	private Stage primaryStage;
@@ -70,7 +73,11 @@ public class ComptesManagement {
 			e.printStackTrace();
 		}
 	}
-
+	
+	/**
+	 * Permet d'afficher le contenu de la fenetre pour gérer les comptes et attends une interaction potentielle avec celle-ci
+	 * @return le contenu à afficher dans la boites de dialogue
+	 */
 	public void doComptesManagementDialog() {
 		this.cmc.displayDialog();
 	}
