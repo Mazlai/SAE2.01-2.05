@@ -1,5 +1,6 @@
 package application.view;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
@@ -7,9 +8,13 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.FontFactory;
+import com.itextpdf.text.Image;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
@@ -148,11 +153,30 @@ public class OperationsManagementController implements Initializable {
 	          new FileOutputStream("C:\\Users\\Etudiant\\Downloads\\Relevé_Mensuel.pdf"));
 	          // open document
 	          document.open();
+	          
+	          String filename = "C:\\Users\\Etudiant\\Downloads\\DailyBank.png";
+	            Image image = Image.getInstance(filename);
+	            image = Image.getInstance(filename);
+	            /*image.scalePercent(200f);
+	            image.setAbsolutePosition(0,0);
+	            System.out.println(image.getScaledHeight());
+	            document.add(image);*/
+	          
+	            //
+	            //Scales the image so that it fits a certain width and
+	            //height
+	            //
+	            image.scaleToFit(100f, 200f);
+	            document.add(image);
+	            System.out.println("created");
+	            
+	          
 	          // ajouter table dans le document
 	          PdfPTable table = new PdfPTable(4);
+	          Font titlefont = FontFactory.getFont(FontFactory.TIMES_ROMAN, 25);
 	          PdfPCell cell =
 	              new PdfPCell(
-	                  new Paragraph("Relevé de comptes"));
+	                  new Paragraph("Relevé de comptes", titlefont));
 	          cell.setColspan(4);
 		         // cell.setBackgroundColor(Color.red);
 		          cell.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -162,13 +186,21 @@ public class OperationsManagementController implements Initializable {
 	              new PdfPCell(
 	                  new Paragraph("Numéro de Compte : " + this.compteConcerne.idNumCompte));
 	         
-	          cellNumCompte.setColspan(2);
+	          cellNumCompte.setColspan(1);
 		      cellNumCompte.setHorizontalAlignment(Element.ALIGN_CENTER);
 		      table.addCell(cellNumCompte);
 		      
+		      PdfPCell cellNom =
+		              new PdfPCell(
+		                  new Paragraph(this.clientDuCompte.nom  +" " + this.clientDuCompte.prenom));
+		         
+		      cellNom.setColspan(1);
+		      cellNom.setHorizontalAlignment(Element.ALIGN_CENTER);
+			  table.addCell(cellNom);
+		      
 		      PdfPCell cellBank =
 		              new PdfPCell(
-		                  new Paragraph("Agence bancaire : " + this.dbs.getAgAct().nomAg));
+		                  new Paragraph(this.dbs.getAgAct().nomAg));
 		         
 		      cellBank.setColspan(2);
 		      cellBank.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -227,6 +259,8 @@ public class OperationsManagementController implements Initializable {
 	          document.add(table);
 	      } catch (DocumentException de) {
 	          de.printStackTrace();
+	      } catch (FileNotFoundException fnfe) {
+	    	  fnfe.printStackTrace();
 	      } catch (IOException ioe) {
 	          ioe.printStackTrace();
 	      }
