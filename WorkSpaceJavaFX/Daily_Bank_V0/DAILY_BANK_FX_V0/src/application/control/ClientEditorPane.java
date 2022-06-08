@@ -13,11 +13,19 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.data.Client;
 
+/**
+ * La classe ClientEditorPane permet de générer la ressource FXML associé à son controller et d'ouvrir la fenetre pour saisir les informations d'un client. 
+ */
 public class ClientEditorPane {
 
 	private Stage primaryStage;
 	private ClientEditorPaneController cepc;
-
+	
+	/**
+	 * Procédure pour générer la ressource clienteditorpane.fxml depuis son controller. Elle prend en parametre la fenetre(Stage) et l'état de l'agence bancaire(DailyBankState).
+	 * @param _parentStage
+	 * @param _dbstate
+	 */
 	public ClientEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
 		try {
@@ -42,7 +50,13 @@ public class ClientEditorPane {
 			e.printStackTrace();
 		}
 	}
-
+	
+	/**
+	 * Permet d'afficher le contenu de la fenetre pour saisir les informations d'un client et attends une interaction potentielle avec celle-ci
+	 * @param client
+	 * @param em
+	 * @return le contenu à afficher dans la boites de dialogue
+	 */
 	public Client doClientEditorDialog(Client client, EditionMode em) {
 		return this.cepc.displayDialog(client, em);
 	}
