@@ -12,25 +12,27 @@ toc::[]
 
 === 1. Explications du use case global
 
-Voici le use case général de la version 1 de l'application DailyBank :
+Voici le use case général de la version 2 de l'application DailyBank :
 
-image::../V1/images/unknown.png[UC V1]
+image::../V2/images/gauche.png[UC V2]
+image::../V2/images/droite.png[UC V2]
 
 ==== 1.1 Types d'utilisateurs et spécificités
 
 Tout comme dans la V0, deux types d'utilisateurs subsistent : le chef d'agence ainsi que les guichetiers.
 En tant que chef d'agence, celui-ci possède des privilèges et des droits supplémentaires au sein de son agence bancaire, à comparer d'un simple employé (guichetier).
 
-Pour justifier cela, bien que le chef d'agence pouvait, dans la V0, rendre inactif un client inscrit dans son agence bancaire, celui-ci peut en plus gérer ses employés. Cela n'aurait évidemment pas d'intérêts que cette action soit réciproque car la hiérarchie des rôles de chaque employé ne serait pas respectée.
+Pour justifier cela, bien que le chef d'agence pouvait, dans la V0, rendre inactif un client inscrit dans son agence bancaire, celui-ci peut gérer ses employés. Cela n'aurait évidemment pas d'intérêts que cette action soit réciproque car la hiérarchie des rôles de chaque employé ne serait pas respectée.
 Celui-ci, en logique, bénéficie de l'ensemble des actions que peuvent réaliser les guichetiers.
+Par ailleurs, dans cette seconde version, le chef d'agence peut en plus effectuer un débit exceptionnel ou encore simuler un emprunt ou une assurance d'emprunt, disposant des capacités, des droits et des connaissances suffisantes.
 
-Pour un guichetier, en plus de pouvoir modifier les informations d'un client ou en créer un nouveau, de consulter un compte ou de pouvoir le débiter, étant des fonctionnalités déjà présentes dans la V0, celui-ci pourra profiter de possibilités supplémentaires telles que de créer un nouveau compte, de créditer ou d'effectuer un virement de compte à compte ou encore de pouvoir clôturer le compte sélectionné.
+Pour un guichetier, en plus de pouvoir modifier les informations d'un client ou en créer un nouveau, de consulter un compte ou de pouvoir le débiter, étant des fonctionnalités déjà présentes dans la V0, celui-ci peut profiter de possibilités supplémentaires telles que de créer un nouveau compte, de créditer ou d'effectuer un virement de compte à compte ou encore de pouvoir clôturer le compte sélectionné. Mais ce n'est pas tout car dans cette seconde version, il pourra générer un relevé mensuel d'un compte en PDF ou encore gérer les prélèvements automatiques.
 
 Ces actions ne seront ainsi, possibles sans traiter les différentes problématiques liées à ces utilisations.
 
 === 2. Explications du diagramme de classe des données globales
 
-image::../V1/images/diagrammeclassesv1.PNG[DC V1]
+image::../V2/images/dcv2.PNG[DC V2]
 
 ==== 2.1 Fonctionnalités du chef d'agence
 
@@ -504,6 +506,8 @@ Cette condition est relativement importante pour mentionner le fait qu'un vireme
 
 ===== Partie du use case conforme
 
+image::/V2/images/pdf.PNG[Générer PDF]
+
 ===== Partie du diagramme de classe conforme
 
 ===== Principales fonctionnalités
@@ -517,6 +521,8 @@ Cette condition est relativement importante pour mentionner le fait qu'un vireme
 ==== 1.10 Gérer (faire le "CRUD") les prélèvements automatiques - Nicolas S.
 
 ===== Partie du use case conforme
+
+image::/V2/images/prelevements.PNG[Gérer les prélèvements]
 
 ===== Partie du diagramme de classe conforme
 
@@ -609,6 +615,8 @@ ____
 
 ===== Partie du use case conforme
 
+image::/V2/images/débitexceptionnel.PNG[Débit exceptionnel]
+
 ===== Partie du diagramme de classe conforme
 
 ===== Principales fonctionnalités
@@ -622,6 +630,8 @@ ____
 ==== 2.4 / 2.5 Simuler un emprunt / Simuler une assurance d'emprunt - Mickael F.
 
 ===== Partie du use case conforme
+
+image::/V2/images/emprunt.PNG[Simulation]
 
 ===== Partie du diagramme de classe conforme
 
