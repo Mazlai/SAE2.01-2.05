@@ -241,11 +241,11 @@ image::/V1/images/cloturercompte.PNG[Clôturer compte]
 
 ==== 1.5 Consulter un compte
 
+Un chef d'agence ou un guichetier peut consulter les informations d'un compte client. Ces informations peuvent concerner le code du compte, son solde, découvert autorisé et s'il est cloturé.
+
 ===== Partie du use case conforme
 
 image::/V1/images/consultercompte.PNG[Consulter compte]
-
-Un chef d'agence ou un guichetier peut consulter les informations d'un compte client. Ces informations peuvent concerner le code du compte, son solde, découvert autorisé et s'il est cloturé.
 
 ===== Partie du diagramme de classe conforme
 
@@ -293,6 +293,10 @@ ____
 • _DatabaseConnexionException.java_
 • _DataAccessException.java_
 ____
+
+===== Éléments à connaître / spécificités
+
+===== Extraits de code commentés pour des points importants
 
 ==== 1.6 Débiter un compte (BD) - Victor T.
 
