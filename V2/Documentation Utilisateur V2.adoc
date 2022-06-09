@@ -6,7 +6,7 @@
 :nofooter:
 
 image::/images/DailyBank.png[]
-= DailyBank - Documentation destinée aux utilisateurs - V1
+= DailyBank - Documentation destinée aux utilisateurs - V2
 _Réalisé par THOMPSON Victor, YVELIN Louis, SACILOTTO Nicolas et FERNANDEZ Mickael (4A)_
 
 toc::[]
