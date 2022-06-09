@@ -110,12 +110,12 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  • Ne doit pas pouvoir gérer un guichetier ayant un compte au sein d'une agence différente. +
  → _Soit le chef d'agence voit uniquement les différents comptes qui sont présents dans l'agence,_ +
  → _(Version non-optimisée) Soit le chef d'agence peut voir tous les comptes. Message d'erreur : "Veuillez choisir un compte au sein de votre agence bancaire." (dans une liste ou sous forme de pop-up)_
-|
+| ✖
 
 |2
 |Effectuer un débit exceptionnel
-|a
-|a
+| ✖
+| ✖
 
 |3
 |Simuler un emprunt / Simuler une assurance d'emprunt
@@ -135,7 +135,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  
  • Ne doit pas pouvoir renseigner un taux d'assurance ou d'intérêt inférieur à 0 ou supérieur à 100. + 
  → _Message d'erreur : "Merci de mettre un taux valide !" (affiché dans une alertbox de type "WARNING")_
-|
+| ✓
 
 |4
 .6+<.>|Guichetier
@@ -157,7 +157,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 
  • Ne doit pas pouvoir être débité d'une somme supérieure à un plafond éventuellement défini. + 
  → _Message d'erreur : "Dépassement du découvert!" (dans une liste ou sous forme de pop-up)_
-|
+| ✓
 
 |5
 |Créer un compte à partir d'informations complémentaires
@@ -168,7 +168,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 
  • Ne doit pas pouvoir être crée une seconde fois. +
  → _Message d'erreur : "Le compte que vous avez renseigné existe déjà." (dans une liste ou sous forme de pop-up)_
-|
+| ✖
 
 |6
 |Effectuer un virement de compte à compte
@@ -185,7 +185,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  
  • Ne doit pas pouvoir réaliser un virement vers lui-même (le même compte) +
  → _Condition vérifiant si le compte dans lequel nous réalisons l'opération figure parmi tous les comptes recherchés. Si c'est le cas, il est retiré pour la procédure du virement, dans le cas échéant, ce ne sera pas le cas._
-|
+| ✓
 
 |7
 |Clôturer un compte
@@ -197,17 +197,16 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  
  • Ne doit pas pouvoir clôturer un compte déjà clôturé. +
   → _Soit le compte clôturé n'existe plus dans l'agence (n'est plus visible),_ +
-  → _(Version non-optimisée) Soit un message d'erreur serait affiché : "Veuillez choisir un compte ouvert." (dans une liste ou sous forme de pop-up)_
- 
-|
+  → _(Version non-optimisée) Soit un message d'erreur serait affiché : "Veuillez choisir un compte ouvert." (dans une liste ou sous forme de pop-up)_ 
+| ✖
 
 |8
 |Générer un relevé mensuel d'un compte en PDF
-|d
-|d
+| ✖
+| ✖
 
 |9
 |Gérer les prélèvements automatiques
-|e
-|e
+| ✖
+| ✖
 |===
