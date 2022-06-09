@@ -50,7 +50,7 @@ public class LoginDialog {
 			this.ldc = loader.getController();
 			this.ldc.initContext(this.primaryStage, this, _dbstate);
 			
-			this.ldc.getTxtPassword().requestFocus();
+			this.ldc.getTxtLogin().requestFocus();
 
 		} catch (Exception e) {
 			e.printStackTrace();

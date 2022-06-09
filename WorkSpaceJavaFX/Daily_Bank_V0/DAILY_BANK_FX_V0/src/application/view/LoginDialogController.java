@@ -60,7 +60,7 @@ public class LoginDialogController implements Initializable {
 	 * Utilisé pour demander un focus à l'ouverture de la fenêtre
 	 * @return Le champs de mot de passe
 	 */
-	public PasswordField getTxtPassword() {return this.txtPassword;}
+	public TextField getTxtLogin() {return this.txtLogin;}
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
