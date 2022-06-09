@@ -250,11 +250,11 @@ S'il dispose d'une assurance, il est alors nécessaire qu'il le soit mentionné 
 
 image::/V2/images/simulationavecassurance.PNG[Etape 5 pour réaliser une simulation]
 
-Le taux d'assurance va influencer la mensualité que devra le client, généralment estimée plus chère. Pour autant, si celui-ci dispose d'un taux d'intérêt à 0%, son taux d'assurance le sera également, car ce genre de taux d'intérêts concernent généralement des légers investissements : la mensualité hors assurance et avec assurance risqueront alors d'être similaires.
+Le taux d'assurance va influencer la mensualité que devra le client, généralement estimée plus chère. Pour autant, si celui-ci dispose d'un taux d'intérêt à 0%, son taux d'assurance le sera également, car ce genre de taux d'intérêts concernent généralement des légers investissements : la mensualité hors assurance et avec assurance risqueront alors d'être similaires.
 
 Ainsi, par le biais d'une pop-up, comme vous avez pu le voir précédemment, la mensualité hors et avec assurance y seront mentionnées : 
 
-image::/V2/images/resultatsansassurance.PNG[Etape 4 pour réaliser une simulation]
+image::/V2/images/resultatavecassurance.PNG[Etape 6 pour réaliser une simulation]
 
 == Résultats plus quelques exemples de jeux d'essais
 
