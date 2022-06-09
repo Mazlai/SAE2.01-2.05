@@ -631,7 +631,7 @@ image::/V2/images/débitexceptionnel.PNG[Débit exceptionnel]
 
 Une simulation d'emprunt est en règle générale, un document émis par une banque permettant de réaliser le meilleure choix en terme de durée de remboursement et de mensualités. Ces simulations sont généralement toujours réalisées avant de faire directement une demande de crédit, sauf si le client connaît déjà le budget qu'il possède. +
 Ici, seul un chef d'agence peut s'occuper, avec un client, de réaliser une simulation d'emprunt : les guichetiers n'ayant pas les droits de disposer de cette fonctionnalité. +
-On se contentera seulement d'afficher la mensualité que le client devra, tout en dépendant de si celui-ci possède une assurance. Car oui, l'assurance en question protègera le client tout au long du crédit, bien qu'il ne soit pas obligatoire.
+On se contentera seulement d'afficher la mensualité que le client devra, tout en dépendant de si celui-ci possède une assurance. Car oui, l'assurance en question protègera le client tout au long du crédit, bien qu'elle ne soit pas obligatoire.
 
 ===== Partie du use case conforme
 
