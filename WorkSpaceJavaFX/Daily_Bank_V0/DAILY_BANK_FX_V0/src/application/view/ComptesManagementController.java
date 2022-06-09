@@ -17,10 +17,14 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 import application.DailyBankState;
 import application.control.ComptesManagement;
+import application.control.DebitExceptionnelEditorPane;
+import application.control.OperationsManagement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -32,8 +36,10 @@ import model.data.Client;
 import model.data.CompteCourant;
 import model.data.Operation;
 import model.orm.AccessCompteCourant;
+import model.orm.AccessOperation;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
+import model.orm.exception.ManagementRuleViolation;
 import model.orm.exception.RowNotFoundOrTooManyRowsException;
 
 public class ComptesManagementController implements Initializable {
@@ -102,6 +108,8 @@ public class ComptesManagementController implements Initializable {
 	@FXML
 	private Button btnSupprCompte;
 	@FXML
+	private Button btnDebitExceptionnel;
+	@FXML
 	private TextField txtDecAutorise;
 	@FXML
 	private TextField txtSolde;
@@ -118,7 +126,33 @@ public class ComptesManagementController implements Initializable {
 		this.primaryStage.close();
 	}
 	
-	
+	@FXML
+	private void doDebitExceptionnel() {
+		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
+		if (selectedIndice >= 0) {
+			CompteCourant cpt = this.olCompteCourant.get(selectedIndice);
+			try {
+				if(this.dbs.isChefDAgence()) {
+					DebitExceptionnelEditorPane editorPane = new DebitExceptionnelEditorPane(this.primaryStage, this.dbs);
+					editorPane.doDebitExceptionnel();
+					
+					
+					AccessOperation ao = new AccessOperation();
+					ao.insertDebit(selectedIndice, 0, null);
+				}
+				else {
+					Alert alerte = new Alert(AlertType.ERROR, "Vous devez contacter votre chef d'agence pour effectuer ce genre d'opération", null);
+					alerte.showAndWait();
+				}
+			} catch (DataAccessException e) {
+				e.printStackTrace();
+			} catch (DatabaseConnexionException e) {
+				e.printStackTrace();
+			} catch (ManagementRuleViolation e) {
+				e.printStackTrace();
+			}
+		}
+	}
 
 	/**
 	 * Permet de voir les opérations financières du compte d'un client
@@ -244,6 +278,7 @@ public class ComptesManagementController implements Initializable {
 		this.btnModifierCompte.setDisable(true);
 		this.btnSupprCompte.setDisable(true);
 		this.btnVoirCompte.setDisable(true);
+		this.btnDebitExceptionnel.setDisable(true);
 
 		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
@@ -252,16 +287,19 @@ public class ComptesManagementController implements Initializable {
 				this.btnSupprCompte.setDisable(true);
 				this.btnModifierCompte.setDisable(true);
 				this.btnVoirCompte.setDisable(false);
+				this.btnDebitExceptionnel.setDisable(true);
 			} else {
 				this.btnVoirOpes.setDisable(false);
 				this.btnSupprCompte.setDisable(false);
 				this.btnModifierCompte.setDisable(false);
 				this.btnVoirCompte.setDisable(false);
+				this.btnDebitExceptionnel.setDisable(false);
 			}
 		} else {
 			this.btnVoirOpes.setDisable(true);
 			this.btnSupprCompte.setDisable(true);
 			this.btnModifierCompte.setDisable(true);
+			this.btnDebitExceptionnel.setDisable(true);
 		}
 
 	}
