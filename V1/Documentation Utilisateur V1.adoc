@@ -306,7 +306,7 @@ image::/V0/images/ri4Preuve.png[Etape 4preuve rendre inactif un client]
 === Réaliser un virement de compte à compte
 
 Comme toute autre opération (créditer/débiter), vous verrez également votre règlement s'afficher dans la liste des opérations effectuées depuis ce même compte et il en va de même pour le compte bénéficiaire du virement.
-Le compte ici choisi est différent de celui mentionné plus haut, mais le principe reste pour autant le même.
+Le compte ici choisi, est différent de celui mentionné plus haut, mais le principe reste pour autant le même.
 
 Ce compte, présent ci-dessous correspond au compte émetteur, c'est-à-dire, celui réalisant le virement :
 
@@ -316,6 +316,6 @@ Et enfin, le compte présent de même, ci-dessous, correspond au compte récepte
 
 image::/V1/images/recepteur.PNG[Etape 2 virement]
 
-Côté back-end, après une requête SQL permettant de retrouver le virement effectué, les informations apparaissent également pour tenir compte des modifications apportées. 
+Côté back-end, après une requête SQL permettant de retrouver le virement effectué, les informations apparaissent également pour tenir compte des modifications apportées :
 
 image::/V1/images/backend.PNG[Etape 3 virement]
