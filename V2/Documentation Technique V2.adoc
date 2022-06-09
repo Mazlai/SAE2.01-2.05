@@ -657,7 +657,7 @@ Les principales fonctionnalités ont été introduites de manière brève dans l
 
 ===== Classes impliquées à l'implémentation de la fonction
 
-_Inspiré en grande partie des classes__ ``ClientEditorPane.java`` _et_ ``ClientEditorPaneController.java``.
+_Inspiré en grande partie des classes_ ``ClientEditorPane.java`` _et_ ``ClientEditorPaneController.java``.
 
 *Côté ``application`` :* +
 ____
