@@ -310,12 +310,12 @@ Le compte ici choisi est différent de celui mentionné plus haut, mais le princ
 
 Ce compte, présent ci-dessous correspond au compte émetteur, c'est-à-dire, celui réalisant le virement :
 
-image::/V0/images/emetteur.PNG[Etape 1 virement]
+image::/V1/images/emetteur.PNG[Etape 1 virement]
 
 Et enfin, le compte présent de même, ci-dessous, correspond au compte récepteur, celui bénéficiant du virement :
 
-image::/V0/images/recepteur.PNG[Etape 1 virement]
+image::/V1/images/recepteur.PNG[Etape 2 virement]
 
 Côté back-end, après une requête SQL permettant de retrouver le virement effectué, les informations apparaissent également pour tenir compte des modifications apportées. 
 
-
+image::/V1/images/backend.PNG[Etape 3 virement]
