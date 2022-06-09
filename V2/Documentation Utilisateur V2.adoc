@@ -227,6 +227,35 @@ image::/V0/images/inactif3.png[Etape 3 pour rendre inactif un client]
 
 ===== Simuler un emprunt / Simuler une assurance d'emprunt
 
+En règle générale, emprunter de l'argent signifie d'être en capacité de pouvoir réaliser le remboursement, ici au niveau du capital emprunté. C'est pour cela qu'il est primordial d'effectuer une simulation de crédit de manière à pouvoir anticiper son budget. 
+Depuis la fenêtre d'un client, une option "Simulation" est ainsi mise à disposition (dont vous pouvez vous référer aux étapes expliquées précédemment pour y accéder) :
+
+image::/V2/images/boutonsimulation.PNG[Etape 1 pour réaliser une simulation]
+
+Toutefois, tous les employés ne possèdent pas les mêmes capacités et compétences qu'un chef d'agence et c'est pourquoi, seulement celui-ci peut procéder à une simulation avec un client désireux d'en effectuer un :
+
+image::/V2/images/permissions.PNG[Etape 2 pour réaliser une simulation]
+
+En cliquant alors sur le bouton, une interface dédiée à la simulation sera ouverte. Vous disposez de l'ensemble des informations nécessaires à renseigner pour calculer la mensualité que le client devrait. Ces informations concernent de ce fait, le capital emprunté, la durée du prêt ainsi qu'un taux d'intérêt optionnel. Car oui, il se peut que le taux d'intérêt soit négligeable, au point d'être nul et ce, pour différents facteurs (politique monétaire, etc.).
+
+Ainsi, le client peut disposer ou non d'une assurance car il n'est pas impossible d'avoir des clients non-assurés :
+
+image::/V2/images/simulationsansassurance.PNG[Etape 3 pour réaliser une simulation]
+
+S'il n'en dispose pas, sa mensualité sera alors basée sur le capital emprunté, la durée ainsi que le taux d'intérêt :  
+
+image::/V2/images/resultatsansassurance.PNG[Etape 4 pour réaliser une simulation]
+
+S'il dispose d'une assurance, il est alors nécessaire qu'il le soit mentionné :
+
+image::/V2/images/simulationavecassurance.PNG[Etape 5 pour réaliser une simulation]
+
+Le taux d'assurance va influencer la mensualité que devra le client, généralment estimée plus chère. Pour autant, si celui-ci dispose d'un taux d'intérêt à 0%, son taux d'assurance le sera également, car ce genre de taux d'intérêts concernent généralement des légers investissements : la mensualité hors assurance et avec assurance risqueront alors d'être similaires.
+
+Ainsi, par le biais d'une pop-up, comme vous avez pu le voir précédemment, la mensualité hors et avec assurance y seront mentionnées : 
+
+image::/V2/images/resultatsansassurance.PNG[Etape 4 pour réaliser une simulation]
+
 == Résultats plus quelques exemples de jeux d'essais
 
 Passons à moins de théorique, ici vous trouverez les résultats de nos fonctionnalités, afin de mieux comprendre, il est fortement conseillé de connaître les étapes à suivre, je vous laisse pour cela, prendre connaissances de celles-ci qui sont situés dans la partie "Fonctionnement". Bien sur vous disposerez de toutes les preuves nécessaires (interface JAVA | base de données) pour témoigner de leur bon fonctionnement. 
