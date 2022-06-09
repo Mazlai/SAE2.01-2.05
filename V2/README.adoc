@@ -4,5 +4,7 @@
 
 . Le CDCU - V2
 . Le cahier de tests (en cours) - V2
+. La documentation technique (en cours) - V2
+. La documentation utilisateur (en cours) - V2
 . Le GANTT prévisionnel - V2
 . Le GANTT réel - V2
