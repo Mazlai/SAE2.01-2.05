@@ -629,16 +629,61 @@ image::/V2/images/débitexceptionnel.PNG[Débit exceptionnel]
 
 ==== 2.4 / 2.5 Simuler un emprunt / Simuler une assurance d'emprunt - Mickael F.
 
+Une simulation d'emprunt est en règle générale, un document émis par une banque permettant de réaliser le meilleure choix en terme de durée de remboursement et de mensualités. Ces simulations sont généralement toujours réalisées avant de faire directement une demande de crédit, sauf si le client connaît déjà le budget qu'il possède. +
+Ici, seul un chef d'agence peut s'occuper, avec un client, de réaliser une simulation d'emprunt : les guichetiers n'ayant pas les droits de disposer de cette fonctionnalité. +
+On se contentera seulement d'afficher la mensualité que le client devra, tout en dépendant de si celui-ci possède une assurance. Car oui, l'assurance en question protègera le client tout au long du crédit, bien qu'il ne soit pas obligatoire.
+
 ===== Partie du use case conforme
 
 image::/V2/images/emprunt.PNG[Simulation]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V2/images/dcemprunt.PNG[Simulation]
+
+La tâche virement inclut 3 classes dans ce diagramme de classes :
+
+____
+• La classe ``Client``, n'étant seulement dédiée qu'en temps que support et donc en lecture, étant donné qu'elle prendra en compte les informations de celui-ci sans pour autant les modifier. En effet, il est seulement nécessaire de savoir quel client envisage une simulation. ;
+• La classe ``Emprunt`` qui elle, utilise les données renseignées de l'utilisateur. Elle ne se contente donc pas de seulement lire les données mais plutôt de les interpréter, et cela passe avant par une définition de ces données (pour autant, on ne peut pas qualifier la simulation comme étant un "ajout" car elle ne nécessite aucune relation avec la base de données et n'est que temporaire).
+• La classe ``AssuranceEmprunt`` qui, de même, utilise les données renseignées de l'utilisateur. Le mode d'utilisation des données est strictement similaire à la classe _Emprunt_.
+____
+
+Dans le code déjà présent, les classes _Emprunt_ et _AssuranceEmprunt_ ont été regroupé en une classe commune nommée _Simulation_ réalisant la simulation d'un emprunt, avec ou sans assurance. 
+
 ===== Principales fonctionnalités
+
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
 
 ===== Classes impliquées à l'implémentation de la fonction
 
+_Inspiré en grande partie des classes__ ``ClientEditorPane.java`` _et_ ``ClientEditorPaneController.java``.
+
+*Côté ``application`` :* +
+____
+• _DailyBankState.java_
+____
+
+*Côté ``application.control`` :* +
+____
+• _ComptesManagement.java_
+• _Simulation.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _ComptesManagementController.java_
+• _SimulationController.java_
+____
+
 ===== Éléments à connaître / spécificités
 
+image::/V2/images/mensualite.PNG[Simulation]
+
+Il est toujours intéressant de savoir sur quels éléments se base le calcul de la mensualité d'un client. Ci-joint, la relation permettant de calculer une mensualité dans le cas où le taux d'intérêt renseigné par celui-ci est différent de zéro. 
+
 ===== Extraits de code commentés pour des points importants
+
+image::/V2/images/dosimulation.PNG[Simulation]
+
+Un des éléments de l'implémentation de cette tâche, assez essentielle de mentionner est la fonction FXML *doSimulation()* qui, associée au bouton "Simulation" présent dans la classe _ComptesManagementController.java_, permet d'ouvrir l'interface dédiée à cette réalisation de simulation *uniquement* si l'utilisateur de cette application est un chef de l'agence bancaire.
