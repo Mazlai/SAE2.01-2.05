@@ -22,8 +22,6 @@ L’application doit permettre de gérer des comptes bancaires de dépôt pour d
 Afin de pouvoir utiliser notre application, nos clients devront disposer d'un poste informatique munie d'un JRE JAVA 8. 
 https://techexpert.tips/fr/windows-fr/installation-de-java-jre-sur-windows/[Comment installer et configurer JAVA 8 sur votre PC ?]
 
-3. Fonctionnement de l’application
-
 == Fonctionnement de l'application 
 
 === Guichetier
