@@ -189,10 +189,6 @@ Si vous pensez que vous êtes prêt à réaliser votre opération, alors appuyez
 
 image::/V0/images/interfacevirement.PNG[Etape 2 pour faire un virement de compte à compte]
 
-Comme toute autre opération (créditer/débiter), vous verrez également votre règlement s'afficher dans la liste des opérations effectuées depuis ce même compte et il en va de même pour le compte bénéficiaire du virement !
-
-image::/V0/images/affichage.PNG[Etape 3 pour faire un virement de compte à compte]
-
 ===== Générer un relevé mensuel d'un compte en PDF
 
 ===== Gérer (faire le "CRUD") les prélèvements automatiques
@@ -345,3 +341,20 @@ Il vous suffit de vous rendre dans "Modifier client" puis de cliquer sur le bout
 Voici l'affichage lorsqu'un client est inactif :
 
 image::/V0/images/ri4Preuve.png[Etape 4preuve rendre inactif un client]
+
+=== Réaliser un virement de compte à compte
+
+Comme toute autre opération (créditer/débiter), vous verrez également votre règlement s'afficher dans la liste des opérations effectuées depuis ce même compte et il en va de même pour le compte bénéficiaire du virement.
+Le compte ici choisi, est différent de celui mentionné plus haut, mais le principe reste pour autant le même.
+
+Ce compte, présent ci-dessous correspond au compte émetteur, c'est-à-dire, celui réalisant le virement :
+
+image::/V1/images/emetteur.PNG[Etape 1 virement]
+
+Et enfin, le compte présent de même, ci-dessous, correspond au compte récepteur, celui bénéficiant du virement :
+
+image::/V1/images/recepteur.PNG[Etape 2 virement]
+
+Côté back-end, après une requête SQL permettant de retrouver le virement effectué, les informations apparaissent également pour tenir compte des modifications apportées :
+
+image::/V1/images/backend.PNG[Etape 3 virement]
