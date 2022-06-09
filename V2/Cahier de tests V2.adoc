@@ -134,7 +134,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  → _Message d'erreur : "L'élément ne doit pas dépasser 6 chiffres !" (affiché dans une alertbox de type "WARNING");_ +
  
  • Ne doit pas pouvoir renseigner un taux d'assurance ou d'intérêt inférieur à 0 ou supérieur à 100. + 
- → _Message d'erreur : "Merci de mettre un taux valide !"_
+ → _Message d'erreur : "Merci de mettre un taux valide !" (affiché dans une alertbox de type "WARNING")_
 |
 
 |4
