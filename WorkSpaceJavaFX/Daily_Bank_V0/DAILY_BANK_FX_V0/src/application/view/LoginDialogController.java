@@ -56,6 +56,12 @@ public class LoginDialogController implements Initializable {
 	@FXML
 	private Label lblMessage;
 
+	/**
+	 * Utilisé pour demander un focus à l'ouverture de la fenêtre
+	 * @return Le champs de mot de passe
+	 */
+	public PasswordField getTxtPassword() {return this.txtPassword;}
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}

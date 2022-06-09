@@ -4,7 +4,5 @@
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="LIBS/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="D:/SAE DEV/sae2022-bank-4a2/WorkSpaceJavaFX/Daily_Bank_V0/DAILY_BANK_FX_V0/LIBS/itextpdf-5.4.0.jar"/>
-	<classpathentry kind="lib" path="D:/SAE DEV/sae2022-bank-4a2/WorkSpaceJavaFX/Daily_Bank_V0/DAILY_BANK_FX_V0/LIBS/slf4j.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

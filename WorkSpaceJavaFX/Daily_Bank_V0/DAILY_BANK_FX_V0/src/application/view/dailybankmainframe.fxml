@@ -8,6 +8,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -16,7 +17,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.DailyBankMainFrameController">
+<BorderPane prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.DailyBankMainFrameController">
    <top>
       <BorderPane BorderPane.alignment="CENTER">
          <center>
@@ -24,10 +25,19 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Utilisateur">
                   <items>
-                    <MenuItem fx:id="mitemConnexion" mnemonicParsing="false" onAction="#doLogin" text="Connexion" />
-                        <MenuItem fx:id="mitemDeConnexion" disable="true" mnemonicParsing="false" onAction="#doDisconnect" text="Déconnexion" />
+                    <MenuItem fx:id="mitemConnexion" mnemonicParsing="false" onAction="#doLogin" text="Connexion">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F2" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="mitemDeConnexion" disable="true" mnemonicParsing="false" onAction="#doDisconnect" text="Déconnexion">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F3" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                           </accelerator></MenuItem>
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem fx:id="mitemQuitter" mnemonicParsing="false" onAction="#doQuit" text="Quitter" />
+                        <MenuItem fx:id="mitemQuitter" mnemonicParsing="false" onAction="#doQuit" text="Quitter">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F4" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                           </accelerator></MenuItem>
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Gestion">
@@ -39,7 +49,10 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="?">
                      <items>
-                        <MenuItem mnemonicParsing="false" onAction="#doActionAide" text="Aide" />
+                        <MenuItem mnemonicParsing="false" onAction="#doActionAide" text="Informations">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F1" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                           </accelerator></MenuItem>
                      </items>
                   </Menu>
               </menus>
