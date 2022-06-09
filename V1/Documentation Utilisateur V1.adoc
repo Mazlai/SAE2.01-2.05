@@ -193,9 +193,9 @@ Comme toute autre opération (créditer/débiter), vous verrez également votre 
 
 image::/V0/images/affichage.PNG[Etape 3 pour faire un virement de compte à compte]
 
-==== Chef d'Agence
+=== Chef d'Agence
 
-===== Rendre inactif un client
+==== Rendre inactif un client
 
 Afin de pouvoir rendre inactif d'un client, il faudra s'assurer dans un premier temps que vous êtes bien connecté en tant que chef d'agence et non en tant que  guichetier car seulement le chef d'agence peut rendre inactif un client. 
 
@@ -211,7 +211,7 @@ Une fois rendu inactif, vous pourrez remarquer que le texte indiqué par la flè
 
 image::/V0/images/inactif3.png[Etape 3 pour rendre inactif un client]
 
-===== Gérer (faire le CRUD) les employés
+==== Gérer (faire le CRUD) les employés
 
 == Résultats plus quelques exemples de jeux d'essais
 
