@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ComptesManagementController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ComptesManagementController">
    <right>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <bottom>
@@ -31,6 +31,7 @@
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
@@ -42,18 +43,23 @@
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="btnDebitExceptionnel" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doDebitExceptionnel" text="Débit exceptionnel" GridPane.rowIndex="1">
+                        <Button fx:id="btnDebitExceptionnel" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doDebitExceptionnel" text="Débit exceptionnel" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="btnVoirCompte" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doVoirCompte" text="Voir compte" GridPane.rowIndex="2" />
-                        <Button fx:id="btnModifierCompte" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doModifierCompte" text="Modifier compte" GridPane.rowIndex="3">
+                        <Button fx:id="btnVoirCompte" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doVoirCompte" text="Voir compte" GridPane.rowIndex="3" />
+                        <Button fx:id="btnModifierCompte" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doModifierCompte" text="Modifier compte" GridPane.rowIndex="4">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="btnSupprCompte" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSupprimerCompte" text="Clôturer compte" GridPane.rowIndex="4">
+                        <Button fx:id="btnSupprCompte" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSupprimerCompte" text="Clôturer compte" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button fx:id="btnSimulation" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSimulation" text="Simulation" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>

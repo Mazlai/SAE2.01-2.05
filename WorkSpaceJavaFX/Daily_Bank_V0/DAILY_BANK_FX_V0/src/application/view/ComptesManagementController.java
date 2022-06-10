@@ -108,6 +108,8 @@ public class ComptesManagementController implements Initializable {
 	@FXML
 	private Button btnSupprCompte;
 	@FXML
+	private Button btnSimulation;
+	@FXML
 	private Button btnDebitExceptionnel;
 	@FXML
 	private TextField txtDecAutorise;
@@ -256,6 +258,22 @@ public class ComptesManagementController implements Initializable {
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * Permet de réaliser une simulation d'emprunt en ouvrant la fenêtre, dès lors que le bouton est cliqué
+	 * 
+	 */
+	@FXML
+	private void doSimulation() {
+		if(this.dbs.isChefDAgence()) {
+			this.cm.realiserSimulation();
+		} else {
+			Alert alertinfo = new Alert(AlertType.INFORMATION);
+	        alertinfo.setHeaderText("Vous n'êtes pas chef d'agence !");
+	        alertinfo.setTitle("Permissions non accordées");
+	        alertinfo.show();
+		}
+	}
 
 	/**
 	 * Permet d'actualiser les compte courant d'un client en rafraichissant la liste depuis la BD
@@ -269,7 +287,6 @@ public class ComptesManagementController implements Initializable {
 		}
 	}
 
-	
 	/**
 	 * Permet de d'activer/desactiver les boutons de manière logique en fonction de l'état de plusieurs facteurs (compte selectionné, compte clôturé)
 	 */

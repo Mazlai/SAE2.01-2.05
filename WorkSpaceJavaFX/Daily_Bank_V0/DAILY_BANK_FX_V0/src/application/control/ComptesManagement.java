@@ -264,4 +264,12 @@ public class ComptesManagement {
 		}
 		return listeCpt;
 	}
+	
+	/**
+	 * Permet de générer la fenêtre de simulation
+	 */
+	public void realiserSimulation() {
+		Simulation sm = new Simulation(this.primaryStage);
+		sm.doSimulationDialog();
+	}
 }
