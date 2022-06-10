@@ -254,9 +254,9 @@ Comme pour arrêter un prélèvement, il faut appuyer sur le bouton "Modifier pr
 
 image::/V2/images/pre4.png[Etape 1 pour modifier un prélèvement]
 
-Une nouvelle fenêtre va s'ouvrir et vous pourrez modifier les champs qui vous intéressent comme le montant du prélèvement, la date recurrente ou encore le bénéficiaire
+Une nouvelle fenêtre va s'ouvrir et vous pourrez modifier les champs qui vous intéressent comme le montant du prélèvement, la date recurrente ou encore le bénéficiaire une fois modifié, vous avez juste qu'à appuyer sur le bouton "Modifier prélèvement" indiqué par la flèce rouge
 
-image::/V2/images/pre5.png[Etape 2 pour modifier un prélèvement]
+image::/V2/images/pre7.png[Etape 2 pour modifier un prélèvement]
 
 
 === Chef d'Agence
