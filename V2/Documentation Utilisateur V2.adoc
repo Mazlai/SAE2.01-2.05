@@ -219,34 +219,33 @@ image::/V0/images/interfacevirement.PNG[Etape 2 pour faire un virement de compte
 
 ====== Créer un prélèvement
 
-Pour créer un prélèvement, il vous suffit de suivre les étapes indiqué par la flèche rouge ci-dessous :
+Pour créer un prélèvement, il vous suffit de suivre les étapes indiquées par la flèche rouge ci-dessous :
 
 image::/V2/images/pre1.png[Etape 1 pour créer un prélèvement]
 
 image::/V2/images/pre2.png[Etape 2 pour créer un prélèvement]
 
-Ensuite une nouvelle interface va s'ouvrir il vous faudra respecter ces règles là :
+Ensuite une nouvelle interface va s'ouvrir il vous faudra respecter les règles suivantes :
 
 ____
- - Le montant indiqué par la flèche rouge doit être positif
+ - Le montant indiqué par la flèche rouge doit être positif ;
  
- - la date indiqué par la flèche verte doit être comprise entre 1 et 30
+ - La date indiquée par la flèche verte doit être comprise entre 1 et 30 ;
  
- - Le bénéficiaire quant à lui il faut juste saisir la chaine de caractère correspondante au nom du bénéficiaire de ce prélèvement
+ - Le bénéficiaire quant à lui, doit juste saisir la chaine de caractère correspondante au nom du bénéficiaire de ce prélèvement.
 ____
 
-Une fois respectées, vous pourrez appuyer sur le bouton "Ajouter" indiqué par la flèche noire
+Une fois respectées, vous pourrez appuyer sur le bouton "Ajouter" indiqué par la flèche noire :
 
 image::/V2/images/pre3.png[Etape 3 pour créer un prélèvement]
 
 ====== Arrêter un prélèvement
 
-Pour arrêter un prélèvement il vous suffit de sélectionner un prélèvement puis d'appuyer sur le bouton "Modifier prélèvement", enfin d'appuyer sur le radio bouton "Arreté" et valider pour finir l'étape
+Pour arrêter un prélèvement il vous suffit de sélectionner un prélèvement puis d'appuyer sur le bouton "Modifier prélèvement", enfin d'appuyer sur le radio bouton "Arrêté" et valider pour finir l'étape :
 
 image::/V2/images/pre4.png[Etape 1 pour arrêter un prélèvement]
 
 image::/V2/images/pre6.png[Etape 2 pour arrêter un prélèvement]
-
 
 ====== Modifier un prélèvement
 
@@ -254,10 +253,9 @@ Comme pour arrêter un prélèvement, il faut appuyer sur le bouton "Modifier pr
 
 image::/V2/images/pre4.png[Etape 1 pour modifier un prélèvement]
 
-Une nouvelle fenêtre va s'ouvrir et vous pourrez modifier les champs qui vous intéressent comme le montant du prélèvement, la date recurrente ou encore le bénéficiaire une fois modifié, vous avez juste qu'à appuyer sur le bouton "Modifier prélèvement" indiqué par la flèce rouge
+Une nouvelle fenêtre va s'ouvrir et vous pourrez modifier les champs qui vous intéressent comme le montant du prélèvement, la date récurrente ou encore le bénéficiaire. Une fois modifié, vous avez juste qu'à appuyer sur le bouton "Modifier prélèvement" indiqué par la flèche rouge :
 
 image::/V2/images/pre7.png[Etape 2 pour modifier un prélèvement]
-
 
 === Chef d'Agence
 
