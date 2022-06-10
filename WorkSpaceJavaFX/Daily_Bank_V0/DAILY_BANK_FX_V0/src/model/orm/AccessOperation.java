@@ -252,5 +252,7 @@ public class AccessOperation {
 		sd = "TO_DATE( '" + sd + "' , 'DD/MM/YYYY')";
 		return sd;
 	}
+	
+	
 
 }

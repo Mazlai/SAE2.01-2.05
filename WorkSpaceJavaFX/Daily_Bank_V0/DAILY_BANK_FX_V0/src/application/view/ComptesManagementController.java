@@ -135,23 +135,12 @@ public class ComptesManagementController implements Initializable {
 			CompteCourant cpt = this.olCompteCourant.get(selectedIndice);
 			try {
 				if(this.dbs.isChefDAgence()) {
-					DebitExceptionnelEditorPane editorPane = new DebitExceptionnelEditorPane(this.primaryStage, this.dbs);
-					editorPane.doDebitExceptionnel();
-					
-					
-					AccessOperation ao = new AccessOperation();
-					ao.insertDebit(selectedIndice, 0, null);
+					DebitExceptionnelController de = null;
+					de.initContext(primaryStage, dbs, cpt);
 				}
-				else {
-					Alert alerte = new Alert(AlertType.ERROR, "Vous devez contacter votre chef d'agence pour effectuer ce genre d'opération", null);
-					alerte.showAndWait();
-				}
-			} catch (DataAccessException e) {
-				e.printStackTrace();
-			} catch (DatabaseConnexionException e) {
-				e.printStackTrace();
-			} catch (ManagementRuleViolation e) {
-				e.printStackTrace();
+			
+			}catch (Exception e) {
+				System.out.println(e);
 			}
 		}
 	}
