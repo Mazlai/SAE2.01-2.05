@@ -141,7 +141,6 @@ Il ne reste plus qu'à suivre les flèches rouges :
 
 image::/V0/images/compte2.png[Etape 2 pour consulter compte]
 
-===== Créer un compte
 
 ==== Opérations
 
