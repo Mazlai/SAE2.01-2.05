@@ -111,9 +111,15 @@ Pour créer un compte il suffit de cliquer sur le bouton nouveau compte puis de 
 
 image::/V1/images/creer1C.png[Etape 1 créer un compte]
 
-En ce qui concerne les champs à renseigner, le montant et le découvert ne doivent pas être négatif
+En ce qui concerne les champs à renseigner, le montant et le découvert ne doivent pas être négatif, une fois bien rempli, vous n'avez juste qu'à appuyer sur le bouton "valider" indiqué par la flèche noire
 
 image::/V1/images/creer2C.png[Etape 2 créer un compte]
+
+===== Clôturer un compte
+
+Pour clôturer un compte, il faut savoir que son solde (du compte en question) doit avoir un solde qui soit nul, équivalent à zéro, pour cela nous avons bloqué la possibilité d'appuyer sur le bouton clôturer compte du moment que le solde du compte ne soit pas nul, dès que le solde d'un compte est nul, vous pourrez appuyer sur le bouton et ainsi clôturer le compte comme illustré par ces images :
+
+
 
 ===== Consulter un compte
 
