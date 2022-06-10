@@ -105,6 +105,32 @@ Une nouvelle fenêtre s'ouvre (image de la fenêtre ci-dessous) et vous pourrez,
 
 image::/V0/images/modifClient.png[Modifier un compte]
 
+
+===== Créer un compte
+
+Pour créer un compte il suffit de cliquer sur le bouton nouveau compte puis de suivre les étapes indiquées par les flèches comme sur les images ci-dessous :
+
+image::/V1/images/creer1C.png[Etape 1 créer un compte]
+
+En ce qui concerne les champs à renseigner, le montant et le découvert ne doivent pas être négatif, une fois bien rempli, vous n'avez juste qu'à appuyer sur le bouton "valider" indiqué par la flèche noire
+
+image::/V1/images/creer2C.png[Etape 2 créer un compte]
+
+===== Clôturer un compte
+
+Pour clôturer un compte, il faut savoir que son solde (du compte en question) doit avoir un solde qui soit nul, équivalent à zéro, pour cela nous avons bloqué la possibilité d'appuyer sur le bouton clôturer compte du moment que le solde du compte ne soit pas nul, dès que le solde d'un compte est nul, vous pourrez appuyer sur le bouton et ainsi clôturer le compte comme illustré par ces images :
+
+image::/V1/images/cloturer1C.png[Etape 1 cloturer un compte]
+
+Puis vous devez arriver à ce résultat :
+
+image::/V1/images/cloturer2C.png[Etape 2 cloturer un compte]
+
+Enfin dans le cas où le solde du compte n'est pas égal à 0 :
+
+image::/V1/images/cloturer3C.png[Etape 3 cloturer un compte]
+
+
 ===== Consulter un compte
 
 Afin de voir les opérations d'un compte je vous laisse suivre les étapes jusqu'à arriver à la fenêtre nommée "Gestion des clients" définie dans la rubrique "Modifier les informations d'un client" (étape 2.1.2.2). Une fois la page ouverte, il suffit de cliquer sur le compte dont on souhaite consulter les opérations avant de terminer par appuyer sur le bouton "Comptes client" (flèche rouge).
