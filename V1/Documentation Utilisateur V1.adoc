@@ -119,6 +119,15 @@ image::/V1/images/creer2C.png[Etape 2 créer un compte]
 
 Pour clôturer un compte, il faut savoir que son solde (du compte en question) doit avoir un solde qui soit nul, équivalent à zéro, pour cela nous avons bloqué la possibilité d'appuyer sur le bouton clôturer compte du moment que le solde du compte ne soit pas nul, dès que le solde d'un compte est nul, vous pourrez appuyer sur le bouton et ainsi clôturer le compte comme illustré par ces images :
 
+image::/V1/images/cloturer1C.png[Etape 1 cloturer un compte]
+
+Puis vous devez arriver à ce résultat :
+
+image::/V1/images/cloturer2C.png[Etape 2 cloturer un compte]
+
+Enfin dans le cas où le solde du compte n'est pas égal à 0 :
+
+image::/V1/images/cloturer3C.png[Etape 3 cloturer un compte]
 
 
 ===== Consulter un compte
