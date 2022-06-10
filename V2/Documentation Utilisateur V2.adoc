@@ -221,21 +221,32 @@ image::/V0/images/interfacevirement.PNG[Etape 2 pour faire un virement de compte
 
 ==== Gestion des clients
 
-===== Rendre inactif un client
+=== Rendre inactif un client
 
-Afin de pouvoir rendre inactif d'un client, il faudra s'assurer dans un premier temps que vous êtes bien connecté en tant que chef d'agence et non en tant que  guichetier car seulement le chef d'agence peut rendre inactif un client. 
+Cette fonctionnalité est différente selon les situations, pour vous les illustrer, vous pourrez les retrouvez ci-dessous :
 
-Ensuite, vous pourrez selectionner un compte d'un client comme sur l'image ci-dessous, puis suivre les étapes de la flèche rouge.
+==== Si le client n'a pas de compte
 
-image::/V0/images/inactif1.png[Etape 1 pour rendre inactif un client]
+Généralement ce cas peut arriver lors de la création d'un client, lors de sa création il ne possède pas de compte donc on ne peut pas le rendre inactif :
 
-Une fois arrivé sur l'interface de modification des informations concernant le client, il vous suffira de cliquer sur le bouton "Inactif". Petite précison des différentes situations qui peuvent se dérouler dans la partie "Jeu d'essais"
+image::/V0/images/ri1Preuve.png[Etape 1 preuve rendre inactif un client]
 
-image::/V0/images/inactif2.png[Etape 2 pour rendre inactif un client]
+==== Si le client possède des comptes non clôturés
 
-Une fois rendu inactif, vous pourrez remarquer que le texte indiqué par la flèche rouge aura changé comme sur l'image ci-dessous, le client est désormais inactif.
+Pour rendre inactif un client, il faut que tous les comptes du client soient clôturés :
 
-image::/V0/images/inactif3.png[Etape 3 pour rendre inactif un client]
+image::/V0/images/ri2Preuve.png[Etape 2 preuve rendre inactif un client]
+
+
+==== Si le client possède tous ses comptes clôturés
+
+Il vous suffit de vous rendre dans "Modifier client" puis de cliquer sur le bouton "Inactif"
+
+==== Si vous êtes arrivé à le rendre inactif
+
+Voici l'affichage lorsqu'un client est inactif :
+
+image::/V0/images/ri4Preuve.png[Etape 4preuve rendre inactif un client]
 
 ==== Gestion des employés
 
