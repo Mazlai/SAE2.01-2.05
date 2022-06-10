@@ -109,6 +109,11 @@ image::/V0/images/modifClient.png[Modifier un compte]
 
 Pour créer un compte il suffit de cliquer sur le bouton nouveau compte puis de suivre les étapes indiquées par les flèches comme sur les images ci-dessous :
 
+image::/V1/images/creer1C.png[Etape 1 créer un compte]
+
+En ce qui concerne les champs à renseigner, le montant et le découvert ne doivent pas être négatif
+
+image::/V1/images/creer2C.png[Etape 2 créer un compte]
 
 ===== Consulter un compte
 
