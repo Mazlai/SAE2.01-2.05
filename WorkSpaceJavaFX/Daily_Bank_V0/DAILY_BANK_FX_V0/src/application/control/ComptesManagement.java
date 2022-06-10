@@ -74,6 +74,17 @@ public class ComptesManagement {
 		}
 	}
 	
+	
+	/**
+	 * Appelle la fenêtre de débit
+	 * @param cpt
+	 */
+	public void doDebitExceptionnel(CompteCourant cpt) {
+		if(this.dbs.isChefDAgence()) {
+			DebitExceptionnel de = new DebitExceptionnel(this.primaryStage, this.dbs, cpt);
+		}
+	}
+	
 	/**
 	 * Permet d'afficher le contenu de la fenetre pour gérer les comptes et attends une interaction potentielle avec celle-ci
 	 * @return le contenu à afficher dans la boites de dialogue

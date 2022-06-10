@@ -17,7 +17,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 import application.DailyBankState;
 import application.control.ComptesManagement;
-import application.control.DebitExceptionnelEditorPane;
+import application.control.DebitExceptionnel;
 import application.control.OperationsManagement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -134,9 +134,9 @@ public class ComptesManagementController implements Initializable {
 		if (selectedIndice >= 0) {
 			CompteCourant cpt = this.olCompteCourant.get(selectedIndice);
 			try {
-				if(this.dbs.isChefDAgence()) {
-					DebitExceptionnelController de = null;
-					de.initContext(primaryStage, dbs, cpt);
+				if (cpt != null) {
+					this.cm.doDebitExceptionnel(cpt);
+					this.loadList();
 				}
 			
 			}catch (Exception e) {

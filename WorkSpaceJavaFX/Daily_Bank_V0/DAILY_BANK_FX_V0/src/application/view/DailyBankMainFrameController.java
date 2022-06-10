@@ -155,6 +155,7 @@ public class DailyBankMainFrameController implements Initializable {
 		this.dbmf.gestionEmploye();
 	}
 
+	@FXML
 	private void actionQuitterBD() {
 		this.dbmf.disconnect();
 	}
