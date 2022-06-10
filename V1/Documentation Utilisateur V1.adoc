@@ -105,6 +105,11 @@ Une nouvelle fenêtre s'ouvre (image de la fenêtre ci-dessous) et vous pourrez,
 
 image::/V0/images/modifClient.png[Modifier un compte]
 
+===== Créer un compte
+
+Pour créer un compte il suffit de cliquer sur le bouton nouveau compte puis de suivre les étapes indiquées par les flèches comme sur les images ci-dessous :
+
+
 ===== Consulter un compte
 
 Afin de voir les opérations d'un compte je vous laisse suivre les étapes jusqu'à arriver à la fenêtre nommée "Gestion des clients" définie dans la rubrique "Modifier les informations d'un client" (étape 2.1.2.2). Une fois la page ouverte, il suffit de cliquer sur le compte dont on souhaite consulter les opérations avant de terminer par appuyer sur le bouton "Comptes client" (flèche rouge).
@@ -114,8 +119,6 @@ image::/V0/images/compte1.png[Etape 1 pour consulter compte]
 Il ne reste plus qu'à suivre les flèches rouges :
 
 image::/V0/images/compte2.png[Etape 2 pour consulter compte]
-
-===== Créer un compte
 
 ==== Opérations
 
