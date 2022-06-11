@@ -1,13 +1,13 @@
 package application.view;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.awt.*;
+import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+import application.control.DailyBankMainFrame;
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -124,7 +124,7 @@ public class OperationsManagementController implements Initializable {
 	 * Permet de générer le pdf du relevé bancaire mensuel
 	 */
 	@FXML
-	private void doPDF() {
+	private void doPDF() throws IOException {
 		 ArrayList<Operation> ALop = new ArrayList<>();
 		 AccessCompteCourant acc = new AccessCompteCourant();
 	      try {
@@ -144,19 +144,19 @@ public class OperationsManagementController implements Initializable {
 
 	      // creation of a document-object
 	      Document document = new Document();
+		String home = System.getProperty("user.home");
 	        try {
+
 	          // create a writer
 	          PdfWriter.getInstance(
 	          // that listens to the document
 	          document,
 	          // and directs a PDF-stream to a file
-	          new FileOutputStream("C:\\Users\\Etudiant\\Downloads\\Relevé_Mensuel.pdf"));
+	          new FileOutputStream(home+"\\Downloads\\Relevé_Mensuel.pdf"));
 	          // open document
 	          document.open();
-	          
-	          String filename = "C:\\Users\\Etudiant\\Downloads\\DailyBank.png";
-	            Image image = Image.getInstance(filename);
-	            image = Image.getInstance(filename);
+
+	            Image image = Image.getInstance("Daily_Bank_V0\\DAILY_BANK_FX_V0\\src\\DailyBank.png");
 	            /*image.scalePercent(200f);
 	            image.setAbsolutePosition(0,0);
 	            System.out.println(image.getScaledHeight());
@@ -267,6 +267,7 @@ public class OperationsManagementController implements Initializable {
 
 	      // close the document
 	      document.close();
+		Desktop.getDesktop().open(new File(home+"\\Downloads\\Relevé_Mensuel.pdf"));
 	}
 
 	/**
