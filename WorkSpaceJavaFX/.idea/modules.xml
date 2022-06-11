@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" filepath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Daily_Bank_V0/DAILY_BANK_FX_V0/DAILY_BANK_FX_V0.iml" filepath="$PROJECT_DIR$/Daily_Bank_V0/DAILY_BANK_FX_V0/DAILY_BANK_FX_V0.iml" />
+    </modules>
+  </component>
+</project>
