@@ -6,6 +6,7 @@ import application.view.DailyBankMainFrameController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.data.AgenceBancaire;
@@ -13,6 +14,8 @@ import model.orm.AccessAgenceBancaire;
 import model.orm.LogToDatabase;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DatabaseConnexionException;
+
+import static com.sun.org.apache.bcel.internal.util.SecuritySupport.getResourceAsStream;
 
 /**
  * La classe DailyBankMainFrame hérite de la classe Application. Elle permet le demarrage de la homepage de l'application, de s'y connecter et de s'y deconnecter.
@@ -44,7 +47,8 @@ public class DailyBankMainFrame extends Application {
 			scene.getStylesheets().add(DailyBankApp.class.getResource("application.css").toExternalForm());
 
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Fenêtre Principale");
+			primaryStage.setTitle("Daily Bank");
+			primaryStage.getIcons().add(new Image(DailyBankMainFrame.class.getResourceAsStream("../../DailyBankIcon.png")));
 
 			/*
 			// En mise au point :

@@ -7,6 +7,7 @@ import application.tools.StageManagement;
 import application.view.OperationEditorPaneController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -46,6 +47,7 @@ public class OperationEditorPane {
 			StageManagement.manageCenteringStage(_parentStage, this.primaryStage);
 			this.primaryStage.setScene(scene);
 			this.primaryStage.setTitle("Enregistrement d'une opération");
+			primaryStage.getIcons().add(new Image(DailyBankMainFrame.class.getResourceAsStream("../../DailyBankIcon.png")));
 			this.primaryStage.setResizable(false);
 
 			this.oepc = loader.getController();

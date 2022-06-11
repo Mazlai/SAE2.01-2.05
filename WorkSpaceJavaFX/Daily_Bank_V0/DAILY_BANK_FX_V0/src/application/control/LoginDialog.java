@@ -6,6 +6,7 @@ import application.tools.StageManagement;
 import application.view.LoginDialogController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -45,6 +46,7 @@ public class LoginDialog {
 			StageManagement.manageCenteringStage(_parentStage, this.primaryStage);
 			this.primaryStage.setScene(scene);
 			this.primaryStage.setTitle("Identification");
+			primaryStage.getIcons().add(new Image(DailyBankMainFrame.class.getResourceAsStream("../../DailyBankIcon.png")));
 			this.primaryStage.setResizable(false);
 
 			this.ldc = loader.getController();

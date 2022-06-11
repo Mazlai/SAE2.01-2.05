@@ -9,6 +9,7 @@ import application.tools.StageManagement;
 import application.view.ClientsManagementController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -46,6 +47,7 @@ public class ClientsManagement {
 			StageManagement.manageCenteringStage(_parentStage, this.primaryStage);
 			this.primaryStage.setScene(scene);
 			this.primaryStage.setTitle("Gestion des clients");
+			primaryStage.getIcons().add(new Image(DailyBankMainFrame.class.getResourceAsStream("../../DailyBankIcon.png")));
 			this.primaryStage.setResizable(false);
 
 			this.cmc = loader.getController();
