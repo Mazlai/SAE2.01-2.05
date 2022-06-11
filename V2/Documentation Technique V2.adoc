@@ -253,7 +253,7 @@ image::/V1/images/consultercompte.PNG[Consulter compte]
 
 image::/V1/images/dcCompteCourant.PNG[Consulter les informations d'un compte]
 
-Cette tâche n'inclut seulement qu'une classe dans le diagramme de classes V1 : la classe ``ComteCourant``.
+Cette tâche n'inclut seulement qu'une classe dans le diagramme de classes V1 : la classe ``CompteCourant``.
 Cette classe est, de ce fait, dédiée à la consultation des informations d'un compte client et par conséquent n'offre aucune possibilité de modification.
 
 ===== Principales fonctionnalités
