@@ -546,11 +546,6 @@ Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blag
 
 Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
 
-*Côté ``application.tools`` :* +
-____
-• _CategorieOperation.java_
-• _ConstantesIHM.java_
-____
 
 *Côté ``application.control`` :* +
 ____
