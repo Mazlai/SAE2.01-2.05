@@ -518,7 +518,9 @@ image::/V2/images/pdf.PNG[Générer PDF]
 
 ===== Extraits de code commentés pour des points importants
 
-==== 1.10 Gérer (faire le "CRUD") les prélèvements automatiques - Nicolas S.
+==== 1.10 Gérer (faire le "CRUD") les prélèvements - Nicolas S.
+
+Les prélèvements sont très courant dans les banques, ce sont des relevés en général mensuel qui ont pour but de débiter des comptes en vue de payer les fournisseurs de la banque (EDF,Véolia ...)
 
 ===== Partie du use case conforme
 
@@ -526,13 +528,64 @@ image::/V2/images/prelevements.PNG[Gérer les prélèvements]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V2/images/svgPrelevement.png[Prélèvement SVG]
+
+La tâche virement inclut 3 classes dans ce diagramme de classes :
+
+____
+• La classe ``CompteCourant`` c'est sur un compte en particulier que les prélèvements se feront
+• La classe ``PrélèvementAutomatique`` qui elle, utilise les données renseignées de l'utilisateur. Elle ne se contente donc pas de seulement lire les données mais plutôt de les interpréter, et cela passe avant par une définition de ces données 
+• La classe ``Opération`` qui, de même, utilise les données renseignées de l'utilisateur. 
+____
+
 ===== Principales fonctionnalités
+
+Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V2.adoc[_documentation utilisateur_].
 
 ===== Classes impliquées à l'implémentation de la fonction
 
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté ``application.tools`` :* +
+____
+• _CategorieOperation.java_
+• _ConstantesIHM.java_
+____
+
+*Côté ``application.control`` :* +
+____
+• _PrelevementEditorPane.java_
+• _PrelevementManagement.java_
+• _ComptesManagement.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _PrelevementEditorPaneController.java_
+• _PrelevementManagementController.java_
+• _ComptesManagementController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _Prelevement.java_
+____
+
+*Côté ``model.orm`` :* +
+____
+• _AcessPrelevement.java_
+• _ApplicationException.java_
+____
+
 ===== Éléments à connaître / spécificités
 
+Nous avons décidés d'implémenter la classe prélèvements à l'instar de la classe compte et client, pous nous il est important de garder une trace des prélevements, de ce fait nous avons ajouter un attribu "estArrete" dans la base de données qui permet d'ajouter un état qui est soit *en cours* ou bien *arrêté*. De ce fait nous pouvons arrêter un prélèvement. 
+
 ===== Extraits de code commentés pour des points importants
+
+image::/V2/images/doPrelevement.png[Prelevement]
+
+Un des éléments de l'implémentation de cette tâche, assez essentielle de mentionner est la fonction FXML *doPrelevement()* qui, associée au bouton "Consulter Prélèvements" présent dans la classe _ComptesManagementController.java_, permet d'ouvrir l'interface dédiée à cette réalisation de prélèvement.
 
 === 2. Chef d'agence
 
