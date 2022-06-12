@@ -189,7 +189,6 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 
 |7
 |Clôturer un compte
-|Clôturer un compte
 |• Doit pouvoir être affiché en tant que message dans une liste pour le guichetier et le chef d'agence ;
 
 • Ne doit plus être en interaction par un autre compte afin de réaliser une transaction quelconque, seul la consultation du compte sera possible, aucune autre action sera possible
