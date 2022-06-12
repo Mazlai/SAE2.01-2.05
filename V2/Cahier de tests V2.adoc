@@ -207,6 +207,14 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 
 |9
 |Gérer les prélèvements automatiques
-| ✖
-| ✖
+|• Doit pouvoir être affiché en tant que message dans une liste pour le guichetier et le chef d'agence ;
+ 
+•Peut être réalisé que si le compte n'est pas clôturé
+ 
+• Ne doit pas renseigner des informations erronées (date non valable). +
+→ _Message d'erreur : "Veuillez vérifiez que vos informations renseignées soient valides." (dans une liste ou sous forme de pop-up) ;_ +
+
+• Un prélèvement peut être arrêté, il est toujours consultable mais non modifiable/exécutable
+
+| ✓
 |===
