@@ -197,19 +197,60 @@ De plus, il n'y a pas de détails spécifiques qui seraient difficiles à compre
 
 ==== 1.2 Créer un nouveau client
 
+Un chef d'agence ou un guichetier peut créer/ insérer les informations d'un client. Ces informations peuvent concerner le nom ou le prénom du client, son adresse, ses moyens de communication (mail) ou encore son évolutivité dans son agence bancaire, c'est-à-dire son activité, s'il est actif ou non.
+
 ===== Partie du use case conforme
 
 image::/V1/images/creernewclient.PNG[Creer new client]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V1/images/clientdc.PNG[Créer client]
+
+Cette tâche n'inclut seulement qu'une classe dans le diagramme de classes V1 : la classe ``Client``.
+Cette classe est, de ce fait, dédiée à la création/insertion des informations d'un client et par conséquent, à l'insertion des données sur la base de données.
+
 ===== Principales fonctionnalités
+
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
+
 
 ===== Classes impliquées à l'implémentation de la fonction
 
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté ``application.tools`` :* +
+____
+• _CategorieOperation.java_
+• _ConstantesIHM.java_
+____
+
+*Côté ``application.control`` :* +
+____
+• _ClientEditorPane.java_
+• _ClientManagement.java_
+• _ExceptionDialog.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _ClientEditorPaneController.java_
+• _ClientManagementController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _Client.java_
+____
+
 ===== Éléments à connaître / spécificités
 
+L'élément à connaître pour cette tâche est une fonction et celle-ci réside dans la classe _ClientsManagement.java_ : *nouveauClient()*.
+
 ===== Extraits de code commentés pour des points importants
+
+Le code étant déjà présent dans l'application, il n'y a aucune partie qui mérite d'être signalée et venant de notre part.
+De plus, il n'y a pas de détails spécifiques qui seraient difficiles à comprendre et donc à expliquer ou tout simplement d'être mentionné.
 
 ==== 1.3 Créer un nouveau compte - Nicolas S.
 
@@ -320,6 +361,8 @@ ____
 
 ===== Extraits de code commentés pour des points importants
 
+Le code étant déjà présent dans l'application, il n'y a aucune partie qui mérite d'être signalée et venant de notre part.
+De plus, il n'y a pas de détails spécifiques qui seraient difficiles à comprendre et donc à expliquer ou tout simplement d'être mentionné.
 
 ==== 1.5 Consulter un compte
 
