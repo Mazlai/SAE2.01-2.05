@@ -115,6 +115,8 @@ public class ComptesManagementController implements Initializable {
 	private TextField txtDecAutorise;
 	@FXML
 	private TextField txtSolde;
+	@FXML
+        private Button btnPrelevement;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -209,6 +211,18 @@ public class ComptesManagementController implements Initializable {
 		}
 	}
 
+	  /**
+     * Permet d'ouvrir l'interface contenant les prélèvements
+     */
+    @FXML
+    void doPrelevement() {
+    	int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
+		if (selectedIndice >= 0) {
+			CompteCourant compte = this.olCompteCourant.get(selectedIndice);
+			this.cm.gererPrelevement(compte);
+		}
+    }
+	
 	/**
 	 * Permet de clôturer un compte
 	 */
