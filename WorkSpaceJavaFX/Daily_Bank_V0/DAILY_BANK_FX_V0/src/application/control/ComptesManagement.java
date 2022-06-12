@@ -238,6 +238,15 @@ public class ComptesManagement {
 	}
 	
 	/**
+	* Permet de load la page des prélèvements
+	**/
+		public void gererPrelevement(CompteCourant c) {
+		PrelevementManagement cm = new PrelevementManagement(this.primaryStage, this.dbs, c);
+		cm.doPrelevementManagementDialog();
+	}
+	
+	
+	/**
 	 * Permet d'appercevoir les informations d'un comptes bancaires. Uniquement de regarder
 	 * 
 	 * @param compteAvoir IN : le compte dont on veux voir ses informations
