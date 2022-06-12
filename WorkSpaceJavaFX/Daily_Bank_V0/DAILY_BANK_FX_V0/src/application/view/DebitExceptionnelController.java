@@ -55,7 +55,13 @@ public class DebitExceptionnelController implements Initializable {
 			System.out.println(e);
 		}
 	}
-	
+
+	/**
+	 * Synchronise le débit exceptionnel avec les informations nécessaires à son fonctionnement
+	 * @param _containingStage Fenêtre mère dont celle-ci dépendra
+	 * @param _dbstate État de l'utilisateur (Chef d'agence, Guicheter)
+	 * @param _cpt Compte sur lequel le débit exceptionnel sera effectué
+	 */
 	public void initContext(Stage _containingStage, DailyBankState _dbstate, CompteCourant _cpt) {
 		this.dbs = _dbstate;
 		this.primaryStage = _containingStage;
