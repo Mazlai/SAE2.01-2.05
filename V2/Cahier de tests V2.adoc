@@ -68,7 +68,7 @@ Créer un compte, A, C,R,I
 Effectuer un virement,A,R,C,I
 Clôturer un compte, , ,R,
 *DEV V2*,---,---,---,---
-Générer un relevé mensuel d'un compte en PDF, , , ,
+Générer un relevé mensuel d'un compte en PDF,R,C,I,A
 Gérer (faire le CRUD) les prélèvements automatiques, A, C,R,I
 Effectuer un débit exceptionnel, I, A, C,R
 Simuler un emprunt, C, R, A, I
