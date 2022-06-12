@@ -217,11 +217,11 @@ image::/V0/images/interfacevirement.PNG[Etape 2 pour faire un virement de compte
 
 Pour générer un relevé mensuel d'un compte en PDF il vous suffit de suivre les étapes indiquées par la flèche rouge ci-dessous :
 
-image::/V2/images/utilpdf[Etape 1 pour généer un pdf]
+image::/V2/images/utilpdf.png[Etape 1 pour générer un pdf]
 
-image::/V2/images/utilpdf2[Etape 2 pour généer un pdf]
+image::/V2/images/utilpdf2.png[Etape 2 pour générer un pdf]
 
-image::/V2/images/utilpdf3[Etape 3 pour généer un pdf]
+image::/V2/images/utilpdf3.png[Etape 3 pour générer un pdf]
 
 Une fois ces étapes effectuées, le PDF s'ouvrira automatiquement, PDF que vous retrouverez dans vos Téléchargements
 
