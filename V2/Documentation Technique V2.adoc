@@ -197,7 +197,7 @@ De plus, il n'y a pas de détails spécifiques qui seraient difficiles à compre
 
 ==== 1.2 Créer un nouveau client
 
-Un chef d'agence ou un guichetier peut créer/ insérer les informations d'un client. Ces informations peuvent concerner le nom ou le prénom du client, son adresse, ses moyens de communication (mail) ou encore son évolutivité dans son agence bancaire, c'est-à-dire son activité, s'il est actif ou non.
+Un chef d'agence ou un guichetier peut créer/ insérer les informations d'un client. Ces informations peuvent concerner le nom ou le prénom du client, son adresse, ses moyens de communication (mail ou téléphone) ou encore son évolutivité dans son agence bancaire, c'est-à-dire son activité, s'il est actif ou non.
 
 ===== Partie du use case conforme
 
