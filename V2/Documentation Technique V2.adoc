@@ -217,11 +217,52 @@ image::/V1/images/creercompte.PNG[Creer new compte]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V1/images/dcCompteCourant.PNG[créer un compte]
+
 ===== Principales fonctionnalités
+
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
 
 ===== Classes impliquées à l'implémentation de la fonction
 
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté ``application.tools`` :* +
+____
+• _CategorieOperation.java_
+• _EditionMode.java_
+____
+
+*Côté ``application.control`` :* +
+____
+• _CompteManagement.java_
+• _CompteEditorPane.java_
+• _ExceptionDialog.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _CompteManagementController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _Compte.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessCompteCourant.java_
+• _ApplicationException.java_
+• _DatabaseConnexionException.java_
+• _DataAccessException.java_
+____
+
 ===== Éléments à connaître / spécificités
+
+Ici, lorsque nous ajoutons un compte à la base de données, si l'on renseigne un découvert autorisé positif, celui-ci deviendra négatif lors de l'ajout, nous adoptons la reglementation de la méthode updateCompte implémenter par un des professeurs de la classe AccessCompteCourant
+
+image::/V1/images/expliUpdate.png[Code déjà implémenter par les profs]
 
 ===== Extraits de code commentés pour des points importants
 
@@ -233,13 +274,50 @@ image::/V1/images/cloturercompte.PNG[Clôturer compte]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V1/images/dcCompteCourant.PNG[clôturer un compte]
+
 ===== Principales fonctionnalités
 
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
+
 ===== Classes impliquées à l'implémentation de la fonction
+
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté ``application.tools`` :* +
+____
+• _CategorieOperation.java_
+• _EditionMode.java_
+____
+
+*Côté ``application.control`` :* +
+____
+• _CompteManagement.java_
+• _ExceptionDialog.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _CompteManagementController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _Compte.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessCompteCourant.java_
+• _ApplicationException.java_
+• _DatabaseConnexionException.java_
+• _DataAccessException.java_
+____
 
 ===== Éléments à connaître / spécificités
 
 ===== Extraits de code commentés pour des points importants
+
 
 ==== 1.5 Consulter un compte
 
@@ -592,13 +670,44 @@ image::/V1/images/inactifclient.PNG[Client inactif]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V1/images/RI.png[Rendre Inactif svg]
+
 ===== Principales fonctionnalités
+
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
 
 ===== Classes impliquées à l'implémentation de la fonction
 
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté ``application.tools`` :* +
+____
+• _ConstantesIHM.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _ClientEditorPaneController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _CompteCourant.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessCompteCourant.java_
+• _AccessClient.java_
+• _DataAccessException.java_
+____
+
 ===== Éléments à connaître / spécificités
 
+Il faut savoir que pour rendre inactif un client il faut que tous ses comptes aient un solde null (égale à zéro)
+
 ===== Extraits de code commentés pour des points importants
+
 
 ==== 2.2 Gérer les employés (CRUD) - Louis Y.
 
