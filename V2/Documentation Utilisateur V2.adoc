@@ -259,7 +259,17 @@ image::/V2/images/pre7.png[Etape 2 pour modifier un prélèvement]
 
 === Chef d'Agence
 
-==== Gestion des clients
+==== Débit Exceptionnel
+En tant que chef d'agence, vous avez la possibilité d'effectuer un débit exceptionnel sur le compte courant d'un client. +
+Pour se faire, rendez vous tout d'abord dans la fenêtre de ``Gestion des Comptes`` courants du client que vous visez. +
+
+image::/V2/images/GestionClients.png[Fenêtre de gestion des comptes d'un client]
+
+Puis sélectionnez le compte à débiter et cliquez, tout logiquement, sur le bouton ``[Débit Exceptionnel]`` sur la droite de la fenêtre. +
+Vous verrez en suite s'ouvrir la fenêtre conçue à cet effet et pourrez y inscrire le montant à débiter. +
+
+Notez qu'un débit exceptionnel n'est possible qu'à condition que le compte soit ouvert et que le client soit actif. +
+De plus, si le débit exceptionnel fait passer le compte courant en dessous de son découvert autorisé, le client ne pourra plus effectuer de débits sur celui-ci et devra d'abord réalimenter le compte. 
 
 === Rendre inactif un client
 
