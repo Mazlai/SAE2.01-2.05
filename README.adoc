@@ -20,13 +20,11 @@ MAJ le 08/05/2022:
 
 - [ ] Générer un relevé mensuel d'un compte en PDF
 - [ ] Effectuer un débit exceptionnel 
-- [ ] Gérer (faire le "CRUD") les prélèvements automatiques
-- [x] Simuler un emprunt
-- [x] Simuler une assurance d'emprunt
 
 *Lien vers le CDCU final :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V3/CDCU%20V3.adoc[__Cliquer ici__] +
-*Lien vers la documentation utilisateur :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[__Cliquer ici__] +
-*Lien vers la documentation technique :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Technique%20V1.adoc[__Cliquer ici__]
+*Lien vers la documentation utilisateur :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V2/Documentation%20Utilisateur%20V2.adoc[__Cliquer ici__] +
+*Lien vers la documentation technique :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V2/Documentation%20Technique%20V2.adoc[__Cliquer ici__] +
+*Lien vers le cahier de tests :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V2/Cahier%20de%20tests%20V2.adoc[__Cliquer ici__]
 
 |===
 |MEMBRES :

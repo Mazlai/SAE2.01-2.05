@@ -10,6 +10,8 @@ toc::[]
 
 == I - Présentation rapide de l'application
 
+La banque DailyBank souhaite développer une application JAVA-Oracle de gestion des comptes clients pour remplacer plusieurs outils jusque-là obsolètes. Ce développement s’inscrit dans le cadre de la restructuration de ses services bancaires et l’application sera déployée dans les 100 agences que compte son réseau.
+
 === 1. Explications du use case global
 
 Voici le use case général de la version 2 de l'application DailyBank :
@@ -217,11 +219,52 @@ image::/V1/images/creercompte.PNG[Creer new compte]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V1/images/dcCompteCourant.PNG[créer un compte]
+
 ===== Principales fonctionnalités
+
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
 
 ===== Classes impliquées à l'implémentation de la fonction
 
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté ``application.tools`` :* +
+____
+• _CategorieOperation.java_
+• _EditionMode.java_
+____
+
+*Côté ``application.control`` :* +
+____
+• _CompteManagement.java_
+• _CompteEditorPane.java_
+• _ExceptionDialog.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _CompteManagementController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _Compte.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessCompteCourant.java_
+• _ApplicationException.java_
+• _DatabaseConnexionException.java_
+• _DataAccessException.java_
+____
+
 ===== Éléments à connaître / spécificités
+
+Ici, lorsque nous ajoutons un compte à la base de données, si l'on renseigne un découvert autorisé positif, celui-ci deviendra négatif lors de l'ajout, nous adoptons la reglementation de la méthode updateCompte implémenter par un des professeurs de la classe AccessCompteCourant
+
+image::/V1/images/expliUpdate.png[Code déjà implémenter par les profs]
 
 ===== Extraits de code commentés pour des points importants
 
@@ -233,13 +276,50 @@ image::/V1/images/cloturercompte.PNG[Clôturer compte]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V1/images/dcCompteCourant.PNG[clôturer un compte]
+
 ===== Principales fonctionnalités
 
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
+
 ===== Classes impliquées à l'implémentation de la fonction
+
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté ``application.tools`` :* +
+____
+• _CategorieOperation.java_
+• _EditionMode.java_
+____
+
+*Côté ``application.control`` :* +
+____
+• _CompteManagement.java_
+• _ExceptionDialog.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _CompteManagementController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _Compte.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessCompteCourant.java_
+• _ApplicationException.java_
+• _DatabaseConnexionException.java_
+• _DataAccessException.java_
+____
 
 ===== Éléments à connaître / spécificités
 
 ===== Extraits de code commentés pour des points importants
+
 
 ==== 1.5 Consulter un compte
 
@@ -518,7 +598,9 @@ image::/V2/images/pdf.PNG[Générer PDF]
 
 ===== Extraits de code commentés pour des points importants
 
-==== 1.10 Gérer (faire le "CRUD") les prélèvements automatiques - Nicolas S.
+==== 1.10 Gérer (faire le "CRUD") les prélèvements - Nicolas S.
+
+Les prélèvements sont très courant dans les banques, ce sont des relevés en général mensuel qui ont pour but de débiter des comptes en vue de payer les fournisseurs de la banque (EDF,Véolia ...)
 
 ===== Partie du use case conforme
 
@@ -526,13 +608,59 @@ image::/V2/images/prelevements.PNG[Gérer les prélèvements]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V2/images/svgPrelevement.png[Prélèvement SVG]
+
+La tâche virement inclut 3 classes dans ce diagramme de classes :
+
+____
+• La classe ``CompteCourant`` c'est sur un compte en particulier que les prélèvements se feront
+• La classe ``PrélèvementAutomatique`` qui elle, utilise les données renseignées de l'utilisateur. Elle ne se contente donc pas de seulement lire les données mais plutôt de les interpréter, et cela passe avant par une définition de ces données 
+• La classe ``Opération`` qui, de même, utilise les données renseignées de l'utilisateur. 
+____
+
 ===== Principales fonctionnalités
+
+Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V2.adoc[_documentation utilisateur_].
 
 ===== Classes impliquées à l'implémentation de la fonction
 
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+
+*Côté ``application.control`` :* +
+____
+• _PrelevementEditorPane.java_
+• _PrelevementManagement.java_
+• _ComptesManagement.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _PrelevementEditorPaneController.java_
+• _PrelevementManagementController.java_
+• _ComptesManagementController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _Prelevement.java_
+____
+
+*Côté ``model.orm`` :* +
+____
+• _AcessPrelevement.java_
+• _ApplicationException.java_
+____
+
 ===== Éléments à connaître / spécificités
 
+Nous avons décidés d'implémenter la classe prélèvements à l'instar de la classe compte et client, pous nous il est important de garder une trace des prélevements, de ce fait nous avons ajouter un attribu "estArrete" dans la base de données qui permet d'ajouter un état qui est soit *en cours* ou bien *arrêté*. De ce fait nous pouvons arrêter un prélèvement. 
+
 ===== Extraits de code commentés pour des points importants
+
+image::/V2/images/doPrelevement.png[Prelevement]
+
+Un des éléments de l'implémentation de cette tâche, assez essentielle de mentionner est la fonction FXML *doPrelevement()* qui, associée au bouton "Consulter Prélèvements" présent dans la classe _ComptesManagementController.java_, permet d'ouvrir l'interface dédiée à cette réalisation de prélèvement.
 
 === 2. Chef d'agence
 
@@ -544,13 +672,44 @@ image::/V1/images/inactifclient.PNG[Client inactif]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V1/images/RI.png[Rendre Inactif svg]
+
 ===== Principales fonctionnalités
+
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
 
 ===== Classes impliquées à l'implémentation de la fonction
 
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté ``application.tools`` :* +
+____
+• _ConstantesIHM.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _ClientEditorPaneController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _CompteCourant.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessCompteCourant.java_
+• _AccessClient.java_
+• _DataAccessException.java_
+____
+
 ===== Éléments à connaître / spécificités
 
+Il faut savoir que pour rendre inactif un client il faut que tous ses comptes aient un solde null (égale à zéro)
+
 ===== Extraits de code commentés pour des points importants
+
 
 ==== 2.2 Gérer les employés (CRUD) - Louis Y.
 

@@ -58,7 +58,7 @@ Rédiger la documentation technique et la documentation utilisateur V0,I,C,C,R
 Créer le cahier de TEST V1,R,A,I,I
 Rédiger la documentation technique et la documentation utilisateur V1,I,C,I,R
 *DEV V0/V1*,---,---,---,---
-Gérer les employés, , ,R ,
+Gérer les employés, , ,C ,R
 Créditer ou débiter un compte,R,I,A,I
 Créer un compte, , ,R ,
 Effectuer un virement,A,R,C,I
@@ -150,10 +150,11 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 |Clôturer un compte
 |• Doit pouvoir être affiché en tant que message dans une liste pour le guichetier et le chef d'agence ;
 
- • Ne doit plus être en interaction par un autre compte afin de réaliser une transaction quelconque, seul la consultation du compte sera possible, aucune autre action sera possible
- → _Le solde du compte est remis à zéro 
+• Ne doit plus être en interaction par un autre compte afin de réaliser une transaction quelconque, seul la consultation du compte sera possible, aucune autre action sera possible
+ 
+•Peut être réalisé une fois que le solde du compte est null 
  
  
  • Ne doit pas pouvoir clôturer un compte déjà clôturé. +
  → _Le compte est toujours visible par le chef d'agence ainsi que le guichetier mais aucunes actions ne peuvent être faites mise à part consulter le compte
-| ✖
+| ✓
