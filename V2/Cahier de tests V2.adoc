@@ -70,7 +70,7 @@ Clôturer un compte, , ,R,
 *DEV V2*,---,---,---,---
 Générer un relevé mensuel d'un compte en PDF, , , ,
 Gérer (faire le CRUD) les prélèvements automatiques, A, C,R,I
-Effectuer un débit exceptionnel, , , ,
+Effectuer un débit exceptionnel, , , ,R
 Simuler un emprunt, C, R, A, I
 Simuler une assurance d'emprunt, C, R, A, I
 |===
