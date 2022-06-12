@@ -587,9 +587,37 @@ image::/V1/images/inactifclient.PNG[Client inactif]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V1/images/RI.png[Rendre Inactif svg]
+
 ===== Principales fonctionnalités
 
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
+
 ===== Classes impliquées à l'implémentation de la fonction
+
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
+
+*Côté ``application.tools`` :* +
+____
+• _ConstantesIHM.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _ClientEditorPaneController.java_
+____
+
+*Côté ``model.data`` :* +
+____
+• _CompteCourant.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessCompteCourant.java_
+• _AccessClient.java_
+• _DataAccessException.java_
+____
 
 ===== Éléments à connaître / spécificités
 
