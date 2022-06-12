@@ -621,6 +621,8 @@ ____
 
 ===== Éléments à connaître / spécificités
 
+Il faut savoir que pour rendre inactif un client il faut que tous ses comptes aient un solde null (égale à zéro)
+
 ===== Extraits de code commentés pour des points importants
 
 ==== 2.2 Gérer les employés (CRUD) - Louis Y.
