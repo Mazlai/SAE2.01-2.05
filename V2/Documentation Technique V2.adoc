@@ -590,6 +590,16 @@ image::/V2/images/pdf.PNG[Générer PDF]
 
 ===== Partie du diagramme de classe conforme
 
+image::/V2/images/diagramme_classe_pdf.png[DC PDF]
+
+La tâche virement inclut 2 classes dans ce diagramme de classes :
+
+____
+• La classe ``CompteCourant``, n'étant seulement dédiée qu'à une lecture étant donné qu'elle prendra en compte les informations de celui-ci sans pour autant les modifier ;
+
+• La classe ``Operation`` qui n'est dédié elle aussi qu'à la lecture puisque qu'elle prend en compte la liste des opérations effectué sur un compte.
+____
+
 ===== Principales fonctionnalités
 
 ===== Classes impliquées à l'implémentation de la fonction
