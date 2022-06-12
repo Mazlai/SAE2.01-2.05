@@ -610,9 +610,6 @@ Les principales fonctionnalités ont été introduites de manière brève dans l
 
 Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
 
-
-
-
 *Côté ``application.view`` :* +
 ____
 • _OperationManagementController.java_
@@ -636,6 +633,18 @@ ____
 La génération d'un PDF utilise la librairie iTextPDF (ajouté avec le .jar "itextpdf-5.4.0.jar"), qui est accesible depuis le dossier 'LIBS'. 
 
 ===== Extraits de code commentés pour des points importants
+
+image::/V2/images/pdfcode.png[Code PDF]
+
+Cette ligne permet d'accéder à la liste des opérations effectué sur un compte depuis la base de données.
+
+image::/V2/images/pdfcode2.png[Code PDF]
+
+Cette ligne permet de créer le PDF et de lui attribué un emplacement de création automatiquement
+
+image::/V2/images/pdfcode3.png[Code PDF]
+
+Cette ligne permet d'ouvrir le PDF une fois que l'utilisateur ai cliqué sur le bouton aussocié sur l'application DailyBank.
 
 ==== 1.10 Gérer (faire le "CRUD") les prélèvements - Nicolas S.
 
