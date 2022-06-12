@@ -110,7 +110,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
  • Ne doit pas pouvoir gérer un guichetier ayant un compte au sein d'une agence différente. +
  → _Soit le chef d'agence voit uniquement les différents comptes qui sont présents dans l'agence,_ +
  → _(Version non-optimisée) Soit le chef d'agence peut voir tous les comptes. Message d'erreur : "Veuillez choisir un compte au sein de votre agence bancaire." (dans une liste ou sous forme de pop-up)_
-| ✖
+| ✓
 
 |2
 |Effectuer un débit exceptionnel
