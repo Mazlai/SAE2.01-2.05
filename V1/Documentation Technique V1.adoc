@@ -215,7 +215,7 @@ image::/V1/images/creercompte.PNG[Creer new compte]
 
 ===== Partie du diagramme de classe conforme
 
-image::/V1/images/consultercompte.PNG[Consulter compte]
+image::/V1/images/dcCompteCourant.PNG[créer un compte]
 
 ===== Principales fonctionnalités
 
@@ -272,7 +272,7 @@ image::/V1/images/cloturercompte.PNG[Clôturer compte]
 
 ===== Partie du diagramme de classe conforme
 
-image::/V1/images/consultercompte.PNG[Consulter compte]
+image::/V1/images/dcCompteCourant.PNG[clôturer un compte]
 
 ===== Principales fonctionnalités
 
