@@ -766,25 +766,60 @@ ____
 • _DataAccessException.java_
 ____
 
-===== Éléments à connaître / spécificités
-
-===== Extraits de code commentés pour des points importants
-
 ==== 2.3 Effectuer un débit exceptionnel - Louis Y.
 
 ===== Partie du use case conforme
 
-image::/V2/images/débitexceptionnel.PNG[Débit exceptionnel]
+image::/V1/images/debitexceptionnel.PNG[Gérer un débit exceptionnel]
+
+Un chef d'agence peut effectuer un débit exceptionnel. Cela concerne le solde d'un compte client, uniquement en débit.
 
 ===== Partie du diagramme de classe conforme
 
+image::/V1/images/DCDE.PNG[Gérer les informations d'un débit exceptionnel]
+
+Cette inclut deux classes dans le diagramme de classes V2 : les classes ``Opération`` et ``TypeOpération``.
+Ces classes ne sont pas seulement dédiées au débit exceptionnel d'un compte client et peuvent par exemple permettre aux employés de gérer leur·s compte·s.
+
 ===== Principales fonctionnalités
+
+Les principales fonctionnalités ont été introduites de manière brève dans l'introduction de cette opération. Pour plus de détails, veuillez vous référer à la https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V1/Documentation%20Utilisateur%20V1.adoc[_documentation utilisateur_].
 
 ===== Classes impliquées à l'implémentation de la fonction
 
-===== Éléments à connaître / spécificités
+Pour l'implémentation de cette action, plusieurs classes ont été impliquées :
 
-===== Extraits de code commentés pour des points importants
+*Côté ``application.tools`` :* +
+____
+• _CategorieOperation.java_
+• _ConstantesIHM.java_
+____
+
+*Côté ``application.control`` :* +
+____
+• DebitExceptionnel.java_
+• _ExceptionDialog.java_
+____
+
+*Côté ``application.view`` :* +
+____
+• _DebitExceptionnelController.java_
+• debitexceptionnel.fxml_
+____
+
+*Côté ``model.data`` :* +
+____
+• _TypeOperation.java_
+____
+
+*Côté ``model.orm / model.orm.exception`` :* +
+____
+• _AccessOperation.java_
+• _AccessCompte.java_
+• _ApplicationException.java_
+• _DatabaseConnexionException.java_
+• _DataAccessException.java_
+____
 
 ==== 2.4 / 2.5 Simuler un emprunt / Simuler une assurance d'emprunt - Mickael F.
 
