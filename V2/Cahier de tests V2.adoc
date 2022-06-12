@@ -212,7 +212,7 @@ Ces listes de tests facilitent ainsi la compréhension et la clarté des actions
 | • Doit pouvoir générer le PDF contenant les opérations d'un compte dans Téléchargements;
 
 • Doit pouvoir ouvrir le PDF une fois le bouton cliqué
-| ✓
+| ✖
 
 |9
 |Gérer les prélèvements automatiques
