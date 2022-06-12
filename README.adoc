@@ -20,7 +20,7 @@ MAJ le 08/05/2022:
 
 - [ ] Générer un relevé mensuel d'un compte en PDF
 - [ ] Effectuer un débit exceptionnel 
-- [ ] Gérer (faire le "CRUD") les prélèvements automatiques
+- [x] Gérer (faire le "CRUD") les prélèvements automatiques
 - [x] Simuler un emprunt
 - [x] Simuler une assurance d'emprunt
 
