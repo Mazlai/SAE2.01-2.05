@@ -770,13 +770,13 @@ ____
 
 ===== Partie du use case conforme
 
-image::/V1/images/debitexceptionnel.PNG[Gérer un débit exceptionnel]
+image::/V2/images/debitexceptionnel.PNG[Gérer un débit exceptionnel]
 
 Un chef d'agence peut effectuer un débit exceptionnel. Cela concerne le solde d'un compte client, uniquement en débit.
 
 ===== Partie du diagramme de classe conforme
 
-image::/V1/images/DCDE.PNG[Gérer les informations d'un débit exceptionnel]
+image::/V2/images/DCDE.PNG[Gérer les informations d'un débit exceptionnel]
 
 Cette inclut deux classes dans le diagramme de classes V2 : les classes ``Opération`` et ``TypeOpération``.
 Ces classes ne sont pas seulement dédiées au débit exceptionnel d'un compte client et peuvent par exemple permettre aux employés de gérer leur·s compte·s.
