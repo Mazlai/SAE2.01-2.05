@@ -36,32 +36,27 @@ MAJ le 08/05/2022:
 
 === Répartition des tâches 
 
-```markdown
-== Répartition des tâches et état d'avancement
-[options="header,footer"]
-|=======================
-|version |user             |use case                 |cas...                  |Victor THOMPSON |Louis YVELIN |Nicolas SACILOTTO |Mickaël FERNANDEZ
-|1       |Chef d'Agence    |CRUD employé             |C|                      |F| |
-|1       |Chef d'Agence    |CRUD employé             |R|                      |F| |
-|1       |Chef d'Agence    |CRUD employé             |U|                      |F| |
-|1    	 |Chef d'Agence    |CRUD employé             |D|                      |F| |
-|1    	 |Guichetier       |Compte                   |Créer|                  | |F|
-|1    	 |Guichetier       |Compte                   |Modifier |              | |F|
-|1    	 |Guichetier       |Compte                   |Créditer/Débiter |     F| | |
-|1    	 |Guichetier       |Compte                   |Effectuer un virement | | | |F
-|1    	 |Guichetier       |Compte                   |Clôturer |              | |F|
-|2    	 |Chef d'Agence    |Compte                   |Débit exceptionnel |    |F| |
-|2    	 |Chef d'Agence    |Emprunt                  |Simuler emprunt |       | | |F
-|2    	 |Chef d'Agence    |Emprunt                  |Simuler assurance |     | | |F
-|2    	 |Guichetier       |Compte                   |Relevé PDF |           F| | |
-|2    	 |Guichetier       |CRUD Prélèvement         |C|                      | |F|
-|2     	 |Guichetier       |CRUD Prélèvement         |R|                      | |F|
-|2    	 |Guichetier       |CRUD Prélèvement         |U|                      | |F|
-|2    	 |Guichetier       |CRUD Prélèvement         |D|                      | |F|
-|3    	 |Batch            |Prélèvement automatiques | |                      | | |
-|3    	 |Batch            |Relevé mensuels          | |                      | | |
-|=======================
-```
+|===
+|Version |Utilisateur      |Use Case                 |Cas particulier       |Réussites    |Victor THOMPSON |Louis YVELIN |Nicolas SACILOTTO |Mickaël FERNANDEZ
+|1       |Chef d'Agence    |CRUD employé             |C                     |             | |✓| |
+|1       |Chef d'Agence    |CRUD employé             |R                     |             | |✓| |
+|1       |Chef d'Agence    |CRUD employé             |U                     |             | |✓| |
+|1    	 |Chef d'Agence    |CRUD employé             |D                     |             | |✓| |
+|1    	 |Guichetier       |Compte                   |Créer                 |             | | |✓|
+|1    	 |Guichetier       |Compte                   |Créditer/Débiter      |             |✓| | |
+|1    	 |Guichetier       |Compte                   |Effectuer un virement |100%             | | | |✓
+|1    	 |Guichetier       |Compte                   |Clôturer              |             | | |✓|
+|2    	 |Chef d'Agence    |Compte                   |Débit exceptionnel    |             | |✓| |
+|2    	 |Chef d'Agence    |Emprunt                  |Simuler emprunt       |60%             | | | |✓
+|2    	 |Chef d'Agence    |Emprunt                  |Simuler assurance     |60%             | | | |✓
+|2    	 |Guichetier       |Compte                   |Relevé PDF            |             |✓| | |
+|2    	 |Guichetier       |CRUD Prélèvement         |C                     |             | | |✓|
+|2     	 |Guichetier       |CRUD Prélèvement         |R                     |             | | |✓|
+|2    	 |Guichetier       |CRUD Prélèvement         |U                     |             | | |✓|
+|2    	 |Guichetier       |CRUD Prélèvement         |D                     |             | | |✓|
+|3    	 |Batch            |Prélèvement automatiques |                      |             | | | |
+|3    	 |Batch            |Relevé mensuels          |                      |             | | | |
+|===
 
 === Prise en compte des commentaires
 
