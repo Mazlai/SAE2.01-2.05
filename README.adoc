@@ -42,7 +42,8 @@ MAJ le 08/05/2022:
 |1       |Chef d'Agence    |CRUD employé             |R                     |             | |✓| |
 |1       |Chef d'Agence    |CRUD employé             |U                     |             | |✓| |
 |1    	 |Chef d'Agence    |CRUD employé             |D                     |             | |✓| |
-|1    	 |Guichetier       |Compte                   |Créer                 |             | | |✓|
+|1       |Chef d'Agence    |Rendre inactif un client |être chef d'agence    |100%         | | |✓|
+|1    	 |Guichetier       |Compte                   |Créer                 |100%         | | |✓|
 |1    	 |Guichetier       |Compte                   |Créditer/Débiter      |             |✓| | |
 |1    	 |Guichetier       |Compte                   |Effectuer un virement |100%             | | | |✓
 |1    	 |Guichetier       |Compte                   |Clôturer              |             | | |✓|
@@ -50,13 +51,15 @@ MAJ le 08/05/2022:
 |2    	 |Chef d'Agence    |Emprunt                  |Simuler emprunt       |60%             | | | |✓
 |2    	 |Chef d'Agence    |Emprunt                  |Simuler assurance     |60%             | | | |✓
 |2    	 |Guichetier       |Compte                   |Relevé PDF            |             |✓| | |
-|2    	 |Guichetier       |CRUD Prélèvement         |C                     |             | | |✓|
-|2     	 |Guichetier       |CRUD Prélèvement         |R                     |             | | |✓|
-|2    	 |Guichetier       |CRUD Prélèvement         |U                     |             | | |✓|
-|2    	 |Guichetier       |CRUD Prélèvement         |D                     |             | | |✓|
+|2    	 |Guichetier       |CRUD Prélèvement         |C                     |100%         | | |✓|
+|2     	 |Guichetier       |CRUD Prélèvement         |R                     |100%         | | |✓|
+|2    	 |Guichetier       |CRUD Prélèvement         |U                     |100%        | | |✓|
+|2    	 |Guichetier       |CRUD Prélèvement         |D                     |80% *        | | |✓|
 |3    	 |Batch            |Prélèvement automatiques |                      |             | | | |
 |3    	 |Batch            |Relevé mensuels          |                      |             | | | |
 |===
+
+*Manque de temps pour supprimer mais il fallait juste ajouter une méthode dans le modèle pour supprimer de la BD le prélèvement selectionné.
 
 === Prise en compte des commentaires
 
