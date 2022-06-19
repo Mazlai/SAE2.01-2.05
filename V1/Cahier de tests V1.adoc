@@ -58,7 +58,7 @@ Rédiger la documentation technique et la documentation utilisateur V0,I,C,C,R
 Créer le cahier de TEST V1,R,A,I,I
 Rédiger la documentation technique et la documentation utilisateur V1,I,C,I,R
 *DEV V0/V1*,---,---,---,---
-Gérer les employés, , ,C ,R
+Gérer les employés, I, I,C ,R
 Créditer ou débiter un compte,R,I,A,I
 Créer un compte, , ,R ,
 Effectuer un virement,A,R,C,I
