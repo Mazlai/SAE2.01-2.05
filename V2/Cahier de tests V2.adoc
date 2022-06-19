@@ -62,7 +62,7 @@ Rédiger le CDCU V2, A, C,R,I
 Rédiger le cahier de tests V2, , , ,
 Rédiger la documentation technique et la documentation utilisateur V2, A, C,R,I
 *DEV V0/V1*,---,---,---,---
-Gérer (faire le CRUD) les employés, , ,C,
+Gérer (faire le CRUD) les employés, I, I,C,R
 Créditer ou débiter un compte,R,I,A,I
 Créer un compte, A, C,R,I
 Effectuer un virement,A,R,C,I
