@@ -47,10 +47,10 @@ MAJ le 08/05/2022:
 |1    	 |Guichetier       |Compte                   |Créditer/Débiter      |             |✓| | |
 |1    	 |Guichetier       |Compte                   |Effectuer un virement |100%             | | | |✓
 |1    	 |Guichetier       |Compte                   |Clôturer              |             | | |✓|
-|2    	 |Chef d'Agence    |Compte                   |Débit exceptionnel    |             | |✓| |
+|2    	 |Chef d'Agence    |Compte                   |Débit exceptionnel    |100%             | |✓| |
 |2    	 |Chef d'Agence    |Emprunt                  |Simuler emprunt       |60%             | | | |✓
 |2    	 |Chef d'Agence    |Emprunt                  |Simuler assurance     |60%             | | | |✓
-|2    	 |Guichetier       |Compte                   |Relevé PDF            |             |✓| | |
+|2    	 |Guichetier       |Compte                   |Relevé PDF            |100%             |✓| | |
 |2    	 |Guichetier       |CRUD Prélèvement         |C                     |100%         | | |✓|
 |2     	 |Guichetier       |CRUD Prélèvement         |R                     |100%         | | |✓|
 |2    	 |Guichetier       |CRUD Prélèvement         |U                     |100%        | | |✓|
