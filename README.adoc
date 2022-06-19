@@ -38,10 +38,10 @@ MAJ le 08/05/2022:
 
 |===
 |Version |Utilisateur      |Use Case                 |Cas particulier       |Réussites    |Victor THOMPSON |Louis YVELIN |Nicolas SACILOTTO |Mickaël FERNANDEZ
-|1       |Chef d'Agence    |CRUD employé             |C                     |             | |✓| |
-|1       |Chef d'Agence    |CRUD employé             |R                     |             | |✓| |
-|1       |Chef d'Agence    |CRUD employé             |U                     |             | |✓| |
-|1    	 |Chef d'Agence    |CRUD employé             |D                     |             | |✓| |
+|1       |Chef d'Agence    |CRUD employé             |C                     |100%             | |✓| |
+|1       |Chef d'Agence    |CRUD employé             |R                     |100%             | |✓| |
+|1       |Chef d'Agence    |CRUD employé             |U                     |100%             | |✓| |
+|1    	 |Chef d'Agence    |CRUD employé             |D                     |100%             | |✓| |
 |1       |Chef d'Agence    |Rendre inactif un client |être chef d'agence    |100%         | | |✓|
 |1    	 |Guichetier       |Compte                   |Créer                 |100%         | | |✓|
 |1    	 |Guichetier       |Compte                   |Créditer/Débiter      |             |✓| | |
