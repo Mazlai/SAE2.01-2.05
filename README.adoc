@@ -1,16 +1,10 @@
+image::/images/DailyBank.png[]
 
 = SAÉ 01-05
 
-Editée le 29/03/2022
+*MAJ le 08/05/2022*
 
-_Groupe 4A02 :_
-
-MAJ le 08/05/2022:
-
-*Lien vers le CDCU final :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V3/CDCU%20V3.adoc[__Cliquer ici__] +
-*Lien vers la documentation utilisateur :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V2/Documentation%20Utilisateur%20V2.adoc[__Cliquer ici__] +
-*Lien vers la documentation technique :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V2/Documentation%20Technique%20V2.adoc[__Cliquer ici__] +
-*Lien vers le cahier de tests :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V2/Cahier%20de%20tests%20V2.adoc[__Cliquer ici__]
+_Groupe 4A02 :_ +
 
 |===
 |MEMBRES :
@@ -19,6 +13,18 @@ MAJ le 08/05/2022:
 |_Mickael Fernandez_
 |_Nicolas Sacilotto_
 |===
+
+= Contexte 
+
+L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. 
+Elle devra permettre de débiter, créditer un compte soit par virement c’est-à-dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
+
+=== Liens
+
+*Lien vers le CDCU final :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V3/CDCU%20V3.adoc[__Cliquer ici__] +
+*Lien vers la documentation utilisateur :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V2/Documentation%20Utilisateur%20V2.adoc[__Cliquer ici__] +
+*Lien vers la documentation technique :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V2/Documentation%20Technique%20V2.adoc[__Cliquer ici__] +
+*Lien vers le cahier de tests :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V2/Cahier%20de%20tests%20V2.adoc[__Cliquer ici__]
 
 === Répartition des tâches 
 
