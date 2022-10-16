@@ -5,21 +5,7 @@ Editée le 29/03/2022
 
 _Groupe 4A02 :_
 
-
 MAJ le 08/05/2022:
-
-=== Tâches à faire 
-
-==== GPO :
-
-- [ ] Créer la documentation technique de la V0
-- [ ] Rédiger la documentation technique et la documentation utilisateur V1
-- [ ] Rédiger le cahier de test V2
-
-==== DEV :
-
-- [ ] Générer un relevé mensuel d'un compte en PDF
-- [ ] Effectuer un débit exceptionnel 
 
 *Lien vers le CDCU final :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V3/CDCU%20V3.adoc[__Cliquer ici__] +
 *Lien vers la documentation utilisateur :* https://github.com/IUT-Blagnac/sae2022-bank-4a2/blob/main/V2/Documentation%20Utilisateur%20V2.adoc[__Cliquer ici__] +
