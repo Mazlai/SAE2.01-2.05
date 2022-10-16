@@ -45,4 +45,4 @@ MAJ le 08/05/2022:
 |3    	 |Batch            |Relevé mensuels          |                      |             | | | |
 |===
 
-*Manque de temps pour supprimer mais il fallait juste ajouter une méthode dans le modèle pour supprimer de la BD le prélèvement selectionné.
+*Manque de temps pour supprimer mais il fallait juste ajouter une méthode dans le modèle pour supprimer de la BD le prélèvement selectionné.*
